@@ -74,7 +74,7 @@
     pnpm start
     ~~~
 
-* Step 7 Open **http://localhost:5173/src/** in browser
+* Step 7 Open **http://localhost:5173** in browser
 
 ## Author
 
