@@ -2,7 +2,7 @@
 
 ## OVERVIEW
 
-* Build the UI of a page with React, creating components from the old HTML/CSS design:
+* Build the UI of a page with React, creating components from the design:
   + This is the design of the page: [Figma](https://www.figma.com/file/vxpGwXCoCTOmemQ77z9UYB/Yoora-CMS?node-id=0%3A1988&mode=dev)
 
 ## TIMELINE
@@ -15,17 +15,17 @@
 ## TECHNICAL
 
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)/[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-  + HTML5 and CSS3 are two core technologies for building web pages. HTML5 provides the structure of the page, while CSS3 provides the visual and aural layout for various devices
+  + HTML5 and CSS3 are two core technologies for building web pages. HTML5 provides the structure of the page, while CSS3 provides the visual and aural layout for various devices.
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  + JavaScript is an interpreted programming language used on both the client and server side, allowing for the creation of professional animations on web pages. It is integrated and embedded into HTML to support more dynamic websites
+  + JavaScript is an interpreted programming language used on both the client and server side, allowing for the creation of professional animations on web pages. It is integrated and embedded into HTML to support more dynamic websites.
 * [ES6](http://es6-features.org/)
-  + ES6, also known as ECMAScript 2015, is the 6th version of the ECMAScript programming language. It was released in 2015 and brought new syntax and features to make code more modern and readable. Some of these features include arrow functions, template strings, class destruction, and modules
+  + ES6, also known as ECMAScript 2015, is the 6th version of the ECMAScript programming language. It was released in 2015 and brought new syntax and features to make code more modern and readable. Some of these features include arrow functions, template strings, class destruction, and modules.
 * [JSON](https://www.w3schools.com/js/js_json_intro.asp)
-  + JSON stands for JavaScript Object Notation, which is a data format that follows a certain rule that most programming languages today can read. JSON is an open standard for data interchange on the web
+  + JSON stands for JavaScript Object Notation, which is a data format that follows a certain rule that most programming languages today can read. JSON is an open standard for data interchange on the web.
 * [React](https://react.dev/learn)
   + React is a JavaScript library for building reusable user interfaces efficiently. It uses a virtual DOM for optimal rendering and updates only what's necessary. With a component-based approach, React simplifies application development and maintenance. It's popular for its simplicity, flexibility, and strong community support.
 
-## DEVELOPMENT TOOLS:
+## DEVELOPMENT TOOLS
 
 * [Prettier](https://docs.google.com/document/d/1MF8DaLU2YsnOjFPMEMo7l8BASeBk6MHj2dXO-IhWXag/edit#heading=h.wn1dmnyf0s8c)
     - Prettier is a code formatting tool that automatically formats code based on predefined rules. It supports various programming languages, integrates with popular code editors, and promotes consistent code style. It reduces debates, enhances code readability, and saves time on manual formatting tasks.
@@ -37,9 +37,9 @@
 ## TARGET
 
 * Apply what you have read about the main concepts of ReactJS
-* Can apply ReactJS to build a  website
+* Can apply ReactJS to build a website
 * Understand and build the common components
-* Apply what you have read about the main concepts of ReactJS to rewrite your previous HTML/CSS practice into React components.
+* Apply what you have read about the main concepts of ReactJS to rewrite your previous HTML/CSS practice into React components
 
 ## HOW TO START
 
@@ -75,6 +75,7 @@
     ~~~
 
 * Step 7 Open **http://localhost:5173/src/** in browser
+
 ## Author
 - HienDuong
 - Email: duongthehien2001@gmail.com
