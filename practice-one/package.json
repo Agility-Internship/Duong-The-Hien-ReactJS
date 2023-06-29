@@ -1,13 +1,19 @@
 {
     "name": "practice-one",
+    "description": "Build the UI of a page with React",
+    "author": "Hien Duong",
     "private": true,
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "start": "vite",
         "build": "vite build",
         "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview"
+    },
+    "repository": {
+        "type": "github",
+        "url": "https://github.com/Agility-Internship/Duong-The-Hien-ReactJS"
     },
     "dependencies": {
         "@vitejs/plugin-react-swc": "^3.3.2",
