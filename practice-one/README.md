@@ -22,6 +22,8 @@
   + ES6, also known as ECMAScript 2015, is the 6th version of the ECMAScript programming language. It was released in 2015 and brought new syntax and features to make code more modern and readable. Some of these features include arrow functions, template strings, class destruction, and modules.
 * [JSON](https://www.w3schools.com/js/js_json_intro.asp)
   + JSON stands for JavaScript Object Notation, which is a data format that follows a certain rule that most programming languages today can read. JSON is an open standard for data interchange on the web.
+* [Tailwind](https://tailwindui.com/documentation)
+  + Tailwind CSS is a utility-first CSS framework designed to help you build responsive web interfaces quickly and easily. When used in React development, Tailwind CSS allows you to leverage pre-defined CSS utility classes to create and customize interfaces flexibly and efficiently.
 * [React](https://react.dev/learn)
   + React is a JavaScript library for building reusable user interfaces efficiently. It uses a virtual DOM for optimal rendering and updates only what's necessary. With a component-based approach, React simplifies application development and maintenance. It's popular for its simplicity, flexibility, and strong community support.
 
@@ -37,6 +39,7 @@
 ## TARGET
 
 * Apply what you have read about the main concepts of ReactJS
+* Understanding and using the Tailwind library to style components and pages
 * Can apply ReactJS to build a website
 * Understand and build the common components
 * Apply what you have read about the main concepts of ReactJS to rewrite your previous HTML/CSS practice into React components
@@ -78,5 +81,5 @@
 
 ## Author
 
-- HienDuong
-- Email: duongthehien2001@gmail.com
+* HienDuong
+* Email: duongthehien2001@gmail.com
