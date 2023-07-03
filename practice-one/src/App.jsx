@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from './Components/Common/Buttons';
-import Link from './Components/Common/Links';
-import Card from './Components/Common/Card';
 
 function App() {
   const handleClick = () => {
