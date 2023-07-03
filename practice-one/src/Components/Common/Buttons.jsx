@@ -24,8 +24,8 @@ const colorClasses = {
 // eslint-disable-next-line react/function-component-definition
 const Button = ({
   text,
-  variant,
-  size,
+  variant = 'primary',
+  size = 'medium',
   rightIcon,
   type,
   color,
@@ -36,7 +36,7 @@ const Button = ({
 
   return (
     <button
-      type={type ? 'button' : 'submit'}
+      type={Boolean ? 'button' : 'submit'}
       className={buttonClasses}
       onClick={onClick}
     >
