@@ -1,28 +1,28 @@
 import React from 'react';
-import Button from './Components/Common/Buttons';
+// import Button from './Components/Common/Buttons';
+import Link from './Components/Common/Links';
 
 function App() {
-  const handleClick = () => { };
   return (
     <div>
-      <Button
-        text="login"
-        variant="outline"
-        onClick={handleClick}
-      />
+      <Link
+        href="https://example.com"
+        isExternal
+      >
+        External-link
+      </Link>
+      <Link
+        href="/#"
+      >
+        Internal-link
+      </Link>
 
-      <Button
-        text="Try For Free"
-        variant="secondary"
-        onClick={handleClick}
-      />
-
-      <Button
-        text="Try For Free"
-        variant="outline"
-        rightIcon={<img src="src\assets\icon_arrow_down.svg" alt="Icon" />}
-        onClick={handleClick}
-      />
+      <Link
+        href="/profile"
+        imageVariant="rounded"
+      >
+        <img src="/avatar.png" alt="Avatar" />
+      </Link>
     </div>
   );
 }

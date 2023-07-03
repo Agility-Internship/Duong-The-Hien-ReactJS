@@ -35,5 +35,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'linebreak-style': 0,
+    'react/function-component-definition': 0, // Using Class const
+    'react/require-default-props': 0, // Turn off define defaultProps => define before
   },
 };
