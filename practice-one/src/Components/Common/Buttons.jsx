@@ -1,24 +1,11 @@
 import React from 'react';
-
-function Button({
-  text, variant, size, rightIcon, type, color, onClick,
-}) {
-  // Define the Tailwind CSS classes based on the props`
-  const buttonClasses = `inline-flex items-center justify-center rounded ${sizeClasses[size]} ${variantClasses[variant]} ${colorClasses[color]}`;
-
-  return (
-    <button type={type} className={buttonClasses} onClick={onClick}>
-      {text}
-      {rightIcon && <span className="ml-2">{rightIcon}</span>}
-    </button>
-  );
-}
+import PropTypes from 'prop-types';
 
 // Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
-  primary: 'bg-primary text-white',
-  secondary: 'bg-secondary text-white',
-  outline: 'bg-transparent text-black border',
+  primary: 'bg-transparent hover:bg-primary hover:text-white focus:bg-primary focus:text-white',
+  secondary: 'bg-secondary text-white hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white',
+  outline: 'bg-transparent hover:bg-primary hover:text-white hover:border-primary focus:bg-primary focus:text-white focus:border-primary',
 };
 
 const sizeClasses = {
@@ -31,7 +18,51 @@ const colorClasses = {
   green: 'text-green-500',
   blue: 'text-blue-500',
   red: 'text-red-500',
+  black: 'text-black-500',
   gray: 'text-gray-500',
+};
+// eslint-disable-next-line react/function-component-definition
+const Button = ({
+  text,
+  variant,
+  size,
+  rightIcon,
+  type,
+  color,
+  onClick = () => {},
+}) => {
+  // Define the Tailwind CSS classes based on the props
+  const buttonClasses = `inline-flex items-center justify-center rounded ${sizeClasses[size]} ${variantClasses[variant]} ${colorClasses[color]}`;
+
+  return (
+    <button
+      type={type ? 'button' : 'submit'}
+      className={buttonClasses}
+      onClick={onClick}
+    >
+      {text}
+      {rightIcon && <span className="ml-2">{rightIcon}</span>}
+    </button>
+  );
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  rightIcon: PropTypes.node,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  color: PropTypes.oneOf(['green', 'blue', 'red', 'gray']),
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  variant: 'primary',
+  size: 'medium',
+  type: 'button',
+  rightIcon: null,
+  color: 'black',
+  onClick: () => {},
 };
 
 export default Button;

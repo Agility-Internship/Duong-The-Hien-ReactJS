@@ -2,15 +2,27 @@ import React from 'react';
 import Button from './Components/Common/Buttons';
 
 function App() {
-  const handleClick = () => {
-    console.log('Button clicked!');
-  };
-
+  const handleClick = () => { };
   return (
     <div>
-      <Button text="login" variant="primary" onClick={handleClick} />
-      <Button text="Try For Free" variant="secondary" onClick={handleClick} />
-      <Button text="Try For Free" variant="outline" rightIcon={<i className="fas fa-check" />} onClick={handleClick} />
+      <Button
+        text="login"
+        variant="outline"
+        onClick={handleClick}
+      />
+
+      <Button
+        text="Try For Free"
+        variant="secondary"
+        onClick={handleClick}
+      />
+
+      <Button
+        text="Try For Free"
+        variant="outline"
+        rightIcon={<img src="src\assets\icon_arrow_down.svg" alt="Icon" />}
+        onClick={handleClick}
+      />
     </div>
   );
 }
