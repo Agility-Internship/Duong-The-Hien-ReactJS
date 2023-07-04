@@ -27,8 +27,8 @@ const Button = ({
   variant = 'primary',
   size = 'medium',
   rightIcon,
-  type,
-  color,
+  type = 'button',
+  color = 'black',
   onClick = () => {},
 }) => {
   // Define the Tailwind CSS classes based on the props
@@ -36,7 +36,7 @@ const Button = ({
 
   return (
     <button
-      type={Boolean ? 'button' : 'submit'}
+      type={type}
       className={buttonClasses}
       onClick={onClick}
     >
@@ -54,15 +54,6 @@ Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   color: PropTypes.oneOf(['green', 'blue', 'red', 'gray']),
   onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  variant: 'primary',
-  size: 'medium',
-  type: 'button',
-  rightIcon: null,
-  color: 'black',
-  onClick: () => {},
 };
 
 export default Button;
