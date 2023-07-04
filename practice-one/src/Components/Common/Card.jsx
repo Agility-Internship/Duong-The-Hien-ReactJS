@@ -9,14 +9,14 @@ const Card = ({
   children,
   onChange = () => {},
 }) => {
-  const commonClasses = 'bg-white rounded-md shadow-md';
+  const commonClasses = 'bg-white ';
   const sizeClasses = {
     small: 'p-4',
     medium: 'p-6',
     large: 'p-8',
   };
   const variantClasses = {
-    primary: 'border-primary',
+    primary: 'border-none',
     secondary: 'border-secondary',
     success: 'border-green-500',
     danger: 'border-red-500',
@@ -61,7 +61,7 @@ const CardFooter = ({ children }) => (
 );
 
 const CardImage = ({ src, alt }) => (
-  <img src={src} alt={alt} className="card-img-top w-full rounded-t-md" />
+  <img src={src} alt={alt} className="card-img-top w-full pt-5 pb-3 rounded-t-md" />
 );
 
 CardImage.propTypes = {
