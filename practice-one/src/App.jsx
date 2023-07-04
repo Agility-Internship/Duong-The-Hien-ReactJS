@@ -11,7 +11,7 @@ const App = () => (
       date="29 Jun 2022"
     />
     <MyCard
-      headerText="News"
+      headerText="sales"
       imgSrc="src\assets\react.svg"
       title="How To Deliver a Successful Product Launch"
       author="Joshua Nash"
