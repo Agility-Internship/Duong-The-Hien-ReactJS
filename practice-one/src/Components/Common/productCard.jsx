@@ -3,17 +3,24 @@ import PropTypes from 'prop-types';
 import Card from './Card';
 
 const MyCard = ({
-  imgSrc, headerText, title, author, date,
+  imgSrc,
+  headerText,
+  title,
+  author,
+  date,
 }) => (
-  <Card variant="secondary" size="large">
+  <Card variant="primary" size="small">
     <Card.CardHeader className="relative">
-      <h5 className="text-sm text-gray-500 font-bold uppercase pb-5">{headerText}</h5>
-      <div className="absolute bottom-0 left-0 w-full h-1/6 bg-gray-500" />
+      <h5 className="text-sm text-gray-500 font-bold uppercase pb-2">{headerText}</h5>
+      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500" />
     </Card.CardHeader>
     <Card.CardImage src={imgSrc} alt="Here is a photo of the product title above" />
     <Card.CardContent>
-      <h3 className="pb-5 pt-5">
-        <a className="text-xl text-black-500" href="#">
+      <h3 className="pb-1.5 pt-1">
+        <a
+          href="#"
+          className="text-xl font-bold text-black-500"
+        >
           {title}
           {' '}
         </a>
