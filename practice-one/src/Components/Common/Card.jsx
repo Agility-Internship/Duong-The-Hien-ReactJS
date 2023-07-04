@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Card
 const Card = ({
   maxW = 'xl',
-  name = '',
   size = 'medium',
   variant = 'primary',
   children,
@@ -27,7 +27,6 @@ const Card = ({
 
   return (
     <div className={`max-w-${maxW} mx-auto ${cardClasses}`} onChange={onChange}>
-      {name && <h2 className="text-sm font-bold mb-4">{name}</h2>}
       {children}
     </div>
   );
@@ -35,7 +34,6 @@ const Card = ({
 
 Card.propTypes = {
   maxW: PropTypes.string,
-  name: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: PropTypes.oneOf([
     'primary',
@@ -48,20 +46,46 @@ Card.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+// CardHeader
 const CardHeader = ({ children }) => (
-  <div className="card-header bg-transparent border-none p-0 relative">{children}</div>
+  <div className="card-header bg-transparent border-none p-0 relative">
+    {children}
+  </div>
 );
 
+CardHeader.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+// CardContent
 const CardContent = ({ children }) => (
-  <div className="card-body bg-transparent border-none p-0 relative">{children}</div>
+  <div className="card-body bg-transparent border-none p-0 relative">
+    {children}
+  </div>
 );
 
+CardContent.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+// CardFooter
 const CardFooter = ({ children }) => (
-  <div className="card-footer bg-transparent border-none p-0 relative">{children}</div>
+  <div className="card-footer bg-transparent border-none p-0 relative">
+    {children}
+  </div>
 );
 
+CardFooter.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+// CardImage
 const CardImage = ({ src, alt }) => (
-  <img src={src} alt={alt} className="card-img-top w-full pt-5 pb-3 rounded-t-md" />
+  <img
+    src={src}
+    alt={alt}
+    className="card-img-top w-full pt-5 pb-3 rounded-t-md"
+  />
 );
 
 CardImage.propTypes = {

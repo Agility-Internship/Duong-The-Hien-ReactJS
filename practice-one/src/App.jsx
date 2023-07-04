@@ -1,26 +1,26 @@
 import React from 'react';
-import MyCard from './Components/Common/productCard';
+import ProductCard from './Components/Common/productCard';
 import ServiceCard from './Components/Common/serviceCard';
 import HorizontalCard from './Components/Common/horizontalCard';
 
 const App = () => (
   <div>
     <div className="flex gap-1">
-      <MyCard
+      <ProductCard
         headerText="News"
         imgSrc="src\assets\products_1.svg"
         title="How To Deliver a Successful Product Launch"
         author="Joshua Nash"
         date="29 Jun 2022"
       />
-      <MyCard
+      <ProductCard
         headerText="sales"
         imgSrc="src\assets\products_1.svg"
         title="How To Deliver a Successful Product Launch"
         author="Joshua Nash"
         date="29 Jun 2022"
       />
-      <MyCard
+      <ProductCard
         headerText="News"
         imgSrc="src\assets\products_1.svg"
         title="How To Deliver a Successful Product Launch"
@@ -29,7 +29,7 @@ const App = () => (
       />
     </div>
     <div className="w-1/2">
-      <MyCard
+      <ProductCard
         headerText="News"
         imgSrc="src\assets\products_1.svg"
         title="Email marketing best practices: 10 experts share their email tips"
@@ -42,7 +42,7 @@ const App = () => (
         headerText="Service"
         title="CRM Insights: Selecting the Right One for Your Organization"
         author=" by Joshua Nash"
-        date="05 Sep 2022,"
+        date="05 Sep 2022"
       />
     </div>
     <div className="flex w-1/2">

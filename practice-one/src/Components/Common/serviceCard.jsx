@@ -11,7 +11,9 @@ const ServiceCard = ({
   <Card variant="primary" size="small">
     <div className="border-t-2 border-b-2 border-gray-500 pt-5 pb-5">
       <Card.CardHeader>
-        <h5 className="text-sm text-gray-500 font-bold uppercase mb-6 ">{headerText}</h5>
+        <h5 className="text-sm text-gray-500 font-bold uppercase mb-6 ">
+          {headerText}
+        </h5>
       </Card.CardHeader>
       <Card.CardContent>
         <div className="w-11/12 mb-6">
@@ -21,8 +23,7 @@ const ServiceCard = ({
       <Card.CardFooter>
         <h4>
           {date}
-          ,
-          {' '}
+          {String.fromCharCode(44)}
           <span className="text-gray-500">{author}</span>
         </h4>
       </Card.CardFooter>

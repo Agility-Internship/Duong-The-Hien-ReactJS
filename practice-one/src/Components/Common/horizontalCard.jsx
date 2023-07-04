@@ -17,14 +17,15 @@ const HorizontalCard = ({
         <Card.CardFooter>
           <h4>
             {date}
-            ,
-            {' '}
+            {String.fromCharCode(44)}
             <span className="text-gray-500">{author}</span>
           </h4>
         </Card.CardFooter>
       </div>
       <Card.CardHeader>
-        <h5 className="text-sm text-gray-500 font-bold uppercase">{headerText}</h5>
+        <h5 className="text-sm text-gray-500 font-bold uppercase">
+          {headerText}
+        </h5>
       </Card.CardHeader>
     </div>
   </Card>
