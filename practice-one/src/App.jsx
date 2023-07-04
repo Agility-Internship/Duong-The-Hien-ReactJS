@@ -1,30 +1,30 @@
 import React from 'react';
-import Button from './Components/Common/Buttons';
+import MyCard from './Components/Common/productCard';
 
-function App() {
-  const handleClick = () => { };
-  return (
-    <div>
-      <Button
-        text="login"
-        variant="outline"
-        onClick={handleClick}
-      />
-
-      <Button
-        text="Try For Free"
-        variant="secondary"
-        onClick={handleClick}
-      />
-
-      <Button
-        text="Try For Free"
-        variant="outline"
-        rightIcon={<img src="src\assets\icon_arrow_down.svg" alt="Icon" />}
-        onClick={handleClick}
-      />
-    </div>
-  );
-}
+const App = () => (
+  <div className="flex gap-1">
+    <MyCard
+      headerText="News"
+      imgSrc="src\assets\react.svg"
+      title="How To Deliver a Successful Product Launch"
+      author="Joshua Nash"
+      date="29 Jun 2022"
+    />
+    <MyCard
+      headerText="News"
+      imgSrc="src\assets\react.svg"
+      title="How To Deliver a Successful Product Launch"
+      author="Joshua Nash"
+      date="29 Jun 2022"
+    />
+    <MyCard
+      headerText="News"
+      imgSrc="src\assets\react.svg"
+      title="How To Deliver a Successful Product Launch"
+      author="Joshua Nash"
+      date="29 Jun 2022"
+    />
+  </div>
+);
 
 export default App;

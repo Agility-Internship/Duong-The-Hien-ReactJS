@@ -36,5 +36,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'linebreak-style': 0,
     'react/require-default-props': 0, // Turn Off define propDefault
+    'react/function-component-definition': 0, // Using Class const
   },
 };
