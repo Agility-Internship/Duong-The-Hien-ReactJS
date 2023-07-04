@@ -10,7 +10,7 @@ export default {
         primary: '#00cc61',
         secondary: '#004050',
         light: '#f4f4f4',
-        'gray-500': '#777777',
+        'gray-500': '#787878',
         'gray-300': '#dcdcdc',
       },
       fontWeight: {

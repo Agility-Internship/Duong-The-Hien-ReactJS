@@ -1,30 +1,59 @@
 import React from 'react';
-import Button from './Components/Common/Buttons';
+import ProductCard from './Components/Common/productCard';
+import ServiceCard from './Components/Common/serviceCard';
+import HorizontalCard from './Components/Common/horizontalCard';
 
-function App() {
-  const handleClick = () => { };
-  return (
-    <div>
-      <Button
-        text="login"
-        variant="outline"
-        onClick={handleClick}
+const App = () => (
+  <div>
+    <div className="flex gap-1">
+      <ProductCard
+        headerText="News"
+        imgSrc="src\assets\products_1.svg"
+        title="How To Deliver a Successful Product Launch"
+        author="Joshua Nash"
+        date="29 Jun 2022"
       />
-
-      <Button
-        text="Try For Free"
-        variant="secondary"
-        onClick={handleClick}
+      <ProductCard
+        headerText="sales"
+        imgSrc="src\assets\products_1.svg"
+        title="How To Deliver a Successful Product Launch"
+        author="Joshua Nash"
+        date="29 Jun 2022"
       />
-
-      <Button
-        text="Try For Free"
-        variant="outline"
-        rightIcon={<img src="src\assets\icon_arrow_down.svg" alt="Icon" />}
-        onClick={handleClick}
+      <ProductCard
+        headerText="News"
+        imgSrc="src\assets\products_1.svg"
+        title="How To Deliver a Successful Product Launch"
+        author="Joshua Nash"
+        date="29 Jun 2022"
       />
     </div>
-  );
-}
+    <div className="w-1/2">
+      <ProductCard
+        headerText="News"
+        imgSrc="src\assets\products_1.svg"
+        title="Email marketing best practices: 10 experts share their email tips"
+        author="Joshua Nash"
+        date="29 Jun 2022"
+      />
+    </div>
+    <div className="w-1/2">
+      <ServiceCard
+        headerText="Service"
+        title="CRM Insights: Selecting the Right One for Your Organization"
+        author=" by Joshua Nash"
+        date="05 Sep 2022"
+      />
+    </div>
+    <div className="flex w-1/2">
+      <HorizontalCard
+        title="Access Yoora’s leads features on your mobile"
+        date="11 Aug 2022"
+        author="Joshua Nash"
+        headerText="products"
+      />
+    </div>
+  </div>
+);
 
 export default App;
