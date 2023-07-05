@@ -13,6 +13,9 @@ export default {
         'gray-500': '#787878',
         'gray-300': '#dcdcdc',
       },
+      fontFamily: {
+        sans: ['Satoshi', 'sans-serif'],
+      },
       fontWeight: {
         small: 400,
         medium: 500,

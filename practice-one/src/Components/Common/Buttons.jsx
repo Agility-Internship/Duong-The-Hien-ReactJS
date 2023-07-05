@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 // Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
-  primary: 'bg-transparent hover:bg-primary hover:text-white focus:bg-primary focus:text-white',
-  secondary: 'bg-secondary text-white hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white',
+  primary: 'bg-white hover:bg-primary hover:text-white font-bold focus:bg-secondary focus:text-white',
+  secondary: 'bg-secondary text-white hover:bg-white font-bold hover:text-black focus:bg-secondary focus:text-white',
   outline: 'bg-transparent hover:bg-primary hover:text-white hover:border-primary focus:bg-primary focus:text-white focus:border-primary',
 };
 
