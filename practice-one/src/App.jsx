@@ -2,6 +2,7 @@ import React from 'react';
 import ProductCard from './Components/Common/productCard';
 import ServiceCard from './Components/Common/serviceCard';
 import HorizontalCard from './Components/Common/horizontalCard';
+import Link from './Components/Common/Links';
 
 const App = () => (
   <div>
@@ -52,6 +53,18 @@ const App = () => (
         author="Joshua Nash"
         headerText="products"
       />
+    </div>
+    <div>
+      <Link
+        href="/"
+      >
+        isInternal
+      </Link>
+      <Link
+        href="/"
+      >
+        isInternal
+      </Link>
     </div>
   </div>
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import Link from './Links';
 
 const ProductCard = ({
   imgSrc = '',
@@ -22,9 +23,14 @@ const ProductCard = ({
     />
     <Card.CardContent>
       <h3 className="pb-1.5 pt-1">
-        <a href="#" className="text-xl font-bold text-black-500">
-          {title}
-        </a>
+        <Link
+          href="#"
+          isExternal
+        >
+          <p className="text-xl font-bold text-black-500">
+            {title}
+          </p>
+        </Link>
       </h3>
     </Card.CardContent>
     <Card.CardFooter>

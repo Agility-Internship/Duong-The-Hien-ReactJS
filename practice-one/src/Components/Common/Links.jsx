@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const Link = ({
   isExternal = false,
-  imageVariant = undefined,
   href,
   target = '_self',
   rel = undefined,
@@ -11,13 +10,7 @@ const Link = ({
 }) => {
   const commonClasses = 'text-underline ';
 
-  const imageClasses = {
-    rounded: 'rounded-full',
-    circle: 'rounded-full',
-    square: 'rounded-md',
-  };
-
-  const linkClasses = `${commonClasses} ${imageClasses[imageVariant] || ''}`;
+  const linkClasses = `${commonClasses}`;
 
   const externalLinkClasses = `${linkClasses} hover:text-primary`;
   const internalLinkClasses = `${linkClasses} hover:text-secondary`;
@@ -35,7 +28,6 @@ const Link = ({
 
 Link.propTypes = {
   isExternal: PropTypes.bool,
-  imageVariant: PropTypes.oneOf(['rounded', 'circle', 'square']),
   href: PropTypes.string.isRequired,
   target: PropTypes.string,
   rel: PropTypes.string,
