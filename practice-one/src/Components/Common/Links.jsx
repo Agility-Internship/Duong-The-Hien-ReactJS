@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link = ({
-  // defaultProps
   isExternal = false,
   imageVariant = undefined,
   href,
@@ -20,12 +19,15 @@ const Link = ({
 
   const linkClasses = `${commonClasses} ${imageClasses[imageVariant] || ''}`;
 
+  const externalLinkClasses = `${linkClasses} hover:text-primary`;
+  const internalLinkClasses = `${linkClasses} hover:text-secondary`;
+
   return isExternal ? (
-    <a href={href} target={target} rel={rel} className={linkClasses}>
+    <a href={href} target={target} rel={rel} className={externalLinkClasses}>
       {children}
     </a>
   ) : (
-    <a href={href} className={linkClasses}>
+    <a href={href} className={internalLinkClasses}>
       {children}
     </a>
   );
