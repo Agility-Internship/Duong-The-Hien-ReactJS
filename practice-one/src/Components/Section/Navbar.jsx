@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// Components
 import Button from '../Common/Button';
 
 // NavLink component
