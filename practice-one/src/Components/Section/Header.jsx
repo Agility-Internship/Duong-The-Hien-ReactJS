@@ -21,9 +21,7 @@ const HeaderTab = ({ children }) => {
   };
 
   return (
-    <li
-      className="list-none relative pb-7"
-    >
+    <li className="list-none relative pb-7">
       <a
         href="/"
         className="text-gray-500 hover:text-black relative cursor-pointer"
@@ -31,7 +29,6 @@ const HeaderTab = ({ children }) => {
         onMouseLeave={handleHover}
       >
         {children}
-
       </a>
       {isHovered && (
         <div className="absolute bottom-0 left-0 w-full h-0.5 bg-primary" />
