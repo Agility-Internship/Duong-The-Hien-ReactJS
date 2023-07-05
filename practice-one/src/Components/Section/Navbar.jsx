@@ -1,32 +1,62 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import Button from '../Common/Button';
 
+// NavLink component
+const NavLink = ({
+  children,
+  to = `#${children}`,
+}) => (
+  <a href={to} className="nav-link text-base hover:text-primary">
+    {children}
+  </a>
+);
+
+NavLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+// NavBrand component
+const NavBrand = ({
+  children,
+  to = `#${children}`,
+}) => (
+  <a href={to} className="nav-brand">
+    {children}
+  </a>
+);
+
+NavBrand.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+// NavContent component
+const NavContent = ({ children }) => (
+  <div className="nav-content flex gap-10 ps-10">{children}</div>
+);
+
+NavContent.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+// Navbar component
 const Navbar = () => (
   <div className="bg-light">
     <nav className="container mx-auto w-screen h-[80px]">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center gap-5">
-          <a className="navbar-brand logo" href="#">
+          <NavBrand to="#">
             <img src="src\assets\logo.png" alt="logo" />
-          </a>
-          <Nav className="hidden ps-20 gap-10 md:flex">
-            <Nav.Link href="#Product" className="text-base hover:text-primary">
-              Product
-            </Nav.Link>
-            <Nav.Link href="#Contact" className="text-base hover:text-primary">
-              Pricing
-            </Nav.Link>
-            <Nav.Link href="#Company" className="text-base hover:text-primary">
-              Company
-            </Nav.Link>
-            <Nav.Link href="#Recourses" className="text-base hover:text-primary">
-              Resources
-            </Nav.Link>
-            <Nav.Link href="#Contact" className="text-base hover:text-primary">
-              Contact
-            </Nav.Link>
-          </Nav>
+          </NavBrand>
+          <NavContent>
+            <NavLink>Product</NavLink>
+            <NavLink>Pricing</NavLink>
+            <NavLink>Company</NavLink>
+            <NavLink>Resources</NavLink>
+            <NavLink>Contact</NavLink>
+          </NavContent>
         </div>
         <div className="hidden md:flex pr-4 gap-5">
           <Button text="Log in" variant="primary" />
