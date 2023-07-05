@@ -28,7 +28,6 @@ const Navbar = () => (
             size="medium"
             variant="secondary"
           />
-
         </div>
       </div>
     </nav>
