@@ -1,41 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const HeaderCarousel = ({
-  childrenBlack,
-  childrenGray,
-}) => (
+const HeaderCarousel = ({ title, subtitle }) => (
   <h1 className="text-black text-6xl font-bold pt-[3rem] pb-24">
-    <span className="text-black">{childrenBlack}</span>
+    <span className="text-black">{title}</span>
     <br />
-    <span className="text-gray-500">{childrenGray}</span>
+    <span className="text-gray-500">{subtitle}</span>
   </h1>
 );
 
 HeaderCarousel.propTypes = {
-  childrenBlack: PropTypes.node.isRequired,
-  childrenGray: PropTypes.node.isRequired,
+  title: PropTypes.node.isRequired,
+  subtitle: PropTypes.node.isRequired,
 };
+const HeaderTab = ({ children }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-const HeaderTab = ({
-  children,
-  onClick,
-}) => (
-  <li className="list-none hover:rounded text-gray-500">
-    <button
-      className="hover:text-black pb-7"
-      onClick={onClick}
-      type="button"
-      role="tab"
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+
+  return (
+    <li
+      className="list-none relative pb-7"
     >
-      {children}
-    </button>
-  </li>
-);
+      <a
+        href="/"
+        className="text-gray-500 hover:text-black relative cursor-pointer"
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHover}
+      >
+        {children}
+
+      </a>
+      {isHovered && (
+        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-primary" />
+      )}
+    </li>
+  );
+};
 
 HeaderTab.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
 };
 
 const Header = () => (
@@ -43,8 +49,8 @@ const Header = () => (
     <div className="container mx-auto w-screen ">
       <div className="px-2 w-full h-full">
         <HeaderCarousel
-          childrenBlack="News and insights"
-          childrenGray=" from our experts"
+          title="News and insights"
+          subtitle=" from our experts"
         />
       </div>
       <div className="px-2 flex gap-12">
@@ -58,7 +64,6 @@ const Header = () => (
       <div />
     </div>
   </div>
-
 );
 
 export default Header;
