@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 
 // Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
-  primary: 'bg-white hover:bg-primary hover:text-white font-bold focus:bg-secondary focus:text-white',
-  secondary: 'bg-secondary text-white hover:bg-white font-bold hover:text-black focus:bg-secondary focus:text-white',
-  outline: 'bg-transparent hover:bg-primary hover:text-white hover:border-primary focus:bg-primary focus:text-white focus:border-primary',
+  primary:
+    'bg-white hover:bg-primary hover:text-white font-bold focus:bg-secondary focus:text-white',
+  secondary:
+    'bg-secondary text-white hover:bg-white font-bold hover:text-black focus:bg-secondary focus:text-white',
+  outline:
+    'bg-transparent hover:bg-primary hover:text-white hover:border-primary focus:bg-primary focus:text-white focus:border-primary',
 };
 
 const sizeClasses = {
@@ -35,11 +38,7 @@ const Button = ({
   const buttonClasses = `inline-flex items-center justify-center rounded ${sizeClasses[size]} ${variantClasses[variant]} ${colorClasses[color]}`;
 
   return (
-    <button
-      type={type}
-      className={buttonClasses}
-      onClick={onClick}
-    >
+    <button type={type} className={buttonClasses} onClick={onClick}>
       {text}
       {rightIcon && <span className="ml-2">{rightIcon}</span>}
     </button>

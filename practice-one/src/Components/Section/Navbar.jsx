@@ -10,24 +10,36 @@ const Navbar = () => (
             <img src="src\assets\logo.png" alt="logo" />
           </a>
           <ul className="hidden ps-20 gap-10  md:flex">
-            <li><a href="/Product" className="text-base hover:text-primary">Product</a></li>
-            <li><a href="/Contact" className="text-base hover:text-primary">Pricing</a></li>
-            <li><a href="/Company" className="text-base hover:text-primary">Company</a></li>
-            <li><a href="/Recourses" className="text-base hover:text-primary">Recourses</a></li>
-            <li><a href="/Contact" className="text-base hover:text-primary">Contact</a></li>
+            <li>
+              <a href="/Product" className="text-base hover:text-primary">
+                Product
+              </a>
+            </li>
+            <li>
+              <a href="/Contact" className="text-base hover:text-primary">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="/Company" className="text-base hover:text-primary">
+                Company
+              </a>
+            </li>
+            <li>
+              <a href="/Recourses" className="text-base hover:text-primary">
+                Recourses
+              </a>
+            </li>
+            <li>
+              <a href="/Contact" className="text-base hover:text-primary">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         <div className="hidden md:flex pr-4 gap-5">
-          <Button
-            text="Log in"
-            size="medium"
-            variant="primary"
-          />
-          <Button
-            text="Try for Free"
-            size="medium"
-            variant="secondary"
-          />
+          <Button text="Log in" size="medium" variant="primary" />
+          <Button text="Try for Free" size="medium" variant="secondary" />
         </div>
       </div>
     </nav>
