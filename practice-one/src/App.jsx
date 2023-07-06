@@ -10,7 +10,6 @@ const App = () => (
     <Navbar />
     <Header />
     <ListCard />
-
   </div>
 );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+
 // Components
 import ServiceCard from '../Common/serviceCard';
 import ProductCard from '../Common/productCard';
@@ -78,6 +79,7 @@ const ListCard = () => (
         </div>
       </div>
     </section>
+
     <section className="marketing mt-32">
       <div className="container mx-auto">
         <div className="marketing-content gap-4 justify-between flex">
@@ -119,6 +121,7 @@ const ListCard = () => (
         </div>
       </div>
     </section>
+
     <section className="BlogArticle mt-32">
       <div className="container mx-auto flex justify-between gap-y-44 flex-wrap">
         <div className="product-card w-[32%]">
