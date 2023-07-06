@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-// HeaderCarousel
 const HeaderCarousel = ({ title, subtitle }) => (
   <h1 className="text-black text-6xl font-bold pt-[3rem] pb-24">
     <span className="text-black">{title}</span>
@@ -15,7 +14,6 @@ HeaderCarousel.propTypes = {
   subtitle: PropTypes.node.isRequired,
 };
 
-// HeaderTab
 const HeaderTab = ({ children }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -44,7 +42,6 @@ HeaderTab.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-// Header
 const Header = () => (
   <div className="bg-light h-full">
     <div className="container mx-auto w-screen ">

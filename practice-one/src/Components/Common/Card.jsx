@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Card
 const Card = ({
   maxW = 'xl',
   size = 'medium',
@@ -46,7 +45,6 @@ Card.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-// CardHeader
 const CardHeader = ({ children }) => (
   <div className="card-header bg-transparent border-none p-0 relative">
     {children}
@@ -57,7 +55,6 @@ CardHeader.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-// CardContent
 const CardContent = ({ children }) => (
   <div className="card-body bg-transparent border-none p-0 relative">
     {children}
@@ -68,7 +65,6 @@ CardContent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-// CardFooter
 const CardFooter = ({ children }) => (
   <div className="card-footer bg-transparent border-none p-0 relative">
     {children}
@@ -79,7 +75,6 @@ CardFooter.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-// CardImage
 const CardImage = ({ src, alt }) => (
   <img
     src={src}
