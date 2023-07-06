@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 
 const Card = ({
   maxW = 'xl',
-  size = 'medium',
   variant = 'primary',
   children,
   onChange = () => {},
 }) => {
-  const commonClasses = 'bg-white ';
-  const sizeClasses = {
-    small: 'p-4',
-    medium: 'p-6',
-    large: 'p-8',
-  };
+  const commonClasses = 'bg-white';
+
   const variantClasses = {
     primary: 'border-none',
     secondary: 'border-secondary',
@@ -22,10 +17,10 @@ const Card = ({
     warning: 'border-yellow-500',
   };
 
-  const cardClasses = `${commonClasses} ${sizeClasses[size]} ${variantClasses[variant]}`;
+  const cardClasses = `${commonClasses} ${variantClasses[variant]}`;
 
   return (
-    <div className={`max-w-${maxW} mx-auto ${cardClasses}`} onChange={onChange}>
+    <div className={`max-w-${maxW} ${cardClasses}`} onChange={onChange}>
       {children}
     </div>
   );
@@ -33,7 +28,6 @@ const Card = ({
 
 Card.propTypes = {
   maxW: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -56,7 +50,7 @@ CardHeader.propTypes = {
 };
 
 const CardContent = ({ children }) => (
-  <div className="card-body bg-transparent border-none p-0 relative">
+  <div className="card-body bg-transparent border-none h-4/5 pt-5 relative">
     {children}
   </div>
 );
