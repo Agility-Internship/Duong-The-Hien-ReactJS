@@ -7,7 +7,7 @@ const Card = ({
   children,
   onChange = () => {},
 }) => {
-  const commonClasses = 'bg-white ';
+  const commonClasses = 'bg-white';
 
   const variantClasses = {
     primary: 'border-none',
@@ -20,7 +20,7 @@ const Card = ({
   const cardClasses = `${commonClasses} ${variantClasses[variant]}`;
 
   return (
-    <div className={`max-w-${maxW} ${cardClasses} `} onChange={onChange}>
+    <div className={`max-w-${maxW} ${cardClasses}`} onChange={onChange}>
       {children}
     </div>
   );
