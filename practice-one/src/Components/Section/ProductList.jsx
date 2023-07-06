@@ -8,11 +8,7 @@ import HorizontalCard from '../Common/horizontalCard';
 
 const ListCard = () => {
   const {
-    services,
-    products,
-    marketing,
-    horizontalCards,
-    blogArticles,
+    services, products, marketing, horizontalCards, blogArticles,
   } = dataCard;
 
   return (
@@ -31,10 +27,7 @@ const ListCard = () => {
           <div className="service-right w-3/5">
             <img
               className="w-full"
-              src={services[0].imgSrc.replace(
-                /\\/g,
-                '/',
-              )}
+              src={services[0].imgSrc.replace(/\\/g, '/')}
               alt="Service right img"
             />
           </div>
