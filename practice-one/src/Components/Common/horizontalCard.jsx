@@ -12,7 +12,7 @@ const HorizontalCard = ({
     <div className="flex justify-between items-end border-t-2 border-t-gray-500">
       <div className="card-horizontal-left pt-5">
         <Card.CardContent>
-          <h3 className="text-xl font-bold mb-6">{title}</h3>
+          <h3 className="text-3xl font-bold mb-6">{title}</h3>
         </Card.CardContent>
         <Card.CardFooter>
           <h4>

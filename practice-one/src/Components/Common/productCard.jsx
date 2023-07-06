@@ -21,8 +21,8 @@ const ProductCard = ({
       alt="Here is a photo of the product title above"
     />
     <Card.CardContent>
-      <h3 className="pb-1.5 pt-1">
-        <a href="#" className="text-xl font-bold text-black-500">
+      <h3 className="pb-6 pt-1">
+        <a href="/" className="text-2xl font-bold text-black-500">
           {title}
         </a>
       </h3>
