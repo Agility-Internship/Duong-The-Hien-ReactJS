@@ -48,17 +48,24 @@ const Navbar = () => (
           <NavBrand to="#">
             <img src="src\assets\logo.png" alt="logo" />
           </NavBrand>
-          <NavContent>
-            <NavLink>Product</NavLink>
-            <NavLink>Pricing</NavLink>
-            <NavLink>Company</NavLink>
-            <NavLink>Resources</NavLink>
-            <NavLink>Contact</NavLink>
-          </NavContent>
+          <div className="hidden lg:flex">
+            <NavContent>
+              <NavLink>Product</NavLink>
+              <NavLink>Pricing</NavLink>
+              <NavLink>Company</NavLink>
+              <NavLink>Resources</NavLink>
+              <NavLink>Contact</NavLink>
+            </NavContent>
+          </div>
         </div>
-        <div className="hidden md:flex pr-4 gap-5">
+        <div className="hidden lg:flex pr-4 gap-5">
           <Button text="Log in" variant="primary" />
           <Button text="Try for Free" variant="secondary" />
+        </div>
+        <div className="lg:hidden">
+          <button type="button" className="focus:outline-none">
+            <img src="src\assets\ic_menu.png" alt="menu_logo" />
+          </button>
         </div>
       </div>
     </nav>
