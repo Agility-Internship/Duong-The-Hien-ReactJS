@@ -13,20 +13,24 @@ const ListCard = () => {
 
   return (
     <main>
-      <section className="service mt-32">
-        <div className="container flex justify-between mx-auto gap-4">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.id}
-              headerText={service.headerText}
-              title={service.title}
-              date={service.date}
-              author={service.author}
-            />
-          ))}
-          <div className="service-right w-3/5">
+      <section className="service mt-20 lg:mt-32">
+        <div className="container flex flex-col lg:flex-row justify-between mx-auto gap-5">
+          <div className="lg:w-1/2 flex flex-col">
+            <div className="w-full h-full">
+              {services.map((service) => (
+                <ServiceCard
+                  key={service.id}
+                  headerText={service.headerText}
+                  title={service.title}
+                  date={service.date}
+                  author={service.author}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="service-right lg:w-1/2 ">
             <img
-              className="w-full"
+              className="w-full lg:h-full object-cover"
               src={services[0].imgSrc.replace(/\\/g, '/')}
               alt="Service right img"
             />
@@ -35,9 +39,9 @@ const ListCard = () => {
       </section>
 
       <section className="product mt-32">
-        <div className="container mx-auto flex justify-between gap-y-44 flex-wrap">
+        <div className="container mx-auto grid sm:gap-y-20 lg:gap-y-44 sm:grid-cols-2 lg:grid-cols-3 gap-20 sm:gap-6">
           {products.map((product) => (
-            <div key={product.id} className="product-card w-[32%]">
+            <div key={product.id} className="product-card">
               <ProductCard
                 imgSrc={product.imgSrc}
                 headerText={product.headerText}
@@ -52,8 +56,8 @@ const ListCard = () => {
 
       <section className="marketing mt-32">
         <div className="container mx-auto">
-          <div className="marketing-content gap-4 justify-between flex">
-            <div className="content-left w-1/2">
+          <div className="marketing-content gap-4 justify-between flex flex-col lg:flex-row">
+            <div className="content-left lg:w-1/2">
               <ProductCard
                 imgSrc={marketing.imgSrc}
                 headerText={marketing.headerText}
@@ -62,7 +66,7 @@ const ListCard = () => {
                 author={marketing.author}
               />
             </div>
-            <div className="content-right flex flex-col justify-between pt-7 gap-16 w-1/2">
+            <div className="content-right flex flex-col justify-between pt-7 gap-16 lg:w-1/2">
               {horizontalCards.map((horizontalCard) => (
                 <div key={horizontalCard.id} className="horizontal-card">
                   <HorizontalCard
@@ -79,9 +83,9 @@ const ListCard = () => {
       </section>
 
       <section className="BlogArticle mt-32">
-        <div className="container mx-auto flex justify-between gap-y-44 flex-wrap">
+        <div className="container mx-auto grid sm:gap-y-20 lg:gap-y-44 sm:grid-cols-2 lg:grid-cols-3 gap-20 sm:gap-6">
           {blogArticles.map((blogArticle) => (
-            <div key={blogArticle.id} className="product-card w-[32%]">
+            <div key={blogArticle.id} className="product-card">
               <ProductCard
                 imgSrc={blogArticle.imgSrc}
                 headerText={blogArticle.headerText}

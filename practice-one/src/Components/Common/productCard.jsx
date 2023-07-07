@@ -11,7 +11,7 @@ const ProductCard = ({
   author = '',
   date = '',
 }) => (
-  <Card variant="primary" size="small">
+  <div className="flex h-full flex-col">
     <Card.CardHeader className="relative">
       <h5 className="text-sm text-gray-500 font-bold uppercase pb-2">
         {headerText}
@@ -36,7 +36,7 @@ const ProductCard = ({
         <span className="text-gray-500">{author}</span>
       </h4>
     </Card.CardFooter>
-  </Card>
+  </div>
 );
 
 ProductCard.propTypes = {
