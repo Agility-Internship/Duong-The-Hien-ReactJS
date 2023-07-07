@@ -8,7 +8,7 @@ const variantClasses = {
   secondary:
     'bg-secondary text-white hover:bg-white font-bold hover:text-black focus:bg-secondary focus:text-white',
   outline:
-    'bg-transparent hover:bg-primary hover:text-white hover:border-primary focus:bg-primary focus:text-white focus:border-primary',
+    'bg-transparent hover:bg-secondary hover:text-white focus:bg-white focus:text-primary focus:border-primary mb-6 border-none rounded-none w-52 h-16 bg-white drop-shadow-md',
 };
 
 const sizeClasses = {
@@ -40,7 +40,7 @@ const Button = ({
   return (
     <button type={type} className={buttonClasses} onClick={onClick}>
       {text}
-      {rightIcon && <span className="ml-2">{rightIcon}</span>}
+      {rightIcon && <img src="src/assets/icon_arrow_down.svg" alt="icon_arrow_down" className="pl-4" />}
     </button>
   );
 };
