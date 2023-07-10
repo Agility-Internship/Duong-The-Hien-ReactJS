@@ -8,13 +8,13 @@ import CtaSection from './Components/Section/CTA';
 import Footer from './Components/Section/Footer';
 
 const App = () => (
-  <div>
+  <>
     <Navbar />
     <Header />
     <ListCard />
     <CtaSection />
     <Footer />
-  </div>
+  </>
 );
 
 export default App;
