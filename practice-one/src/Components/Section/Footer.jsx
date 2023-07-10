@@ -176,8 +176,8 @@ const Footer = () => {
               name="language"
               id="language"
             >
-              <option value="volvo">English</option>
-              <option value="saab">Vietnamese</option>
+              <option value="Eng">English</option>
+              <option value="VN">Vietnamese</option>
             </select>
           </div>
         </div>
