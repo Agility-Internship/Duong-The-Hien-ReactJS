@@ -17,7 +17,7 @@ const CtaSection = () => (
           </p>
         </div>
       </div>
-      <div className="card-footer bg-[url(./assets/BG.png)] lg:bg-none bg-[100%] bg-fill  flex flex-col items-center w-full p-20 lg:p-0 justify-center">
+      <div className="card-footer bg-[url(./assets/BG.png)] lg:bg-none bg-[100%] bg-fill flex flex-col items-center w-full p-20 lg:p-0 justify-center">
         <Button
           text="Try for Free"
           variant="outline"
