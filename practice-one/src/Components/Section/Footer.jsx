@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import footerIcon from '../../database/footerIcon';
 
 const FooterLogo = ({ logoSrc, altText }) => (
   <div className="card-header">
@@ -67,62 +68,9 @@ FooterMenuItem.propTypes = {
 };
 
 const Footer = () => {
-  const footerMenus = [
-    {
-      title: 'Company',
-      items: ['About', 'Pricing', 'Jobs', 'Blog', 'Careers'],
-    },
-    {
-      title: 'Product',
-      items: [
-        'Sales software',
-        'Features',
-        'Privacy and security',
-        'Marketplace',
-        'Status',
-        'API',
-      ],
-    },
-    {
-      title: 'Discover',
-      items: [
-        'Partner Program',
-        'Get our newsletter',
-        'Sales Pipeline Course',
-        'What is CRM?',
-        'CRM Comparison',
-        'Resources',
-      ],
-    },
-    {
-      title: 'Help Center',
-      items: ['Community', 'Knowledge Base', 'Academy', 'Support'],
-    },
-  ];
-
-  const footerLinks = [
-    { text: 'Terms of Service' },
-    { text: 'Privacy Policy' },
-    { text: 'Cookie' },
-  ];
-
-  const footerIcons = [
-    {
-      iconSrc: 'src/assets/Twitter.png',
-      altText: 'Here is a logo of Twitter',
-      href: 'https://twitter.com/',
-    },
-    {
-      iconSrc: 'src/assets/Facebook.png',
-      altText: 'Here is a logo of Facebook',
-      href: 'https://www.facebook.com/',
-    },
-    {
-      iconSrc: 'src/assets/Linkedin.png',
-      altText: 'Here is a logo of LinkedIn',
-      href: 'https://www.linkedin.com/',
-    },
-  ];
+  const {
+    footerMenus, footerLinks, footerIcons, ShapeIcon,
+  } = footerIcon;
 
   return (
     <footer className="footer bg-white relative mt-56 lg:mt-0 m-7">
@@ -168,7 +116,7 @@ const Footer = () => {
           </ul>
           <div className="dropdown flex">
             <img
-              src="src\assets\Shape.png"
+              src={ShapeIcon.iconSrc}
               alt="This is the icon for the change language button"
             />
             <select
@@ -185,5 +133,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
