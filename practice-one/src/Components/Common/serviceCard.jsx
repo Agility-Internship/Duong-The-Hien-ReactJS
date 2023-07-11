@@ -12,7 +12,7 @@ const ServiceCard = ({
 }) => (
   <div className="border-t-2 border-b-2 border-gray-500 flex flex-col h-full pt-5 pb-5">
     <Card.CardHeader>
-      <h5 className="text-sm text-gray-500 font-bold uppercase lg:mb-6 ">
+      <h5 className="text-sm text-gray-500 font-bold uppercase lg:mb-6">
         {headerText}
       </h5>
     </Card.CardHeader>

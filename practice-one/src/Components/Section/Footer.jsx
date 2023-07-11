@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Mock database
 import dataFooter from '../../database/footerIcon';
 
-// Import the logo image
+// Image
 import logo from '../../assets/logo.png';
 
 const FooterLogo = ({ logoSrc, altText }) => (
@@ -46,7 +46,7 @@ FooterCardBody.propTypes = {
 
 const FooterMenu = ({ title, children }) => (
   <div className="footer-menu nav-menu">
-    <ul className="menu-list text-sm flex flex-col gap-4 ">
+    <ul className="menu-list text-sm flex flex-col gap-4">
       <a href="/" className="item font-bold hover:text-primary">
         {title}
       </a>
@@ -78,7 +78,7 @@ const Footer = () => {
   } = dataFooter;
 
   return (
-    <footer className="footer bg-white relative mt-56 lg:mt-0 m-7">
+    <footer className="footer bg-white absolute mt-56 lg:mt-0 m-7">
       <div className="footer-content container mx-auto mt-14 mb-12 flex flex-col lg:flex-row flex-wrap justify-between gap-y-8 lg:flex-nowrap">
         <div className="card w-[30%] lg:w-[20%]">
           <FooterLogo logoSrc={logo} altText="logo" />

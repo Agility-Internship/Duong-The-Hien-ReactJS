@@ -30,7 +30,7 @@ const ListCard = () => {
               ))}
             </div>
           </div>
-          <div className="service-right lg:w-1/2 ">
+          <div className="service-right lg:w-1/2">
             <img
               className="w-full lg:h-full object-cover"
               src={services[0].imgSrc.replace(/\\/g, '/')}

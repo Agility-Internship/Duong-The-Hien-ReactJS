@@ -1,4 +1,4 @@
-// Import images link
+// Images
 import service__img from '../assets/service__img.png';
 import product__item1 from '../assets/product__item1.png';
 import product__item2 from '../assets/product__item2.png';
