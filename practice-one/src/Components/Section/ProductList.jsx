@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Import Card data from the database
+// Mock database
 import dataCard from '../../database/productCard';
 
 // Components

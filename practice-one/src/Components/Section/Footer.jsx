@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Import footerIcon data from the database
+// Mock database
 import dataFooter from '../../database/footerIcon';
 
 // Import the logo image
