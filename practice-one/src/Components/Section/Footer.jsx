@@ -46,7 +46,7 @@ FooterCardBody.propTypes = {
 
 const FooterMenu = ({ title, children }) => (
   <div className="footer-menu nav-menu">
-    <ul className="menu-list text-sm flex flex-col gap-4 ">
+    <ul className="menu-list text-sm flex flex-col gap-4">
       <a href="/" className="item font-bold hover:text-primary">
         {title}
       </a>
