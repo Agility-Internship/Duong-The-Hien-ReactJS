@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Import footerIcon data from the database
-import footerIcon from '../../database/footerIcon';
+import dataFooter from '../../database/footerIcon';
 
 // Import the logo image
 import logo from '../../assets/logo.png';
@@ -75,7 +75,7 @@ FooterMenuItem.propTypes = {
 const Footer = () => {
   const {
     footerMenus, footerLinks, footerIcons, ShapeIcon,
-  } = footerIcon;
+  } = dataFooter;
 
   return (
     <footer className="footer bg-white relative mt-56 lg:mt-0 m-7">
