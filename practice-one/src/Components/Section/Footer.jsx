@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+// Import footerIcon data from the database
 import footerIcon from '../../database/footerIcon';
+
+// Import the logo image
 import logo from '../../assets/logo.png';
 
 const FooterLogo = ({ logoSrc, altText }) => (

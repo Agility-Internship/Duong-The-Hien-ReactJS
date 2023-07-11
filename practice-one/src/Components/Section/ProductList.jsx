@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Import Card data from the database
 import dataCard from '../../database/productCard';
 
 // Components
