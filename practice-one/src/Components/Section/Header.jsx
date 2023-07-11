@@ -70,7 +70,7 @@ const HeaderSelector = () => {
 const Header = () => (
   <div className="bg-light h-full">
     <div className="container mx-auto w-screen">
-      <div className="px-2 md:pb-24 sm:pb-9  w-full">
+      <div className="px-2 md:pb-24 pb-9 w-full">
         <HeaderCarousel title="News and insights" subtitle="from our experts" />
       </div>
       <div className="px-2 flex gap-12">
