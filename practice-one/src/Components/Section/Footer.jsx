@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Mock database
+import dataFooter from '../../database/footerIcon';
+
+// Import the logo image
+import logo from '../../assets/logo.png';
+
 const FooterLogo = ({ logoSrc, altText }) => (
   <div className="card-header">
     <a href="/" className="logo">
@@ -67,68 +73,15 @@ FooterMenuItem.propTypes = {
 };
 
 const Footer = () => {
-  const footerMenus = [
-    {
-      title: 'Company',
-      items: ['About', 'Pricing', 'Jobs', 'Blog', 'Careers'],
-    },
-    {
-      title: 'Product',
-      items: [
-        'Sales software',
-        'Features',
-        'Privacy and security',
-        'Marketplace',
-        'Status',
-        'API',
-      ],
-    },
-    {
-      title: 'Discover',
-      items: [
-        'Partner Program',
-        'Get our newsletter',
-        'Sales Pipeline Course',
-        'What is CRM?',
-        'CRM Comparison',
-        'Resources',
-      ],
-    },
-    {
-      title: 'Help Center',
-      items: ['Community', 'Knowledge Base', 'Academy', 'Support'],
-    },
-  ];
-
-  const footerLinks = [
-    { text: 'Terms of Service' },
-    { text: 'Privacy Policy' },
-    { text: 'Cookie' },
-  ];
-
-  const footerIcons = [
-    {
-      iconSrc: 'src/assets/Twitter.png',
-      altText: 'Here is a logo of Twitter',
-      href: 'https://twitter.com/',
-    },
-    {
-      iconSrc: 'src/assets/Facebook.png',
-      altText: 'Here is a logo of Facebook',
-      href: 'https://www.facebook.com/',
-    },
-    {
-      iconSrc: 'src/assets/Linkedin.png',
-      altText: 'Here is a logo of LinkedIn',
-      href: 'https://www.linkedin.com/',
-    },
-  ];
+  const {
+    footerMenus, footerLinks, footerIcons, ShapeIcon,
+  } = dataFooter;
 
   return (
     <footer className="footer bg-white relative mt-56 lg:mt-0 m-7">
       <div className="footer-content container mx-auto mt-14 mb-12 flex flex-col lg:flex-row flex-wrap justify-between gap-y-8 lg:flex-nowrap">
         <div className="card w-[30%] lg:w-[20%]">
-          <FooterLogo logoSrc="src\assets\logo.png" altText="logo" />
+          <FooterLogo logoSrc={logo} altText="logo" />
           <FooterCardBody text="We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs" />
           <div className="card-footer">
             <ul className="media menu-list flex gap-5">
@@ -168,7 +121,7 @@ const Footer = () => {
           </ul>
           <div className="dropdown flex">
             <img
-              src="src\assets\Shape.png"
+              src={ShapeIcon.iconSrc}
               alt="This is the icon for the change language button"
             />
             <select
@@ -185,5 +138,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

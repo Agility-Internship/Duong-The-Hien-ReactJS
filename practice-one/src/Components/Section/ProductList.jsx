@@ -1,5 +1,7 @@
 import React from 'react';
-import dataCard from '../../../database/productCard.json';
+
+// Mock database
+import dataCard from '../../database/productCard';
 
 // Components
 import ServiceCard from '../Common/serviceCard';

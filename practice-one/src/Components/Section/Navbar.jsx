@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Import the logo image
+import logo from '../../assets/logo.png';
+
 // Components
 import Button from '../Common/Button';
 
@@ -46,7 +49,7 @@ const Navbar = () => (
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center gap-5">
           <NavBrand to="#">
-            <img src="src\assets\logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </NavBrand>
           <div className="hidden lg:flex">
             <NavContent>
