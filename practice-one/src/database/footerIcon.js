@@ -1,4 +1,4 @@
-// Import icons images link
+// Images
 import Twitter__icon from '../assets/Twitter.png';
 import Facebook__icon from '../assets/Facebook.png';
 import Linkedin__icon from '../assets/Linkedin.png';

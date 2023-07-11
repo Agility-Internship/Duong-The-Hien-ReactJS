@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Import the logo image
+// Image
 import logo from '../../assets/logo.png';
 
 // Components
