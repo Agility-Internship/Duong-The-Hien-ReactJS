@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import footerIcon from '../../database/footerIcon';
+import logo from '../../assets/logo.png';
 
 const FooterLogo = ({ logoSrc, altText }) => (
   <div className="card-header">
@@ -76,7 +77,7 @@ const Footer = () => {
     <footer className="footer bg-white relative mt-56 lg:mt-0 m-7">
       <div className="footer-content container mx-auto mt-14 mb-12 flex flex-col lg:flex-row flex-wrap justify-between gap-y-8 lg:flex-nowrap">
         <div className="card w-[30%] lg:w-[20%]">
-          <FooterLogo logoSrc="src\assets\logo.png" altText="logo" />
+          <FooterLogo logoSrc={logo} altText="logo" />
           <FooterCardBody text="We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs" />
           <div className="card-footer">
             <ul className="media menu-list flex gap-5">
