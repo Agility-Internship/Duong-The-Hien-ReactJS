@@ -1,5 +1,5 @@
 import React from 'react';
-import dataCard from '../../../database/productCard.json';
+import dataCard from '../../database/productCard';
 
 // Components
 import ServiceCard from '../Common/serviceCard';
