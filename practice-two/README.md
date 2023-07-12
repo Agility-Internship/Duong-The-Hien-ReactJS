@@ -10,8 +10,8 @@
 ## TIMELINE
 
 * Start date: 13/07/2023
-* Estimate time: 11 days
-* End date: 03/28/2023 (Except Saturday and Sunday)
+* Estimate time: 7 days
+* End date: 21/07/2023 (Except Saturday and Sunday)
 * Task management: [Trello](https://trello.com/b/jjHXERu1/reactjs-practice-02)
 
 ## TECHNICAL
