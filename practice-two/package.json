@@ -9,6 +9,7 @@
         "start": "vite",
         "build": "vite build",
         "lint": "eslint src --ext js,jsx && prettier src --check",
+        "prettier:fix": "prettier src --write",
         "preview": "vite preview"
     },
     "repository": {
