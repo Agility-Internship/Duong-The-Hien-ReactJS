@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './components/common/Button';
+import ProductCard from './components/common/Card';
 
 const App = () => {
   const handlePrimaryButtonClick = () => {
@@ -47,6 +48,11 @@ const App = () => {
           <img src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png" alt="Button icon" className="w-full" />
         </Button>
       </div>
+      <ul className="w-[30%]">
+        <li className="item">
+          <ProductCard />
+        </li>
+      </ul>
     </>
   );
 };
