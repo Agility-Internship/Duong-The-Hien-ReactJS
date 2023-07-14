@@ -48,8 +48,17 @@ const App = () => {
           <img src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png" alt="Button icon" className="w-full" />
         </Button>
       </div>
-      <ul className="w-[30%]">
-        <li className="item">
+      <ul className="flex">
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+        <li className="item p-6">
           <ProductCard />
         </li>
       </ul>
