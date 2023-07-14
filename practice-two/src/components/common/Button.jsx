@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/button-has-type */
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const BUTTON = {
@@ -7,10 +8,8 @@ const BUTTON = {
 
 // Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
-  primary:
-    `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
-  secondary:
-    `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
+  primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
+  secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
 };
 
 const sizeClasses = {
@@ -26,7 +25,6 @@ const colorClasses = {
   black: 'text-black-500',
   gray: 'text-gray-500',
 };
-// eslint-disable-next-line react/function-component-definition
 
 /**
  * Button component

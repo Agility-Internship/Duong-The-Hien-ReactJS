@@ -30,6 +30,14 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/require-default-props": "off",
+        "react/function-component-definition": "off",
+        "react/button-has-type": "error",
+        "no-console": "warn",
+        "no-unused-vars": "error"
     }
 }
