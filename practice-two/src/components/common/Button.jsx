@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-// Constanst
-import { BUTTON } from '../../constants/components';
+const BUTTON = {
+  DEFAULT: 'bg-white hover:border-secondary border-2 border-light',
+};
 
 // Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
@@ -29,16 +30,19 @@ const colorClasses = {
 
 /**
  * Button component
- * @param text text for button
- * @param variant text for button
- * @param size text for button
- * @param rightIcon text for button
- * @param image image
- * @param rightIcon text for button
- * @returns button element
+ * @param children Text for the button.
+ * @param variant Variant of the button. Can be one of 'primary', 'secondary'
+ * @param size Size of the button. Can be one of 'small', 'medium', or 'large'.
+ * @param rightIcon Path to the right icon image.
+ * @param leftIcon Path to the left icon image.
+ * @param image Path to the button image.
+ * @param type Type of the button. Can be one of 'button', 'submit', or 'reset'.
+ * @param color Color of the button. Can be one of 'green', 'blue', 'red', 'gray'.
+ * @param onClick Click event handler function for the button.
+ * @returns {JSX.Element} - Button element.
  */
 const Button = ({
-  text,
+  children,
   variant = 'primary',
   size = 'medium',
   rightIcon,
@@ -68,7 +72,7 @@ const Button = ({
   return (
     <button type={type} className={buttonClasses} onClick={handleButtonClick}>
       {leftIcon && <img src={leftIconSrc} alt="left_icon" className="w-5" />}
-      {text}
+      {children}
       {image && <img src={image} alt="button_image" className="w-full h-full" />}
       {rightIcon && (
         <img src={rightIconSrc} alt="right_icon" className="w-4" />
@@ -78,7 +82,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   rightIcon: PropTypes.string,
