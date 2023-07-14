@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -24,7 +25,6 @@ const colorClasses = {
   black: 'text-black-500',
   gray: 'text-gray-500',
 };
-// eslint-disable-next-line react/function-component-definition
 
 /**
  * Button component
@@ -56,7 +56,6 @@ const Button = ({
   ].join(' ');
 
   return (
-    // eslint-disable-next-line react/button-has-type
     <button type={type} className={buttonClasses} onClick={handleButtonClick}>
       {children}
     </button>
