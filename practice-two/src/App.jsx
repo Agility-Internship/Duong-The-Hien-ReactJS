@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './components/common/Button';
 
-const App = () => {
+const App = () => (
   <>
     <div className=" flex gap-6">
       <Button variant="primary">
@@ -76,7 +76,7 @@ const App = () => {
         />
       </Button>
     </div>
-  </>;
-};
+  </>
+);
 
 export default App;
