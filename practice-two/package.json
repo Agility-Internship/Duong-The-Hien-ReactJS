@@ -1,6 +1,7 @@
 {
     "name": "practice-two",
     "description": "Build the UI of a page with React",
+    "type": "module",
     "author": "Hien Duong",
     "private": true,
     "version": "1.0.0",
