@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const BUTTON = {
@@ -7,10 +7,8 @@ const BUTTON = {
 
 // Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
-  primary:
-    `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
-  secondary:
-    `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
+  primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
+  secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
 };
 
 const sizeClasses = {
@@ -58,6 +56,7 @@ const Button = ({
   ].join(' ');
 
   return (
+    // eslint-disable-next-line react/button-has-type
     <button type={type} className={buttonClasses} onClick={handleButtonClick}>
       {children}
     </button>
