@@ -22,7 +22,12 @@ const ProductCard = () => (
       />
       <CardContent>
         <div className="card-name hover:text-secondary">
-          <Link href="/product-card" disabled level="body3" variant="custom-variant">
+          <Link
+            href="/product-card"
+            disabled
+            level="body3"
+            variant="custom-variant"
+          >
             Samsung Galaxy A24
           </Link>
         </div>

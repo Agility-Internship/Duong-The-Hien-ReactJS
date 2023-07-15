@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Link component
-function Link({
-  color, disabled, level, underline, variant, children,
-}) {
+function Link({ color, disabled, level, underline, variant, children }) {
   const linkStyles = {
     textDecoration: underline ? 'underline' : 'none',
     color: disabled && color,

@@ -40,5 +40,6 @@ module.exports = {
     'react/button-has-type': 'error', // Add rule to require button elements to have a type attribute
     'no-console': 'warn', // Add rule to warn when using console.log() and similar methods
     'no-unused-vars': 'error', // Add rule to error when variables are declared but not used
+    'object-curly-newline': 0,
   },
 };
