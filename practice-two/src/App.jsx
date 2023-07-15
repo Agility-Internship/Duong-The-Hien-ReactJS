@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './components/common/Button';
+import ProductCard from './components/common/ProductCard';
 
 const App = () => (
   <>
@@ -75,6 +76,20 @@ const App = () => (
           className="w-full"
         />
       </Button>
+      <ul className="flex">
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+        <li className="item p-6">
+          <ProductCard />
+        </li>
+      </ul>
     </div>
   </>
 );
