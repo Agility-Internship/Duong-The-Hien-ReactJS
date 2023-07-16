@@ -6,7 +6,6 @@ import ButtonDropdown from './components/common/ButtonDropdown';
 const App = () => (
   <>
     <div className=" flex gap-6">
-
       <ButtonDropdown variant="primary">
         Filter
         <img
@@ -21,7 +20,7 @@ const App = () => (
       </ButtonDropdown>
       <ButtonDropdown variant="primary">Prices</ButtonDropdown>
     </div>
-    <div className="mt-5 flex flex-wrap gap-3 ">
+    <div className="mt-5 gap-3 ">
       <Button variant="secondary" size="small">
         <img
           src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"

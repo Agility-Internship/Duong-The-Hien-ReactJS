@@ -55,7 +55,12 @@ const Button = ({
   ].join(' ');
 
   return (
-    <button type={type} className={buttonClasses} onClick={handleButtonClick} {...restProps}>
+    <button
+      type={type}
+      className={buttonClasses}
+      onClick={handleButtonClick}
+      {...restProps}
+    >
       {children}
     </button>
   );

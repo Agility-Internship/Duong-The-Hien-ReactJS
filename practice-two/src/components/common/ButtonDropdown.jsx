@@ -21,9 +21,7 @@ const ButtonDropdown = ({ children, dropdownContent, ...buttonProps }) => {
       </Button>
 
       {isDropdownOpen && (
-        <div className="bg-white mt-2 p-2 shadow">
-          {dropdownContent}
-        </div>
+        <div className="bg-white mt-2 p-2 shadow">{dropdownContent}</div>
       )}
     </div>
   );
