@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,7 +5,6 @@ const BUTTON = {
   DEFAULT: 'bg-white hover:border-secondary border-2 border-light',
 };
 
-// Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
   primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
   secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
@@ -20,7 +18,7 @@ const sizeClasses = {
 
 const colorClasses = {
   green: 'text-green-500',
-  hello: 'text-blue-500',
+  blue: 'text-blue-500',
   red: 'text-red-500',
   black: 'text-black-500',
   gray: 'text-gray-500',
@@ -42,7 +40,8 @@ const Button = ({
   size = 'medium',
   type = 'button',
   color = 'black',
-  onClick = () => {},
+  onClick,
+  ...restProps
 }) => {
   const handleButtonClick = () => {
     onClick();
@@ -56,7 +55,7 @@ const Button = ({
   ].join(' ');
 
   return (
-    <button type={type} className={buttonClasses} onClick={handleButtonClick}>
+    <button type={type} className={buttonClasses} onClick={handleButtonClick} {...restProps}>
       {children}
     </button>
   );
@@ -64,10 +63,10 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
+  variant: PropTypes.oneOf(['primary', 'secondary']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  color: PropTypes.oneOf(['green', 'blue', 'red', 'gray']),
+  color: PropTypes.oneOf(['green', 'blue', 'red', 'black', 'gray']),
   onClick: PropTypes.func,
 };
 
