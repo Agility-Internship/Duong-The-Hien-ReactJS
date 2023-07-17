@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-import ProductCard from './components/common/ProductCard';
+import ProductCard from './components/ProductCard';
 
 const App = () => (
   <div className="mt-5 gap-3 ">

@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Component
-import Card from './material/Card';
-import CardOverflow from './material/CardOverflow';
-import CardImage from './material/CardImage';
-import CardContent from './material/CardContent';
-import Typography from './Typography';
-import Link from './Link';
+import Card from './common/Card';
+import CardOverflow from './common/CardOverflow';
+import CardImage from './common/CardImage';
+import CardContent from './common/CardContent';
+import Typography from './common/Typography';
+import Link from './common/Link';
 
 /**
  * Product Card Component.
