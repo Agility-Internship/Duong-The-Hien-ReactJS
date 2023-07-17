@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Component
-import Card from './common/Card';
-import CardOverflow from './common/CardOverflow';
-import CardImage from './common/CardImage';
-import CardContent from './common/CardContent';
-import Typography from './common/Typography';
+import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
+import { Typography } from './common/DataDisplay';
 import Link from './common/Link';
 
 /**
