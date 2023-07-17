@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // Component
 import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
-import { Typography } from './common/DataDisplay';
+import Typography from './common/Typography';
 import Link from './common/Link';
 
 /**
