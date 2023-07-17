@@ -17,7 +17,8 @@ function Link({
   level = 'lg',
   underline = 'true',
   variant,
-  children }) {
+  children,
+}) {
   const linkStyles = {
     textDecoration: underline ? 'underline' : 'none',
     color: disabled && color,

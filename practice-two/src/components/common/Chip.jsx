@@ -17,7 +17,8 @@ function Chip({
   size = 'small',
   variant = 'outlined',
   icon,
-  children }) {
+  children,
+}) {
   const chipStyles = {
     backgroundColor: disabled ? 'gray' : color,
     fontSize: size === 'small' ? '0.8rem' : '1rem',
