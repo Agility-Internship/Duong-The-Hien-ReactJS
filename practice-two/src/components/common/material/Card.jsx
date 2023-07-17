@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- *
- * @param {*} param0
- * @returns
+ * Card Component
+ * @param maxW - The maximum width of the card. Defaults to 'xl'.
+ * @param variant - The variant of the card style. Defaults to 'primary'.
+ * @param children - The content to be displayed inside the Card component.
+ * @param onChange - The callback function .
+ * @returns {JSX.Element} - The Card component.
  */
 const Card = ({
   maxW = 'xl',

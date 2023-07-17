@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// CardImage component
+/**
+ * CardImage Component
+ * @param src - The URL of the image source.
+ * @param alt - The alternate text for the image.
+ * @returns {JSX.Element} - The CardImage component.
+ */
 const CardImage = ({ src, alt }) => (
   <img
     src={src}
