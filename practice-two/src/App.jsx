@@ -85,7 +85,7 @@ const App = () => (
             name="Samsung Galaxy A24"
             compare="6.5"
             resolution="Full HD+"
-            prices="          6.090.000₫"
+            prices="6.090.000₫"
           />
         </li>
         <li className="item p-6">
@@ -95,7 +95,7 @@ const App = () => (
             name="Samsung Galaxy A24"
             compare="6.5"
             resolution="Full HD+"
-            prices="          6.090.000₫"
+            prices="6.090.000₫"
           />
         </li>
         <li className="item p-6">
@@ -105,7 +105,7 @@ const App = () => (
             name="Samsung Galaxy A24"
             compare="6.5"
             resolution="Full HD+"
-            prices="          6.090.000₫"
+            prices="6.090.000₫"
           />
         </li>
         <li className="item p-6">
@@ -115,7 +115,7 @@ const App = () => (
             name="Samsung Galaxy A24"
             compare="6.5"
             resolution="Full HD+"
-            prices="          6.090.000₫"
+            prices="6.090.000₫"
           />
         </li>
       </ul>
