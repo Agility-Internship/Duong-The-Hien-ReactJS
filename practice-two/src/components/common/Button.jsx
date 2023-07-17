@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -5,11 +6,11 @@ const BUTTON = {
   DEFAULT: 'bg-white hover:border-secondary border-2 border-light',
 };
 
+// Mapping the props to corresponding Tailwind CSS classes
 const variantClasses = {
   primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
   secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
 };
-
 const sizeClasses = {
   small: 'px-3 py-1 text-sm',
   medium: 'px-4 py-2 text-base',
@@ -18,12 +19,11 @@ const sizeClasses = {
 
 const colorClasses = {
   green: 'text-green-500',
-  blue: 'text-blue-500',
+  hello: 'text-blue-500',
   red: 'text-red-500',
   black: 'text-black-500',
   gray: 'text-gray-500',
 };
-
 /**
  * Button component
  * @param children Text for the button.
@@ -40,13 +40,11 @@ const Button = ({
   size = 'medium',
   type = 'button',
   color = 'black',
-  onClick,
-  ...restProps
+  onClick = () => {},
 }) => {
   const handleButtonClick = () => {
     onClick();
   };
-
   const buttonClasses = [
     'inline-flex items-center gap-2 pl-2 pr-2',
     sizeClasses[size],
@@ -55,12 +53,7 @@ const Button = ({
   ].join(' ');
 
   return (
-    <button
-      type={type}
-      className={buttonClasses}
-      onClick={handleButtonClick}
-      {...restProps}
-    >
+    <button type={type} className={buttonClasses} onClick={handleButtonClick}>
       {children}
     </button>
   );
@@ -68,10 +61,10 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  color: PropTypes.oneOf(['green', 'blue', 'red', 'black', 'gray']),
+  color: PropTypes.oneOf(['green', 'blue', 'red', 'gray']),
   onClick: PropTypes.func,
 };
 
