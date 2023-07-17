@@ -11,7 +11,13 @@ import PropTypes from 'prop-types';
  * @param children - The content to be displayed inside the chip.
  * @returns {JSX.Element} - The Chip component.
  */
-function Chip({ color, disabled, size, variant, icon, children }) {
+function Chip({
+  color = 'black',
+  disabled = 'false',
+  size = 'small',
+  variant = 'outlined',
+  icon,
+  children }) {
   const chipStyles = {
     backgroundColor: disabled ? 'gray' : color,
     fontSize: size === 'small' ? '0.8rem' : '1rem',

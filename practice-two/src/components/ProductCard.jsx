@@ -21,7 +21,7 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
     <Card>
       <CardOverflow>
         <div className="card-label ">
-          <Typography color="black" level="body1" variant="solid">
+          <Typography color="black" level="xl" variant="solid">
             {label}
           </Typography>
         </div>
@@ -31,21 +31,21 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
             <Link
               href="/product-card"
               disabled
-              level="body3"
+              level="xl"
               variant="custom-variant"
             >
               {name}
             </Link>
           </div>
           <div className="card-compare flex gap-2">
-            <Typography color="black" level="body1" variant="solid">
+            <Typography color="black" level="md" variant="solid">
               {compare}
             </Typography>
-            <Typography color="black" level="body1" variant="solid">
+            <Typography color="black" level="md" variant="solid">
               {resolution}
             </Typography>
           </div>
-          <Typography color="red" level="body3">
+          <Typography color="red" level="xl">
             {prices}
           </Typography>
         </CardContent>
