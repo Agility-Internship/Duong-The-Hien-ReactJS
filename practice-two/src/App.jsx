@@ -10,7 +10,7 @@ const App = () => (
     <div className="flex gap-5">
       <Popover
         variant="primary"
-        dropdownContent={
+        popoverContent={
           <div>
             <Button variant="secondary" size="small">
               <img
