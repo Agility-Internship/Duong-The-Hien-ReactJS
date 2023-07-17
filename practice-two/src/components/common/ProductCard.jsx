@@ -11,12 +11,12 @@ import Link from './Link';
 
 /**
  * Product Card Component.
- * @param {string} label - The label for the card.
- * @param {string} image - The image source for the card.
- * @param {string} name - The name of the product.
- * @param {string} compare - Comparison information for the product.
- * @param {string} resolution - Resolution information for the product.
- * @param {string} prices - The price information for the product.
+ * @param label - The label for the card.
+ * @param image - The image source for the card.
+ * @param name - The name of the product.
+ * @param compare - Comparison information for the product.
+ * @param resolution - Resolution information for the product.
+ * @param prices - The price information for the product.
  * @returns {JSX.Element} Products Card content
  */
 function ProductCard({ label, image, name, compare, resolution, prices }) {

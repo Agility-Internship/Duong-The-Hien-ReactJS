@@ -1,8 +1,16 @@
-/* eslint-disable object-curly-newline */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Chip component
+/**
+ * Chip Component
+ * @param color - The background color of the chip.
+ * @param disabled - Determines if the chip is disabled or not.
+ * @param size - The size of the chip. Possible values: 'small', 'medium'.
+ * @param variant - The style possible values: 'solid', 'plain', 'outlined', 'soft'.
+ * @param icon - The icon to be displayed on the chip.
+ * @param children - The content to be displayed inside the chip.
+ * @returns {JSX.Element} - The Chip component.
+ */
 function Chip({ color, disabled, size, variant, icon, children }) {
   const chipStyles = {
     backgroundColor: disabled ? 'gray' : color,

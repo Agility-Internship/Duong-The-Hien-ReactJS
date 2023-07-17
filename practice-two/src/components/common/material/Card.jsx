@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Card component
+/**
+ *
+ * @param {*} param0
+ * @returns
+ */
 const Card = ({
   maxW = 'xl',
   variant = 'primary',

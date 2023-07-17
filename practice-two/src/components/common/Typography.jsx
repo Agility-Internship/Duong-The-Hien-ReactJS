@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Typography component
+/**
+ * Typography Component
+ * @param color - The color of the text.
+ * @param level - The level of the text's font values: 'body3', 'body2', 'body1'.
+ * @param variant - The variant of the text values: 'solid', 'soft', 'outlined', 'plain'.
+ * @param children - The content to be displayed inside the Typography component.
+ * @returns {JSX.Element} - The Typography component.
+ */
 function Typography({ color, level, variant, children }) {
   const levelClasses = {
     body3: 'text-xl font-bold ',
