@@ -42,5 +42,6 @@ module.exports = {
     'no-unused-vars': 'error', // Add rule to error when variables are declared but not used
     'object-curly-newline': 0,
     'react/jsx-props-no-spreading': 0, // Close jsx ... props
+    'react/jsx-wrap-multilines': 0, // config husky eslint to formatting
   },
 };
