@@ -11,6 +11,7 @@ const variantClasses = {
   primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
   secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
 };
+
 const sizeClasses = {
   small: 'px-3 py-1 text-sm',
   medium: 'px-4 py-2 text-base',
@@ -24,6 +25,7 @@ const colorClasses = {
   black: 'text-black-500',
   gray: 'text-gray-500',
 };
+
 /**
  * Button component
  * @param children Text for the button.
@@ -45,6 +47,7 @@ const Button = ({
   const handleButtonClick = () => {
     onClick();
   };
+
   const buttonClasses = [
     'inline-flex items-center gap-2 pl-2 pr-2',
     sizeClasses[size],
