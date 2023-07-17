@@ -17,7 +17,7 @@ import Link from './Link';
  * @param {string} compare - Comparison information for the product.
  * @param {string} resolution - Resolution information for the product.
  * @param {string} prices - The price information for the product.
- * @returns {JSX.Element} Products Card contetn
+ * @returns {JSX.Element} Products Card content
  */
 function ProductCard({ label, image, name, compare, resolution, prices }) {
   return (
