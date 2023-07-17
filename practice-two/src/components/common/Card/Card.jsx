@@ -6,16 +6,10 @@ import PropTypes from 'prop-types';
  * @param maxW - The maximum width of the card. Defaults to 'xl'.
  * @param variant - The variant of the card style. Defaults to 'primary'.
  * @param children - The content to be displayed inside the Card component.
- * @param onChange - The callback function .
  * @returns {JSX.Element} - The Card component.
  */
-const Card = ({
-  maxW = 'xl',
-  variant = 'primary',
-  children,
-  onChange = () => {},
-}) => {
-  const commonClasses = 'bg-white';
+const Card = ({ maxW = 'xl', variant = 'primary', children }) => {
+  const commonClasses = 'card bg-white';
 
   const variantClasses = {
     primary: 'border-none',
@@ -27,11 +21,7 @@ const Card = ({
 
   const cardClasses = `${commonClasses} ${variantClasses[variant]}`;
 
-  return (
-    <div className={`card max-w-${maxW} ${cardClasses}`} onChange={onChange}>
-      {children}
-    </div>
-  );
+  return <div className={`max-w-${maxW} ${cardClasses}`}>{children}</div>;
 };
 
 Card.propTypes = {
@@ -43,7 +33,6 @@ Card.propTypes = {
     'danger',
     'warning',
   ]),
-  onChange: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
 

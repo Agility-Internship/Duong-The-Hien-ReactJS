@@ -31,6 +31,7 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
             <Link
               href="/product-card"
               disabled
+              underline={false}
               level="xl"
               variant="custom-variant"
             >
