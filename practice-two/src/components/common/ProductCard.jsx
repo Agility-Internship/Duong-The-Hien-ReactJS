@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Component
 import Card from './material/Card';
@@ -8,43 +9,61 @@ import CardContent from './material/CardContent';
 import Typography from './Typography';
 import Link from './Link';
 
-const ProductCard = () => (
-  <Card>
-    <CardOverflow>
-      <div className="card-label ">
-        <Typography color="black" level="body1" variant="solid">
-          0% installment
-        </Typography>
-      </div>
-      <CardImage
-        src="https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg"
-        alt=""
-      />
-      <CardContent>
-        <div className="card-name hover:text-secondary">
-          <Link
-            href="/product-card"
-            disabled
-            level="body3"
-            variant="custom-variant"
-          >
-            Samsung Galaxy A24
-          </Link>
-        </div>
-        <div className="card-compare flex gap-2">
+/**
+ * Product Card Component.
+ * @param {string} label - The label for the card.
+ * @param {string} image - The image source for the card.
+ * @param {string} name - The name of the product.
+ * @param {string} compare - Comparison information for the product.
+ * @param {string} resolution - Resolution information for the product.
+ * @param {string} prices - The price information for the product.
+ * @returns {JSX.Element} Products Card contetn
+ */
+function ProductCard({ label, image, name, compare, resolution, prices }) {
+  return (
+    <Card>
+      <CardOverflow>
+        <div className="card-label ">
           <Typography color="black" level="body1" variant="solid">
-            6.5
-          </Typography>
-          <Typography color="black" level="body1" variant="solid">
-            Full HD+
+            {label}
           </Typography>
         </div>
-        <Typography color="red" level="body3">
-          6.090.000₫
-        </Typography>
-      </CardContent>
-    </CardOverflow>
-  </Card>
-);
+        <CardImage src={image} alt="This is a picture of the card-image" />
+        <CardContent>
+          <div className="card-name hover:text-secondary">
+            <Link
+              href="/product-card"
+              disabled
+              level="body3"
+              variant="custom-variant"
+            >
+              {name}
+            </Link>
+          </div>
+          <div className="card-compare flex gap-2">
+            <Typography color="black" level="body1" variant="solid">
+              {compare}
+            </Typography>
+            <Typography color="black" level="body1" variant="solid">
+              {resolution}
+            </Typography>
+          </div>
+          <Typography color="red" level="body3">
+            {prices}
+          </Typography>
+        </CardContent>
+      </CardOverflow>
+    </Card>
+  );
+}
+
+ProductCard.propTypes = {
+  label: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  compare: PropTypes.string.isRequired,
+  resolution: PropTypes.string.isRequired,
+  prices: PropTypes.string.isRequired,
+};
 
 export default ProductCard;
