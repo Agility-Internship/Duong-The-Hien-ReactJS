@@ -37,7 +37,6 @@
         "react/require-default-props": "off",
         "react/function-component-definition": "off",
         "react/button-has-type": "error",
-        "no-console": "warn",
-        "no-unused-vars": "error"
+        "no-console": "warn"
     }
 }
