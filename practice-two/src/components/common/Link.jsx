@@ -12,15 +12,7 @@ import PropTypes from 'prop-types';
  * @param children - The content to be displayed inside the link.
  * @returns {JSX.Element} The Link component.
  */
-function Link({
-  href = '#',
-  color = 'black',
-  disabled = false,
-  size = 'lg',
-  underline = true,
-  variant,
-  children,
-}) {
+function Link({ href = '#', color = 'black', disabled = false, size = 'lg', underline = true, variant, children }) {
   const linkStyles = {
     textDecoration: underline ? 'underline' : 'none',
     color: disabled ? color : null,

@@ -34,33 +34,15 @@ const colorClasses = {
  * @param onClick Click event handler function for the button.
  * @returns {JSX.Element} - Button element.
  */
-const Button = ({
-  children,
-  variant = 'primary',
-  size = 'medium',
-  type = 'button',
-  color = 'black',
-  onClick,
-  ...restProps
-}) => {
+const Button = ({ children, variant = 'primary', size = 'medium', type = 'button', color = 'black', onClick, ...restProps }) => {
   const handleButtonClick = () => {
     onClick();
   };
 
-  const buttonClasses = [
-    'inline-flex items-center gap-2 pl-2 pr-2',
-    sizeClasses[size],
-    variantClasses[variant],
-    colorClasses[color],
-  ].join(' ');
+  const buttonClasses = ['inline-flex items-center gap-2 pl-2 pr-2', sizeClasses[size], variantClasses[variant], colorClasses[color]].join(' ');
 
   return (
-    <button
-      type={type}
-      className={buttonClasses}
-      onClick={handleButtonClick}
-      {...restProps}
-    >
+    <button type={type} className={buttonClasses} onClick={handleButtonClick} {...restProps}>
       {children}
     </button>
   );
