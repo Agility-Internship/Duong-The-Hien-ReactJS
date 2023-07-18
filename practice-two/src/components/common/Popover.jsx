@@ -14,13 +14,13 @@ import Button from './Button';
 // prettier-ignore
 const Popover = ({ isOpen, onClose, closeButton = true, children }) => (
   isOpen ? (
-    <div className="popover absolute flex top-10 -left-5 bg-white border-2 border-gray-300 m-4 p-5 z-10">
-      <div className="popover-inner relative flex">
-        <div className="popover-main flex">
-          <div className="popover-content">{children}</div>
+    <div className="flex top-10 -left-5 bg-white border-2 border-gray-300 m-4 p-5 z-10">
+      <div className="relative flex">
+        <div className="flex">
+          <di>{children}</di>
           {/* Render the close button only if closeButton prop is true */}
           {closeButton && (
-            <div className="btn-close">
+            <div>
               <Button onClick={onClose}>Close</Button>
             </div>
           )}
