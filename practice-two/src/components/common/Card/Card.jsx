@@ -26,7 +26,13 @@ const Card = ({ maxW = 'xl', variant = 'primary', children }) => {
 
 Card.propTypes = {
   maxW: PropTypes.string,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning']),
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+  ]),
   children: PropTypes.node.isRequired,
 };
 

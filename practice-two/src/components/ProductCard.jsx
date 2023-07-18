@@ -28,7 +28,13 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
         <CardImage src={image} alt="This is a picture of the card-image" />
         <CardContent>
           <div className="card-name hover:text-secondary">
-            <Link href="/product-card" disabled underline={false} size="xl" variant="custom-variant">
+            <Link
+              href="/product-card"
+              disabled
+              underline={false}
+              size="xl"
+              variant="custom-variant"
+            >
               {name}
             </Link>
           </div>

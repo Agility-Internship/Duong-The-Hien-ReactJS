@@ -13,6 +13,7 @@ import Button from './Button';
  */
 const Popover = ({ isOpen, onClose, closeButton = true, children }) => {
   // CSS styles for the popover (using Tailwind CSS classes)
+  // prettier-ignore
   const popoverStyles = 'popover absolute flex top-10 -left-5 bg-white border-2 border-gray-300 m-4 p-5 z-10';
   const popoverInnerStyles = 'popover-inner relative flex';
   const popoverMainStyles = 'popover-main flex';
