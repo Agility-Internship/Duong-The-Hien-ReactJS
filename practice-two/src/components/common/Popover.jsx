@@ -16,15 +16,11 @@ const Popover = ({ isOpen, onClose, closeButton = true, children }) => (
   isOpen ? (
     <div className="flex top-10 -left-5 bg-white border-2 border-gray-300 m-4 p-5 z-10">
       <div className="relative flex">
-        <div className="flex">
-          <di>{children}</di>
-          {/* Render the close button only if closeButton prop is true */}
-          {closeButton && (
-            <div>
-              <Button onClick={onClose}>Close</Button>
-            </div>
-          )}
-        </div>
+        {children}
+        {/* Render the close button only if closeButton prop is true */}
+        {closeButton && (
+          <Button onClick={onClose}>Close</Button>
+        )}
       </div>
     </div>
   ) : null

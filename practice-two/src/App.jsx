@@ -10,7 +10,7 @@ const App = () => (
     <Popover isOpen>
       <div className="filter-show show-total flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-9 max-h-[80vh] p-0 ">
         <Button variant="primary" size="small">
-          <img
+          <imgp
             src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
             alt="Button icon"
             className="w-full "
