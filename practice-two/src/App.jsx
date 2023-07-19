@@ -3,9 +3,13 @@ import React from 'react';
 // Components
 import Button from './components/common/Button';
 import Popover from './components/common/Popover';
+import GroupFilterPopover from './components/GroupFilterPopover';
 
 const App = () => (
   <div className="flex gap-6">
+    <div className="filter-category relative">
+      <GroupFilterPopover />
+    </div>
     <div className="filter-category relative">
       <Button variant="primary">filter</Button>
       <Popover isOpen>
