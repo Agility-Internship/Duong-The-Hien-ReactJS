@@ -30,9 +30,9 @@ const Popover = ({ isOpen, onClose, closeButton = true, children }) => (
 
 Popover.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func,
   closeButton: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default Popover;
