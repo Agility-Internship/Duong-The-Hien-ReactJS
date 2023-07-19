@@ -1,52 +1,200 @@
 import React from 'react';
 
-// Component
-import ProductCard from './components/ProductCard';
+// Components
+import Button from './components/common/Button';
+import Popover from './components/common/Popover';
 
 const App = () => (
-  <div className="mt-5 gap-3 ">
-    <ul className="flex">
-      <li className="item p-6">
-        <ProductCard
-          label="0% installment"
-          image="https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg"
-          name="Samsung Galaxy A24"
-          compare="6.5"
-          resolution="Full HD+"
-          prices="6.090.000₫"
-        />
-      </li>
-      <li className="item p-6">
-        <ProductCard
-          label="0% installment"
-          image="https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg"
-          name="Samsung Galaxy A24"
-          compare="6.5"
-          resolution="Full HD+"
-          prices="6.090.000₫"
-        />
-      </li>
-      <li className="item p-6">
-        <ProductCard
-          label="0% installment"
-          image="https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg"
-          name="Samsung Galaxy A24"
-          compare="6.5"
-          resolution="Full HD+"
-          prices="6.090.000₫"
-        />
-      </li>
-      <li className="item p-6">
-        <ProductCard
-          label="0% installment"
-          image="https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg"
-          name="Samsung Galaxy A24"
-          compare="6.5"
-          resolution="Full HD+"
-          prices="6.090.000₫"
-        />
-      </li>
-    </ul>
+  <div className="flex gap-6">
+    <div className="filter-category relative">
+      <Button variant="primary">filter</Button>
+      <Popover isOpen>
+        <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-9 max-h-[80vh] p-0">
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+        </div>
+      </Popover>
+    </div>
+    <div className="filter-category relative">
+      <Button variant="primary">Brand</Button>
+      <Popover closeButton={false} isOpen>
+        <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-9 max-h-[80vh] p-0">
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+        </div>
+      </Popover>
+    </div>
+    <div className="filter-category relative">
+      <Button variant="primary">Price</Button>
+      <Popover isOpen closeButton={false}>
+        <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-9 max-h-[80vh] p-0">
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+          <Button variant="primary" size="small">
+            <img
+              src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+              alt="Button icon"
+              className="w-full"
+            />
+          </Button>
+        </div>
+      </Popover>
+    </div>
   </div>
 );
 
