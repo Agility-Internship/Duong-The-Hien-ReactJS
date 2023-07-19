@@ -6,7 +6,7 @@ import Button from './common/Button';
 import Popover from './common/Popover';
 import Typography from './common/Typography';
 
-const GroupFilterPopover = ({ children, dropdownContent, ...buttonProps }) => {
+const GroupFilterPopover = ({ children }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -19,9 +19,7 @@ const GroupFilterPopover = ({ children, dropdownContent, ...buttonProps }) => {
 
   return (
     <div className="relative box-">
-      <Button onClick={handleButtonClick} {...buttonProps}>
-        {children}
-      </Button>
+      <Button onClick={handleButtonClick}>{children}</Button>
       {isDropdownOpen && (
         <Popover isOpen={isDropdownOpen} onClose={toggleDropdown}>
           {/* Group filter popover */}
@@ -115,7 +113,6 @@ const GroupFilterPopover = ({ children, dropdownContent, ...buttonProps }) => {
 
 GroupFilterPopover.propTypes = {
   children: PropTypes.node.isRequired,
-  dropdownContent: PropTypes.node.isRequired,
 };
 
 export default GroupFilterPopover;
