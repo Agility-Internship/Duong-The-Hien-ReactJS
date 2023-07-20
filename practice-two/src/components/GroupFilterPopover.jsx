@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
@@ -6,16 +6,47 @@ import Button from './common/Button';
 import Popover from './common/Popover';
 import Typography from './common/Typography';
 
+/**
+ * GroupFilterPopover Component
+ *
+ * A popover component for grouping and filtering options.
+ * When the button is clicked, popover with a list of manufacturers and price options is displayed.
+ * Users can select specific options to apply filters, e.g., for a product list.
+ * The popover automatically closes when clicking outside of it.
+ *
+ * @param children - The content inside the button.
+ * @returns {JSX.Element} The GroupFilterPopover Component
+ */
 const GroupFilterPopover = ({ children }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const popoverRef = useRef(null);
 
-  const toggleDropdown = () => {
+  // Toggle the popover open/close state
+  const togglePopover = () => {
     setIsPopoverOpen(!isPopoverOpen);
   };
 
+  // Handle button click event
   const handleButtonClick = () => {
-    toggleDropdown();
+    togglePopover();
   };
+
+  // Handle clicks outside the popover to close it
+  const handleClickOutside = (event) => {
+    if (popoverRef.current && !popoverRef.current.contains(event.target)) {
+      setIsPopoverOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add an event listener to detect clicks outside the popover when it's open.
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      // Clean up the event listener when the component unmounts.
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   // Data testing
   const manufacturers = [
@@ -31,10 +62,10 @@ const GroupFilterPopover = ({ children }) => {
   ];
 
   return (
-    <div className="relative box-">
+    <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>{children}</Button>
       {isPopoverOpen && (
-        <Popover isOpen={isPopoverOpen} onClose={toggleDropdown}>
+        <Popover isOpen={isPopoverOpen} onClose={togglePopover}>
           {/* Group filter popover */}
           <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
             {/* Manufacture list */}
