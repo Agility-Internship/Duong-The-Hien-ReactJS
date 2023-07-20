@@ -7,21 +7,34 @@ import Popover from './common/Popover';
 import Typography from './common/Typography';
 
 const GroupFilterPopover = ({ children }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsPopoverOpen(!isPopoverOpen);
   };
 
   const handleButtonClick = () => {
     toggleDropdown();
   };
 
+  // Data testing
+  const manufacturers = [
+    'http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png',
+    // Add other manufacturer URLs here
+  ];
+
+  const prices = [
+    '2-4 million',
+    '4-8 million',
+    '8-15 million',
+    'Over 15 million',
+  ];
+
   return (
     <div className="relative box-">
       <Button onClick={handleButtonClick}>{children}</Button>
-      {isDropdownOpen && (
-        <Popover isOpen={isDropdownOpen} onClose={toggleDropdown}>
+      {isPopoverOpen && (
+        <Popover isOpen={isPopoverOpen} onClose={toggleDropdown}>
           {/* Group filter popover */}
           <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
             {/* Manufacture list */}
@@ -30,63 +43,16 @@ const GroupFilterPopover = ({ children }) => {
                 <Typography size="xl">Manufacture</Typography>
               </div>
               {/* Filter Manufactures Button */}
-              <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto ">
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
-                <Button variant="primary" size="small">
-                  <img
-                    src="http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
-                    alt="Button icon"
-                    className="w-full"
-                  />
-                </Button>
+              <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+                {manufacturers.map((manufacturer, index) => (
+                  <Button key={index.id} variant="primary" size="small">
+                    <img
+                      src={manufacturer}
+                      alt={`Manufacturer ${index + 1}`}
+                      className="w-full"
+                    />
+                  </Button>
+                ))}
               </div>
             </div>
             {/* Hr line */}
@@ -98,10 +64,9 @@ const GroupFilterPopover = ({ children }) => {
               </div>
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                <Button>2-4 million</Button>
-                <Button>4-8 million</Button>
-                <Button>8-15 million</Button>
-                <Button>Over 15 million</Button>
+                {prices.map((price, index) => (
+                  <Button key={index.id}>{price}</Button>
+                ))}
               </div>
             </div>
           </div>
