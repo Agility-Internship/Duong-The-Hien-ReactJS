@@ -5,6 +5,10 @@ import Button from './common/Button';
 import Popover from './common/Popover';
 import Typography from './common/Typography';
 
+// Logo Brand
+import BRAND from '../constants/images';
+import { PRICES } from '../constants/data';
+
 /**
  * GroupFilterPopover Component
  *
@@ -36,18 +40,13 @@ const GroupFilterPopover = () => {
     };
   }, []);
 
-  // Data testing
-  const manufacturers = [
-    'http://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png',
-    // Add other manufacturer URLs here
-  ];
+  const manufacturers = BRAND.map((brand) => brand.imageURL);
 
-  const prices = [
-    '2-4 million',
-    '4-8 million',
-    '8-15 million',
-    'Over 15 million',
-  ];
+  const prices = PRICES.map((price) => ({
+    text: price.text,
+    min: price.minPrice,
+    max: price.maxPrice,
+  }));
 
   return (
     <div className="relative" ref={popoverRef}>
@@ -70,11 +69,11 @@ const GroupFilterPopover = () => {
               </div>
               {/* Filter Manufactures Button */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {manufacturers.map((manufacturer, index) => (
-                  <Button key={index.id}>
+                {manufacturers.map((manufacturer, key) => (
+                  <Button key={key.id}>
                     <img
                       src={manufacturer}
-                      alt={`Manufacturer ${index + 1}`}
+                      alt={`Manufacturer ${key + 1}`}
                       className="w-full"
                     />
                   </Button>
@@ -90,8 +89,14 @@ const GroupFilterPopover = () => {
               </div>
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {prices.map((price, index) => (
-                  <Button key={index.id}>{price}</Button>
+                {prices.map((price, key) => (
+                  <Button
+                    key={key.id}
+                    data-min={price.min}
+                    data-max={price.max}
+                  >
+                    {price.text}
+                  </Button>
                 ))}
               </div>
             </div>
