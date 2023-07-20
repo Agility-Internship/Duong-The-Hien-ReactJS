@@ -6,7 +6,7 @@ import Popover from './common/Popover';
 import Typography from './common/Typography';
 
 // Logo Brand
-import BRAND from '../constants/images';
+import BRAND from '../constants/brand';
 import { PRICES } from '../constants/data';
 
 /**
