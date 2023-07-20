@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 
 // Components
 import Button from './common/Button';
@@ -14,22 +13,11 @@ import Typography from './common/Typography';
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
- * @param children - The content inside the button.
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
-const GroupFilterPopover = ({ children }) => {
+const GroupFilterPopover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
-
-  // Toggle the popover open/close state
-  const togglePopover = () => {
-    setIsPopoverOpen(!isPopoverOpen);
-  };
-
-  // Handle button click event
-  const handleButtonClick = () => {
-    togglePopover();
-  };
 
   // Handle clicks outside the popover to close it
   const handleClickOutside = (event) => {
@@ -63,9 +51,16 @@ const GroupFilterPopover = ({ children }) => {
 
   return (
     <div className="relative" ref={popoverRef}>
-      <Button onClick={handleButtonClick}>{children}</Button>
+      <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+        Filter
+        <img
+          src="public\images\Filter-icon.png"
+          alt="filter-icon"
+          className="w-4"
+        />
+      </Button>
       {isPopoverOpen && (
-        <Popover isOpen={isPopoverOpen} onClose={togglePopover}>
+        <Popover isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
           {/* Group filter popover */}
           <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
             {/* Manufacture list */}
@@ -76,7 +71,7 @@ const GroupFilterPopover = ({ children }) => {
               {/* Filter Manufactures Button */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {manufacturers.map((manufacturer, index) => (
-                  <Button key={index.id} variant="primary" size="small">
+                  <Button key={index.id}>
                     <img
                       src={manufacturer}
                       alt={`Manufacturer ${index + 1}`}
@@ -105,10 +100,6 @@ const GroupFilterPopover = ({ children }) => {
       )}
     </div>
   );
-};
-
-GroupFilterPopover.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default GroupFilterPopover;
