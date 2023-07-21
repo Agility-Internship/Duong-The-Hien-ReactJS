@@ -4,38 +4,37 @@ import React, { useState, useRef } from 'react';
 import Button from './common/Button';
 import Popover from './common/Popover';
 
-// Logo Brand
-import BRAND from '../constants/brand';
+// Logo Prices
+import { PRICES } from '../constants/data';
 
 // Hook
 import useClickOutside from '../hook/useClickOutside';
-
 /**
- * ManuFactureFilterPopover Component
+ * PricePopover Component
  *
  * A popover component for filtering options.
- * When the button is clicked, popover with a list of manufacturers is displayed.
+ * When the button is clicked, popover with a list of prices is displayed.
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
- * @returns {JSX.Element} The ManuFactureFilterPopover Component
+ * @returns {JSX.Element} The PricePopover Component
  */
-const ManuFacturePopover = () => {
+const PricePopover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
   useClickOutside(popoverRef, () => setIsPopoverOpen(false));
 
-  const manufacturers = BRAND.map((brand) => ({
-    id: brand.id,
-    img: brand.imageURL,
-    alt: brand.type,
+  const prices = PRICES.map((price) => ({
+    text: price.text,
+    min: price.minPrice,
+    max: price.maxPrice,
   }));
 
   return (
     <div className="relative" ref={popoverRef}>
       <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-        ManuFactures
+        Prices
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
@@ -45,18 +44,21 @@ const ManuFacturePopover = () => {
           onClose={() => setIsPopoverOpen(false)}
         >
           <div className="flex flex-wrap w-[900px] max-w-[900px] gap-0 max-h-[80vh] py-5">
-            {/* Manufacture list */}
+            {/* PricePopover list */}
             <div className="w-full block px-5">
-              {/* Filter Manufactures Button */}
-              {/* TODO: Update reuse components, props manufactures */}
+              {/* Filter PricePopovers Button */}
+              {/* TODO: Update reuse components, props PricePopovers */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {manufacturers.map((manufacturer) => (
-                  <Button key={manufacturer.id}>
-                    <img
-                      src={manufacturer.img}
-                      alt={`Manufacturer ${manufacturer.alt}`}
-                      className="w-full"
-                    />
+                {prices.map((price) => (
+                  <Button
+                    variant="primary"
+                    size="large"
+                    key={price.id}
+                    data-min={price.min}
+                    data-max={price.max}
+                    style={{ display: 'block' }}
+                  >
+                    {price.text}
                   </Button>
                 ))}
               </div>
@@ -68,4 +70,4 @@ const ManuFacturePopover = () => {
   );
 };
 
-export default ManuFacturePopover;
+export default PricePopover;

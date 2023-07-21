@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 // Components
 import Button from './common/Button';
@@ -9,6 +9,8 @@ import Typography from './common/Typography';
 import BRAND from '../constants/brand';
 import { PRICES } from '../constants/data';
 
+// Hook
+import useClickOutsides from '../hook/useClickOutside';
 /**
  * GroupFilterPopover Component
  *
@@ -23,22 +25,7 @@ const GroupFilterPopover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
-  // Handle clicks outside the popover to close it
-  const handleClickOutside = (event) => {
-    if (popoverRef.current && !popoverRef.current.contains(event.target)) {
-      setIsPopoverOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    // Add an event listener to detect clicks outside the popover when it's open.
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      // Clean up the event listener when the component unmounts.
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
+  useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
 
   const manufacturers = BRAND.map((brand) => ({
     id: brand.id,
