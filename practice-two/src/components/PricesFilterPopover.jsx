@@ -35,16 +35,16 @@ const PricePopover = ({ prices }) => {
           isOpen={isPopoverOpen}
           onClose={() => setIsPopoverOpen(false)}
         >
-          <div className="flex flex-wrap w-[900px] max-w-[900px] gap-0 max-h-[80vh] py-5">
+          <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
             {/* PricePopover list */}
             <div className="w-full block px-5">
               {/* Filter PricePopovers Button */}
 
-              <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+              <div className="gap-2 pt-2 grid grid-cols-4 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => (
                   <Button
                     variant="primary"
-                    size="large"
+                    size="meidum"
                     key={price.id}
                     data-min={price.min}
                     data-max={price.max}

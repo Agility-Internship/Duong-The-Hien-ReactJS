@@ -36,7 +36,7 @@ const ManuFacturePopover = ({ manufacturers }) => {
           isOpen={isPopoverOpen}
           onClose={() => setIsPopoverOpen(false)}
         >
-          <div className="flex flex-wrap w-[900px] max-w-[900px] gap-0 max-h-[80vh] py-5">
+          <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
             {/* Manufacture list */}
             <div className="w-full block px-5">
               {/* Filter Manufactures Button */}

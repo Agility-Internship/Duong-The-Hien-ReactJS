@@ -4,11 +4,11 @@ import React from 'react';
 import FilterCategoryLayout from './components/layout/FilterCategoryLayout';
 
 const App = () => (
-  <div className="flex gap-6">
-    <div className="filter-category flex gap-4 relative">
+  <main className="flex m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">
+    <section className="pt-3 flex gap-4 relative">
       <FilterCategoryLayout />
-    </div>
-  </div>
+    </section>
+  </main>
 );
 
 export default App;

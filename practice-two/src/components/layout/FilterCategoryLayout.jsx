@@ -26,7 +26,7 @@ const FilterCategoryLayout = () => {
 
   return (
     <div>
-      <div className="filter-category flex gap-4 relative">
+      <div className="flex gap-4 relative">
         {/* Use the GroupFilterPopover component with the 'manufacturers' and 'prices' props */}
         <GroupFilterPopover manufacturers={manufacturers} prices={prices} />
 
@@ -37,14 +37,14 @@ const FilterCategoryLayout = () => {
         <PricePopover prices={prices} />
       </div>
       <div className="flex gap-6">
-        <div className="mt-5 flex flex-wrap gap-3">
+        <div className="mt-5 flex flex-wrap w-full gap-3">
           {manufacturers.map((manufacturer) => (
-            <Button key={manufacturer.id} variant="secondary" size="large">
+            <Button key={manufacturer.id} variant="secondary" size="medium">
               <img
                 src={manufacturer.img}
                 alt={`Manufacturer ${manufacturer.alt}`}
                 className="w-full"
-                style={{ padding: '0 15px' }}
+                style={{ padding: '0 10px', width: 'auto', height: '20px' }}
               />
             </Button>
           ))}
