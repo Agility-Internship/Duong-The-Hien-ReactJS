@@ -1,11 +1,9 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Button from './common/Button';
 import Popover from './common/Popover';
-
-// Logo Prices
-import { PRICES } from '../constants/data';
 
 // Hook
 import useClickOutside from '../hook/useClickOutside';
@@ -17,19 +15,14 @@ import useClickOutside from '../hook/useClickOutside';
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
+ * @param prices - An array of objects representing the price options.
  * @returns {JSX.Element} The PricePopover Component
  */
-const PricePopover = () => {
+const PricePopover = ({ prices = [] }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
   useClickOutside(popoverRef, () => setIsPopoverOpen(false));
-
-  const prices = PRICES.map((price) => ({
-    text: price.text,
-    min: price.minPrice,
-    max: price.maxPrice,
-  }));
 
   return (
     <div className="relative" ref={popoverRef}>
@@ -43,16 +36,16 @@ const PricePopover = () => {
           isOpen={isPopoverOpen}
           onClose={() => setIsPopoverOpen(false)}
         >
-          <div className="flex flex-wrap w-[900px] max-w-[900px] gap-0 max-h-[80vh] py-5">
+          <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
             {/* PricePopover list */}
             <div className="w-full block px-5">
               {/* Filter PricePopovers Button */}
-              {/* TODO: Update reuse components, props PricePopovers */}
-              <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+
+              <div className="gap-2 pt-2 grid grid-cols-4 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => (
                   <Button
                     variant="primary"
-                    size="large"
+                    size="meidum"
                     key={price.id}
                     data-min={price.min}
                     data-max={price.max}
@@ -69,5 +62,14 @@ const PricePopover = () => {
     </div>
   );
 };
-
+PricePopover.propTypes = {
+  prices: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      min: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 export default PricePopover;

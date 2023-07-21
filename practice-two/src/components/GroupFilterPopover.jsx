@@ -1,13 +1,10 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Button from './common/Button';
 import Popover from './common/Popover';
 import Typography from './common/Typography';
-
-// Logo Brand
-import BRAND from '../constants/brand';
-import { PRICES } from '../constants/data';
 
 // Hook
 import useClickOutsides from '../hook/useClickOutside';
@@ -19,25 +16,15 @@ import useClickOutsides from '../hook/useClickOutside';
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
+ * @param manufacturers An array of objects representing the manufacturers.
+ * @param prices - An array of objects representing the price options.
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
-const GroupFilterPopover = () => {
+const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
   useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
-
-  const manufacturers = BRAND.map((brand) => ({
-    id: brand.id,
-    img: brand.imageURL,
-    alt: brand.type,
-  }));
-
-  const prices = PRICES.map((price) => ({
-    text: price.text,
-    min: price.minPrice,
-    max: price.maxPrice,
-  }));
 
   return (
     <div className="relative" ref={popoverRef}>
@@ -59,7 +46,6 @@ const GroupFilterPopover = () => {
                 <Typography size="xl">Manufacture</Typography>
               </div>
               {/* Filter Manufactures Button */}
-              {/* TODO: Update reuse components, props manufactures */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {manufacturers.map((manufacturer) => (
                   <Button key={manufacturer.id}>
@@ -80,7 +66,6 @@ const GroupFilterPopover = () => {
                 <Typography size="xl">Prices</Typography>
               </div>
               {/* Filter Prices Button */}
-              {/* TODO: Update reuse components, props Prices */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => (
                   <Button
@@ -100,4 +85,21 @@ const GroupFilterPopover = () => {
   );
 };
 
+GroupFilterPopover.propTypes = {
+  manufacturers: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      img: PropTypes.string.isRequired,
+      alt: PropTypes.string,
+    }),
+  ).isRequired,
+  prices: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      min: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 export default GroupFilterPopover;

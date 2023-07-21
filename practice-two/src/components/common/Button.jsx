@@ -7,7 +7,7 @@ const BUTTON = {
 
 const variantClasses = {
   primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
-  secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-3xl`,
+  secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-[50px]`,
 };
 
 const sizeClasses = {
