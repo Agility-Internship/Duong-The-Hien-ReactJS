@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Components
-import Button from './common/Button';
-import Popover from './common/Popover';
+import Button from '../common/Button';
+import Popover from '../common/Popover';
 
 // Logo Brand
-import BRAND from '../constants/brand';
+import BRAND from '../../constants/brand';
 
 /**
  * ManuFactureFilterPopover Component

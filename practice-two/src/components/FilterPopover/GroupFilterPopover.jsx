@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Components
-import Button from './common/Button';
-import Popover from './common/Popover';
-import Typography from './common/Typography';
+import Button from '../common/Button';
+import Popover from '../common/Popover';
+import Typography from '../common/Typography';
 
 // Logo Brand
-import BRAND from '../constants/brand';
-import { PRICES } from '../constants/data';
+import BRAND from '../../constants/brand';
+import { PRICES } from '../../constants/data';
 
 /**
  * GroupFilterPopover Component
