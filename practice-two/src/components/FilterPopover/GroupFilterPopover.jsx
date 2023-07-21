@@ -40,7 +40,11 @@ const GroupFilterPopover = () => {
     };
   }, []);
 
-  const manufacturers = BRAND.map((brand) => brand.imageURL);
+  const manufacturers = BRAND.map((brand) => ({
+    id: brand.id,
+    img: brand.imageURL,
+    alt: brand.type,
+  }));
 
   const prices = PRICES.map((price) => ({
     text: price.text,
@@ -70,11 +74,11 @@ const GroupFilterPopover = () => {
               {/* Filter Manufactures Button */}
               {/* TODO: Update reuse components, props manufactures */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {manufacturers.map((manufacturer, key) => (
-                  <Button key={key.id}>
+                {manufacturers.map((manufacturer) => (
+                  <Button key={manufacturer.id}>
                     <img
-                      src={manufacturer}
-                      alt={`Manufacturer ${key + 1}`}
+                      src={manufacturer.img}
+                      alt={`Manufacturer ${manufacturer.alt}`}
                       className="w-full"
                     />
                   </Button>
@@ -91,9 +95,9 @@ const GroupFilterPopover = () => {
               {/* Filter Prices Button */}
               {/* TODO: Update reuse components, props Prices */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {prices.map((price, key) => (
+                {prices.map((price) => (
                   <Button
-                    key={key.id}
+                    key={price.id}
                     data-min={price.min}
                     data-max={price.max}
                   >
