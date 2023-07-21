@@ -22,28 +22,33 @@ const BRAND = [
   },
   {
     id: 5,
-    imageURL: '//cdn.tgdd.vn/Brand/1/Realme42-b_37.png',
+    imageURL: '//cdn.tgdd.vn/Brand/1/vivo-logo-220-220x48-3.png',
     type: 'vivo',
   },
   {
     id: 6,
-    imageURL: '//cdn.tgdd.vn/Brand/1/Nokia42-b_21.jpg',
+    imageURL: '//cdn.tgdd.vn/Brand/1/Realme42-b_37.png',
     type: 'realme',
   },
   {
     id: 7,
-    imageURL: '//cdn.tgdd.vn/Brand/1/Masstel42-b_0.png',
+    imageURL: '//cdn.tgdd.vn/Brand/1/Nokia42-b_21.jpg',
     type: 'nokia',
   },
   {
     id: 8,
-    imageURL: '//cdn.tgdd.vn/Brand/1/Itel42-b_54.jpg',
+    imageURL: '//cdn.tgdd.vn/Brand/1/Masstel42-b_0.png',
     type: 'masstel',
   },
   {
     id: 9,
-    imageURL: '//cdn.tgdd.vn/Brand/1/Mobell42-b_19.jpg',
+    imageURL: '//cdn.tgdd.vn/Brand/1/Itel42-b_54.jpg',
     type: 'itel',
+  },
+  {
+    id: 10,
+    imageURL: '//cdn.tgdd.vn/Brand/1/Mobell42-b_19.jpg',
+    type: 'mobell',
   },
 ];
 
