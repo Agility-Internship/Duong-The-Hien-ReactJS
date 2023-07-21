@@ -43,12 +43,8 @@ const ManuFacturePopover = () => {
   return (
     <div className="relative" ref={popoverRef}>
       <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-        Filter
-        <img
-          src="public\images\Filter-icon.png"
-          alt="filter-icon"
-          className="w-4"
-        />
+        ManuFactures
+        <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
         <Popover
