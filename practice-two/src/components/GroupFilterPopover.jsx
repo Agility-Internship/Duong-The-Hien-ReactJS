@@ -68,6 +68,7 @@ const GroupFilterPopover = () => {
                 <Typography size="xl">Manufacture</Typography>
               </div>
               {/* Filter Manufactures Button */}
+              {/* TODO: Update reuse components, props manufactures */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {manufacturers.map((manufacturer, key) => (
                   <Button key={key.id}>
@@ -88,6 +89,7 @@ const GroupFilterPopover = () => {
                 <Typography size="xl">Prices</Typography>
               </div>
               {/* Filter Prices Button */}
+              {/* TODO: Update reuse components, props Prices */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price, key) => (
                   <Button
