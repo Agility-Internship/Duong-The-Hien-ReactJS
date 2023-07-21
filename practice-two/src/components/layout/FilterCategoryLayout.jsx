@@ -4,11 +4,11 @@ import React from 'react';
 import GroupFilterPopover from '../GroupFilterPopover';
 import ManuFacturePopover from '../ManuFactureFilterPopover';
 import PricePopover from '../PircesFilterPopover';
+import Button from '../common/Button';
 
-// Hook
+// Data
 import BRAND from '../../constants/brand';
 import { PRICES } from '../../constants/data';
-import Button from '../common/Button';
 
 const FilterCategoryLayout = () => {
   // Prepare data for manufacturers and prices
