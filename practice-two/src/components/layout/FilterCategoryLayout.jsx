@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import GroupFilterPopover from '../GroupFilterPopover';
 import ManuFacturePopover from '../ManuFactureFilterPopover';
-import PricePopover from '../PircesFilterPopover';
+import PricePopover from '../PricesFilterPopover';
 import Button from '../common/Button';
 
 // Data
