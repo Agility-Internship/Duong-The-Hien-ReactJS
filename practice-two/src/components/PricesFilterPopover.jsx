@@ -15,9 +15,10 @@ import useClickOutside from '../hook/useClickOutside';
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
+ * @param prices - An array of objects representing the price options.
  * @returns {JSX.Element} The PricePopover Component
  */
-const PricePopover = ({ prices }) => {
+const PricePopover = ({ prices = [] }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 

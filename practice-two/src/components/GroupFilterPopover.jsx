@@ -20,7 +20,7 @@ import useClickOutsides from '../hook/useClickOutside';
  * @param prices - An array of objects representing the price options.
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
-const GroupFilterPopover = ({ manufacturers, prices }) => {
+const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 

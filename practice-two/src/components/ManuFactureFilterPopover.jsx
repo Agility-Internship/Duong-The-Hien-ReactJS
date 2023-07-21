@@ -18,7 +18,7 @@ import useClickOutside from '../hook/useClickOutside';
  *
  * @returns {JSX.Element} The ManuFactureFilterPopover Component
  */
-const ManuFacturePopover = ({ manufacturers }) => {
+const ManuFacturePopover = ({ manufacturers = [] }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
