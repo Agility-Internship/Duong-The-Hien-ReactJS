@@ -8,14 +8,14 @@ import Popover from '../common/Popover';
 import { PRICES } from '../../constants/data';
 
 /**
- * ManuFactureFilterPopover Component
+ * PricePopover Component
  *
  * A popover component for filtering options.
  * When the button is clicked, popover with a list of prices is displayed.
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
- * @returns {JSX.Element} The ManuFactureFilterPopover Component
+ * @returns {JSX.Element} The PricePopover Component
  */
 const PricePopover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -57,16 +57,16 @@ const PricePopover = () => {
           onClose={() => setIsPopoverOpen(false)}
         >
           <div className="flex flex-wrap w-[900px] max-w-[900px] gap-0 max-h-[80vh] py-5">
-            {/* Manufacture list */}
+            {/* PricePopover list */}
             <div className="w-full block px-5">
-              {/* Filter Manufactures Button */}
-              {/* TODO: Update reuse components, props manufactures */}
+              {/* Filter PricePopovers Button */}
+              {/* TODO: Update reuse components, props PricePopovers */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {prices.map((price, key) => (
+                {prices.map((price) => (
                   <Button
                     variant="primary"
-                    size="medium"
-                    key={key.id}
+                    size="large"
+                    key={price.id}
                     data-min={price.min}
                     data-max={price.max}
                     style={{ display: 'block' }}
