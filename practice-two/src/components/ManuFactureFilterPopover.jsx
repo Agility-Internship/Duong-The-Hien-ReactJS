@@ -10,8 +10,8 @@ import BRAND from '../constants/brand';
 /**
  * ManuFactureFilterPopover Component
  *
- * A popover component for grouping and filtering options.
- * When the button is clicked, popover with a list of manufacturers and price options is displayed.
+ * A popover component for filtering options.
+ * When the button is clicked, popover with a list of manufacturers is displayed.
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
@@ -52,7 +52,6 @@ const ManuFacturePopover = () => {
           isOpen={isPopoverOpen}
           onClose={() => setIsPopoverOpen(false)}
         >
-          {/* Group filter popover */}
           <div className="flex flex-wrap w-[900px] max-w-[900px] gap-0 max-h-[80vh] py-5">
             {/* Manufacture list */}
             <div className="w-full block px-5">
