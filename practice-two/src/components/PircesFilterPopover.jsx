@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Components
-import Button from '../common/Button';
-import Popover from '../common/Popover';
+import Button from './common/Button';
+import Popover from './common/Popover';
 
 // Logo Prices
-import { PRICES } from '../../constants/data';
+import { PRICES } from '../constants/data';
 
 /**
  * PricePopover Component

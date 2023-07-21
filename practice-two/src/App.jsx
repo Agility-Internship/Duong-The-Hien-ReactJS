@@ -1,11 +1,9 @@
 import React from 'react';
 
 // Components
-import {
-  GroupFilterPopover,
-  ManuFacturePopover,
-  PricePopover,
-} from './components/FilterPopover';
+import GroupFilterPopover from './components/GroupFilterPopover';
+import ManuFacturePopover from './components/ManuFactureFilterPopover';
+import PricePopover from './components/PircesFilterPopover';
 
 const App = () => (
   <div className="flex gap-6">
