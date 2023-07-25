@@ -33,11 +33,11 @@ const ProductList = () => {
         </Typography>
       </div>
       {/* List Products */}
-      <div className="grid grid-cols-5  border">
+      <div className="grid grid-cols-5 border">
         {productData.map((product) => (
           <div
             key={product.id}
-            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b "
+            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b"
           >
             {/* TODO: Update image transition */}
             <ProductCard
