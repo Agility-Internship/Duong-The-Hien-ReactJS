@@ -20,17 +20,22 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
   return (
     <Card>
       <CardOverflow>
-        <div className="card-label ">
-          <Typography color="black" size="xl" variant="solid">
-            {label}
-          </Typography>
+        <div className="card-label">
+          {label ? (
+            <Typography color="black" size="xl" variant="solid">
+              {label}
+            </Typography>
+          ) : (
+            <Typography color="black" size="xl" variant="soft">
+              {undefined}
+            </Typography>
+          )}
         </div>
         <CardImage src={image} alt="This is a picture of the card-image" />
         <CardContent>
-          <div className="card-name hover:text-secondary">
+          <div className="hover:text-blue-700">
             <Link
               href="/product-card"
-              disabled
               underline={false}
               size="xl"
               variant="custom-variant"
@@ -46,8 +51,9 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
               {resolution}
             </Typography>
           </div>
-          <Typography color="red" size="xl">
+          <Typography color="red" size="xl" variant="outline">
             {prices}
+            &#8363;
           </Typography>
         </CardContent>
       </CardOverflow>
@@ -56,11 +62,11 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
 }
 
 ProductCard.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  compare: PropTypes.string.isRequired,
-  resolution: PropTypes.string.isRequired,
+  compare: PropTypes.string,
+  resolution: PropTypes.string,
   prices: PropTypes.string.isRequired,
 };
 
