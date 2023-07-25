@@ -23,7 +23,7 @@ function Typography({
 
   const variantClasses = {
     solid: 'rounded-md text-xs leading-tight inline-block bg-light p-1',
-    soft: 'bg-soft',
+    soft: 'rounded-md text-xs leading-tight inline-block bg-white p-1',
     outlined: 'border border-solid',
     plain: '',
   };
