@@ -1,9 +1,11 @@
-// ProductList.js
-
 import React from 'react';
-import LIST_PRODUCTS from '../../../database/products.json';
+
+// Components
 import ProductCard from '../ProductCard';
 import Typography from '../common/Typography';
+
+// data
+import LIST_PRODUCTS from '../../../database/products.json';
 
 const ProductList = () => {
   const productData = LIST_PRODUCTS.map((product) => ({
