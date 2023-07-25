@@ -21,13 +21,9 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
     <Card>
       <CardOverflow>
         <div className="card-label">
-          {label ? (
+          {label && (
             <Typography color="black" size="xl" variant="solid">
               {label}
-            </Typography>
-          ) : (
-            <Typography color="black" size="xl" variant="soft">
-              {undefined}
             </Typography>
           )}
         </div>

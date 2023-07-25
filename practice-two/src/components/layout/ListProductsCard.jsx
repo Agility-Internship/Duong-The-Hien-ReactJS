@@ -37,7 +37,7 @@ const ProductList = () => {
         {productData.map((product) => (
           <div
             key={product.id}
-            className="overflow-hidden block p-2 pt-4 pb-5 border-r border-b "
+            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b "
           >
             {/* TODO: Update image transition */}
             <ProductCard
