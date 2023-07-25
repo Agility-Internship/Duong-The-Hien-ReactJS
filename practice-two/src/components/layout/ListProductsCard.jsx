@@ -39,6 +39,7 @@ const ProductList = () => {
             key={product.id}
             className="overflow-hidden block p-2 pt-4 pb-5 border-r border-b "
           >
+            {/* TODO: Update image transition */}
             <ProductCard
               label={product.installment ? product.installment : undefined}
               image={product.image}
