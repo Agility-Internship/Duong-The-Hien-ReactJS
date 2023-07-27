@@ -18,7 +18,7 @@ import useClickOutside from '../hook/useClickOutside';
  *
  * @returns {JSX.Element} The ManuFactureFilterPopover Component
  */
-const ManuFacturePopover = ({ manufacturers = [] }) => {
+const ManuFacturePopover = ({ manufacturers = [], onSelectManufacturer }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
@@ -42,7 +42,10 @@ const ManuFacturePopover = ({ manufacturers = [] }) => {
               {/* Filter Manufactures Button */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden py overflow-y-auto overflow-x-auto">
                 {manufacturers.map((manufacturer) => (
-                  <Button key={manufacturer.id}>
+                  <Button
+                    key={manufacturer.id}
+                    onClick={() => onSelectManufacturer(manufacturer.alt)}
+                  >
                     <img
                       src={manufacturer.img}
                       alt={`Manufacturer ${manufacturer.alt}`}
@@ -67,6 +70,6 @@ ManuFacturePopover.propTypes = {
       alt: PropTypes.string,
     }),
   ).isRequired,
+  onSelectManufacturer: PropTypes.func.isRequired,
 };
-
 export default ManuFacturePopover;

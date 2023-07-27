@@ -7,6 +7,7 @@ import Popover from './common/Popover';
 
 // Hook
 import useClickOutside from '../hook/useClickOutside';
+
 /**
  * PricePopover Component
  *
@@ -18,7 +19,7 @@ import useClickOutside from '../hook/useClickOutside';
  * @param prices - An array of objects representing the price options.
  * @returns {JSX.Element} The PricePopover Component
  */
-const PricePopover = ({ prices = [] }) => {
+const PricePopover = ({ prices = [], onSelectPrice }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
@@ -45,11 +46,12 @@ const PricePopover = ({ prices = [] }) => {
                 {prices.map((price) => (
                   <Button
                     variant="primary"
-                    size="meidum"
+                    size="medium"
                     key={price.id}
                     data-min={price.min}
                     data-max={price.max}
                     style={{ display: 'block' }}
+                    onClick={() => onSelectPrice(price.min)}
                   >
                     {price.text}
                   </Button>
@@ -71,5 +73,6 @@ PricePopover.propTypes = {
       text: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  onSelectPrice: PropTypes.func.isRequired,
 };
 export default PricePopover;
