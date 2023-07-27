@@ -18,9 +18,16 @@ import useClickOutsides from '../hook/useClickOutside';
  *
  * @param manufacturers An array of objects representing the manufacturers.
  * @param prices - An array of objects representing the price options.
+ * @param selectedFilter - Object containing the selected filter criteria.
+ * @param onSelectManufacturer - Function to handle selecting a manufacturer option.
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
-const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
+const GroupFilterPopover = ({
+  manufacturers = [],
+  prices = [],
+  selectedFilter,
+  onSelectManufacturer,
+}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
@@ -48,7 +55,16 @@ const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
               {/* Filter Manufactures Button */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {manufacturers.map((manufacturer) => (
-                  <Button key={manufacturer.id}>
+                  <Button
+                    key={manufacturer.id}
+                    color={
+                      selectedFilter.manufacturer.includes(manufacturer.alt)
+                        ? 'red' // Add 'border-primary' class for selected manufacturers
+                        : ''
+                    }
+                    variant="primary"
+                    onClick={() => onSelectManufacturer(manufacturer.alt)}
+                  >
                     <img
                       src={manufacturer.img}
                       alt={`Manufacturer ${manufacturer.alt}`}
@@ -101,5 +117,10 @@ GroupFilterPopover.propTypes = {
       text: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  selectedFilter: PropTypes.shape({
+    manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  onSelectManufacturer: PropTypes.func.isRequired,
 };
 export default GroupFilterPopover;

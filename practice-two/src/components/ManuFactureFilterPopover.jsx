@@ -16,9 +16,16 @@ import useClickOutside from '../hook/useClickOutside';
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
+ * @param manufacturers - An array of objects representing the manufacturers.
+ * @param selectedFilter - Object containing the selected filter criteria.
+ * @param onSelectManufacturer - Function to handle selecting a manufacturer option.
  * @returns {JSX.Element} The ManuFactureFilterPopover Component
  */
-const ManuFacturePopover = ({ manufacturers = [], onSelectManufacturer }) => {
+const ManuFacturePopover = ({
+  manufacturers = [],
+  selectedFilter,
+  onSelectManufacturer,
+}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
@@ -44,6 +51,12 @@ const ManuFacturePopover = ({ manufacturers = [], onSelectManufacturer }) => {
                 {manufacturers.map((manufacturer) => (
                   <Button
                     key={manufacturer.id}
+                    color={
+                      selectedFilter.manufacturer.includes(manufacturer.alt)
+                        ? 'red' // Add 'border-primary' class for selected manufacturers
+                        : ''
+                    }
+                    variant="primary"
                     onClick={() => onSelectManufacturer(manufacturer.alt)}
                   >
                     <img
@@ -71,5 +84,9 @@ ManuFacturePopover.propTypes = {
     }),
   ).isRequired,
   onSelectManufacturer: PropTypes.func.isRequired,
+  selectedFilter: PropTypes.shape({
+    manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 export default ManuFacturePopover;

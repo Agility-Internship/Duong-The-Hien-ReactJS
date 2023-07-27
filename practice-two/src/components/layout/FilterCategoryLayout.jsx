@@ -18,11 +18,13 @@ import { PRICES } from '../../constants/data';
  * It receives two functions, `handleManufacturerFilter` and `handlePriceFilter`,
  * to handle filtering based on manufacturers and prices, respectively.
  *
+ * @param selectedFilter - Object containing the selected filter criteria.
  * @param handleManufacturerFilter - Function to handle manufacturer filtering.
  * @param handlePriceFilter - Function to handle price filtering.
  * @returns {JSX.Element} The FilterCategoryLayout Component.
  */
 const FilterCategoryLayout = ({
+  selectedFilter,
   handleManufacturerFilter,
   handlePriceFilter,
 }) => {
@@ -41,18 +43,34 @@ const FilterCategoryLayout = ({
   return (
     <div>
       <div className="flex gap-4 relative">
-        <GroupFilterPopover manufacturers={manufacturers} prices={prices} />
+        <GroupFilterPopover
+          selectedFilter={selectedFilter}
+          manufacturers={manufacturers}
+          onSelectManufacturer={handleManufacturerFilter}
+          prices={prices}
+          onSelectPrice={handlePriceFilter}
+        />
         <ManuFacturePopover
+          selectedFilter={selectedFilter}
           manufacturers={manufacturers}
           onSelectManufacturer={handleManufacturerFilter}
         />
-        <PricePopover prices={prices} onSelectPrice={handlePriceFilter} />
+        <PricePopover
+          selectedFilter={selectedFilter}
+          prices={prices}
+          onSelectPrice={handlePriceFilter}
+        />
       </div>
       <div className="flex gap-6">
         <div className="mt-5 flex flex-wrap w-full gap-3">
           {manufacturers.map((manufacturer) => (
             <Button
               key={manufacturer.id}
+              color={
+                selectedFilter.manufacturer.includes(manufacturer.alt)
+                  ? 'red' // Add 'border-primary' class for selected manufacturers
+                  : ''
+              }
               variant="secondary"
               size="medium"
               onClick={() => handleManufacturerFilter(manufacturer.alt)}
@@ -74,6 +92,10 @@ const FilterCategoryLayout = ({
 FilterCategoryLayout.propTypes = {
   handleManufacturerFilter: PropTypes.func.isRequired,
   handlePriceFilter: PropTypes.func.isRequired,
+  selectedFilter: PropTypes.shape({
+    manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default FilterCategoryLayout;

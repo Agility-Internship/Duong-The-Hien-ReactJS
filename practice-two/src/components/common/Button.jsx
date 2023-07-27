@@ -6,8 +6,8 @@ const BUTTON = {
 };
 
 const variantClasses = {
-  primary: `${BUTTON.DEFAULT} focus:border-secondary rounded-lg`,
-  secondary: `${BUTTON.DEFAULT} focus:border-primary rounded-[50px]`,
+  primary: `${BUTTON.DEFAULT} rounded-lg`,
+  secondary: `${BUTTON.DEFAULT} rounded-[50px]`,
 };
 
 const sizeClasses = {
@@ -17,11 +17,9 @@ const sizeClasses = {
 };
 
 const colorClasses = {
-  green: 'text-green-500',
-  blue: 'text-blue-500',
-  red: 'text-red-500',
-  black: 'text-black-500',
-  gray: 'text-gray-500',
+  red: 'border-primary',
+  blue: 'border-secondary',
+  light: 'border-light',
 };
 
 /**
@@ -39,7 +37,7 @@ const Button = ({
   variant = 'primary',
   size = 'medium',
   type = 'button',
-  color = 'black',
+  color = 'light',
   onClick,
   ...restProps
 }) => {

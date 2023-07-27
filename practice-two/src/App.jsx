@@ -14,9 +14,12 @@ import LIST_PRODUCTS from '../database/products.json';
  * @returns {Array} - An array containing the filtered products based on the selected brand names.
  */
 const filterProductsByName = (products, selectedBrands) => {
+  if (selectedBrands.length === 0) {
+    return products; // Return all products if no brands are selected
+  }
+
   const filteredResults = [];
 
-  // Filter products by selected brand names
   // prettier-ignore
   selectedBrands.forEach((brand) => {
     const filteredProducts = products.filter(
@@ -29,6 +32,7 @@ const filterProductsByName = (products, selectedBrands) => {
   return filteredResults;
 };
 
+// prettier-ignore
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState({
@@ -36,9 +40,19 @@ const App = () => {
     price: [],
   });
 
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  useEffect(() => {
+    // Set the initial value of allProducts using data from LIST_PRODUCTS
+    setAllProducts(LIST_PRODUCTS);
+  }, []);
 
-  // prettier-ignore
+  // InProcess
+  const handlePriceFilter = (selectedPrice) => {
+    setSelectedFilter((prevFilter) => ({
+      ...prevFilter,
+      price: [selectedPrice],
+    }));
+  };
+
   const handleManufacturerFilter = (selectedManufacturer) => {
     setSelectedFilter((prevFilter) => {
       const isAlreadySelected = prevFilter.manufacturer.includes(selectedManufacturer);
@@ -60,33 +74,11 @@ const App = () => {
     });
   };
 
-  // InProcess
-  const handlePriceFilter = (selectedPrice) => {
-    setSelectedFilter((prevFilter) => ({
-      ...prevFilter,
-      price: [selectedPrice],
-    }));
-  };
-
-  useEffect(() => {
-    const filterProducts = () => {
-      const { manufacturer, price } = selectedFilter;
-      const selectedBrands = [...manufacturer, ...price];
-
-      // Use the filterProductsByName function to filter products by names
-      const filtered = filterProductsByName(allProducts, selectedBrands);
-
-      setFilteredProducts(filtered);
-    };
-
-    // Update the filtered products whenever the selectedFilter or allProducts change
-    filterProducts();
-  }, [selectedFilter, allProducts]);
-
-  useEffect(() => {
-    // Set the initial value of allProducts using data from LIST_PRODUCTS
-    setAllProducts(LIST_PRODUCTS);
-  }, []);
+  // Apply filtering logic to get the list of products to display
+  const filteredProducts = filterProductsByName(
+    allProducts,
+    selectedFilter.manufacturer,
+  );
 
   return (
     <main className="m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">
