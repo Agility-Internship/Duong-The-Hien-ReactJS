@@ -18,25 +18,25 @@ const filterProductsByManufacturer = (products, selectedFilter) => {
     return products; // If no manufacturers are selected, return all products without filter
   }
 
-  // Filter products based on whether their 'manufactory'
+  // Filter products based on whether their 'manufacturer'
   return products.filter((product) => {
     const selectedManufacturerLowerCase = selectedFilter.map((manufacturer) =>
       manufacturer.toLowerCase(),
     );
-    const productManufacturerLowerCase = product.manufactory.toLowerCase();
+    const productManufacturerLowerCase = product.manufacturer.toLowerCase();
 
     return selectedManufacturerLowerCase.includes(productManufacturerLowerCase);
   });
 };
 
 /**
- * Adds a 'manufactory' property to each product.
- * @param {Array} products - The array of products to add the 'manufactory' property to.
- * @returns {Array} - An array of products with the 'manufactory' property added.
+ * Adds a 'manufacturer' property to each product.
+ * @param {Array} products - The array of products to add the 'manufacturer' property to.
+ * @returns {Array} - An array of products with the 'manufacturer' property added.
  */
-const addManufactoryProperty = (products) => {
-  // Map from keyword to manufactory value
-  const keywordToManufactory = {
+const addManufacturerProperty = (products) => {
+  // Map from keyword to manufacturer value
+  const keywordToManufacturer = {
     iphone: 'apple',
     samsung: 'samsung',
     oppo: 'Oppo',
@@ -52,13 +52,13 @@ const addManufactoryProperty = (products) => {
   return products.map((product) => {
     // Check if the product name contains any of the keywords
     const name = product.name.toLowerCase();
-    const matchedKeyword = Object.keys(keywordToManufactory).find((keyword) =>
+    const matchedKeyword = Object.keys(keywordToManufacturer).find((keyword) =>
       name.includes(keyword),
     );
 
-    // If a matching keyword is found, add the 'manufactory'
+    // If a matching keyword is found, add the 'manufacturer'
     if (matchedKeyword) {
-      return { ...product, manufactory: keywordToManufactory[matchedKeyword] };
+      return { ...product, manufacturer: keywordToManufacturer[matchedKeyword] };
     }
 
     // If the name does not contain any keywords, keep the product as it is
@@ -67,8 +67,8 @@ const addManufactoryProperty = (products) => {
 };
 
 const App = () => {
-  // Process the product data by adding the 'manufactory' property to each product
-  const allProducts = addManufactoryProperty(LIST_PRODUCTS);
+  // Process the product data by adding the 'manufacturer' property to each product
+  const allProducts = addManufacturerProperty(LIST_PRODUCTS);
 
   // State for storing the selected filter options
   const [selectedFilter, setSelectedFilter] = useState({

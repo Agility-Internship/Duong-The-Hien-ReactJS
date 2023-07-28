@@ -6,8 +6,7 @@
     "version": "6.5\"",
     "resolution": "Full HD+",
     "price": "6.090.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"2",
@@ -16,8 +15,7 @@
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
     "price": "25.490.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"3",
@@ -26,8 +24,7 @@
     "version": "6.8\"",
     "resolution": "Quad HD+ (2K+)",
     "price": "26.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"4",
@@ -36,8 +33,7 @@
     "version": "6.72\"",
     "resolution": "Full HD+",
     "price": "4.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"5",
@@ -46,8 +42,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "4.690.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"6",
@@ -56,8 +51,7 @@
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.190.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"7",
@@ -66,8 +60,7 @@
     "version": "main 7.6\" & extra 6.2\"",
     "resolution": "Quad HD+ (2K+)",
     "price": "35.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"8",
@@ -76,8 +69,7 @@
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "17.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"9",
@@ -86,8 +78,7 @@
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.890.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"10",
@@ -96,8 +87,7 @@
     "version": "6.1\"",
     "resolution": "Full HD+",
     "price": "19.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"11",
@@ -106,8 +96,7 @@
     "version": "main 6.7\" & extra 1.9\"",
     "resolution": "Full HD+",
     "price": "18.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"12",
@@ -116,8 +105,7 @@
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
     "price": "16.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"13",
@@ -126,8 +114,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "7.790.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"14",
@@ -136,8 +123,7 @@
     "version": "6.43\"",
     "resolution": "Full HD+",
     "price": "7.490.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"15",
@@ -146,8 +132,7 @@
     "version": "6.44\"",
     "resolution": "Full HD+",
     "price": "5.490.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"16",
@@ -156,8 +141,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "4.490.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"17",
@@ -166,8 +150,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "2.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"18",
@@ -176,8 +159,7 @@
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"19",
@@ -186,8 +168,7 @@
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"20",
@@ -196,8 +177,7 @@
     "version": "6.7\"",
     "resolution": "HD+",
     "price": "2.190.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"21",
@@ -206,8 +186,7 @@
     "version": "6.52\"",
     "resolution": "HD+",
     "price": "1.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"22",
@@ -216,8 +195,7 @@
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "1.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"23",
@@ -226,8 +204,7 @@
     "version": "6.1\"",
     "resolution": "HD+",
     "price": "1.390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"24",
@@ -236,8 +213,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"25",
@@ -246,8 +222,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "810.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"26",
@@ -256,8 +231,7 @@
     "version": "2.31\"",
     "resolution": "QVGA",
     "price": "760.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"27",
@@ -266,8 +240,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "750.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"28",
@@ -276,8 +249,7 @@
     "version": "2\"",
     "resolution": "QVGA",
     "price": "730.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"29",
@@ -286,8 +258,7 @@
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "720.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"30",
@@ -296,8 +267,7 @@
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "700.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"31",
@@ -306,8 +276,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "680.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"32",
@@ -316,8 +285,7 @@
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "670.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"33",
@@ -326,8 +294,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "620.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"34",
@@ -336,8 +303,7 @@
     "version": "2\"",
     "resolution": "QVGA",
     "price": "620.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"35",
@@ -346,8 +312,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "600.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"36",
@@ -356,8 +321,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "580.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"37",
@@ -366,8 +330,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "570.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"38",
@@ -376,8 +339,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"39",
@@ -386,8 +348,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"40",
@@ -396,8 +357,7 @@
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "7.000.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"41",
@@ -406,8 +366,7 @@
     "version": "6.7\"",
     "resolution": "Super Retina XDR",
     "price": "27.490.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"42",
@@ -416,8 +375,7 @@
     "version": "6.4\"",
     "resolution": "Full HD+",
     "price": "9.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"43",
@@ -426,8 +384,7 @@
     "version": "6.71\"",
     "resolution": "HD+",
     "price": "2.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"44",
@@ -436,8 +393,7 @@
     "version": "6.1\"",
     "resolution": "Liquid Retina",
     "price": "10.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"45",
@@ -446,8 +402,7 @@
     "version": "6.67\"",
     "resolution": "Full HD+",
     "price": "5.390.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"46",
@@ -456,8 +411,7 @@
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "10.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"47",
@@ -466,8 +420,7 @@
     "version": "6.44\"",
     "resolution": "Full HD+",
     "price": "9.790.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"48",
@@ -476,8 +429,7 @@
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.190.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"49",
@@ -486,8 +438,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "23.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"50",
@@ -496,8 +447,7 @@
     "version": "6.7\"",
     "resolution": "Super Retina XDR",
     "price": "21.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"51",
@@ -506,8 +456,7 @@
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "3.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"52",
@@ -516,8 +465,7 @@
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "17.990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"53",
@@ -526,8 +474,7 @@
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.090.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"54",
@@ -536,8 +483,7 @@
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "3.290.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"55",
@@ -546,8 +492,7 @@
     "version": "6.1\"",
     "resolution": "Full HD+",
     "price": "19.990.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"56",
@@ -556,8 +501,7 @@
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
     "price": "15.490.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"57",
@@ -566,8 +510,7 @@
     "version": "6.4\"",
     "resolution": "Full HD+",
     "price": "9.490.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"58",
@@ -576,8 +519,7 @@
     "version": "6.67\"",
     "resolution": "Full HD+",
     "price": "6.690.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"59",
@@ -586,8 +528,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "5.190.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"60",
@@ -596,8 +537,7 @@
     "version": "6.55\"",
     "resolution": "HD+",
     "price": "4.790.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"61",
@@ -606,8 +546,7 @@
     "version": "6.56\"",
     "resolution": "HD+",
     "price": "4.090.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"62",
@@ -616,8 +555,7 @@
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "3.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"63",
@@ -626,8 +564,7 @@
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.490.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"64",
@@ -636,8 +573,7 @@
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.490.000",
-    "installment": "0% installment",
-    "manufactory":""
+    "installment": "0% installment"
   },
   {
     "id":"65",
@@ -646,8 +582,7 @@
     "version": "6.52\"",
     "resolution": "HD+",
     "price": "2.490.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"66",
@@ -656,8 +591,7 @@
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.440.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"67",
@@ -666,8 +600,7 @@
     "version": "6.52\"",
     "resolution": "HD+",
     "price": "1.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"68",
@@ -676,8 +609,7 @@
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "1.590.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"69",
@@ -686,8 +618,7 @@
     "version": "6.1\"",
     "resolution": "HD+",
     "price": "1.390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"70",
@@ -696,8 +627,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "990.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"71",
@@ -706,8 +636,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "810.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"72",
@@ -716,8 +645,7 @@
     "version": "2.31\"",
     "resolution": "QVGA",
     "price": "760.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"73",
@@ -726,8 +654,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "750.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"74",
@@ -736,8 +663,7 @@
     "version": "2\"",
     "resolution": "QVGA",
     "price": "730.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"75",
@@ -746,8 +672,7 @@
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "720.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"76",
@@ -756,8 +681,7 @@
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "700.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"77",
@@ -766,8 +690,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "680.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"78",
@@ -776,8 +699,7 @@
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "670.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"79",
@@ -786,8 +708,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "620.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"80",
@@ -796,8 +717,7 @@
     "version": "2\"",
     "resolution": "QVGA",
     "price": "620.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"81",
@@ -806,8 +726,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "600.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"82",
@@ -816,8 +735,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "580.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"83",
@@ -826,8 +744,7 @@
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "570.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"84",
@@ -836,8 +753,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"85",
@@ -846,8 +762,7 @@
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   },
   {
     "id":"86",
@@ -856,7 +771,6 @@
     "version": "6.6\"",
     "resolution": "HD+",
     "price": "16.000.000",
-    "installment": "",
-    "manufactory":""
+    "installment": ""
   }
 ]
