@@ -77,7 +77,7 @@ const FilterCategoryLayout = ({ selectedFilter, handleManufacturerFilter, handle
             >
               <img
                 src={manufacturer.img}
-                alt={manufacturer.alt} // Use the manufacturer type as alt text
+                alt={manufacturer.alt}
                 className="w-full"
                 style={{ padding: '0 10px', width: 'auto', height: '20px' }}
               />
