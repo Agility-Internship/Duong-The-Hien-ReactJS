@@ -50,8 +50,9 @@ const addManufacturerProperty = (products) => {
   };
 
   return products.map((product) => {
-    // Check if the product name contains any of the keywords
     const name = product.name.toLowerCase();
+
+    // Check if the product name contains any of the keywords
     const matchedKeyword = Object.keys(keywordToManufacturer).find((keyword) =>
       name.includes(keyword),
     );
