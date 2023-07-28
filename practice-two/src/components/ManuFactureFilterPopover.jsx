@@ -21,7 +21,11 @@ import useClickOutside from '../hook/useClickOutside';
  * @param onSelectManufacturer - Function to handle selecting a manufacturer option.
  * @returns {JSX.Element} The ManuFactureFilterPopover Component
  */
-const ManuFacturePopover = ({ manufacturers = [], selectedFilter, onSelectManufacturer }) => {
+const ManuFacturePopover = ({
+  manufacturers = [],
+  selectedFilter = { manufacturer: [], price: [] },
+  onSelectManufacturer = () => {},
+}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 

@@ -23,7 +23,11 @@ import { PRICES } from '../../constants/data';
  * @param handlePriceFilter - Function to handle price filtering.
  * @returns {JSX.Element} The FilterCategoryLayout Component.
  */
-const FilterCategoryLayout = ({ selectedFilter, handleManufacturerFilter, handlePriceFilter }) => {
+const FilterCategoryLayout = ({
+  selectedFilter = { manufacturer: [], price: [] },
+  handleManufacturerFilter = () => {},
+  handlePriceFilter = () => {},
+}) => {
   const manufacturers = BRAND.map((brand) => ({
     id: brand.id,
     img: brand.imageURL,
@@ -90,12 +94,12 @@ const FilterCategoryLayout = ({ selectedFilter, handleManufacturerFilter, handle
 };
 
 FilterCategoryLayout.propTypes = {
-  handleManufacturerFilter: PropTypes.func.isRequired,
-  handlePriceFilter: PropTypes.func.isRequired,
+  handleManufacturerFilter: PropTypes.func,
+  handlePriceFilter: PropTypes.func,
   selectedFilter: PropTypes.shape({
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
+  }),
 };
 
 export default FilterCategoryLayout;

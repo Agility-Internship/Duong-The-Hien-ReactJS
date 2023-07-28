@@ -25,8 +25,8 @@ import useClickOutsides from '../hook/useClickOutside';
 const GroupFilterPopover = ({
   manufacturers = [],
   prices = [],
-  selectedFilter,
-  onSelectManufacturer,
+  selectedFilter = { manufacturer: [], price: [] },
+  onSelectManufacturer = () => {},
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
@@ -117,6 +117,6 @@ GroupFilterPopover.propTypes = {
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
-  onSelectManufacturer: PropTypes.func.isRequired,
+  onSelectManufacturer: PropTypes.func,
 };
 export default GroupFilterPopover;

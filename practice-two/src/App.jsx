@@ -8,35 +8,75 @@ import ProductList from './components/layout/ListProductsCard';
 import LIST_PRODUCTS from '../database/products.json';
 
 /**
- * Filters an array of products based on the selected manufacture names.
+ * Filters an array of products based on the selected manufacturer names.
  * @param {Array} products - The array of products to filter.
- * @param {Array} selectedManufacture - An array of selected manufacture names to filter.
+ * @param {Array} selectedFilter - An array of selected manufacture names to filter.
  * @returns {Array} - An array containing the filtered products based on the selected manufacture.
  */
-const filterProductsByName = (products, selectedManufacture) => {
-  if (selectedManufacture.length === 0) {
-    return products; // Return all products if no manufactures are selected
+const filterProductsByManufacturer = (products, selectedFilter) => {
+  if (selectedFilter.length === 0) {
+    return products; // If no manufacturers are selected, return all products without filter
   }
 
-  const filteredResults = selectedManufacture.reduce((acc, manufacture) => {
-    const filteredProducts = products.filter((product) =>
-      product.name.toLowerCase().includes(manufacture.toLowerCase()),
+  // Filter products based on whether their 'manufactory'
+  return products.filter((product) => {
+    const selectedManufacturerLowerCase = selectedFilter.map((manufacturer) =>
+      manufacturer.toLowerCase(),
+    );
+    const productManufacturerLowerCase = product.manufactory.toLowerCase();
+
+    return selectedManufacturerLowerCase.includes(productManufacturerLowerCase);
+  });
+};
+
+/**
+ * Adds a 'manufactory' property to each product.
+ * @param {Array} products - The array of products to add the 'manufactory' property to.
+ * @returns {Array} - An array of products with the 'manufactory' property added.
+ */
+const addManufactoryProperty = (products) => {
+  // Map from keyword to manufactory value
+  const keywordToManufactory = {
+    iphone: 'apple',
+    samsung: 'samsung',
+    oppo: 'Oppo',
+    xiaomi: 'Xiaomi',
+    vivo: 'Vivo',
+    realme: 'realme',
+    nokia: 'nokia',
+    masstel: 'masstel',
+    itel: 'itel',
+    mobell: 'mobell',
+  };
+
+  return products.map((product) => {
+    // Check if the product name contains any of the keywords
+    const name = product.name.toLowerCase();
+    const matchedKeyword = Object.keys(keywordToManufactory).find((keyword) =>
+      name.includes(keyword),
     );
 
-    // Concatenate the filtered products to maintain the original order
-    return acc.concat(filteredProducts);
-  }, []);
+    // If a matching keyword is found, add the 'manufactory'
+    if (matchedKeyword) {
+      return { ...product, manufactory: keywordToManufactory[matchedKeyword] };
+    }
 
-  return filteredResults;
+    // If the name does not contain any keywords, keep the product as it is
+    return product;
+  });
 };
 
 const App = () => {
-  const allProducts = LIST_PRODUCTS;
+  // Process the product data by adding the 'manufactory' property to each product
+  const allProducts = addManufactoryProperty(LIST_PRODUCTS);
+
+  // State for storing the selected filter options
   const [selectedFilter, setSelectedFilter] = useState({
-    manufacturer: [],
-    price: [],
+    manufacturer: [], // Array to store selected manufacturer names
+    price: [], // Array to store selected price options
   });
 
+  // Function to handle the selection of a price filter
   const handlePriceFilter = (selectedPrice) => {
     setSelectedFilter((prevFilter) => ({
       ...prevFilter,
@@ -44,6 +84,7 @@ const App = () => {
     }));
   };
 
+  // Function to handle the selection of a manufacturer filter
   const handleManufacturerFilter = (selectedManufacturer) => {
     setSelectedFilter((prevFilter) => {
       const isAlreadySelected = prevFilter.manufacturer.includes(selectedManufacturer);
@@ -67,7 +108,7 @@ const App = () => {
   };
 
   // Apply filtering logic to get the list of products to display
-  const filteredProducts = filterProductsByName(allProducts, selectedFilter.manufacturer);
+  const filterProducts = filterProductsByManufacturer(allProducts, selectedFilter.manufacturer);
 
   return (
     <main className="m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">
@@ -79,7 +120,7 @@ const App = () => {
         />
       </section>
       <section>
-        <ProductList products={filteredProducts} />
+        <ProductList products={filterProducts} />
       </section>
     </main>
   );
