@@ -23,6 +23,10 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
+  const handleSelectPrice = (e) => {
+    onSelectPrice(e.target.value);
+  };
+
   useClickOutside(popoverRef, () => setIsPopoverOpen(false));
 
   return (
@@ -32,11 +36,7 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
-        <Popover
-          closeButton={false}
-          isOpen={isPopoverOpen}
-          onClose={() => setIsPopoverOpen(false)}
-        >
+        <Popover closeButton={false} isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
           <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
             {/* PricePopover list */}
             <div className="w-full block px-5">
@@ -51,7 +51,7 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
                     data-min={price.min}
                     data-max={price.max}
                     style={{ display: 'block' }}
-                    onClick={() => onSelectPrice(price.min)}
+                    onClick={handleSelectPrice}
                   >
                     {price.text}
                   </Button>

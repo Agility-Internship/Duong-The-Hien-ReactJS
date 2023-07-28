@@ -39,7 +39,7 @@ const ProductList = ({ products }) => {
             {/* TODO: Update image transition */}
             <ProductCard
               label={product.installment ? product.installment : undefined}
-              image={product.images}
+              image={product.image}
               name={product.name}
               compare={product.version}
               resolution={product.resolution}

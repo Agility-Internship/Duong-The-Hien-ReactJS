@@ -8,31 +8,28 @@ import ProductList from './components/layout/ListProductsCard';
 import LIST_PRODUCTS from '../database/products.json';
 
 /**
- * Filters an array of products based on the selected brand names.
+ * Filters an array of products based on the selected manufacture names.
  * @param {Array} products - The array of products to filter.
- * @param {Array} selectedBrands - An array of selected brand names to filter the products.
- * @returns {Array} - An array containing the filtered products based on the selected brand names.
+ * @param {Array} selectedManufacture - An array of selected manufacture names to filter.
+ * @returns {Array} - An array containing the filtered products based on the selected manufacture.
  */
-const filterProductsByName = (products, selectedBrands) => {
-  if (selectedBrands.length === 0) {
-    return products; // Return all products if no brands are selected
+const filterProductsByName = (products, selectedManufacture) => {
+  if (selectedManufacture.length === 0) {
+    return products; // Return all products if no manufactures are selected
   }
 
-  const filteredResults = [];
-
-  // prettier-ignore
-  selectedBrands.forEach((brand) => {
-    const filteredProducts = products.filter(
-      (product) => product.name.toLowerCase().includes(brand.toLowerCase()),
+  const filteredResults = selectedManufacture.reduce((acc, manufacture) => {
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(manufacture.toLowerCase()),
     );
-    // Unshift the filtered products to maintain the original order
-    filteredResults.unshift(...filteredProducts);
-  });
+
+    // Concatenate the filtered products to maintain the original order
+    return acc.concat(filteredProducts);
+  }, []);
 
   return filteredResults;
 };
 
-// prettier-ignore
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState({
@@ -40,12 +37,11 @@ const App = () => {
     price: [],
   });
 
+  // Set the initial value of allProducts using data from LIST_PRODUCTS
   useEffect(() => {
-    // Set the initial value of allProducts using data from LIST_PRODUCTS
     setAllProducts(LIST_PRODUCTS);
   }, []);
 
-  // InProcess
   const handlePriceFilter = (selectedPrice) => {
     setSelectedFilter((prevFilter) => ({
       ...prevFilter,
@@ -57,8 +53,8 @@ const App = () => {
     setSelectedFilter((prevFilter) => {
       const isAlreadySelected = prevFilter.manufacturer.includes(selectedManufacturer);
 
+      // If the selectedManufacturer is already in the manufacturer array, delete it
       if (isAlreadySelected) {
-        // If the selectedManufacturer is already in the manufacturer array, delete it
         return {
           ...prevFilter,
           manufacturer: prevFilter.manufacturer.filter(
@@ -66,6 +62,7 @@ const App = () => {
           ),
         };
       }
+
       // If the selectedManufacturer is not already in the manufacturer array, add it
       return {
         ...prevFilter,
@@ -75,10 +72,7 @@ const App = () => {
   };
 
   // Apply filtering logic to get the list of products to display
-  const filteredProducts = filterProductsByName(
-    allProducts,
-    selectedFilter.manufacturer,
-  );
+  const filteredProducts = filterProductsByName(allProducts, selectedFilter.manufacturer);
 
   return (
     <main className="m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">

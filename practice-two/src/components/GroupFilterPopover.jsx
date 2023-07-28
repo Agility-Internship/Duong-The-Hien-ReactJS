@@ -31,17 +31,17 @@ const GroupFilterPopover = ({
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
+  const handleManufacturerSelect = (manufacturerAlt) => {
+    onSelectManufacturer(manufacturerAlt);
+  };
+
   useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
 
   return (
     <div className="relative" ref={popoverRef}>
       <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
         Filter
-        <img
-          src="public\images\Filter-icon.png"
-          alt="filter-icon"
-          className="w-4"
-        />
+        <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
         <Popover isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
@@ -63,7 +63,7 @@ const GroupFilterPopover = ({
                         : ''
                     }
                     variant="primary"
-                    onClick={() => onSelectManufacturer(manufacturer.alt)}
+                    onClick={handleManufacturerSelect.bind(null, manufacturer.alt)}
                   >
                     <img
                       src={manufacturer.img}
@@ -84,11 +84,7 @@ const GroupFilterPopover = ({
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => (
-                  <Button
-                    key={price.id}
-                    data-min={price.min}
-                    data-max={price.max}
-                  >
+                  <Button key={price.id} data-min={price.min} data-max={price.max}>
                     {price.text}
                   </Button>
                 ))}

@@ -23,11 +23,7 @@ import { PRICES } from '../../constants/data';
  * @param handlePriceFilter - Function to handle price filtering.
  * @returns {JSX.Element} The FilterCategoryLayout Component.
  */
-const FilterCategoryLayout = ({
-  selectedFilter,
-  handleManufacturerFilter,
-  handlePriceFilter,
-}) => {
+const FilterCategoryLayout = ({ selectedFilter, handleManufacturerFilter, handlePriceFilter }) => {
   const manufacturers = BRAND.map((brand) => ({
     id: brand.id,
     img: brand.imageURL,
@@ -39,6 +35,10 @@ const FilterCategoryLayout = ({
     min: price.minPrice,
     max: price.maxPrice,
   }));
+
+  const handleManufacturerSelect = (manufacturerAlt) => {
+    handleManufacturerFilter(manufacturerAlt);
+  };
 
   return (
     <div>
@@ -73,7 +73,7 @@ const FilterCategoryLayout = ({
               }
               variant="secondary"
               size="medium"
-              onClick={() => handleManufacturerFilter(manufacturer.alt)}
+              onClick={handleManufacturerSelect.bind(null, manufacturer.alt)}
             >
               <img
                 src={manufacturer.img}

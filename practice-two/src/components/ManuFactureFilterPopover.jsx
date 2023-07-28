@@ -21,15 +21,15 @@ import useClickOutside from '../hook/useClickOutside';
  * @param onSelectManufacturer - Function to handle selecting a manufacturer option.
  * @returns {JSX.Element} The ManuFactureFilterPopover Component
  */
-const ManuFacturePopover = ({
-  manufacturers = [],
-  selectedFilter,
-  onSelectManufacturer,
-}) => {
+const ManuFacturePopover = ({ manufacturers = [], selectedFilter, onSelectManufacturer }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
   useClickOutside(popoverRef, () => setIsPopoverOpen(false));
+
+  const handleManufacturerSelect = (manufacturerAlt) => {
+    onSelectManufacturer(manufacturerAlt);
+  };
 
   return (
     <div className="relative" ref={popoverRef}>
@@ -38,11 +38,7 @@ const ManuFacturePopover = ({
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
-        <Popover
-          closeButton={false}
-          isOpen={isPopoverOpen}
-          onClose={() => setIsPopoverOpen(false)}
-        >
+        <Popover closeButton={false} isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
           <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
             {/* Manufacture list */}
             <div className="w-full block px-5">
@@ -57,7 +53,7 @@ const ManuFacturePopover = ({
                         : ''
                     }
                     variant="primary"
-                    onClick={() => onSelectManufacturer(manufacturer.alt)}
+                    onClick={handleManufacturerSelect.bind(null, manufacturer.alt)}
                   >
                     <img
                       src={manufacturer.img}
