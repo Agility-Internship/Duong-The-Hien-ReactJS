@@ -12,7 +12,7 @@ import Button from './Button';
  * @returns {JSX.Element|null} The Popover component JSX.
  */
 const Popover = ({ isOpen, onClose, closeButton = true, children }) =>
-  (isOpen ? (
+  isOpen ? (
     <div className="absolute flex top-10 -left-5 bg-white m-4 z-200 shadow-2xl">
       <div className="flex">
         {children}
@@ -25,7 +25,7 @@ const Popover = ({ isOpen, onClose, closeButton = true, children }) =>
       </div>
       <div className="h-8 w-8 rounded border rotate-45 bg-transparent border-gray-300 shadow-2xl absolute left-6 top-[-6px] -z-10" />
     </div>
-  ) : null);
+  ) : null;
 
 Popover.propTypes = {
   isOpen: PropTypes.bool.isRequired,

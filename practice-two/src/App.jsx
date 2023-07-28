@@ -20,12 +20,10 @@ const filterProductsByManufacturer = (products, selectedFilter) => {
 
   // Filter products based on whether their 'manufacturer'
   return products.filter((product) => {
-    const selectedManufacturerLowerCase = selectedFilter.map((manufacturer) =>
-      manufacturer.toLowerCase(),
-    );
-    const productManufacturerLowerCase = product.manufacturer.toLowerCase();
+    const selectedManufacturerObject = selectedFilter.map((manufacturer) => manufacturer.toLowerCase());
+    const productManufacturer = product.manufacturer.toLowerCase();
 
-    return selectedManufacturerLowerCase.includes(productManufacturerLowerCase);
+    return selectedManufacturerObject.includes(productManufacturer);
   });
 };
 
@@ -53,9 +51,7 @@ const addManufacturerProperty = (products) => {
     const name = product.name.toLowerCase();
 
     // Check if the product name contains any of the keywords
-    const matchedKeyword = Object.keys(keywordToManufacturer).find((keyword) =>
-      name.includes(keyword),
-    );
+    const matchedKeyword = Object.keys(keywordToManufacturer).find((keyword) => name.includes(keyword));
 
     // If a matching keyword is found, add the 'manufacturer'
     if (matchedKeyword) {

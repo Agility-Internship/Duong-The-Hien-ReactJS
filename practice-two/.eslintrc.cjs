@@ -40,5 +40,7 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'eslint-disable': 0,
     'function-paren-newline': 0,
+    'no-confusing-arrow': 0,
+    'max-len': 0,
   },
 };

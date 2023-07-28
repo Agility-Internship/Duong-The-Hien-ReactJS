@@ -19,7 +19,7 @@ const ProductList = ({ products }) => {
 
   // Check plural singular
   const pluralize = (count, singular, plural) =>
-    (count <= 1 ? `${count} ${singular}` : `${count} ${plural}`);
+    count <= 1 ? `${count} ${singular}` : `${count} ${plural}`;
 
   return (
     <div className="mt-8">
