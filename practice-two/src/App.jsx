@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // Components
 import FilterCategoryLayout from './components/layout/FilterCategoryLayout';
@@ -31,16 +31,11 @@ const filterProductsByName = (products, selectedManufacture) => {
 };
 
 const App = () => {
-  const [allProducts, setAllProducts] = useState([]);
+  const allProducts = LIST_PRODUCTS;
   const [selectedFilter, setSelectedFilter] = useState({
     manufacturer: [],
     price: [],
   });
-
-  // Set the initial value of allProducts using data from LIST_PRODUCTS
-  useEffect(() => {
-    setAllProducts(LIST_PRODUCTS);
-  }, []);
 
   const handlePriceFilter = (selectedPrice) => {
     setSelectedFilter((prevFilter) => ({
