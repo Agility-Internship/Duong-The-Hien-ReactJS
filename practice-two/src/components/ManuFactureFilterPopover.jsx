@@ -31,13 +31,17 @@ const ManuFacturePopover = ({
 
   useClickOutside(popoverRef, () => setIsPopoverOpen(false));
 
-  const handleManufacturerSelect = (manufacturerAlt) => {
-    onSelectManufacturer(manufacturerAlt);
+  const handleButtonClick = () => {
+    setIsPopoverOpen(!isPopoverOpen);
+  };
+
+  const handleSelectManufacturer = (e) => {
+    onSelectManufacturer(e.target.value);
   };
 
   return (
     <div className="relative" ref={popoverRef}>
-      <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+      <Button onClick={handleButtonClick}>
         ManuFactures
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
@@ -57,7 +61,8 @@ const ManuFacturePopover = ({
                         : ''
                     }
                     variant="primary"
-                    onClick={handleManufacturerSelect.bind(null, manufacturer.alt)}
+                    value={manufacturer.alt}
+                    onClick={handleSelectManufacturer}
                   >
                     <img
                       src={manufacturer.img}

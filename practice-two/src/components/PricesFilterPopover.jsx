@@ -23,15 +23,19 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
+  useClickOutside(popoverRef, () => setIsPopoverOpen(false));
+
   const handleSelectPrice = (e) => {
     onSelectPrice(e.target.value);
   };
 
-  useClickOutside(popoverRef, () => setIsPopoverOpen(false));
+  const handleButtonClick = () => {
+    setIsPopoverOpen(!isPopoverOpen);
+  };
 
   return (
     <div className="relative" ref={popoverRef}>
-      <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+      <Button onClick={handleButtonClick}>
         Prices
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
