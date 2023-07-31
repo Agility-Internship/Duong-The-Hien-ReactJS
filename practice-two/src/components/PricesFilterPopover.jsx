@@ -40,7 +40,7 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
-        <Popover closeButton={false} isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
+        <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
           <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
             {/* PricePopover list */}
             <div className="w-full block px-5">
