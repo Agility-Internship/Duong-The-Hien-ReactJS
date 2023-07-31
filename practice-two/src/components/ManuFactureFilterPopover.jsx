@@ -35,7 +35,7 @@ const ManuFacturePopover = ({
     setIsPopoverOpen(!isPopoverOpen);
   };
 
-  const handleSelectManufacturer = (e) => {
+  const handleManufacturerSelect = (e) => {
     onSelectManufacturer(e.target.value);
   };
 
@@ -62,7 +62,7 @@ const ManuFacturePopover = ({
                     }
                     variant="primary"
                     value={manufacturer.alt}
-                    onClick={handleSelectManufacturer}
+                    onClick={handleManufacturerSelect}
                   >
                     <img
                       src={manufacturer.img}

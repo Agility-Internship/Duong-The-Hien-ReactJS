@@ -31,20 +31,24 @@ const GroupFilterPopover = ({
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
+  useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
+
   const handleManufacturerSelect = (manufacturerAlt) => {
     onSelectManufacturer(manufacturerAlt);
   };
 
-  useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
+  const handleButtonClick = () => {
+    setIsPopoverOpen(!isPopoverOpen);
+  };
 
   return (
     <div className="relative" ref={popoverRef}>
-      <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+      <Button onClick={handleButtonClick}>
         Filter
         <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
-        <Popover isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
+        <Popover isOpen={isPopoverOpen} onClose={handleButtonClick}>
           {/* Group filter popover */}
           <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
             {/* Manufacture list */}
