@@ -18,54 +18,19 @@ const filterProductsByManufacturer = (products, selectedFilter) => {
     return products; // If no manufacturers are selected, return all products without filter
   }
 
-  // Filter products based on whether their 'manufacturer'
+  // Convert the selectedFilter array to lowercase for case-insensitive comparison
+  const selectedManufacturerObject = selectedFilter.map((manufacturer) => manufacturer.toLowerCase());
+
+  // Filter products based on whether their 'manufactory' is in the selectedManufacturerObject
   return products.filter((product) => {
-    const selectedManufacturerObject = selectedFilter.map((manufacturer) => manufacturer.toLowerCase());
-    const productManufacturer = product.manufacturer.toLowerCase();
-
+    const productManufacturer = product.manufactory.toLowerCase();
     return selectedManufacturerObject.includes(productManufacturer);
-  });
-};
-
-/**
- * Adds a 'manufacturer' property to each product.
- * @param {Array} products - The array of products to add the 'manufacturer' property to.
- * @returns {Array} - An array of products with the 'manufacturer' property added.
- */
-const addManufacturerProperty = (products) => {
-  // Map from keyword to manufacturer value
-  const keywordToManufacturer = {
-    iphone: 'apple',
-    samsung: 'samsung',
-    oppo: 'Oppo',
-    xiaomi: 'Xiaomi',
-    vivo: 'Vivo',
-    realme: 'realme',
-    nokia: 'nokia',
-    masstel: 'masstel',
-    itel: 'itel',
-    mobell: 'mobell',
-  };
-
-  return products.map((product) => {
-    const name = product.name.toLowerCase();
-
-    // Check if the product name contains any of the keywords
-    const matchedKeyword = Object.keys(keywordToManufacturer).find((keyword) => name.includes(keyword));
-
-    // If a matching keyword is found, add the 'manufacturer'
-    if (matchedKeyword) {
-      return { ...product, manufacturer: keywordToManufacturer[matchedKeyword] };
-    }
-
-    // If the name does not contain any keywords, keep the product as it is
-    return product;
   });
 };
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
-  const allProducts = addManufacturerProperty(LIST_PRODUCTS);
+  const allProducts = LIST_PRODUCTS;
 
   // State for storing the selected filter options
   const [selectedFilter, setSelectedFilter] = useState({
