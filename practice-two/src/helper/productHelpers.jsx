@@ -1,18 +1,18 @@
 /**
- * Filters an array of products based on the selected manufacturer names.
+ * Filters products based on selected manufacturer names.
  * @param {Array} products - The array of products to filter.
- * @param {Array} selectedFilter - An array of selected manufacture names to filter.
- * @returns {Array} - An array containing the filtered products based on the selected manufacture.
+ * @param {Array} selectedManufacturer - An array of selected manufacturer names to filter.
+ * @returns {Array} - An array containing the filtered products based on the selected manufacturer.
  */
-const filterProductsByManufacturer = (products, selectedFilter) => {
-  if (selectedFilter.length === 0) {
-    return products; // If no manufacturers are selected, return all products without filter
+const filterProductsByManufacturer = (products, selectedManufacturer) => {
+  if (selectedManufacturer.length === 0) {
+    return products;
   }
 
-  // Convert the selectedFilter array to lowercase for case-insensitive comparison
-  const selectedManufacturerObject = selectedFilter.map((manufacturer) => manufacturer.toLowerCase());
+  const selectedManufacturerObject = selectedManufacturer.map((manufacturer) =>
+    manufacturer.toLowerCase(),
+  );
 
-  // Filter products based on whether their 'manufactory' is in the selectedManufacturerObject
   return products.filter((product) => {
     const productManufacturer = product.manufactory.toLowerCase();
     return selectedManufacturerObject.includes(productManufacturer);
@@ -30,16 +30,20 @@ const convertPriceToNumber = (price) => {
 };
 
 /**
- * This function is used to filter products by price
+ * Filters products based on selected price options.
  * @param {Array} products - The array of products to filter.
- * @param {number} minPrice - The minimum price to filter.
- * @param {number} maxPrice - The maximum price to filter.
- * @returns {Array} An array of filtered products.
+ * @param {Array} selectedPrice - An array of selected price options to filter.
+ * @returns {Array} - An array containing the filtered products based on the selected price options.
  */
-const filterProductsByPrice = (products, minPrice, maxPrice) =>
-  products.filter((product) => {
-    const price = convertPriceToNumber(product.price);
-    return price >= minPrice && (maxPrice === undefined || price <= maxPrice);
-  });
+const filterProductsByPrice = (products, selectedPrice) => {
+  if (selectedPrice.length === 0) {
+    return products;
+  }
 
-export { filterProductsByManufacturer, filterProductsByPrice };
+  return products.filter((product) => {
+    const price = convertPriceToNumber(product.price);
+    return selectedPrice.some((priceOption) => price >= priceOption.min && price <= priceOption.max);
+  });
+};
+
+export { filterProductsByManufacturer, filterProductsByPrice, convertPriceToNumber };

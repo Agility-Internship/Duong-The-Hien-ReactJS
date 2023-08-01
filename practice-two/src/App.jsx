@@ -27,13 +27,14 @@ const App = () => {
         (priceOption) => priceOption.id === selectedID,
       );
 
+      // If the selected price option already exists, remove it from the price filter
       if (isPriceOptionSelected) {
-        // If the selected price option already exists, remove it from the price filter
         return {
           ...prevFilter,
           price: prevFilter.price.filter((priceOption) => priceOption.id !== selectedID),
         };
       }
+
       // If the selected price option does not exist, add it to the price filter
       return {
         ...prevFilter,
@@ -65,22 +66,14 @@ const App = () => {
     });
   };
 
-  const filterProductsByManufacturerAndPrice = (products, selectedManufacturer, selectedPrice) => {
-    const filteredByManufacturer = filterProductsByManufacturer(products, selectedManufacturer);
-    if (selectedPrice.length === 0) {
-      // If no price options are selected, return the products filtered by manufacturer only
-      return filteredByManufacturer;
-    }
-    // If price options are selected, apply both manufacturer and price filtering
-    const { min: selectedMin, max: selectedMax } = selectedPrice[0];
-    return filterProductsByPrice(filteredByManufacturer, selectedMin, selectedMax);
-  };
+  // Filter products based on the selected
+  const filteredProducts = allProducts.filter((product) => {
+    const manufacturerFilterMatch =
+      filterProductsByManufacturer([product], selectedFilter.manufacturer).length > 0;
+    const priceFilterMatch = filterProductsByPrice([product], selectedFilter.price).length > 0;
 
-  const filteredProducts = filterProductsByManufacturerAndPrice(
-    allProducts,
-    selectedFilter.manufacturer,
-    selectedFilter.price,
-  );
+    return manufacturerFilterMatch && priceFilterMatch;
+  });
 
   return (
     <main className="m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">
