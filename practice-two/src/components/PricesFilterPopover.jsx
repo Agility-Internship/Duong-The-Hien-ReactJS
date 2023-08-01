@@ -51,7 +51,6 @@ const PricePopover = ({
             <div className="w-full block px-5">
               <div className="gap-2 pt-2 grid grid-cols-4 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => {
-                  // Check if the current price option is in the selectedFilter.price array
                   const isSelected = selectedPriceIds.includes(`${price.id}`);
 
                   return (

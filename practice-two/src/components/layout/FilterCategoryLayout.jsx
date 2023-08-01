@@ -46,10 +46,10 @@ const FilterCategoryLayout = ({
   };
 
   const handlePriceSelect = (e) => {
-    const selectPrice = e.target;
+    const selectedOption = e.target;
     const selectDataset = e.target.dataset;
 
-    handlePriceFilter(selectPrice.id, selectDataset.min, selectDataset.max);
+    handlePriceFilter(selectedOption.id, selectDataset.min, selectDataset.max);
   };
 
   return (

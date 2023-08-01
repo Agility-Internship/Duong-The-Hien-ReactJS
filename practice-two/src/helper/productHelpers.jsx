@@ -42,7 +42,10 @@ const filterProductsByPrice = (products, selectedPrice) => {
 
   return products.filter((product) => {
     const price = convertPriceToNumber(product.price);
-    return selectedPrice.some((priceOption) => price >= priceOption.min && price <= priceOption.max);
+    return selectedPrice.some((priceOption) => {
+      const { min, max } = priceOption;
+      return (min === undefined || price >= min) && (max === undefined || price <= max);
+    });
   });
 };
 
