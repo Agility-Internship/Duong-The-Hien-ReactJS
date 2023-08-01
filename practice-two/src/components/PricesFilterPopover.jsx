@@ -19,7 +19,7 @@ import useClickOutside from '../hook/useClickOutside';
  * @param prices - An array of objects representing the price options.
  * @returns {JSX.Element} The PricePopover Component
  */
-const PricePopover = ({ prices = [], onSelectPrice }) => {
+const PricePopover = ({ categories = { id: [], value: [] }, prices = [], onSelectPrice }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
@@ -34,24 +34,21 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
   };
 
   return (
-    <div className="relative" ref={popoverRef}>
+    <div key={categories.id} className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
-        Prices
+        {categories.value}
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
         <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
           <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
-            {/* PricePopover list */}
             <div className="w-full block px-5">
-              {/* Filter PricePopovers Button */}
-
               <div className="gap-2 pt-2 grid grid-cols-4 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => (
                   <Button
+                    key={price.id}
                     variant="primary"
                     size="medium"
-                    key={price.id}
                     data-min={price.min}
                     data-max={price.max}
                     style={{ display: 'block' }}
@@ -69,6 +66,10 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
   );
 };
 PricePopover.propTypes = {
+  categories: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    value: PropTypes.string.isRequired,
+  }).isRequired,
   prices: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
