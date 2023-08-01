@@ -45,6 +45,13 @@ const FilterCategoryLayout = ({
     handleManufacturerFilter(e.currentTarget.value);
   };
 
+  const handlePriceSelect = (e) => {
+    const selectPrice = e.target;
+    const selectDataset = e.target.dataset;
+
+    handlePriceFilter(selectPrice.id, selectDataset.min, selectDataset.max);
+  };
+
   return (
     <div>
       <div className="flex gap-4 relative">
@@ -54,7 +61,7 @@ const FilterCategoryLayout = ({
           manufacturers={manufacturers}
           onSelectManufacturer={handleManufacturerSelect}
           prices={prices}
-          onSelectPrice={handlePriceFilter}
+          onSelectPrice={handlePriceSelect}
         />
         <ManuFacturePopover
           categories={CATEGORIES[1]}
@@ -66,7 +73,7 @@ const FilterCategoryLayout = ({
           categories={CATEGORIES[2]}
           selectedFilter={selectedFilter}
           prices={prices}
-          onSelectPrice={handlePriceFilter}
+          onSelectPrice={handlePriceSelect}
         />
       </div>
       <div className="flex gap-6">

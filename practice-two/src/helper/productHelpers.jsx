@@ -19,4 +19,27 @@ const filterProductsByManufacturer = (products, selectedFilter) => {
   });
 };
 
-export default filterProductsByManufacturer;
+/**
+ * This function is used to convert price string to a numeric value
+ * @param {string} price - The price string to convert.
+ * @returns {number} The numeric value of the price.
+ */
+const convertPriceToNumber = (price) => {
+  const numericString = price.replace(/[.]+/g, '');
+  return parseInt(numericString, 10);
+};
+
+/**
+ * This function is used to filter products by price
+ * @param {Array} products - The array of products to filter.
+ * @param {number} minPrice - The minimum price to filter.
+ * @param {number} maxPrice - The maximum price to filter.
+ * @returns {Array} An array of filtered products.
+ */
+const filterProductsByPrice = (products, minPrice, maxPrice) =>
+  products.filter((product) => {
+    const price = convertPriceToNumber(product.price);
+    return price >= minPrice && (maxPrice === undefined || price <= maxPrice);
+  });
+
+export { filterProductsByManufacturer, filterProductsByPrice };

@@ -28,18 +28,24 @@ const GroupFilterPopover = ({
   prices = [],
   selectedFilter = { manufacturer: [], price: [] },
   onSelectManufacturer = () => {},
+  onSelectPrice = () => {},
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
+  const selectedPriceIds = selectedFilter.price.map((selectedPrice) => selectedPrice.id);
 
   useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
+
+  const handleButtonClick = () => {
+    setIsPopoverOpen(!isPopoverOpen);
+  };
 
   const handleManufacturerSelect = (e) => {
     onSelectManufacturer(e);
   };
 
-  const handleButtonClick = () => {
-    setIsPopoverOpen(!isPopoverOpen);
+  const handleSelectPrice = (e) => {
+    onSelectPrice(e);
   };
 
   return (
@@ -89,11 +95,26 @@ const GroupFilterPopover = ({
               </div>
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {prices.map((price) => (
-                  <Button key={price.id} data-min={price.min} data-max={price.max}>
-                    {price.text}
-                  </Button>
-                ))}
+                {prices.map((price) => {
+                  // Check if the current price option is in the selectedFilter.price array
+                  const isSelected = selectedPriceIds.includes(`${price.id}`);
+
+                  return (
+                    <Button
+                      key={price.id}
+                      id={price.id}
+                      variant="primary"
+                      color={isSelected ? 'red' : 'light'}
+                      size="medium"
+                      data-min={price.min}
+                      data-max={price.max}
+                      style={{ display: 'block' }}
+                      onClick={handleSelectPrice}
+                    >
+                      {price.text}
+                    </Button>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -127,5 +148,6 @@ GroupFilterPopover.propTypes = {
     price: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   onSelectManufacturer: PropTypes.func,
+  onSelectPrice: PropTypes.func,
 };
 export default GroupFilterPopover;
