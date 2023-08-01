@@ -96,7 +96,6 @@ const GroupFilterPopover = ({
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => {
-                  // Check if the current price option is in the selectedFilter.price array
                   const isSelected = selectedPriceIds.includes(`${price.id}`);
 
                   return (

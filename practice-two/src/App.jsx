@@ -67,7 +67,7 @@ const App = () => {
   };
 
   // Filter products based on the selected
-  const filteredProducts = allProducts.filter((product) => {
+  const filterProducts = allProducts.filter((product) => {
     const manufacturerFilterMatch =
       filterProductsByManufacturer([product], selectedFilter.manufacturer).length > 0;
     const priceFilterMatch = filterProductsByPrice([product], selectedFilter.price).length > 0;
@@ -85,7 +85,7 @@ const App = () => {
         />
       </section>
       <section>
-        <ProductList products={filteredProducts} />
+        <ProductList products={filterProducts} />
       </section>
     </main>
   );
