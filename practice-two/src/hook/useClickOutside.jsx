@@ -12,8 +12,8 @@ const useClickOutside = (ref, callback) => {
     // Add an event listener to detect clicks outside the popover when it's open.
     document.addEventListener('click', handleClickOutside);
 
+    // Clean up the event listener when the component unmounts.
     return () => {
-      // Clean up the event listener when the component unmounts.
       document.removeEventListener('click', handleClickOutside);
     };
   }, [callback, ref]);

@@ -9,12 +9,7 @@ import PropTypes from 'prop-types';
  * @param children - The content to be displayed inside the Typography component.
  * @returns {JSX.Element} - The Typography component.
  */
-function Typography({
-  color = 'black',
-  size = 'md',
-  variant = 'soft',
-  children,
-}) {
+function Typography({ color = 'black', size = 'md', variant = 'soft', children }) {
   const sizeClasses = {
     xl: 'text-xl font-bold ',
     lg: 'text-lg font-normal',

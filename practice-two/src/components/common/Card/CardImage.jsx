@@ -8,11 +8,7 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element} - The CardImage component.
  */
 const CardImage = ({ src, alt }) => (
-  <img
-    src={src}
-    alt={alt}
-    className="card-img-top w-full pt-5 pb-3 rounded-t-md"
-  />
+  <img src={src} alt={alt} className="card-img-top w-full pt-5 pb-3 rounded-t-md" />
 );
 
 CardImage.propTypes = {

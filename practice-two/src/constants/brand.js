@@ -3,7 +3,7 @@ const BRAND = [
   {
     id: 1,
     imageURL: '//cdn.tgdd.vn/Brand/1/logo-iphone-220x48.png',
-    type: 'iphone',
+    type: 'apple',
   },
   {
     id: 2,

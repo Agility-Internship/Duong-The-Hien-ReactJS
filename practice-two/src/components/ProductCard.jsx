@@ -30,12 +30,7 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
         <CardImage src={image} alt="This is a picture of the card-image" />
         <CardContent>
           <div className="hover:text-blue-700">
-            <Link
-              href="/product-card"
-              underline={false}
-              size="xl"
-              variant="custom-variant"
-            >
+            <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
               {name}
             </Link>
           </div>
@@ -47,7 +42,7 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
               {resolution}
             </Typography>
           </div>
-          <Typography color="red" size="xl" variant="outline">
+          <Typography color="red" size="xl" variant="outlined">
             {prices}
             &#8363;
           </Typography>

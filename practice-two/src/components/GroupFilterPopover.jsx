@@ -18,26 +18,37 @@ import useClickOutsides from '../hook/useClickOutside';
  *
  * @param manufacturers An array of objects representing the manufacturers.
  * @param prices - An array of objects representing the price options.
+ * @param selectedFilter - Object containing the selected filter criteria.
+ * @param onSelectManufacturer - Function to handle selecting a manufacturer option.
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
-const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
+const GroupFilterPopover = ({
+  manufacturers = [],
+  prices = [],
+  selectedFilter = { manufacturer: [], price: [] },
+  onSelectManufacturer = () => {},
+}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
 
   useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
 
+  const handleManufacturerSelect = (e) => {
+    onSelectManufacturer(e);
+  };
+
+  const handleButtonClick = () => {
+    setIsPopoverOpen(!isPopoverOpen);
+  };
+
   return (
     <div className="relative" ref={popoverRef}>
-      <Button onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+      <Button onClick={handleButtonClick}>
         Filter
-        <img
-          src="public\images\Filter-icon.png"
-          alt="filter-icon"
-          className="w-4"
-        />
+        <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
-        <Popover isOpen={isPopoverOpen} onClose={() => setIsPopoverOpen(false)}>
+        <Popover isOpen={isPopoverOpen} onClose={handleButtonClick}>
           {/* Group filter popover */}
           <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
             {/* Manufacture list */}
@@ -48,7 +59,17 @@ const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
               {/* Filter Manufactures Button */}
               <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {manufacturers.map((manufacturer) => (
-                  <Button key={manufacturer.id}>
+                  <Button
+                    key={manufacturer.id}
+                    color={
+                      selectedFilter.manufacturer.includes(manufacturer.alt)
+                        ? 'red' // Add 'border-primary' class for selected manufacturers
+                        : ''
+                    }
+                    variant="primary"
+                    value={manufacturer.alt}
+                    onClick={handleManufacturerSelect}
+                  >
                     <img
                       src={manufacturer.img}
                       alt={`Manufacturer ${manufacturer.alt}`}
@@ -68,11 +89,7 @@ const GroupFilterPopover = ({ manufacturers = [], prices = [] }) => {
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
                 {prices.map((price) => (
-                  <Button
-                    key={price.id}
-                    data-min={price.min}
-                    data-max={price.max}
-                  >
+                  <Button key={price.id} data-min={price.min} data-max={price.max}>
                     {price.text}
                   </Button>
                 ))}
@@ -95,11 +112,15 @@ GroupFilterPopover.propTypes = {
   ).isRequired,
   prices: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      min: PropTypes.number.isRequired,
-      max: PropTypes.number.isRequired,
+      min: PropTypes.string,
+      max: PropTypes.string,
       text: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  selectedFilter: PropTypes.shape({
+    manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+  onSelectManufacturer: PropTypes.func,
 };
 export default GroupFilterPopover;

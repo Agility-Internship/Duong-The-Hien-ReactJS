@@ -1,40 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import ProductCard from '../ProductCard';
 import Typography from '../common/Typography';
 
-// data
-import LIST_PRODUCTS from '../../../database/products.json';
-
-const ProductList = () => {
-  const productData = LIST_PRODUCTS.map((product) => ({
-    id: product.id,
-    image: product.images,
-    name: product.name,
-    version: product.version,
-    resolution: product.resolution,
-    price: product.price,
-    installment: product.installment,
-  }));
-
-  const totalProducts = productData.length;
+/**
+ * ProductList Component
+ *
+ * A component that render a list of products using a grid layout.
+ *
+ * @param products - An array of product objects to be displayed.
+ * @returns {JSX.Element} The ProductList Component.
+ */
+const ProductList = ({ products }) => {
+  // Calculate the total number of products
+  const totalProducts = products.length;
 
   // Check plural singular
-  // prettier-ignore
-  const pluralize = (count, singular, plural) => (count === 1 ? `${count} ${singular}` : `${count} ${plural}`);
+  const pluralize = (count, singular, plural) =>
+    count <= 1 ? `${count} ${singular}` : `${count} ${plural}`;
 
   return (
     <div className="mt-8">
       {/* Total Products */}
       <div className="mb-3">
-        <Typography size="xl" variant="outline">
+        <Typography size="xl" variant="solid">
           {pluralize(totalProducts, 'phone', 'phones')}
         </Typography>
       </div>
       {/* List Products */}
       <div className="grid grid-cols-5 border">
-        {productData.map((product) => (
+        {products.map((product) => (
           <div
             key={product.id}
             className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b"
@@ -53,5 +50,18 @@ const ProductList = () => {
       </div>
     </div>
   );
+};
+
+ProductList.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      images: PropTypes.arrayOf(PropTypes.string),
+      name: PropTypes.string.isRequired,
+      version: PropTypes.string.isRequired,
+      resolution: PropTypes.string.isRequired,
+      price: PropTypes.string,
+    }),
+  ).isRequired,
 };
 export default ProductList;
