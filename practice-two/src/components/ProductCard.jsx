@@ -42,7 +42,7 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
               {resolution}
             </Typography>
           </div>
-          <Typography color="red" size="xl" variant="outline">
+          <Typography color="red" size="xl" variant="outlined">
             {prices}
             &#8363;
           </Typography>

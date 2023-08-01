@@ -71,9 +71,9 @@ const PricePopover = ({ prices = [], onSelectPrice }) => {
 PricePopover.propTypes = {
   prices: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      min: PropTypes.number.isRequired,
-      max: PropTypes.number.isRequired,
+      id: PropTypes.number,
+      min: PropTypes.string,
+      max: PropTypes.string,
       text: PropTypes.string.isRequired,
     }),
   ).isRequired,

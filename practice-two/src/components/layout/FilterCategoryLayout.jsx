@@ -40,8 +40,8 @@ const FilterCategoryLayout = ({
     max: price.maxPrice,
   }));
 
-  const handleManufacturerSelect = (manufacturerAlt) => {
-    handleManufacturerFilter(manufacturerAlt);
+  const handleManufacturerSelect = (e) => {
+    handleManufacturerFilter(e.currentTarget.value);
   };
 
   return (
@@ -50,14 +50,14 @@ const FilterCategoryLayout = ({
         <GroupFilterPopover
           selectedFilter={selectedFilter}
           manufacturers={manufacturers}
-          onSelectManufacturer={handleManufacturerFilter}
+          onSelectManufacturer={handleManufacturerSelect}
           prices={prices}
           onSelectPrice={handlePriceFilter}
         />
         <ManuFacturePopover
           selectedFilter={selectedFilter}
           manufacturers={manufacturers}
-          onSelectManufacturer={handleManufacturerFilter}
+          onSelectManufacturer={handleManufacturerSelect}
         />
         <PricePopover
           selectedFilter={selectedFilter}
@@ -73,11 +73,12 @@ const FilterCategoryLayout = ({
               color={
                 selectedFilter.manufacturer.includes(manufacturer.alt)
                   ? 'red' // Add 'border-primary' class for selected manufacturers
-                  : ''
+                  : 'light' // Use 'light' as the default color
               }
               variant="secondary"
               size="medium"
-              onClick={handleManufacturerSelect.bind(null, manufacturer.alt)}
+              value={manufacturer.alt}
+              onClick={handleManufacturerSelect}
             >
               <img
                 src={manufacturer.img}

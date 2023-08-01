@@ -25,7 +25,7 @@ const ProductList = ({ products }) => {
     <div className="mt-8">
       {/* Total Products */}
       <div className="mb-3">
-        <Typography size="xl" variant="outline">
+        <Typography size="xl" variant="solid">
           {pluralize(totalProducts, 'phone', 'phones')}
         </Typography>
       </div>
@@ -55,12 +55,12 @@ const ProductList = ({ products }) => {
 ProductList.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      images: PropTypes.arrayOf(PropTypes.string).isRequired,
+      id: PropTypes.string.isRequired,
+      images: PropTypes.arrayOf(PropTypes.string),
       name: PropTypes.string.isRequired,
       version: PropTypes.string.isRequired,
       resolution: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
+      price: PropTypes.string,
     }),
   ).isRequired,
 };

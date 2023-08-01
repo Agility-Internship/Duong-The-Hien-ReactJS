@@ -41,8 +41,8 @@ const Button = ({
   onClick,
   ...restProps
 }) => {
-  const handleButtonClick = () => {
-    onClick();
+  const handleButtonClick = (e) => {
+    onClick(e);
   };
 
   const buttonClasses = [
@@ -64,7 +64,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['primary', 'secondary']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  color: PropTypes.oneOf(['green', 'blue', 'red', 'black', 'gray']),
+  color: PropTypes.oneOf(['red', 'blue', 'light']),
   onClick: PropTypes.func,
 };
 

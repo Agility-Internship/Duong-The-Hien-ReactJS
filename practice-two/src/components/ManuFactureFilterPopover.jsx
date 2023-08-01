@@ -36,7 +36,7 @@ const ManuFacturePopover = ({
   };
 
   const handleManufacturerSelect = (e) => {
-    onSelectManufacturer(e.target.value);
+    onSelectManufacturer(e);
   };
 
   return (

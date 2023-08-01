@@ -33,8 +33,8 @@ const GroupFilterPopover = ({
 
   useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
 
-  const handleManufacturerSelect = (manufacturerAlt) => {
-    onSelectManufacturer(manufacturerAlt);
+  const handleManufacturerSelect = (e) => {
+    onSelectManufacturer(e);
   };
 
   const handleButtonClick = () => {
@@ -67,7 +67,8 @@ const GroupFilterPopover = ({
                         : ''
                     }
                     variant="primary"
-                    onClick={handleManufacturerSelect.bind(null, manufacturer.alt)}
+                    value={manufacturer.alt}
+                    onClick={handleManufacturerSelect}
                   >
                     <img
                       src={manufacturer.img}
@@ -111,15 +112,14 @@ GroupFilterPopover.propTypes = {
   ).isRequired,
   prices: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      min: PropTypes.number.isRequired,
-      max: PropTypes.number.isRequired,
+      min: PropTypes.string,
+      max: PropTypes.string,
       text: PropTypes.string.isRequired,
     }),
   ).isRequired,
   selectedFilter: PropTypes.shape({
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
-    price: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   onSelectManufacturer: PropTypes.func,
 };
