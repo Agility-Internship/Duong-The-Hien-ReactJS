@@ -40,7 +40,7 @@ const PricePopover = ({
   };
 
   return (
-    <div key={categories.id} className="relative" ref={popoverRef}>
+    <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
         {categories.value}
         <img src="public\images\down.png" alt="filter-icon" className="w-4" />

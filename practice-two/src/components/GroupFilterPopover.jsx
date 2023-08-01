@@ -49,7 +49,7 @@ const GroupFilterPopover = ({
   };
 
   return (
-    <div key={categories.id} className="relative" ref={popoverRef}>
+    <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
         {categories.value}
         <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
