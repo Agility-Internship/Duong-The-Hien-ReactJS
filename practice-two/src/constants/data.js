@@ -25,7 +25,7 @@ const PRICES = [
 ];
 const CATEGORIES = [
   { id: 1, value: 'Filter' },
-  { id: 2, value: 'Brand' },
+  { id: 2, value: 'ManuFacture' },
   { id: 3, value: 'Price' },
 ];
 

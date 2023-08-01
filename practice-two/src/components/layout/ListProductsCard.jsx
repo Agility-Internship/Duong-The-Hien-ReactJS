@@ -25,9 +25,7 @@ const ProductList = ({ products }) => {
     <div className="mt-8">
       {/* Total Products */}
       <div className="mb-3">
-        <Typography size="xl" variant="solid">
-          {pluralize(totalProducts, 'phone', 'phones')}
-        </Typography>
+        <Typography size="xl">{pluralize(totalProducts, 'phone', 'phones')}</Typography>
       </div>
       {/* List Products */}
       <div className="grid grid-cols-5 border">

@@ -23,28 +23,35 @@ import useClickOutsides from '../hook/useClickOutside';
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
 const GroupFilterPopover = ({
+  categories = { id: [], value: [] },
   manufacturers = [],
   prices = [],
   selectedFilter = { manufacturer: [], price: [] },
   onSelectManufacturer = () => {},
+  onSelectPrice = () => {},
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef(null);
+  const selectedPriceIds = selectedFilter.price.map((selectedPrice) => selectedPrice.id);
 
   useClickOutsides(popoverRef, () => setIsPopoverOpen(false));
-
-  const handleManufacturerSelect = (e) => {
-    onSelectManufacturer(e);
-  };
 
   const handleButtonClick = () => {
     setIsPopoverOpen(!isPopoverOpen);
   };
 
+  const handleManufacturerSelect = (e) => {
+    onSelectManufacturer(e);
+  };
+
+  const handleSelectPrice = (e) => {
+    onSelectPrice(e);
+  };
+
   return (
     <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
-        Filter
+        {categories.value}
         <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
@@ -64,7 +71,7 @@ const GroupFilterPopover = ({
                     color={
                       selectedFilter.manufacturer.includes(manufacturer.alt)
                         ? 'red' // Add 'border-primary' class for selected manufacturers
-                        : ''
+                        : 'light' // Use 'light' as the default color
                     }
                     variant="primary"
                     value={manufacturer.alt}
@@ -88,11 +95,25 @@ const GroupFilterPopover = ({
               </div>
               {/* Filter Prices Button */}
               <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {prices.map((price) => (
-                  <Button key={price.id} data-min={price.min} data-max={price.max}>
-                    {price.text}
-                  </Button>
-                ))}
+                {prices.map((price) => {
+                  const isSelected = selectedPriceIds.includes(`${price.id}`);
+
+                  return (
+                    <Button
+                      key={price.id}
+                      id={price.id}
+                      variant="primary"
+                      color={isSelected ? 'red' : 'light'}
+                      size="medium"
+                      data-min={price.min}
+                      data-max={price.max}
+                      style={{ display: 'block' }}
+                      onClick={handleSelectPrice}
+                    >
+                      {price.text}
+                    </Button>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -103,6 +124,10 @@ const GroupFilterPopover = ({
 };
 
 GroupFilterPopover.propTypes = {
+  categories: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    value: PropTypes.string.isRequired,
+  }).isRequired,
   manufacturers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -122,5 +147,6 @@ GroupFilterPopover.propTypes = {
     price: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   onSelectManufacturer: PropTypes.func,
+  onSelectPrice: PropTypes.func,
 };
 export default GroupFilterPopover;

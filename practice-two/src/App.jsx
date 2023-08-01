@@ -8,7 +8,7 @@ import ProductList from './components/layout/ListProductsCard';
 import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
-import filterProductsByManufacturer from './helper/productHelpers';
+import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -21,11 +21,26 @@ const App = () => {
   });
 
   // Function to handle the selection of a price filter
-  const handlePriceFilter = (selectedPrice) => {
-    setSelectedFilter((prevFilter) => ({
-      ...prevFilter,
-      price: [selectedPrice],
-    }));
+  const handlePriceFilter = (selectedID, selectedMin, selectedMax) => {
+    setSelectedFilter((prevFilter) => {
+      const isPriceOptionSelected = prevFilter.price.some(
+        (priceOption) => priceOption.id === selectedID,
+      );
+
+      // If the selected price option already exists, remove it from the price filter
+      if (isPriceOptionSelected) {
+        return {
+          ...prevFilter,
+          price: prevFilter.price.filter((priceOption) => priceOption.id !== selectedID),
+        };
+      }
+
+      // If the selected price option does not exist, add it to the price filter
+      return {
+        ...prevFilter,
+        price: [...prevFilter.price, { id: selectedID, min: selectedMin, max: selectedMax }],
+      };
+    });
   };
 
   // Function to handle the selection of a manufacturer filter
@@ -51,8 +66,14 @@ const App = () => {
     });
   };
 
-  // Apply filtering logic to get the list of products to display
-  const filterProducts = filterProductsByManufacturer(allProducts, selectedFilter.manufacturer);
+  // Filter products based on the selected
+  const filterProducts = allProducts.filter((product) => {
+    const manufacturerFilterMatch =
+      filterProductsByManufacturer([product], selectedFilter.manufacturer).length > 0;
+    const priceFilterMatch = filterProductsByPrice([product], selectedFilter.price).length > 0;
+
+    return manufacturerFilterMatch && priceFilterMatch;
+  });
 
   return (
     <main className="m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">

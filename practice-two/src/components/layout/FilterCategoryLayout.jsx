@@ -9,7 +9,7 @@ import Button from '../common/Button';
 
 // Data
 import BRAND from '../../constants/brand';
-import { PRICES } from '../../constants/data';
+import { PRICES, CATEGORIES } from '../../constants/data';
 
 /**
  * FilterCategoryLayout Component
@@ -35,6 +35,7 @@ const FilterCategoryLayout = ({
   }));
 
   const prices = PRICES.map((price) => ({
+    id: price.id,
     text: price.text,
     min: price.minPrice,
     max: price.maxPrice,
@@ -44,25 +45,35 @@ const FilterCategoryLayout = ({
     handleManufacturerFilter(e.currentTarget.value);
   };
 
+  const handlePriceSelect = (e) => {
+    const selectedOption = e.target;
+    const selectDataset = e.target.dataset;
+
+    handlePriceFilter(selectedOption.id, selectDataset.min, selectDataset.max);
+  };
+
   return (
     <div>
       <div className="flex gap-4 relative">
         <GroupFilterPopover
+          categories={CATEGORIES[0]}
           selectedFilter={selectedFilter}
           manufacturers={manufacturers}
           onSelectManufacturer={handleManufacturerSelect}
           prices={prices}
-          onSelectPrice={handlePriceFilter}
+          onSelectPrice={handlePriceSelect}
         />
         <ManuFacturePopover
+          categories={CATEGORIES[1]}
           selectedFilter={selectedFilter}
           manufacturers={manufacturers}
           onSelectManufacturer={handleManufacturerSelect}
         />
         <PricePopover
+          categories={CATEGORIES[2]}
           selectedFilter={selectedFilter}
           prices={prices}
-          onSelectPrice={handlePriceFilter}
+          onSelectPrice={handlePriceSelect}
         />
       </div>
       <div className="flex gap-6">
