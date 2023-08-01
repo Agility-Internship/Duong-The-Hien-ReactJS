@@ -9,7 +9,7 @@ import Button from '../common/Button';
 
 // Data
 import BRAND from '../../constants/brand';
-import { PRICES } from '../../constants/data';
+import { PRICES, CATEGORIES } from '../../constants/data';
 
 /**
  * FilterCategoryLayout Component
@@ -35,6 +35,7 @@ const FilterCategoryLayout = ({
   }));
 
   const prices = PRICES.map((price) => ({
+    id: price.id,
     text: price.text,
     min: price.minPrice,
     max: price.maxPrice,
@@ -48,6 +49,7 @@ const FilterCategoryLayout = ({
     <div>
       <div className="flex gap-4 relative">
         <GroupFilterPopover
+          categories={CATEGORIES[0]}
           selectedFilter={selectedFilter}
           manufacturers={manufacturers}
           onSelectManufacturer={handleManufacturerSelect}
@@ -55,11 +57,13 @@ const FilterCategoryLayout = ({
           onSelectPrice={handlePriceFilter}
         />
         <ManuFacturePopover
+          categories={CATEGORIES[1]}
           selectedFilter={selectedFilter}
           manufacturers={manufacturers}
           onSelectManufacturer={handleManufacturerSelect}
         />
         <PricePopover
+          categories={CATEGORIES[2]}
           selectedFilter={selectedFilter}
           prices={prices}
           onSelectPrice={handlePriceFilter}

@@ -23,6 +23,7 @@ import useClickOutsides from '../hook/useClickOutside';
  * @returns {JSX.Element} The GroupFilterPopover Component
  */
 const GroupFilterPopover = ({
+  categories = { id: [], value: [] },
   manufacturers = [],
   prices = [],
   selectedFilter = { manufacturer: [], price: [] },
@@ -42,9 +43,9 @@ const GroupFilterPopover = ({
   };
 
   return (
-    <div className="relative" ref={popoverRef}>
+    <div key={categories.id} className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
-        Filter
+        {categories.value}
         <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
@@ -64,7 +65,7 @@ const GroupFilterPopover = ({
                     color={
                       selectedFilter.manufacturer.includes(manufacturer.alt)
                         ? 'red' // Add 'border-primary' class for selected manufacturers
-                        : ''
+                        : 'light' // Use 'light' as the default color
                     }
                     variant="primary"
                     value={manufacturer.alt}
@@ -103,6 +104,10 @@ const GroupFilterPopover = ({
 };
 
 GroupFilterPopover.propTypes = {
+  categories: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    value: PropTypes.string.isRequired,
+  }).isRequired,
   manufacturers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
