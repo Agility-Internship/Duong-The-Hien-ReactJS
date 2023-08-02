@@ -24,6 +24,8 @@ const App = () => {
   // State for storing the favorite product IDs
   const [favorites, setFavorites] = useState([]);
 
+  console.log(favorites);
+
   // Function to handle toggling a product as favorite
   const handleFavoriteToggle = (productID) => {
     setFavorites((prevFavorites) => {
@@ -102,7 +104,11 @@ const App = () => {
           handleManufacturerFilter={handleManufacturerFilter}
           handlePriceFilter={handlePriceFilter}
         />
-        <FavoriteProductsCard />
+        <FavoriteProductsCard
+          product={filterProducts}
+          favorites={favorites}
+          handleFavoriteToggle={handleFavoriteToggle}
+        />
       </section>
       <section>
         <ProductList
