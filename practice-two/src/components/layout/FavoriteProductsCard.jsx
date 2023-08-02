@@ -82,6 +82,39 @@ const FavoriteProductsCard = () => {
                     </CardContent>
                   </CardOverflow>
                 </Card>
+                <Card>
+                  <CardOverflow>
+                    <div className="card-label flex">
+                      <Typography color="black" size="xl" variant="solid">
+                        0% installment
+                      </Typography>
+
+                      <FavoriteButton />
+                    </div>
+                    <CardImage
+                      src="https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg"
+                      alt="This is a picture of the card-image"
+                    />
+                    <CardContent>
+                      <div className="hover:text-blue-700">
+                        <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
+                          Samsung Galaxy A24
+                        </Link>
+                      </div>
+                      <div className="card-compare flex gap-2">
+                        <Typography color="black" size="md" variant="solid">
+                          6.5
+                        </Typography>
+                        <Typography color="black" size="md" variant="solid">
+                          Super Retina XDR
+                        </Typography>
+                      </div>
+                      <Typography color="red" size="xl" variant="outlined">
+                        6.090.000 &#8363;
+                      </Typography>
+                    </CardContent>
+                  </CardOverflow>
+                </Card>
               </div>
             </div>
           </Popover>
