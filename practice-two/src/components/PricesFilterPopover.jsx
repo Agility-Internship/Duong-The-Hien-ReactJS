@@ -8,6 +8,9 @@ import Popover from './common/Popover';
 // Hook
 import useClickOutside from '../hook/useClickOutside';
 
+// Data
+import { ICON } from '../constants/data';
+
 /**
  * PricePopover Component
  *
@@ -43,7 +46,7 @@ const PricePopover = ({
     <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
         {categories.value}
-        <img src="public\images\down.png" alt="filter-icon" className="w-4" />
+        <img src={ICON.dropdown} alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
         <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
