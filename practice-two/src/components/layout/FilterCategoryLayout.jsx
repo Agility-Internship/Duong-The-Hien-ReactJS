@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import GroupFilterPopover from '../GroupFilterPopover';
 import ManuFacturePopover from '../ManuFactureFilterPopover';
 import PricePopover from '../PricesFilterPopover';
-import Button from '../common/Button';
+import Button from '../common/Button/Button';
 
 // Data
 import BRAND from '../../constants/brand';

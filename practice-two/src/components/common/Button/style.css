@@ -1,0 +1,24 @@
+/* Thêm các thuộc tính mới vào class .heart */
+.heart {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  height: 60px;
+  width: 64px;
+  display: block;
+  margin: 0 auto;
+}
+
+.heart.heart-active {
+  animation: animate 0.8s steps(28) forwards; /* Use "forwards" to retain the final animation state */
+  background-position: right;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}

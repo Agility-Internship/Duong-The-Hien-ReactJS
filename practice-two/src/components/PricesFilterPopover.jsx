@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import Button from './common/Button';
+import Button from './common/Button/Button';
 import Popover from './common/Popover';
 
 // Hook

@@ -8,41 +8,35 @@ import Typography from '../common/Typography';
 /**
  * ProductList Component
  *
- * A component that render a list of products using a grid layout.
+ * A component that renders a list of products using a grid layout.
  *
  * @param products - An array of product objects to be displayed.
+ * @param favorites - An array of product IDs marked as favorites.
+ * @param handleFavoriteToggle - Function to handle the selection/unselection of a favorite product.
  * @returns {JSX.Element} The ProductList Component.
  */
-const ProductList = ({ products }) => {
-  // Calculate the total number of products
-  const totalProducts = products.length;
-
-  // Check plural singular
-  const pluralize = (count, singular, plural) =>
-    count <= 1 ? `${count} ${singular}` : `${count} ${plural}`;
+const ProductList = ({ products, handleFavoriteToggle }) => {
+  // Function to handle the click event when a favorite product is selected
+  const handleFavoriteSelect = (e) => {
+    handleFavoriteToggle(e);
+  };
 
   return (
     <div className="mt-8">
       {/* Total Products */}
       <div className="mb-3">
-        <Typography size="xl">{pluralize(totalProducts, 'phone', 'phones')}</Typography>
+        <Typography size="xl">
+          {`${products.length} ${products.length <= 1 ? 'phone' : 'phones'}`}
+        </Typography>
       </div>
       {/* List Products */}
-      <div className="grid grid-cols-5 border">
+      <div className="grid grid-cols-5 border -z-30">
         {products.map((product) => (
           <div
             key={product.id}
-            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b"
+            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
           >
-            {/* TODO: Update image transition */}
-            <ProductCard
-              label={product.installment ? product.installment : undefined}
-              image={product.image}
-              name={product.name}
-              compare={product.version}
-              resolution={product.resolution}
-              prices={product.price}
-            />
+            <ProductCard product={product} onSelectFavoriteSelect={handleFavoriteSelect} />
           </div>
         ))}
       </div>
@@ -61,5 +55,7 @@ ProductList.propTypes = {
       price: PropTypes.string,
     }),
   ).isRequired,
+  handleFavoriteToggle: PropTypes.func.isRequired,
 };
+
 export default ProductList;

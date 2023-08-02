@@ -1,9 +1,11 @@
 import arrowDown from '../../public/images/down.png';
 import filterIcon from '../../public/images/Filter-icon.png';
+import heartIcon from '../../public/images/heart.png';
 
 const ICON = {
   filter: filterIcon,
   dropdown: arrowDown,
+  heart: heartIcon,
 };
 
 const PRICES = [

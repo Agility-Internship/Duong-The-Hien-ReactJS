@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Component
-import Button from './Button';
+import Button from './Button/Button';
 
 /**
  * Popover comments
@@ -13,17 +13,20 @@ import Button from './Button';
  */
 const Popover = ({ isOpen, onClose, closeButton = true, children }) =>
   isOpen ? (
-    <div className="absolute flex top-10 -left-5 bg-white m-4 z-200 shadow-2xl">
-      <div className="flex">
-        {children}
-        {/* Render the close button only if closeButton prop is true */}
-        {closeButton && (
-          <div className="absolute top-1 right-2">
-            <Button onClick={onClose}>Close</Button>
-          </div>
-        )}
+    <div className="z-30">
+      <div className="absolute flex top-10 -left-5 bg-white m-4 z-200 shadow-2xl z-50">
+        <div className="flex">
+          {children}
+          {/* Render the close button only if closeButton prop is true */}
+          {closeButton && (
+            <div className="absolute top-1 right-2">
+              <Button onClick={onClose}>Close</Button>
+            </div>
+          )}
+        </div>
+        {/* Change the z-index value to -z-10 */}
       </div>
-      <div className="h-8 w-8 rounded border rotate-45 bg-transparent border-gray-300 shadow-2xl absolute left-6 top-[-6px] -z-10" />
+      <div className="h-8 w-8 rounded border rotate-45 bg-transparent border-gray-300 shadow-2xl absolute left-6 top-[50px] -z-10" />
     </div>
   ) : null;
 
