@@ -36,7 +36,9 @@ const FavoriteProductsCard = () => {
       <div className={`popover-container ${isPopoverOpen ? 'visible' : 'hidden'}`}>
         <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
           <div className="bg-white p-8 shadow-lg w-64 left-20 top-10">
-            <h2 className="font-secondary text-2xl leading-xl text-centerpb-5 relative">My Wishlist</h2>
+            <h2 className="font-secondary text-2xl leading-xl text-centerpb-5 relative">
+              My Favorite List
+            </h2>
             <div className="flex flex-wrap">{/* ... */}</div>
           </div>
         </Popover>
