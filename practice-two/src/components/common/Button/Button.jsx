@@ -8,6 +8,7 @@ const BUTTON = {
 const variantClasses = {
   primary: `${BUTTON.DEFAULT} rounded-lg`,
   secondary: `${BUTTON.DEFAULT} rounded-[50px]`,
+  outline: 'border-none',
 };
 
 const sizeClasses = {
@@ -61,7 +62,7 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   color: PropTypes.oneOf(['red', 'blue', 'light']),

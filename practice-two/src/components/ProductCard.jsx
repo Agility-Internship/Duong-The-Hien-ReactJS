@@ -1,49 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Component
+// Components
 import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
 import Typography from './common/Typography';
 import Link from './common/Link';
+import FavoriteButton from './common/Button/ButtonFavorite';
 
 /**
  * Product Card Component.
- * @param label - The label for the card.
- * @param image - The image source for the card.
- * @param name - The name of the product.
- * @param compare - Comparison information for the product.
- * @param resolution - Resolution information for the product.
- * @param prices - The price information for the product.
- * @returns {JSX.Element} Products Card content
+ * @param product - The product data object.
+ * @returns {JSX.Element} Product Card content
  */
-function ProductCard({ label, image, name, compare, resolution, prices }) {
+function ProductCard({ product, onSelectFavoriteSelect }) {
+  const handleFavoriteToggle = () => {
+    onSelectFavoriteSelect(product.id);
+  };
   return (
     <Card>
       <CardOverflow>
-        <div className="card-label">
-          {label && (
+        <div className="card-label flex">
+          {product.installment && (
             <Typography color="black" size="xl" variant="solid">
-              {label}
+              {product.installment}
             </Typography>
           )}
+          <FavoriteButton onClick={handleFavoriteToggle} />
         </div>
-        <CardImage src={image} alt="This is a picture of the card-image" />
+        <CardImage src={product.image} alt="This is a picture of the card-image" />
         <CardContent>
           <div className="hover:text-blue-700">
             <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
-              {name}
+              {product.name}
             </Link>
           </div>
           <div className="card-compare flex gap-2">
             <Typography color="black" size="md" variant="solid">
-              {compare}
+              {product.version}
             </Typography>
             <Typography color="black" size="md" variant="solid">
-              {resolution}
+              {product.resolution}
             </Typography>
           </div>
           <Typography color="red" size="xl" variant="outlined">
-            {prices}
+            {product.price}
             &#8363;
           </Typography>
         </CardContent>
@@ -51,14 +51,16 @@ function ProductCard({ label, image, name, compare, resolution, prices }) {
     </Card>
   );
 }
-
 ProductCard.propTypes = {
-  label: PropTypes.string,
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  compare: PropTypes.string,
-  resolution: PropTypes.string,
-  prices: PropTypes.string.isRequired,
+  product: PropTypes.shape({
+    installment: PropTypes.string,
+    id: PropTypes.string.isRequired, // Add id to propTypes
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    version: PropTypes.string,
+    resolution: PropTypes.string,
+    price: PropTypes.string.isRequired,
+  }).isRequired,
+  onSelectFavoriteSelect: PropTypes.func.isRequired, // Add the prop type for the onSelectFavoriteSelect function
 };
-
 export default ProductCard;

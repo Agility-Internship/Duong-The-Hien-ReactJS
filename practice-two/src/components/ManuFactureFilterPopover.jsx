@@ -2,11 +2,14 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import Button from './common/Button';
+import Button from './common/Button/Button';
 import Popover from './common/Popover';
 
 // Hook
 import useClickOutside from '../hook/useClickOutside';
+
+// Data
+import { ICON } from '../constants/data';
 
 /**
  * ManuFactureFilterPopover Component
@@ -45,7 +48,7 @@ const ManuFacturePopover = ({
     <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
         {categories.value}
-        <img src="public\images\down.png" alt="filter-icon" className="w-4" />
+        <img src={ICON.dropdown} alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
         <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>

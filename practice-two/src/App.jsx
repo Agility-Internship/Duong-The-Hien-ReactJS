@@ -9,6 +9,7 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
+import FavoriteProductsCard from './components/layout/ListProductsCard/FavoriteProductsCard';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -19,6 +20,24 @@ const App = () => {
     manufacturer: [], // Array to store selected manufacturer names
     price: [], // Array to store selected price options
   });
+
+  // State for storing the favorite product IDs
+  const [favorites, setFavorites] = useState([]);
+
+  // Function to handle toggling a product as favorite
+  const handleFavoriteToggle = (productID) => {
+    setFavorites((prevFavorites) => {
+      const isFavorite = prevFavorites.includes(productID);
+
+      // If it's already in the favorites list, remove it
+      if (isFavorite) {
+        return prevFavorites.filter((id) => id !== productID);
+      }
+
+      // If it's not in the favorites list, add it
+      return [...prevFavorites, productID];
+    });
+  };
 
   // Function to handle the selection of a price filter
   const handlePriceFilter = (selectedID, selectedMin, selectedMax) => {
@@ -83,9 +102,14 @@ const App = () => {
           handleManufacturerFilter={handleManufacturerFilter}
           handlePriceFilter={handlePriceFilter}
         />
+        <FavoriteProductsCard />
       </section>
       <section>
-        <ProductList products={filterProducts} />
+        <ProductList
+          products={filterProducts}
+          favorites={favorites}
+          handleFavoriteToggle={handleFavoriteToggle}
+        />
       </section>
     </main>
   );

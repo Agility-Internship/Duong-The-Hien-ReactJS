@@ -2,12 +2,15 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import Button from './common/Button';
+import Button from './common/Button/Button';
 import Popover from './common/Popover';
 import Typography from './common/Typography';
 
 // Hook
 import useClickOutsides from '../hook/useClickOutside';
+
+// Data
+import { ICON } from '../constants/data';
 /**
  * GroupFilterPopover Component
  *
@@ -52,7 +55,7 @@ const GroupFilterPopover = ({
     <div className="relative" ref={popoverRef}>
       <Button onClick={handleButtonClick}>
         {categories.value}
-        <img src="public\images\Filter-icon.png" alt="filter-icon" className="w-4" />
+        <img src={ICON.filter} alt="filter-icon" className="w-4" />
       </Button>
       {isPopoverOpen && (
         <Popover isOpen={isPopoverOpen} onClose={handleButtonClick}>
