@@ -9,7 +9,7 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
-import FavoriteProductsCard from './components/layout/ListProductsCard/FavoriteProductsCard';
+import FavoriteProductsCard from './components/layout/FavoriteProductsCard';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -96,7 +96,7 @@ const App = () => {
 
   return (
     <main className="m-auto p-3 max-w-[1300px] w-full min-w-[980px] gap-6">
-      <section className="pt-3 flex gap-4 relative">
+      <section className="pt-3 flex gap-4 ">
         <FilterCategoryLayout
           selectedFilter={selectedFilter}
           handleManufacturerFilter={handleManufacturerFilter}

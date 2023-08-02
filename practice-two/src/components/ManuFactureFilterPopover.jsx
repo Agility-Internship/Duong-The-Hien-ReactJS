@@ -50,37 +50,35 @@ const ManuFacturePopover = ({
         {categories.value}
         <img src={ICON.dropdown} alt="filter-icon" className="w-4" />
       </Button>
-      {isPopoverOpen && (
-        <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
-          <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
-            {/* Manufacture list */}
-            <div className="w-full block px-5">
-              {/* Filter Manufacturers Button */}
-              <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden py overflow-y-auto overflow-x-auto">
-                {manufacturers.map((manufacturer) => (
-                  <Button
-                    key={manufacturer.id}
-                    color={
-                      selectedFilter.manufacturer.includes(manufacturer.alt)
-                        ? 'red' // Add 'border-primary' class for selected manufacturers
-                        : 'light' // Use 'light' as the default color
-                    }
-                    variant="primary"
-                    value={manufacturer.alt}
-                    onClick={handleManufacturerSelect}
-                  >
-                    <img
-                      src={manufacturer.img}
-                      alt={`Manufacturer ${manufacturer.alt}`}
-                      className="w-full"
-                    />
-                  </Button>
-                ))}
-              </div>
+      <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
+        <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
+          {/* Manufacture list */}
+          <div className="w-full block px-5">
+            {/* Filter Manufacturers Button */}
+            <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden py overflow-y-auto overflow-x-auto">
+              {manufacturers.map((manufacturer) => (
+                <Button
+                  key={manufacturer.id}
+                  color={
+                    selectedFilter.manufacturer.includes(manufacturer.alt)
+                      ? 'red' // Add 'border-primary' class for selected manufacturers
+                      : 'light' // Use 'light' as the default color
+                  }
+                  variant="primary"
+                  value={manufacturer.alt}
+                  onClick={handleManufacturerSelect}
+                >
+                  <img
+                    src={manufacturer.img}
+                    alt={`Manufacturer ${manufacturer.alt}`}
+                    className="w-full"
+                  />
+                </Button>
+              ))}
             </div>
           </div>
-        </Popover>
-      )}
+        </div>
+      </Popover>
     </div>
   );
 };

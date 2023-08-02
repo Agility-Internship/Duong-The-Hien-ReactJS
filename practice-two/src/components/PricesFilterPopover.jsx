@@ -48,35 +48,33 @@ const PricePopover = ({
         {categories.value}
         <img src={ICON.dropdown} alt="filter-icon" className="w-4" />
       </Button>
-      {isPopoverOpen && (
-        <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
-          <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
-            <div className="w-full block px-5">
-              <div className="gap-2 pt-2 grid grid-cols-4 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
-                {prices.map((price) => {
-                  const isSelected = selectedPriceIds.includes(`${price.id}`);
+      <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
+        <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
+          <div className="w-full block px-5">
+            <div className="gap-2 pt-2 grid grid-cols-4 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+              {prices.map((price) => {
+                const isSelected = selectedPriceIds.includes(`${price.id}`);
 
-                  return (
-                    <Button
-                      key={price.id}
-                      id={price.id}
-                      variant="primary"
-                      color={isSelected ? 'red' : 'light'} // Set color based on isSelected
-                      size="medium"
-                      data-min={price.min}
-                      data-max={price.max}
-                      style={{ display: 'block' }}
-                      onClick={handleSelectPrice}
-                    >
-                      {price.text}
-                    </Button>
-                  );
-                })}
-              </div>
+                return (
+                  <Button
+                    key={price.id}
+                    id={price.id}
+                    variant="primary"
+                    color={isSelected ? 'red' : 'light'} // Set color based on isSelected
+                    size="medium"
+                    data-min={price.min}
+                    data-max={price.max}
+                    style={{ display: 'block' }}
+                    onClick={handleSelectPrice}
+                  >
+                    {price.text}
+                  </Button>
+                );
+              })}
             </div>
           </div>
-        </Popover>
-      )}
+        </div>
+      </Popover>
     </div>
   );
 };
