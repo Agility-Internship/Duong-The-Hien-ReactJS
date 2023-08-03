@@ -102,7 +102,7 @@ const App = () => {
           handleManufacturerFilter={handleManufacturerFilter}
           handlePriceFilter={handlePriceFilter}
         />
-        <FavoriteProductsCard />
+        <FavoriteProductsCard products={filterProducts} />
       </section>
       <section>
         <ProductList
