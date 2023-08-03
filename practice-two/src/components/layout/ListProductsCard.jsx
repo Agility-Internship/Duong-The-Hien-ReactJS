@@ -20,7 +20,6 @@ const ProductList = ({ products, handleFavoriteToggle, favorites }) => {
   const handleFavoriteSelect = (productId) => {
     handleFavoriteToggle(productId);
   };
-  console.log(favorites);
   return (
     <div className="mt-8">
       {/* Total Products */}
