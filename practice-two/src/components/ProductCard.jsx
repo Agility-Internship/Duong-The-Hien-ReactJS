@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 // Components
 import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
 import Typography from './common/Typography';
 import Link from './common/Link';
 import FavoriteButton from './common/Button/ButtonFavorite';
-
 /**
  * Product Card Component.
  * @param product - The product data object.

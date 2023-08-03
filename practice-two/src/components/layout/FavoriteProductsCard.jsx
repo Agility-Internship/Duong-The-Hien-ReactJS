@@ -50,11 +50,7 @@ const FavoriteProductsCard = ({ product, favorites, handleFavoriteToggle }) => {
                       key={productFavorite.id}
                       className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
                     >
-                      <ProductCard
-                        product={productFavorite}
-                        onSelectFavorite={handleFavoriteToggle}
-                        favorites={favorites}
-                      />
+                      <ProductCard product={productFavorite} onSelectFavorite={handleFavoriteToggle} />
                     </div>
                   );
                 })}

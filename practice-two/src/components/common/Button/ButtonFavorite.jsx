@@ -10,7 +10,7 @@ import Button from './Button';
 // Data
 import { ICON } from '../../../constants/data';
 
-const FavoriteButton = ({ onClick, isActive }) => {
+const FavoriteButton = ({ onClick }) => {
   // Use state to store the button's state, initialize the value to false
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -26,7 +26,7 @@ const FavoriteButton = ({ onClick, isActive }) => {
   };
 
   // Create a variable 'heartIconClasses' to apply CSS classes based on the state of the button
-  const heartIconClasses = `heart ${isFavorite || isActive ? 'heart-active' : ''}`;
+  const heartIconClasses = `heart ${isFavorite ? 'heart-active' : ''}`;
 
   return (
     <Button variant="outline" size="small" onClick={handleButtonClick}>
@@ -44,7 +44,6 @@ const FavoriteButton = ({ onClick, isActive }) => {
 
 FavoriteButton.propTypes = {
   onClick: PropTypes.func, // Add the 'onClick' prop type
-  isActive: PropTypes.bool, // Add the new 'isActive' prop type
 };
 
 export default FavoriteButton;

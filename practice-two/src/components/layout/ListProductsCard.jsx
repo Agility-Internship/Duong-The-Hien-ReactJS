@@ -36,7 +36,7 @@ const ProductList = ({ products, handleFavoriteToggle }) => {
             key={product.id}
             className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
           >
-            <ProductCard product={product} onSelectFavoriteSelect={handleFavoriteSelect} />
+            <ProductCard product={product} onSelectFavorite={handleFavoriteSelect} />
           </div>
         ))}
       </div>
