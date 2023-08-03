@@ -27,7 +27,7 @@ const FavoriteProductsCard = ({ products }) => {
     <div>
       <Button onClick={handleButtonClick}>Like</Button>
       <div
-        className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-sm flex items-center justify-center z-50 ${
+        className={`fixed inset-0 bg-opacity-300 backdrop-filter backdrop-blur-sm flex items-center justify-center z-50 ${
           isPopoverOpen ? '' : 'hidden'
         }`}
       >
