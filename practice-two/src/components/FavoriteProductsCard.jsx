@@ -27,24 +27,24 @@ const FavoriteProductsCard = ({ products }) => {
     <div>
       <Button onClick={handleButtonClick}>Like</Button>
       <div
-        className={`fixed inset-0 bg-opacity-300 backdrop-filter backdrop-blur-sm flex items-center justify-center z-50 ${
-          isPopoverOpen ? '' : 'hidden'
+        className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50 ${
+          isPopoverOpen ? 'bg-gray-800' : 'hidden'
         }`}
       >
         <Popover
           closeButton
           isOpen={isPopoverOpen}
           onClose={handleButtonClick}
-          popoverClassName="relative bg-white p-8 rounded border border-gray-300 max-h-[500px] max-w-[900px] overflow-y-auto"
+          popoverClassName="relative bg-white p-8 rounded-xl border border-gray-500 max-h-[800px] max-w-[900px] overflow-y-auto"
           arrowPopover={false}
         >
           <div className="mb-4">
             <h2 className="text-2xl text-center pb-4">My Favorite List</h2>
-            <div className="grid grid-cols-3 border ">
+            <div className="grid grid-cols-3 gap-2">
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
+                  className="overflow-hidden flex items-center p-2 pt-4 pb-5 border  relative rounded-xl border-gray-500"
                 >
                   <ProductCard product={product} />
                 </div>
