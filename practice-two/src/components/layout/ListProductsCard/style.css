@@ -1,7 +1,0 @@
-.popover-container {
-  visibility: hidden;
-}
-
-.popover-container.visible {
-  visibility: visible;
-}

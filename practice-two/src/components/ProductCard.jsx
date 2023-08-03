@@ -19,11 +19,13 @@ function ProductCard({ product, onSelectFavoriteSelect }) {
   return (
     <Card>
       <CardOverflow>
-        <div className="card-label flex">
+        <div className="card-label flex justify-between">
           {product.installment && (
-            <Typography color="black" size="xl" variant="solid">
-              {product.installment}
-            </Typography>
+            <div className="absolute top-2 left-2">
+              <Typography color="black" size="xl" variant="solid">
+                {product.installment}
+              </Typography>
+            </div>
           )}
           <FavoriteButton onClick={handleFavoriteToggle} />
         </div>
