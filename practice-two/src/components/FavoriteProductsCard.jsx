@@ -47,13 +47,18 @@ const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => 
                 // Find the product data from allProducts array based on productId
                 const productFavorite = products.find((p) => p.id === productId);
                 if (!productFavorite) return null; // Product not found
+                const isFavoriteProduct = !!favorites.includes(productId);
 
                 return (
                   <div
                     key={productFavorite.id}
-                    className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
+                    className="overflow-hidden flex items-center p-2 pt-4 pb-5 border relative rounded-xl border-gray-500"
                   >
-                    <ProductCard product={productFavorite} onSelectFavorite={handleFavoriteToggle} />
+                    <ProductCard
+                      isFavoriteProduct={isFavoriteProduct}
+                      product={productFavorite}
+                      onSelectFavorite={handleFavoriteToggle}
+                    />
                   </div>
                 );
               })}

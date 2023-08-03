@@ -5,15 +5,18 @@ import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
 import Typography from './common/Typography';
 import Link from './common/Link';
 import FavoriteButton from './common/Button/ButtonFavorite';
+
 /**
  * Product Card Component.
  * @param product - The product data object.
+ * @param isFavoriteProduct - Boolean value indicating if the product is in favorites list.
  * @returns {JSX.Element} Product Card content
  */
-function ProductCard({ product, onSelectFavorite }) {
+function ProductCard({ product, isFavoriteProduct, onSelectFavorite }) {
   const handleFavoriteToggle = () => {
     onSelectFavorite(product.id);
   };
+
   return (
     <Card>
       <CardOverflow>
@@ -25,7 +28,7 @@ function ProductCard({ product, onSelectFavorite }) {
               </Typography>
             </div>
           )}
-          <FavoriteButton onClick={handleFavoriteToggle} />
+          <FavoriteButton isFavorite={isFavoriteProduct} onClick={handleFavoriteToggle} />
         </div>
         <CardImage src={product.image} alt="This is a picture of the card-image" />
         <CardContent>
@@ -51,16 +54,19 @@ function ProductCard({ product, onSelectFavorite }) {
     </Card>
   );
 }
+
 ProductCard.propTypes = {
   product: PropTypes.shape({
     installment: PropTypes.string,
-    id: PropTypes.string.isRequired, // Add id to propTypes
+    id: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     version: PropTypes.string,
     resolution: PropTypes.string,
     price: PropTypes.string.isRequired,
   }).isRequired,
-  onSelectFavorite: PropTypes.func.isRequired, // Add the prop type for the onSelectFavorite function
+  isFavoriteProduct: PropTypes.bool.isRequired, // Add the prop type for isFavoriteProduct
+  onSelectFavorite: PropTypes.func.isRequired,
 };
+
 export default ProductCard;

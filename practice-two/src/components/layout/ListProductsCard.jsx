@@ -15,12 +15,12 @@ import Typography from '../common/Typography';
  * @param handleFavoriteToggle - Function to handle the selection/unselection of a favorite product.
  * @returns {JSX.Element} The ProductList Component.
  */
-const ProductList = ({ products, handleFavoriteToggle }) => {
+const ProductList = ({ products, handleFavoriteToggle, favorites }) => {
   // Function to handle the click event when a favorite product is selected
-  const handleFavoriteSelect = (e) => {
-    handleFavoriteToggle(e);
+  const handleFavoriteSelect = (productId) => {
+    handleFavoriteToggle(productId);
   };
-
+  console.log(favorites);
   return (
     <div className="mt-8">
       {/* Total Products */}
@@ -31,14 +31,22 @@ const ProductList = ({ products, handleFavoriteToggle }) => {
       </div>
       {/* List Products */}
       <div className="grid grid-cols-5 border -z-30">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
-          >
-            <ProductCard product={product} onSelectFavorite={handleFavoriteSelect} />
-          </div>
-        ))}
+        {products.map((product) => {
+          // Check if product.id exists in favorites array
+          const isFavoriteProduct = !!favorites.includes(product.id);
+          return (
+            <div
+              key={product.id}
+              className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
+            >
+              <ProductCard
+                product={product}
+                isFavoriteProduct={isFavoriteProduct}
+                onSelectFavorite={handleFavoriteSelect}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -55,6 +63,7 @@ ProductList.propTypes = {
       price: PropTypes.string,
     }),
   ).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleFavoriteToggle: PropTypes.func.isRequired,
 };
 
