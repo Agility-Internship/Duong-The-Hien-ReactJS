@@ -12,9 +12,9 @@ import FavoriteButton from './common/Button/ButtonFavorite';
  * @param product - The product data object.
  * @returns {JSX.Element} Product Card content
  */
-function ProductCard({ product, onSelectFavoriteSelect }) {
+function ProductCard({ product, onSelectFavorite }) {
   const handleFavoriteToggle = () => {
-    onSelectFavoriteSelect(product.id);
+    onSelectFavorite(product.id);
   };
   return (
     <Card>
@@ -63,6 +63,6 @@ ProductCard.propTypes = {
     resolution: PropTypes.string,
     price: PropTypes.string.isRequired,
   }).isRequired,
-  onSelectFavoriteSelect: PropTypes.func.isRequired, // Add the prop type for the onSelectFavoriteSelect function
+  onSelectFavorite: PropTypes.func.isRequired, // Add the prop type for the onSelectFavorite function
 };
 export default ProductCard;

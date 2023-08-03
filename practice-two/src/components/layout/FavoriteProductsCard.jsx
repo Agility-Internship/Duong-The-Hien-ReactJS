@@ -36,7 +36,6 @@ const FavoriteProductsCard = ({ product, favorites, handleFavoriteToggle }) => {
             onClose={handleButtonClick}
             popoverClassName="relative bg-white p-8 rounded border border-gray-300 max-h-[500px] max-w-[900px] overflow-y-auto"
             arrowPopover={false}
-            transitionDuration={300}
           >
             <div className="mb-4">
               <h2 className="text-2xl text-center pb-4">My Favorite List</h2>
@@ -53,7 +52,8 @@ const FavoriteProductsCard = ({ product, favorites, handleFavoriteToggle }) => {
                     >
                       <ProductCard
                         product={productFavorite}
-                        onSelectFavoriteSelect={handleFavoriteToggle}
+                        onSelectFavorite={handleFavoriteToggle}
+                        favorites={favorites}
                       />
                     </div>
                   );
