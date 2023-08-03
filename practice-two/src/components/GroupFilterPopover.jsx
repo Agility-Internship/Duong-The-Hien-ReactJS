@@ -109,7 +109,6 @@ const GroupFilterPopover = ({
                     size="medium"
                     data-min={price.min}
                     data-max={price.max}
-                    style={{ display: 'block' }}
                     onClick={handleSelectPrice}
                   >
                     {price.text}

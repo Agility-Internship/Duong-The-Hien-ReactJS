@@ -9,7 +9,7 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
-import FavoriteProductsCard from './components/layout/FavoriteProductsCard';
+import FavoriteProductsCard from './components/FavoriteProductsCard';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
