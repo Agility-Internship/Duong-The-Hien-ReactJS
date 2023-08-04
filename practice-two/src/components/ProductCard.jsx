@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 // Components
 import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
 import Typography from './common/Typography';

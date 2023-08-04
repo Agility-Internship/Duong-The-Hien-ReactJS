@@ -48,9 +48,9 @@ const FavoriteProductsCard = ({
             <h2 className="text-2xl text-center pb-4">My Favorite List</h2>
             <div className="grid grid-cols-3 gap-2">
               {favoriteProductIDs.map((productId) => {
-                // Find the product data from allProducts array based on productId
                 const productFavorite = products.find((p) => p.id === productId);
-                if (!productFavorite) return null; // Product not found
+                if (!productFavorite) return null;
+
                 const isFavoriteProduct = !!favoriteProductIDs.includes(productId);
 
                 return (

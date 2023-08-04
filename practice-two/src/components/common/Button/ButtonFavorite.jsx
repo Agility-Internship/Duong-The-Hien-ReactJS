@@ -10,7 +10,17 @@ import Button from './Button';
 // Data
 import { ICON } from '../../../constants/data';
 
-const FavoriteButton = ({ onClick, isFavorite }) => {
+/**
+ * FavoriteButton Component
+ *
+ * A custom button component that represents a favorite/unfavorite action.
+ * When clicked, it toggles between the active (favorite) and inactive (unfavorite) states.
+ *
+ * @param onClick - Function to handle the click event when the button is clicked.
+ * @param isFavorite - Boolean value indicating if the button is in the favorite state.
+ * @returns {JSX.Element} The FavoriteButton component JSX.
+ */
+const FavoriteButton = ({ onClick = () => {}, isFavorite = false }) => {
   // Use state to store the button's state, initialize the value based on the 'isFavorite' prop
   const [isButtonFavorite, setIsButtonFavorite] = useState(isFavorite);
 
