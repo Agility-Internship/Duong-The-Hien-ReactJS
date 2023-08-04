@@ -25,8 +25,8 @@ import { PRICES, CATEGORIES } from '../../constants/data';
  */
 const FilterCategoryLayout = ({
   selectedFilter = { manufacturer: [], price: [] },
-  handleManufacturerFilter = () => {},
-  handlePriceFilter = () => {},
+  onManufacturerFilter = () => {},
+  onPriceFilter = () => {},
 }) => {
   const manufacturers = BRAND.map((brand) => ({
     id: brand.id,
@@ -42,14 +42,14 @@ const FilterCategoryLayout = ({
   }));
 
   const handleManufacturerSelect = (e) => {
-    handleManufacturerFilter(e.currentTarget.value);
+    onManufacturerFilter(e.currentTarget.value);
   };
 
   const handlePriceSelect = (e) => {
     const selectedOption = e.target;
     const selectDataset = e.target.dataset;
 
-    handlePriceFilter(selectedOption.id, selectDataset.min, selectDataset.max);
+    onPriceFilter(selectedOption.id, selectDataset.min, selectDataset.max);
   };
 
   return (
@@ -106,8 +106,8 @@ const FilterCategoryLayout = ({
 };
 
 FilterCategoryLayout.propTypes = {
-  handleManufacturerFilter: PropTypes.func,
-  handlePriceFilter: PropTypes.func,
+  onManufacturerFilter: PropTypes.func,
+  onPriceFilter: PropTypes.func,
   selectedFilter: PropTypes.shape({
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.arrayOf(PropTypes.string).isRequired,

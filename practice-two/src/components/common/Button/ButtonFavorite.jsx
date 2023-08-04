@@ -10,23 +10,33 @@ import Button from './Button';
 // Data
 import { ICON } from '../../../constants/data';
 
-const FavoriteButton = ({ onClick }) => {
-  // Use state to store the button's state, initialize the value to false
-  const [isFavorite, setIsFavorite] = useState(false);
+/**
+ * FavoriteButton Component
+ *
+ * A custom button component that represents a favorite/unfavorite action.
+ * When clicked, it toggles between the active (favorite) and inactive (unfavorite) states.
+ *
+ * @param onClick - Function to handle the click event when the button is clicked.
+ * @param isFavorite - Boolean value indicating if the button is in the favorite state.
+ * @returns {JSX.Element} The FavoriteButton component JSX.
+ */
+const FavoriteButton = ({ onClick = () => {}, isFavorite = false }) => {
+  // Use state to store the button's state, initialize the value based on the 'isFavorite' prop
+  const [isButtonFavorite, setIsButtonFavorite] = useState(isFavorite);
 
   // Function to handle the event when the button is clicked
   const handleButtonClick = (e) => {
     // Toggle the state when the button is clicked
-    setIsFavorite((prevIsFavorite) => !prevIsFavorite);
+    setIsButtonFavorite((prevIsButtonFavorite) => !prevIsButtonFavorite);
 
     // Call the onClick function provided by the parent component
     if (onClick) {
-      onClick(e); // Pass the event object to the parent's onClick function
+      onClick(e); // Pass the event object and the new 'isFavorite' value to the parent's onClick function
     }
   };
 
   // Create a variable 'heartIconClasses' to apply CSS classes based on the state of the button
-  const heartIconClasses = `heart ${isFavorite ? 'heart-active' : ''}`;
+  const heartIconClasses = `heart ${isButtonFavorite ? 'heart-active' : ''}`;
 
   return (
     <Button variant="outline" size="small" onClick={handleButtonClick}>
@@ -44,6 +54,7 @@ const FavoriteButton = ({ onClick }) => {
 
 FavoriteButton.propTypes = {
   onClick: PropTypes.func, // Add the 'onClick' prop type
+  isFavorite: PropTypes.bool, // Add the 'isFavorite' prop type
 };
 
 export default FavoriteButton;
