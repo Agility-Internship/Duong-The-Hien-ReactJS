@@ -22,11 +22,11 @@ const App = () => {
   });
 
   // State for storing the favorite product IDs
-  const [favorites, setFavorites] = useState([]);
+  const [favoriteProductIDs, setFavoriteProductIDs] = useState([]);
 
   // Function to handle toggling a product as favorite
-  const handleFavoriteToggle = (productID) => {
-    setFavorites((prevFavorites) => {
+  const toggleProductFavorite = (productID) => {
+    setFavoriteProductIDs((prevFavorites) => {
       const isFavorite = prevFavorites.includes(productID);
 
       // If it's already in the favorites list, remove it
@@ -99,20 +99,20 @@ const App = () => {
       <section className="pt-3 flex gap-4 ">
         <FilterCategoryLayout
           selectedFilter={selectedFilter}
-          handleManufacturerFilter={handleManufacturerFilter}
-          handlePriceFilter={handlePriceFilter}
+          onManufacturerFilter={handleManufacturerFilter}
+          onPriceFilter={handlePriceFilter}
         />
         <FavoriteProductsCard
           products={filterProducts}
-          favorites={favorites}
-          handleFavoriteToggle={handleFavoriteToggle}
+          favoriteProductIDs={favoriteProductIDs}
+          onToggleProductFavorite={toggleProductFavorite}
         />
       </section>
       <section>
         <ProductList
           products={filterProducts}
-          favorites={favorites}
-          handleFavoriteToggle={handleFavoriteToggle}
+          favoriteProductIDs={favoriteProductIDs}
+          onToggleProductFavorite={toggleProductFavorite}
         />
       </section>
     </main>

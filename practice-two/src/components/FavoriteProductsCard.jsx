@@ -18,7 +18,7 @@ import ProductCard from './ProductCard';
  * @param handleFavoriteToggle - Function to handle toggling a product as favorite
  * @returns {JSX.Element} The FavoriteProductsCard Component
  */
-const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => {
+const FavoriteProductsCard = ({ products, favoriteProductIDs, onToggleProductFavorite }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -43,11 +43,11 @@ const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => 
           <div className="mb-4">
             <h2 className="text-2xl text-center pb-4">My Favorite List</h2>
             <div className="grid grid-cols-3 gap-2">
-              {favorites.map((productId) => {
+              {favoriteProductIDs.map((productId) => {
                 // Find the product data from allProducts array based on productId
                 const productFavorite = products.find((p) => p.id === productId);
                 if (!productFavorite) return null; // Product not found
-                const isFavoriteProduct = !!favorites.includes(productId);
+                const isFavoriteProduct = !!favoriteProductIDs.includes(productId);
 
                 return (
                   <div
@@ -57,7 +57,7 @@ const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => 
                     <ProductCard
                       isFavoriteProduct={isFavoriteProduct}
                       product={productFavorite}
-                      onSelectFavorite={handleFavoriteToggle}
+                      onSelectFavorite={onToggleProductFavorite}
                     />
                   </div>
                 );
@@ -77,8 +77,8 @@ FavoriteProductsCard.propTypes = {
       // Define other product properties based on your ProductCard component
     }),
   ).isRequired,
-  favorites: PropTypes.arrayOf(PropTypes.number).isRequired,
-  handleFavoriteToggle: PropTypes.func.isRequired,
+  favoriteProductIDs: PropTypes.arrayOf(PropTypes.number).isRequired,
+  onToggleProductFavorite: PropTypes.func.isRequired,
 };
 
 export default FavoriteProductsCard;
