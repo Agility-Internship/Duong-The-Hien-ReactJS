@@ -8,11 +8,15 @@ import FavoriteButton from './common/Button/ButtonFavorite';
 
 /**
  * Product Card Component.
+ *
+ * A reusable component that displays product information in a card format.
+ *
  * @param product - The product data object.
  * @param isFavoriteProduct - Boolean value indicating if the product is in favorites list.
- * @returns {JSX.Element} Product Card content
+ * @param onSelectFavorite - Function to handle the selection/unselection of a favorite product.
+ * @returns {JSX.Element} Product Card content.
  */
-function ProductCard({ product, isFavoriteProduct, onSelectFavorite }) {
+function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = () => {} }) {
   const handleFavoriteToggle = () => {
     onSelectFavorite(product.id);
   };
@@ -65,7 +69,7 @@ ProductCard.propTypes = {
     resolution: PropTypes.string,
     price: PropTypes.string.isRequired,
   }).isRequired,
-  isFavoriteProduct: PropTypes.bool.isRequired, // Add the prop type for isFavoriteProduct
+  isFavoriteProduct: PropTypes.bool.isRequired,
   onSelectFavorite: PropTypes.func.isRequired,
 };
 

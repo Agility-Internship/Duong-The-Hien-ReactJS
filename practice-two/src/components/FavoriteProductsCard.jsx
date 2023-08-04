@@ -13,12 +13,16 @@ import ProductCard from './ProductCard';
  * When the button is clicked, a popover with a list of favorite products is displayed.
  * The popover automatically closes when clicking outside of it.
  *
- * @param favorites - An array of favorite product IDs
  * @param products - An array of all products
- * @param handleFavoriteToggle - Function to handle toggling a product as favorite
+ * @param favoriteProductIDs - An array of favorite product IDs
+ * @param onToggleProductFavorite - Function to handle toggling a product as favorite
  * @returns {JSX.Element} The FavoriteProductsCard Component
  */
-const FavoriteProductsCard = ({ products, favoriteProductIDs, onToggleProductFavorite }) => {
+const FavoriteProductsCard = ({
+  products = [],
+  favoriteProductIDs = [],
+  onToggleProductFavorite = () => {},
+}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -73,8 +77,7 @@ const FavoriteProductsCard = ({ products, favoriteProductIDs, onToggleProductFav
 FavoriteProductsCard.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      // Define other product properties based on your ProductCard component
+      id: PropTypes.string.isRequired,
     }),
   ).isRequired,
   favoriteProductIDs: PropTypes.arrayOf(PropTypes.number).isRequired,

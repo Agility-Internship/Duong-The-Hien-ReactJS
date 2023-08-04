@@ -11,19 +11,22 @@ import useClickOutsides from '../hook/useClickOutside';
 
 // Data
 import { ICON } from '../constants/data';
+
 /**
  * GroupFilterPopover Component
  *
  * A popover component for grouping and filtering options.
- * When the button is clicked, popover with a list of manufacturers and price options is displayed.
+ * When the button is clicked, a popover with a list of manufacturers and price options is displayed.
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
- * @param manufacturers An array of objects representing the manufacturers.
+ * @param categories - An object representing the filter categories with 'id' and 'value'.
+ * @param manufacturers - An array of objects representing the manufacturers.
  * @param prices - An array of objects representing the price options.
  * @param selectedFilter - Object containing the selected filter criteria.
  * @param onSelectManufacturer - Function to handle selecting a manufacturer option.
- * @returns {JSX.Element} The GroupFilterPopover Component
+ * @param onSelectPrice - Function to handle selecting a price option.
+ * @returns {JSX.Element} The GroupFilterPopover Component.
  */
 const GroupFilterPopover = ({
   categories = { id: [], value: [] },
