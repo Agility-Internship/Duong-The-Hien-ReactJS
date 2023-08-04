@@ -10,6 +10,7 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
+import ProductDetails from './components/ProductDetails';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -114,6 +115,9 @@ const App = () => {
           favorites={favorites}
           handleFavoriteToggle={handleFavoriteToggle}
         />
+      </section>
+      <section>
+        <ProductDetails products={filterProducts} />
       </section>
     </main>
   );
