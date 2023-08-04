@@ -14,11 +14,11 @@ import Button from './Button/Button';
  * @returns {JSX.Element|null} The Popover component JSX.
  */
 const Popover = ({
-  isOpen,
-  onClose,
+  isOpen = false,
+  onClose = () => {},
   closeButton = true,
   children,
-  popoverClassName,
+  popoverClassName = false,
   arrowPopover = true,
 }) => {
   const defaultPopoverClassName = 'absolute flex top-10 -left-5 bg-white m-4 z-200 shadow-2xl z-50';

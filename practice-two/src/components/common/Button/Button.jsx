@@ -39,7 +39,7 @@ const Button = ({
   size = 'medium',
   type = 'button',
   color = 'light',
-  onClick,
+  onClick = () => {},
   ...restProps
 }) => {
   const handleButtonClick = (e) => {

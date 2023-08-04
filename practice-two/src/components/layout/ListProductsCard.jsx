@@ -11,14 +11,14 @@ import Typography from '../common/Typography';
  * A component that renders a list of products using a grid layout.
  *
  * @param products - An array of product objects to be displayed.
- * @param favorites - An array of product IDs marked as favorites.
- * @param handleFavoriteToggle - Function to handle the selection/unselection of a favorite product.
+ * @param favoriteProductIDs - An array of product IDs marked as favorites.
+ * @param onToggleProductFavorite - Function to handle the selection/unselection of a favorite product.
  * @returns {JSX.Element} The ProductList Component.
  */
-const ProductList = ({ products, handleFavoriteToggle, favorites }) => {
+const ProductList = ({ products = [], favoriteProductIDs = [], onToggleProductFavorite = () => {} }) => {
   // Function to handle the click event when a favorite product is selected
   const handleFavoriteSelect = (productId) => {
-    handleFavoriteToggle(productId);
+    onToggleProductFavorite(productId);
   };
   return (
     <div className="mt-8">
@@ -32,7 +32,7 @@ const ProductList = ({ products, handleFavoriteToggle, favorites }) => {
       <div className="grid grid-cols-5 border -z-30">
         {products.map((product) => {
           // Check if product.id exists in favorites array
-          const isFavoriteProduct = !!favorites.includes(product.id);
+          const isFavoriteProduct = !!favoriteProductIDs.includes(product.id);
           return (
             <div
               key={product.id}
@@ -62,8 +62,8 @@ ProductList.propTypes = {
       price: PropTypes.string,
     }),
   ).isRequired,
-  favorites: PropTypes.arrayOf(PropTypes.string).isRequired,
-  handleFavoriteToggle: PropTypes.func.isRequired,
+  favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onToggleProductFavorite: PropTypes.func.isRequired,
 };
 
 export default ProductList;

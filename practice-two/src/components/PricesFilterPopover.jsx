@@ -19,7 +19,10 @@ import { ICON } from '../constants/data';
  * Users can select specific options to apply filters, e.g., for a product list.
  * The popover automatically closes when clicking outside of it.
  *
+ * @param categories - An object representing the filter categories with 'id' and 'value'.
  * @param prices - An array of objects representing the price options.
+ * @param selectedFilter - Object containing the selected filter criteria.
+ * @param onSelectPrice - Function to handle selecting a price option.
  * @returns {JSX.Element} The PricePopover Component
  */
 const PricePopover = ({

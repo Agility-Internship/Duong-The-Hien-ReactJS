@@ -13,12 +13,16 @@ import ProductCard from './ProductCard';
  * When the button is clicked, a popover with a list of favorite products is displayed.
  * The popover automatically closes when clicking outside of it.
  *
- * @param favorites - An array of favorite product IDs
  * @param products - An array of all products
- * @param handleFavoriteToggle - Function to handle toggling a product as favorite
+ * @param favoriteProductIDs - An array of favorite product IDs
+ * @param onToggleProductFavorite - Function to handle toggling a product as favorite
  * @returns {JSX.Element} The FavoriteProductsCard Component
  */
-const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => {
+const FavoriteProductsCard = ({
+  products = [],
+  favoriteProductIDs = [],
+  onToggleProductFavorite = () => {},
+}) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -43,11 +47,11 @@ const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => 
           <div className="mb-4">
             <h2 className="text-2xl text-center pb-4">My Favorite List</h2>
             <div className="grid grid-cols-3 gap-2">
-              {favorites.map((productId) => {
-                // Find the product data from allProducts array based on productId
+              {favoriteProductIDs.map((productId) => {
                 const productFavorite = products.find((p) => p.id === productId);
-                if (!productFavorite) return null; // Product not found
-                const isFavoriteProduct = !!favorites.includes(productId);
+                if (!productFavorite) return null;
+
+                const isFavoriteProduct = !!favoriteProductIDs.includes(productId);
 
                 return (
                   <div
@@ -57,7 +61,7 @@ const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => 
                     <ProductCard
                       isFavoriteProduct={isFavoriteProduct}
                       product={productFavorite}
-                      onSelectFavorite={handleFavoriteToggle}
+                      onSelectFavorite={onToggleProductFavorite}
                     />
                   </div>
                 );
@@ -73,12 +77,11 @@ const FavoriteProductsCard = ({ products, favorites, handleFavoriteToggle }) => 
 FavoriteProductsCard.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      // Define other product properties based on your ProductCard component
+      id: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  favorites: PropTypes.arrayOf(PropTypes.number).isRequired,
-  handleFavoriteToggle: PropTypes.func.isRequired,
+  favoriteProductIDs: PropTypes.arrayOf(PropTypes.number).isRequired,
+  onToggleProductFavorite: PropTypes.func.isRequired,
 };
 
 export default FavoriteProductsCard;
