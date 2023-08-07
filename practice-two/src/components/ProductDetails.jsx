@@ -18,25 +18,20 @@ import FavoriteButton from './common/Button/ButtonFavorite';
  */
 const ProductDetails = (products = [], isFavoriteProduct = []) => {
   const product = products.products;
+  const imageUrls = Object.values(product.image);
   return (
     <section className="container min-h-screen flex justify-center items-center">
       <div className="box bg-white rounded-2xl shadow-2xl p-10 m-2 w-96 grid grid-cols-1 lg:grid-cols-2 grid-rows-auto md:w-3/4 md:grid-rows-auto items-center">
         {/* Images list */}
         <div className="grid grid-cols-3 grid-rows-auto gap-3 mr-5">
-          {/* Displaying multiple images */}
-          <div className="border rounded-2xl active col-span-3">
-            <CardImage src={product.image} alt="This is a picture of the product" />
-          </div>
-          {/* Additional color images(if have) */}
-          <div className="border rounded-2xl">
-            <CardImage src={product.image} alt="This is a picture of the product" />
-          </div>
-          <div className="border rounded-2xl">
-            <CardImage src={product.image} alt="This is a picture of the product" />
-          </div>
-          <div className="border rounded-2xl">
-            <CardImage src={product.image} alt="This is a picture of the product" />
-          </div>
+          {imageUrls.map((imageUrl, index) => (
+            <div
+              key={index.id}
+              className={`border rounded-2xl ${index === 0 ? 'active col-span-3' : ''}`}
+            >
+              <CardImage src={imageUrl} alt={`Product Image ${index + 1}`} />
+            </div>
+          ))}
         </div>
         <div>
           <div className="basic-info flex flex-col gap-4 relative">

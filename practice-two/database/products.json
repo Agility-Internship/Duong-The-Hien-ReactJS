@@ -12,7 +12,12 @@
   },
   {
     "id": "2",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-vang-thumb-600x600.jpg",
+    "image": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-bac-thumb-200x200.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-tim-thumb-200x200.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-den-thumb-200x200.jpg"
+    },
     "name": "iPhone 14 Pro",
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
