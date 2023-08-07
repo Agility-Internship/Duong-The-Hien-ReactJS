@@ -16,17 +16,17 @@ import FavoriteButton from './common/Button/ButtonFavorite';
  * @param isFavoriteProduct - Boolean value indicating if the product is in favorites list.
  * @returns {JSX.Element} Product Details content.
  */
-const ProductDetails = (products = [], isFavoriteProduct = []) => {
-  const product = products.products;
-  const imageUrls = Object.values(product.image);
+const ProductDetails = (product = []) => {
+  const selectedProduct = product.product;
+  const imageUrls = Object.values(selectedProduct.images);
   return (
     <section className="container min-h-screen flex justify-center items-center">
       <div className="box bg-white rounded-2xl shadow-2xl p-10 m-2 w-96 grid grid-cols-1 lg:grid-cols-2 grid-rows-auto md:w-3/4 md:grid-rows-auto items-center">
-        {/* Images list */}
         <div className="grid grid-cols-3 grid-rows-auto gap-3 mr-5">
           {imageUrls.map((imageUrl, index) => (
             <div
-              key={index.id}
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
               className={`border rounded-2xl ${index === 0 ? 'active col-span-3' : ''}`}
             >
               <CardImage src={imageUrl} alt={`Product Image ${index + 1}`} />
@@ -36,44 +36,35 @@ const ProductDetails = (products = [], isFavoriteProduct = []) => {
         <div>
           <div className="basic-info flex flex-col gap-4 relative">
             <div className="flex justify-between">
-              {/* Displaying product name and favorite button */}
               <Typography level={3} className="text-4xl" size="xl">
-                {product.name}
+                {selectedProduct.name}
               </Typography>
-              <div className="flex justify-between">
-                {/* Displaying installment info (if available) */}
-                {products.installment && (
-                  <div className="absolute top-2 left-2">
-                    <Typography color="black" size="xl" variant="solid">
-                      {product.installment}
-                    </Typography>
-                  </div>
-                )}
-                {/* Displaying the favorite button */}
-                <FavoriteButton isFavorite={isFavoriteProduct} />
-              </div>
+              <FavoriteButton />
             </div>
-            {/* Displaying product version and resolution */}
+            <div className="inline-block">
+              {selectedProduct.installment && (
+                <Typography color="black" size="md" variant="solid">
+                  {selectedProduct.installment}
+                </Typography>
+              )}
+            </div>
             <div className="card-compare flex gap-2">
               <Typography color="black" size="md" variant="solid">
-                {product.version}
+                {selectedProduct.version}
               </Typography>
               <Typography color="black" size="md" variant="solid">
-                {product.resolution}
+                {selectedProduct.resolution}
               </Typography>
             </div>
-            {/* Displaying product price */}
             <Typography size="xl" color="red" variant="plain">
-              {product.price}
+              {selectedProduct.price}
               &#8363;
             </Typography>
-            {/* Displaying product description */}
             <Typography className="leading-6" color="gray-300" size="md" variant="plain">
-              {product.description}
+              {selectedProduct.description}
             </Typography>
-            {/* Buy button */}
             <Link
-              href="/products-card-details"
+              href="/shopping-cart"
               variant="bg-secondary py-2 px-4 rounded font-semibold text-sm"
               disabled
               color="white"
@@ -90,10 +81,10 @@ const ProductDetails = (products = [], isFavoriteProduct = []) => {
 };
 
 ProductDetails.propTypes = {
-  products: PropTypes.shape({
+  product: PropTypes.shape({
     installment: PropTypes.string,
     id: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    images: PropTypes.objectOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
     version: PropTypes.string,
     resolution: PropTypes.string,

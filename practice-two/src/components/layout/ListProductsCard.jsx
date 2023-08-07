@@ -55,7 +55,7 @@ ProductList.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      images: PropTypes.arrayOf(PropTypes.string),
+      images: PropTypes.objectOf(PropTypes.string).isRequired,
       name: PropTypes.string.isRequired,
       version: PropTypes.string.isRequired,
       resolution: PropTypes.string.isRequired,
