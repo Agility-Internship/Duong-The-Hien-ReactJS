@@ -50,7 +50,7 @@ function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = 
               {product.resolution}
             </Typography>
           </div>
-          <Typography color="red" size="xl" variant="outlined">
+          <Typography color="red" size="xl" variant="plain">
             {product.price}
             &#8363;
           </Typography>

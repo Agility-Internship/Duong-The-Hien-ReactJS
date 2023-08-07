@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /**
  * Link Component
  * @param href - The URL or path the link should navigate to.
- * @param color - The color of the link.
+ * @param color - The color of the link text.
  * @param disabled - Determines if the link is disabled or not.
  * @param size - The size of the link's text. Possible values: 'xl', 'lg'.
  * @param underline - Determines if the link text should be underlined or not.
@@ -42,7 +42,7 @@ function Link({
 
 Link.propTypes = {
   href: PropTypes.string,
-  color: PropTypes.string,
+  color: PropTypes.string, // Add the 'color' prop type for customizing the link text color
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['xl', 'lg']),
   underline: PropTypes.bool,

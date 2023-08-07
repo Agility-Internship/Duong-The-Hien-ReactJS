@@ -116,9 +116,8 @@ const App = () => {
           onToggleProductFavorite={toggleProductFavorite}
         />
       </section>
-      <section>
-        <ProductDetails products={filterProducts} />
-      </section>
+      <ProductDetails products={allProducts[1]} favoriteProductIDs={favoriteProductIDs} />
+      <section />
     </main>
   );
 };
