@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import FilterCategoryLayout from './components/layout/FilterCategoryLayout';
 import ProductList from './components/layout/ListProductsCard';
 import FavoriteProductsCard from './components/FavoriteProductsCard';
+import ProductDetails from './components/ProductDetails';
 
 // Data
 import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
-import ProductDetails from './components/ProductDetails';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
