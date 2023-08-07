@@ -21,17 +21,18 @@ const ProductDetails = (products = [], isFavoriteProduct = []) => {
   return (
     <div className="container min-h-screen flex justify-center items-center">
       <div className="box bg-white rounded-2xl shadow-2xl p-10 m-2 w-96 grid grid-cols-1 lg:grid-cols-2 grid-rows-auto md:w-3/4 md:grid-rows-auto items-center">
-        <div className="images grid grid-cols-3 grid-rows-auto gap-3">
-          <div className="img-holder active col-span-3">
+        {/* Images list */}
+        <div className="grid grid-cols-3 grid-rows-auto gap-3 mr-5">
+          <div className="border rounded-2xl active col-span-3">
             <CardImage src={product.image} alt="This is a picture of the product" />
           </div>
-          <div className="img-holder">
+          <div className="border rounded-2xl">
             <CardImage src={product.image} alt="This is a picture of the product" />
           </div>
-          <div className="img-holder">
+          <div className="border rounded-2xl">
             <CardImage src={product.image} alt="This is a picture of the product" />
           </div>
-          <div className="img-holder">
+          <div className="border rounded-2xl">
             <CardImage src={product.image} alt="This is a picture of the product" />
           </div>
         </div>

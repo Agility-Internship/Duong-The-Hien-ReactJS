@@ -42,7 +42,7 @@ function Link({
 
 Link.propTypes = {
   href: PropTypes.string,
-  color: PropTypes.string, // Add the 'color' prop type for customizing the link text color
+  color: PropTypes.string,
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['xl', 'lg']),
   underline: PropTypes.bool,
