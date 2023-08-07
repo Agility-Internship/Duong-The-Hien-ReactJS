@@ -66,12 +66,7 @@ const ProductDetails = (products = [], isFavoriteProduct = []) => {
               &#8363;
             </Typography>
             <Typography className="leading-6" color="gray-300" size="md" variant="plain">
-              {/* {product.description} */}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, dolore. Illum, architecto
-              voluptas ipsam sapiente necessitatibus, nobis id perferendis totam expedita asperiores
-              labore saepe! Corrupti quibusdam eligendi placeat nemo molestias vel maiores velit labore?
-              Facilis recusandae cupiditate esse quia possimus, doloribus voluptate earum voluptatum
-              ipsam, quos
+              {product.description}
             </Typography>
             <Link
               href="/products-card-ddetails"
