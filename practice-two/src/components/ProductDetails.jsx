@@ -27,7 +27,7 @@ const ProductDetails = (products = [], isFavoriteProduct = []) => {
           <div className="border rounded-2xl active col-span-3">
             <CardImage src={product.image} alt="This is a picture of the product" />
           </div>
-          {/* Additional images */}
+          {/* Additional color images(if have) */}
           <div className="border rounded-2xl">
             <CardImage src={product.image} alt="This is a picture of the product" />
           </div>
