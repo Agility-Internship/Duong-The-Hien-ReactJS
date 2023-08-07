@@ -21,6 +21,7 @@ function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = 
   const handleFavoriteToggle = () => {
     onSelectFavorite(product.id);
   };
+  const firstImage = Object.values(product.images)[0];
 
   return (
     <Card>
@@ -35,7 +36,7 @@ function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = 
           )}
           <FavoriteButton isFavorite={isFavoriteProduct} onClick={handleFavoriteToggle} />
         </div>
-        <CardImage src={product.image} alt="This is a picture of the card-image" />
+        <CardImage src={firstImage} alt="This is a picture of the card-image" />
         <CardContent>
           <div className="hover:text-blue-700">
             <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
@@ -50,7 +51,7 @@ function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = 
               {product.resolution}
             </Typography>
           </div>
-          <Typography color="red" size="xl" variant="outlined">
+          <Typography color="red" size="xl" variant="plain">
             {product.price}
             &#8363;
           </Typography>
@@ -64,7 +65,7 @@ ProductCard.propTypes = {
   product: PropTypes.shape({
     installment: PropTypes.string,
     id: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    images: PropTypes.objectOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
     version: PropTypes.string,
     resolution: PropTypes.string,

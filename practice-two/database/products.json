@@ -1,862 +1,1376 @@
 [
   {
-    "id":"1",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg",
+    "id": "1",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-green-thumb-200x200.jpg"
+    },
     "name": "Samsung Galaxy A24",
     "version": "6.5\"",
     "resolution": "Full HD+",
     "price": "6.090.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy A24 6GB - is a generation of Galaxy phones that have just been introduced by Samsung to the Vietnamese market in April 2023. The device owns a camera cluster with a main resolution of 50 MP, a good chip and a quality Super AMOLED screen. Trendy square design In terms of design, this device is inspired by a few high-end Samsung product lines such as the Galaxy S23 series, with a flat shape in the frame and back to make the overall device luxurious and modern more. The outer shell of the machine is made mainly of plastic, which plays an important role in minimizing weight and creating a light feeling when holding the product."
   },
   {
-    "id":"2",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-vang-thumb-600x600.jpg",
+    "id": "2",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-bac-thumb-200x200.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-tim-thumb-200x200.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-den-thumb-200x200.jpg"
+    },
     "name": "iPhone 14 Pro",
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
     "price": "25.490.000",
     "installment": "",
-    "manufactory": "apple"
+    "manufactory": "apple",
+    "description": "iPhone 14 Pro 128GB - The most anticipated smartphone from Apple in 2022, this time Apple brings us a version with a new notch design, powerful configuration thanks to Apple A16 Bionic chip and cluster The camera has an upgraded resolution of up to 48 MP.Elegant and distinctive designComing to the design of this year's iPhone 14 Pro, the company the inherent features from previous generations, still carrying in itself a square appearance with beveled back. Currently, the user's taste for this design is still very high, so in my opinion, this will still be a trending phone for many years to come."
   },
   {
-    "id":"3",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-thumb-xanh-600x600.jpg",
+    "id": "3",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-thumb-xanh-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-thumb-xanh-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-thumb-xanh-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-thumb-xanh-600x600.jpg"
+    },
     "name": "Samsung Galaxy S23 Ultra 5G",
     "version": "6.8\"",
     "resolution": "Quad HD+ (2K+)",
     "price": "26.990.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy S23 Ultra 5G 256GB is Samsung's most advanced smartphone, possessing an unbelievable configuration with a huge chip  Qualcomm optimized exclusively for the Galaxy series and a camera up to 200 MP, worthy of the expected Android flagship. best in 2023. Exquisite luxury styling In terms of design, the Samsung Galaxy S23 Ultra will continue to inherit the luxurious design from the previous generation, still a metal frame, glass back and slightly curved shape on the side and screen."
   },
   {
-    "id":"4",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/301603/realme-c35-vang-thumb-600x600.jpg",
+    "id": "4",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/301603/realme-c35-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/301603/realme-c35-vang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/301603/realme-c35-vang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/301603/realme-c35-vang-thumb-600x600.jpg"
+    },
     "name": "realme C55",
     "version": "6.72\"",
     "resolution": "Full HD+",
     "price": "4.590.000",
     "installment": "",
-    "manufactory": "realme"
+    "manufactory": "realme",
+    "description": "Recently, the  realme C55  phone has been officially introduced with a remarkable set of specifications and a reasonable price for users, creating this product to improve the experience for products in the segment. Cheap. Stylish look realme C55 smartphone has a simple design with a square design language and elegant colors, a sturdy frame and a rough plastic back to help provide a firm grip or limit fingerprints every day. when using."
   },
   {
-    "id":"5",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/262650/samsung-galaxy-a23-cam-thumb-600x600.jpg",
+    "id": "5",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/262650/samsung-galaxy-a23-cam-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/262650/samsung-galaxy-a23-cam-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/262650/samsung-galaxy-a23-cam-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/262650/samsung-galaxy-a23-cam-thumb-600x600.jpg"
+    },
     "name": "Samsung Galaxy A23",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "4.690.000",
     "installment": "",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Launched by Samsung on 03/2022 - Samsung Galaxy A23 6GB has a youthful design with an impressive set of specifications in the price range, meeting the needs of all-day use stably thanks to the upcoming chipset. from Qualcomm and a huge capacity battery. Smooth experience on every task Equipped in the device is an 8-core Snapdragon 680 processor with a maximum clock speed of up to 2.4 GHz, giving an experience in my opinion that is quite smooth, daily tasks such as texting, surfing the web quickly. quickly, no lag is seen."
   },
   {
-    "id":"6",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+    "id": "6",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg"
+    },
     "name": "realme C30s",
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.190.000",
     "installment": "",
-    "manufactory": "realme"
+    "manufactory": "realme",
+    "description": "Recently, the  realme C30s (2GB / 32GB) phone  has also been officially revealed as expected by users with an impressive set of specifications and a reasonable price. This helps enhance the experience in a better way for low-priced product lines. Young designers and entrepreneurial realme C30s has a beautiful design thanks to the trendy square shape, owns two neutral color versions, blue and black, so this is considered a device that can be suitable for all ages and genders."
   },
   {
-    "id":"7",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg",
+    "id": "7",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg"
+    },
     "name": "Samsung Galaxy Z Fold4 5G",
     "version": "main 7.6\" & extra 6.2\"",
     "resolution": "Quad HD+ (2K+)",
     "price": "35.990.000",
     "installment": "",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "At the annual Samsung Unpacked event, the Samsung Galaxy Z Fold4 256GB was officially introduced to the technology market, bringing with it many valuable improvements that make the Galaxy Z Fold a better folding phone. Exquisite folding design makes a difference Galaxy Z Fold4 (2022) launched with an almost unchanged appearance when compared to the  Galaxy Z Fold3, if you just look at it, you will have a hard time distinguishing these two products. The device still uses a durable Armor Aluminum frame, the secondary screen glass is Corning Gorilla Glass Victus +, the main screen glass is Ultra Thin Glass."
   },
   {
-    "id":"8",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+    "id": "8",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg"
+    },
     "name": "OPPO Reno8 series",
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "17.990.000",
     "installment": "",
-    "manufactory": "oppo"
+    "manufactory": "oppo",
+    "description": "OPPO Reno8 Pro 5G is a high-end phone launched by OPPO on 09/2022, the device is aimed at high-end perfection in design and professional shooting capabilities thanks to its MariSilicon image processor. Dedicated X. Luxurious look This time, the OPPO house brings us a phone with a special design, it owns a different appearance from previous OPPO Reno phones, this design reminds me of the  OPPO Find. The X5 Pro was launched earlier."
   },
   {
-    "id":"9",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-3-600x600.jpg",
+    "id": "9",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-3-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-3-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-3-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-3-600x600.jpg"
+    },
     "name": "Vivo Y02s",
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.890.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo Y02s - a name of the Y series has just been launched by Vivo with a youthful appearance. Possessing a set of parameters that are considered outstanding in the current low-cost phone segment (August 2022). This promises to be a cheap and delicious product that users should not ignore. Modern look, youthful colors Vivo Y02s is finished with two sides and flat beveled edges that make the body of the device square and extremely trendy today. The most prominent is the camera cluster designed by Vivo with two impressive large circular clusters."
   },
   {
-    "id":"10",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+    "id": "10",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg"
+    },
     "name": "Samsung Galaxy S23 5G",
     "version": "6.1\"",
     "resolution": "Full HD+",
     "price": "19.990.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy S23 5G 128GB is probably no longer a strange name for today's technology believers, considered one of the key faces from Samsung with the most powerful configuration, famous camera. top class with extremely luxurious and modern finishing. Possessing a luxurious design In this year's version, I am happy to know that the Galaxy S23 retains the familiar design from the previous generation, it is considered an icon of the Samsung Galaxy S series phones when carrying a unique feature. unique and full of class."
   },
   {
-    "id":"11",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-xanh-600x600.jpg",
+    "id": "11",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-xanh-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-xanh-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-xanh-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-xanh-600x600.jpg"
+    },
     "name": "Samsung Galaxy Z Flip4 5G",
     "version": "main 6.7\" & extra 1.9\"",
     "resolution": "Full HD+",
     "price": "18.990.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy Z Flip4 128GB has officially launched the technology market, marking Samsung's return on the user-oriented path of convenience on folding phones. With increased durability and beautiful design, Flip4 becomes one of the bright spots for the second half of 2022. Leading the new design trend Perhaps folding phones are no longer a strange name because many big players in the mobile device industry have launched many products with similar designs, most recently with the presence of the smartphone. Samsung's flagship is called Galaxy Z Flip4."
   },
   {
-    "id":"12",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg",
+    "id": "12",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg"
+    },
     "name": "iPhone 13",
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
     "price": "16.990.000",
     "installment": "",
-    "manufactory": "apple"
+    "manufactory": "apple",
+    "description": "iPhone 14 128GB is considered an explosive smartphone model of the apple house in 2022, impressive with its youthful appearance, quality screen accompanied by improvements in operating system and image processing algorithms, making the device become more popular. It became a name that attracted the attention of many users at the time of its launch. iPhone 13 has a premium design With the standard version, the Apple house retains the same design compared to its predecessor, still has a flat back and a square frame to help the device become more modern."
   },
   {
-    "id":"13",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-thumb-bac-600x600.jpg",
+    "id": "13",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-thumb-bac-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-thumb-bac-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-thumb-bac-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/303583/samsung-galaxy-a34-thumb-bac-600x600.jpg"
+    },
     "name": "Samsung Galaxy A34 5G",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "7.790.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Introduced in March 2023, the Samsung Galaxy A34 5G 128GB is a notable choice in the mid-range Android phone market. With advanced 5G connectivity and reliable performance, the product promises a smooth and enjoyable user experience. Modern luxury styling With a beautiful and modern design, the Galaxy A34 5G has a smooth back made of high-quality plastic and the camera cluster is arranged symmetrically in an eye-catching vertical row. Thanks to the use of plastic material, the machine becomes lighter and feels comfortable to hold."
   },
   {
-    "id":"14",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-2-1-600x600.jpg",
+    "id": "14",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-2-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-2-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-2-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-2-1-600x600.jpg"
+    },
     "name": "OPPO Reno7 series",
     "version": "6.43\"",
     "resolution": "Full HD+",
     "price": "7.490.000",
     "installment": "0% installment",
-    "manufactory": "oppo"
+    "manufactory": "oppo",
+    "description": "OPPO has launched the Reno7 Z 5G model with the exclusive OPPO Glow design, the camera has the effect of a professional DSLR with dual light borders, the device has a powerful configuration and is certified with an A rating for smoothness. Easily stand out from the crowd The OPPO Reno7 Z 5G phone has a trendy, square beveled frame that makes the device exude a modern and dynamic look. Softly curved four corners create a feeling of comfort and lightness (only 173 g). The monolithic design makes the overall machine extremely solid, not only beautiful but also durable."
   },
   {
-    "id":"15",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/245607/Vivo-v23e-den%20(5)-600x600.jpg",
+    "id": "15",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/245607/Vivo-v23e-den%20(5)-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/245607/Vivo-v23e-den%20(5)-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/245607/Vivo-v23e-den%20(5)-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/245607/Vivo-v23e-den%20(5)-600x600.jpg"
+    },
     "name": "Vivo V23 series",
     "version": "6.44\"",
     "resolution": "Full HD+",
     "price": "5.490.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo  officially launched the Vivo V23 6GB phone  with a series of outstanding advantages, not only external appearance but also internal power. In particular, this smartphone also owns a very good price in the segment, promising to meet your entertainment needs well. Outstanding camera cluster, capturing all the moments Becoming a photographer will be extremely easy with the rear 3-camera system with the main camera having a resolution of 50 MP for sharp, high-quality photos whether you take pictures during the day or at night."
   },
   {
-    "id":"16",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/292770/samsung-galaxy-a14-tlte-thumb-den-600x600.jpg",
+    "id": "16",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/292770/samsung-galaxy-a14-tlte-thumb-den-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/292770/samsung-galaxy-a14-tlte-thumb-den-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/292770/samsung-galaxy-a14-tlte-thumb-den-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/292770/samsung-galaxy-a14-tlte-thumb-den-600x600.jpg"
+    },
     "name": "Samsung Galaxy A14 4G",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "4.490.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung has launched the Samsung Galaxy A23 5G 4GB phone model, an upgraded version supporting modern 5G connectivity of  Galaxy A23 launched in March 2022. Great performance on 5G technology platform The A23 owns a Snapdragon 695 chip with a maximum clock speed of 2.2 GHz, combined with an advanced 5G technology network platform to provide optimal working ability with all tasks in life."
   },
   {
-    "id":"17",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-thumb-new-600x600.jpg",
+    "id": "17",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-thumb-new-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-thumb-new-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-thumb-new-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-thumb-new-600x600.jpg"
+    },
     "name": "realme C35",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "2.990.000",
     "installment": "",
-    "manufactory": "realme"
+    "manufactory": "realme",
+    "description": "realme C35 can be considered as one of the most anticipated smartphone models in the beginning of 2023 with many highlights, some notable points can be mentioned such as: Super AMOLED panel, super resolution 50 MP camera comes with powerful Helio G99 chip. Shine with a new look realme 10 has a square appearance thanks to the flat shaping on the sides and edges. The total weight of the device reaches 178 g, so long-term use will help reduce hand fatigue, which is really useful for those who often have to use the phone for many hours."
   },
   {
-    "id":"18",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/298388/vivo-y02-xanh-thumb-1-2-600x600.jpg",
+    "id": "18",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/298388/vivo-y02-xanh-thumb-1-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/298388/vivo-y02-xanh-thumb-1-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/298388/vivo-y02-xanh-thumb-1-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/298388/vivo-y02-xanh-thumb-1-2-600x600.jpg"
+    },
     "name": "Vivo Y02",
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.590.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo has just launched a smartphone model at the end of 2022 with an accessible price, Vivo Y02 is considered a name that will overwhelm many competitors in the segment when it comes to owning a large screen, buffalo battery and the same price. Helio P22 chip has stable performance. Youthful appearance Vivo Y02 uses a square design with two sides and flat edges, the frame and back of the device are all machined from plastic and finished in a light texture, this helps the phone become more grippy. more hands."
   },
   {
-    "id":"19",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/268880/vivi-y01-%C4%91en-thumb-600x600.jpg",
+    "id": "19",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/268880/vivi-y01-%C4%91en-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/268880/vivi-y01-%C4%91en-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/268880/vivi-y01-%C4%91en-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/268880/vivi-y01-%C4%91en-thumb-600x600.jpg"
+    },
     "name": "Vivo Y01",
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.390.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo Y01 was launched with an impressive set of specifications in the price range, possessing advantages such as: Large screen, stable performance and long usage time, is considered the right device. with students - students for study or light entertainment after stressful moments. Youthful appearance full of personality The first impression when I hold the device in my hand is a solid and compact feeling, although the overall is made of plastic but still brings a certain durability, the creaky condition almost does not appear. ."
   },
   {
-    "id":"20",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/292717/Nokia-C31-Green-thumb-600x600.jpg",
+    "id": "20",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/292717/Nokia-C31-Green-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/292717/Nokia-C31-Green-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/292717/Nokia-C31-Green-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/292717/Nokia-C31-Green-thumb-600x600.jpg"
+    },
     "name": "Nokia C31 (3GB/32GB)",
     "version": "6.7\"",
     "resolution": "HD+",
     "price": "2.190.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia C31 (3GB/32GB) is a phone model that carries many outstanding advantages such as a large screen, stable performance for most everyday tasks, and a 5050 mAh battery for long usage time. Simplicity creates attraction The first impression that makes me very satisfied is that Nokia has equipped the device with a full set of accessories, which is something that many phone companies no longer do. With this Nokia C31, you don't need to worry about buying a case or charger for the device anymore."
   },
   {
-    "id":"21",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+    "id": "21",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg"
+    },
     "name": "Itel L6502",
     "version": "6.52\"",
     "resolution": "HD+",
     "price": "1.590.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Nokia C31 (3GB/32GB) is a phone model that carries many outstanding advantages such as a large screen, stable performance for most everyday tasks, and a 5050 mAh battery for long usage time. Simplicity creates attraction The first impression that makes me very satisfied is that Nokia has equipped the device with a full set of accessories, which is something that many phone companies no longer do. With this Nokia C31, you don't need to worry about buying a case or charger for the device anymore."
   },
   {
-    "id":"22",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+    "id": "22",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg"
+    },
     "name": "Nokia 8210 4G",
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "1.590.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia 8210 4G is probably a suitable choice for those who need a common phone for their calling needs. The machine is cheap and has high durability, helping users to save a lot of money initially as well as not to worry too much about problems during use. Meticulously finished down to the smallest detail Nokia 8210 4G owns a back and frame made from Polycarbonate plastic, with youthful colors. With the body of a compact, easy-to-hold phone, users can easily pocket it without fear of being pinched like on large-sized smartphones."
   },
   {
-    "id":"23",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+    "id": "23",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg"
+    },
     "name": "Itel L6006",
     "version": "6.1\"",
     "resolution": "HD+",
     "price": "1.390.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Itel L6006 from Itel brand is suitable for those who are looking for a cheap smartphone with stable configuration, fully equipped with common features and at an affordable price. Simple design, youthful colors Itel L6006 has a streamlined design language, an aluminum chassis with a plastic back for a weight of only 181 g, you can easily put it in your pocket or pocket to carry anywhere. The back of the phone has a beautiful light-catching effect that is impressive at first sight."
   },
   {
-    "id":"24",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+    "id": "24",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg"
+    },
     "name": "Nokia 215 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "990.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia 215 4G a popular phone in addition to basic functions, it has been upgraded with support for 4G network connectivity to bring more experiences to users. Simple, lightweight design The Nokia 215 4G uses plastic for a durable design, large soft-touch buttons, easy-grip edges and a curved back designed to fit perfectly in your hand, giving you comfort and convenience. best."
   },
   {
-    "id":"25",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+    "id": "25",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg"
+    },
     "name": "Mobell Rock 4",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "810.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell Rock 4 is considered one of the most durable phones that the Mobell family officially launched on the market, possessing a sturdy appearance and an extremely strong battery that helps the device to accompany you for a long time. long time. Unique look Mobell Rock 4 is complete with a rather aggressive and fancy look, the textures on the body are highlighted with diagonal lines on the back to help users hold it more firmly without worrying too much. to the problem of collision during use."
   },
   {
-    "id":"26",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+    "id": "26",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg"
+    },
     "name": "Mobell F309",
     "version": "2.31\"",
     "resolution": "QVGA",
     "price": "760.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "The Mobell F309  is the right choice for customers who are looking for a compact mobile device for communication, which supports 4G VoLTE mobile networks and can use two nano SIMs to help communication needs by Calls/texts are responsive. Compact design Mobell F309 has a delicate design with a soft curved back on both sides, providing a comfortable grip for users who often use the phone. The device is wrapped by a frame and back made of lightweight plastic to optimize weight and make it easy for users to hold."
   },
   {
-    "id":"27",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+    "id": "27",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg"
+    },
     "name": "Masstel Lux 20 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "750.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Lux 20 is a popular phone model that has just been launched on the market in July 2022 with an extremely attractive price, the device mainly supports texting and calls and a large battery so you can comfortable to use for many days in a row. Compact design This Masstel phone measures  53.8 mm in width with a weight of  137.6 g, which makes it easier to hold so you can comfortably use it for hours or easily carry it around. anywhere."
   },
   {
-    "id":"28",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+    "id": "28",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg"
+    },
     "name": "Masstel FAMI 60 4G",
     "version": "2\"",
     "resolution": "QVGA",
     "price": "730.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Fami 60 is a popular phone exclusively for the elderly with a neat design, clear screen and extremely large speakerphone cluster and super buffalo battery, supporting 4G LTE talk technology, promising. will perfectly meet your basic entertainment needs, communication. Convenient design, easy to use Masstel Fami 60 has a neat and convenient design with the familiar T9 keyboard, the keys are large and evenly spaced, easy to observe and use even for the elderly, poor eyes can also operate a exact way."
   },
   {
-    "id":"29",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+    "id": "29",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg"
+    },
     "name": "Nokia 110 4G",
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "720.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia officially launched the Nokia 110 4G phone upgraded version of the Nokia 110 2019 with the main highlight of which is 4G Internet connection technology to enjoy the experience anytime, anywhere with an extremely new and luxurious design. important. Elegant and durable design Nokia 110 4G owns a familiar appearance, when using refined Polycarbonate plastic material to help the device become youthful, dynamic and extremely eye-catching."
   },
   {
-    "id":"30",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+    "id": "30",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg"
+    },
     "name": "Mobell M539",
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "700.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell M539 - the newly launched feature phone is suitable for those who are looking for a compact device that serves well in communication because the device supports 4G VoLTE mobile network and the ability to equip 2 nano SIM. Small and slim appearance Mobell M539 owns a delicate shape with a soft curved back on both sides, providing a comfortable grip experience for those of you who often use the phone. The overall device is surrounded by a frame and back made of plastic, thereby optimizing the volume so that the user can hold it more gently."
   },
   {
-    "id":"31",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+    "id": "31",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg"
+    },
     "name": "Itel it9210 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "680.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Itel 105 4G - The popular phone stands out with its luxurious design, long-lasting ability to listen to calls, support 4G technology and many other attractive entertainment utilities from Nokia. Looks mixed with a bit of modern The whole body of the machine is finished from plastic with a shiny shell that looks quite nice, creating elegance and sophistication for the machine. One of the plus points of the device is its high durability, which prevents it from cracking when accidentally bumped or dropped."
   },
   {
-    "id":"32",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+    "id": "32",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg"
+    },
     "name": "Nokia 105 4G",
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "670.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia 105 4G - The popular phone stands out with its luxurious design, long-lasting ability to listen to calls, support 4G technology and many other attractive entertainment utilities from Nokia. Looks mixed with a bit of modern The whole body of the machine is finished from plastic with a shiny shell that looks quite nice, creating elegance and sophistication for the machine. One of the plus points of the device is its high durability, which prevents it from cracking when accidentally bumped or dropped."
   },
   {
-    "id":"33",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+    "id": "33",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg"
+    },
     "name": "Masstel FAMI 12 4G",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "620.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Fami 12 4G - a popular phone model, launched to meet the basic needs of users such as making calls, texting or listening to FM radio. The device possesses a compact, durable appearance, so it is very suitable as a secondary phone to serve work, because it can accompany you anywhere because of its easy-to-carry appearance. Compact design Masstel FAMI 12 4G has a solid design with a metal frame and a plastic back. The device has a quick screen unlock key next to the border, for more convenient operation. Besides, the device is also launched with many colors for users to freely choose."
   },
   {
-    "id":"34",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+    "id": "34",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg"
+    },
     "name": "Mobell F209",
     "version": "2\"",
     "resolution": "QVGA",
     "price": "620.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "In addition to the technology race on smartphones, somewhere in the market there are still a few companies that continue to improve and produce popular phone models with the goal of meeting the needs of basic users. copy. Prominent among them can be mentioned the Mobell F209 with a large and clear screen, large battery and 4G VoLTE mobile network technology. Easy to pocket with slim body Mobell F209 owns a classic-looking appearance with rounded corners and edges, both the back and the frame are made of plastic, so the device feels relatively light with a weight of only 131.5 g. Preliminary in size, this Mobell phone is 57 mm wide and 122.7 mm long, so it can easily fit in the palm of your hand. Because the phone uses a removable battery design language, users can quickly remove and install the back cover, it becomes extremely convenient to replace such as SIM or battery without having to go to support centers. technical assistance. Instead of a camera cluster arrangement, the Mobell house gives us a set of speakers designed with a large size on the back, which both helps the device bring highlights and also brings better quality sound. Large and clear display The front of the phone will be a TFT LCD screen, the viewing angle is also quite wide so you can use the device in many different directions. In addition, the advantage of this type of panel is that it delivers relatively high-brightness content, suitable for situations where viewing messages or phone numbers when in high-brightness environments. See also: What is TFT LCD screen? What are the advantages? Which device uses TFT screen? Mobell F209 has a screen size of 2 inches, the display interface is intuitive and very easy to use, so it can be used by elderly parents or customers with poor eyesight. Besides, the machine supports displaying images with QVGA resolution (176 x 220 Pixels), enough to reproduce the sequence of numbers and text messages clearly. Listen to stable calls and comfortably store with 2000 numbers In order to provide more stable call quality, the company brings to the machine 4G VoLTE mobile network technology, which helps to receive better reception to limit network flickering and interruptions in suburban areas with signal. poor, thereby enhancing the experience every time you make calls. In this version, the device supports two card slots with Nano SIM format, in addition, the phone will also support storing contacts up to 2000 numbers for you to comfortably store. Comfortable talking for a long time Inside the device will be a battery with a capacity of 1500 mAh, this is considered a large number on a popular phone because the device mainly serves a few main tasks such as making calls and texting, so the power consumption is not so significant. So users can feel more secure when using the device for many days without worrying about running out of battery. If you are looking for a phone that can handle calls for many hours without worrying about battery, then Mobell F209 might be the right phone for you at the moment. helps you save a lot of money when you don't have to invest too much in a device just to use it to make calls."
   },
   {
-    "id":"35",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+    "id": "35",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg"
+    },
     "name": "Masstel IZI 26 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "600.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "In addition to the popularity of many smartphone models, some popular phone products are still very popular with users. Masstel IZI 26 4G was launched with many of the essential features of a “brick” phone to help you stay in touch better. Compact appearance - easy to use Still a familiar design that makes the Masstel phone brand, the machine is finished from plastic to provide certainty, as well as good grip when in use."
   },
   {
-    "id":"36",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+    "id": "36",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg"
+    },
     "name": "Itel it9010 4G",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "580.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Itel it9010 4G launched with youthful colors, bringing a personality as well as flexibility - easy to carry anywhere, because the machine has an extremely compact size. Small appearance Itel it9010 4G has a finished plastic frame and back, removable battery design makes it easy to replace the battery every time it degrades without going to a repair service."
   },
   {
-    "id":"37",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+    "id": "37",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg"
+    },
     "name": "Masstel Lux 10 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "570.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Fami 10 4G - a popular phone model, launched to meet the basic needs of users such as making calls, texting or listening to FM radio. The device possesses a compact, durable appearance, so it is very suitable as a secondary phone to serve work, because it can accompany you anywhere because of its easy-to-carry appearance. Compact design Masstel FAMI 12 4G has a solid design with a metal frame and a plastic back. The device has a quick screen unlock key next to the border, for more convenient operation. Besides, the device is also launched with many colors for users to freely choose."
   },
   {
-    "id":"38",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+    "id": "38",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg"
+    },
     "name": "Masstel IZI 10 4G",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Lux 10 - a phone model that has just been launched in Vietnam market in December 2022, the device is shaped by the manufacturer as a popular phone with the function to meet the main listening tasks. The phone features a large battery and advanced 4G VoLTE mobile network support. Slim and small design Masstel Lux 10 has a fairly modern appearance thanks to the use of a fairly square design language when the edges and back are beveled flat. The width of the phone is 53.8 mm, so it will easily fit in the palm of your hand."
   },
   {
-    "id":"39",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+    "id": "39",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg"
+    },
     "name": "Mobell M239",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell officially launched the popular phone Mobell M239, which has the advantage of a neat design and youthful colors. Simple, sturdy design Mobell M239 possesses the familiar appearance of a popular phone, when using fine-tuned plastic material to help the device become youthful and extremely sturdy."
   },
   {
-    "id":"40",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/307203/vivo-y36-xanh-thumb-1-2-600x600.jpg",
+    "id": "40",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/307203/vivo-y36-xanh-thumb-1-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/307203/vivo-y36-xanh-thumb-1-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/307203/vivo-y36-xanh-thumb-1-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/307203/vivo-y36-xanh-thumb-1-2-600x600.jpg"
+    },
     "name": "Vivo Y36",
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "7.000.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo C53 - a cheap phone with a beautiful design, large screen and sharp camera, is really a reasonable choice for users who are wondering to buy a device in the low-cost segment. Youthful square appearance realme C53 is designed with squareness and made mainly of plastic, providing a solid feeling when holding. With a compact waterdrop display, this realme phone can provide users with a wider screen experience while keeping its compact and stylish size."
   },
   {
-    "id":"41",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+    "id": "41",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg"
+    },
     "name": "iPhone 14 Pro Max",
     "version": "6.7\"",
     "resolution": "Super Retina XDR",
     "price": "27.490.000",
     "installment": "",
-    "manufactory": "apple"
+    "manufactory": "apple",
+    "description": "Vivo Y36 is the latest Vivo Y phone launched by Vivo in Vietnam in June 2023. The device possesses a youthful modern appearance, a sharp display and stable performance for everyday tasks. Simple looks create charm Unlike previous Vivo Y phones, the front of the Y36 is replaced with a trendy mole design compared to the previous teardrop screen. It is this change that makes the screen wider and the edges are thinned for a good touch feeling."
   },
   {
-    "id":"42",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg",
+    "id": "42",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg"
+    },
     "name": "Samsung Galaxy S21 FE 5G",
     "version": "6.4\"",
     "resolution": "Full HD+",
     "price": "9.990.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy S21 Ultra 5G 256GB is Samsung's most advanced smartphone, possessing an unbelievable configuration with a huge chip  Qualcomm optimized exclusively for the Galaxy series and a camera up to 200 MP, worthy of the expected Android flagship. best in 2023. Exquisite luxury styling In terms of design, the Samsung Galaxy S23 Ultra will continue to inherit the luxurious design from the previous generation, still a metal frame, glass back and slightly curved shape on the side and screen."
   },
   {
-    "id":"43",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-grey-thumb-600x600.jpg",
+    "id": "43",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-grey-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-grey-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-grey-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/303575/xiaomi-redmi-12c-grey-thumb-600x600.jpg"
+    },
     "name": "Xiaomi Redmi 12C",
     "version": "6.71\"",
     "resolution": "HD+",
     "price": "2.990.000",
     "installment": "",
-    "manufactory": "xiaomi"
+    "manufactory": "xiaomi",
+    "description": "Xiaomi Redmi 12C is a popular phone model that has just been launched on the market in July 2022 with an extremely attractive price, the device mainly supports texting and calls and a large battery so you can comfortable to use for many days in a row. Compact design This Masstel phone measures  53.8 mm in width with a weight of  137.6 g, which makes it easier to hold so you can comfortably use it for hours or easily carry it around. anywhere."
   },
   {
-    "id":"44",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-den-600x600.jpg",
+    "id": "44",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-den-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-den-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-den-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-den-600x600.jpg"
+    },
     "name": "iPhone 11",
     "version": "6.1\"",
     "resolution": "Liquid Retina",
     "price": "10.590.000",
     "installment": "",
-    "manufactory": "apple"
+    "manufactory": "apple",
+    "description": "iPhone 11 128GB is considered an explosive smartphone model of the apple house in 2022, impressive with its youthful appearance, quality screen accompanied by improvements in operating system and image processing algorithms, making the device become more popular. It became a name that attracted the attention of many users at the time of its launch. iPhone 13 has a premium design With the standard version, the Apple house retains the same design compared to its predecessor, still has a flat back and a square frame to help the device become more modern."
   },
   {
-    "id":"45",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-den-600x600.jpg",
+    "id": "45",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-den-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-den-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-den-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/303298/xiaomi-redmi-note-12-4g-mono-den-600x600.jpg"
+    },
     "name": "Xiaomi Redmi Note 12 4G",
     "version": "6.67\"",
     "resolution": "Full HD+",
     "price": "5.390.000",
     "installment": "0% installment",
-    "manufactory": "xiaomi"
+    "manufactory": "xiaomi",
+    "description": "Xiaomi Redmi Note 12 4G is a popular phone model that has just been launched on the market in July 2022 with an extremely attractive price, the device mainly supports texting and calls and a large battery so you can comfortable to use for many days in a row. Compact design This Masstel phone measures  53.8 mm in width with a weight of  137.6 g, which makes it easier to hold so you can comfortably use it for hours or easily carry it around. anywhere."
   },
   {
-    "id":"46",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg",
+    "id": "46",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg"
+    },
     "name": "OPPO Reno8 T 5G",
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "10.990.000",
     "installment": "0% installment",
-    "manufactory": "oppo"
+    "manufactory": "oppo",
+    "description": "OPPO Reno8 T 5G model with the exclusive OPPO Glow design, the camera has the effect of a professional DSLR with dual light borders, the device has a powerful configuration and is certified with an A rating for smoothness. Easily stand out from the crowd The OPPO Reno7 Z 5G phone has a trendy, square beveled frame that makes the device exude a modern and dynamic look. Softly curved four corners create a feeling of comfort and lightness (only 173 g). The monolithic design makes the overall machine extremely solid, not only beautiful but also durable."
   },
   {
-    "id":"47",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg",
+    "id": "47",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg"
+    },
     "name": "Vivo V25 series",
     "version": "6.44\"",
     "resolution": "Full HD+",
     "price": "9.790.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo officially launched the Vivo V23 6GB phone  with a series of outstanding advantages, not only external appearance but also internal power. In particular, this smartphone also owns a very good price in the segment, promising to meet your entertainment needs well. Outstanding camera cluster, capturing all the moments Becoming a photographer will be extremely easy with the rear 3-camera system with the main camera having a resolution of 50 MP for sharp, high-quality photos whether you take pictures during the day or at night."
   },
   {
-    "id":"48",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+    "id": "48",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg"
+    },
     "name": "realme C30s",
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.190.000",
     "installment": "",
-    "manufactory": "realme"
+    "manufactory": "realme",
+    "description": "realme C30s can be considered as one of the most anticipated smartphone models in the beginning of 2023 with many highlights, some notable points can be mentioned such as: Super AMOLED panel, super resolution 50 MP camera comes with powerful Helio G99 chip. Shine with a new look realme 10 has a square appearance thanks to the flat shaping on the sides and edges. The total weight of the device reaches 178 g, so long-term use will help reduce hand fatigue, which is really useful for those who often have to use the phone for many hours."
   },
   {
-    "id":"49",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/290829/samsung-galaxy-s23-plus-600x600.jpg",
+    "id": "49",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/290829/samsung-galaxy-s23-plus-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/290829/samsung-galaxy-s23-plus-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/290829/samsung-galaxy-s23-plus-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/290829/samsung-galaxy-s23-plus-600x600.jpg"
+    },
     "name": "Samsung Galaxy S23+ 5G",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "23.990.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy S23 5G 128GB is probably no longer a strange name for today's technology believers, considered one of the key faces from Samsung with the most powerful configuration, famous camera. top class with extremely luxurious and modern finishing. Possessing a luxurious design In this year's version, I am happy to know that the Galaxy S23 retains the familiar design from the previous generation, it is considered an icon of the Samsung Galaxy S series phones when carrying a unique feature. unique and full of class."
   },
   {
-    "id":"50",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg",
+    "id": "50",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg"
+    },
     "name": "iPhone 14 Plus",
     "version": "6.7\"",
     "resolution": "Super Retina XDR",
     "price": "21.990.000",
     "installment": "",
-    "manufactory": "apple"
+    "manufactory": "apple",
+    "description": "iPhone 14 128GB is considered an explosive smartphone model of the apple house in 2022, impressive with its youthful appearance, quality screen accompanied by improvements in operating system and image processing algorithms, making the device become more popular. It became a name that attracted the attention of many users at the time of its launch. iPhone 13 has a premium design With the standard version, the Apple house retains the same design compared to its predecessor, still has a flat back and a square frame to help the device become more modern."
   },
   {
-    "id":"51",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/291697/vivo-y16-vang-thumb-600x600.jpg",
+    "id": "51",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/291697/vivo-y16-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/291697/vivo-y16-vang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/291697/vivo-y16-vang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/291697/vivo-y16-vang-thumb-600x600.jpg"
+    },
     "name": "Vivo Y16",
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "3.590.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo Y16 was launched with an impressive set of specifications in the price range, possessing advantages such as: Large screen, stable performance and long usage time, is considered the right device. with students - students for study or light entertainment after stressful moments. Youthful appearance full of personality The first impression when I hold the device in my hand is a solid and compact feeling, although the overall is made of plastic but still brings a certain durability, the creaky condition almost does not appear. ."
   },
   {
-    "id":"52",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+    "id": "52",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg"
+    },
     "name": "OPPO Reno8 series",
     "version": "6.7\"",
     "resolution": "Full HD+",
     "price": "17.990.000",
     "installment": "",
-    "manufactory": "oppo"
+    "manufactory": "oppo",
+    "description": "OPPO has launched the Reno7 Z 5G model with the exclusive OPPO Glow design, the camera has the effect of a professional DSLR with dual light borders, the device has a powerful configuration and is certified with an A rating for smoothness. Easily stand out from the crowd The OPPO Reno7 Z 5G phone has a trendy, square beveled frame that makes the device exude a modern and dynamic look. Softly curved four corners create a feeling of comfort and lightness (only 173 g). The monolithic design makes the overall machine extremely solid, not only beautiful but also durable."
   },
   {
-    "id":"53",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/274084/Nokia-C21-Plus-Gray-600x600.jpg",
+    "id": "53",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/274084/Nokia-C21-Plus-Gray-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/274084/Nokia-C21-Plus-Gray-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/274084/Nokia-C21-Plus-Gray-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/274084/Nokia-C21-Plus-Gray-600x600.jpg"
+    },
     "name": "Nokia C21 Plus",
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.090.000",
     "installment": "0% installment",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": ""
   },
   {
-    "id":"54",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/115343/vivo-y21-white-01-1-600x600.jpg",
+    "id": "54",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/115343/vivo-y21-white-01-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/115343/vivo-y21-white-01-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/115343/vivo-y21-white-01-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/115343/vivo-y21-white-01-1-600x600.jpg"
+    },
     "name": "Vivo Y21 series",
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "3.290.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo officially launched the Vivo V23 6GB phone  with a series of outstanding advantages, not only external appearance but also internal power. In particular, this smartphone also owns a very good price in the segment, promising to meet your entertainment needs well. Outstanding camera cluster, capturing all the moments Becoming a photographer will be extremely easy with the rear 3-camera system with the main camera having a resolution of 50 MP for sharp, high-quality photos whether you take pictures during the day or at night."
   },
   {
-    "id":"55",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+    "id": "55",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-2-600x600.jpg"
+    },
     "name": "Samsung Galaxy S23 5G",
     "version": "6.1\"",
     "resolution": "Full HD+",
     "price": "19.990.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy S23 5 - is a generation of Galaxy phones that have just been introduced by Samsung to the Vietnamese market in April 2023. The device owns a camera cluster with a main resolution of 50 MP, a good chip and a quality Super AMOLED screen. Trendy square design In terms of design, this device is inspired by a few high-end Samsung product lines such as the Galaxy S23 series, with a flat shape in the frame and back to make the overall device luxurious and modern more. The outer shell of the machine is made mainly of plastic, which plays an important role in minimizing weight and creating a light feeling when holding the product."
   },
   {
-    "id":"56",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg",
+    "id": "56",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg"
+    },
     "name": "iPhone 12",
     "version": "6.1\"",
     "resolution": "Super Retina XDR",
     "price": "15.490.000",
     "installment": "",
-    "manufactory": "apple"
+    "manufactory": "apple",
+    "description": "iPhone 12 128GB is considered an explosive smartphone model of the apple house in 2022, impressive with its youthful appearance, quality screen accompanied by improvements in operating system and image processing algorithms, making the device become more popular. It became a name that attracted the attention of many users at the time of its launch. iPhone 13 has a premium design With the standard version, the Apple house retains the same design compared to its predecessor, still has a flat back and a square frame to help the device become more modern."
   },
   {
-    "id":"57",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/303585/samsung-galaxy-a54-thumb-tim-600x600.jpg",
+    "id": "57",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303585/samsung-galaxy-a54-thumb-tim-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/303585/samsung-galaxy-a54-thumb-tim-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/303585/samsung-galaxy-a54-thumb-tim-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/303585/samsung-galaxy-a54-thumb-tim-600x600.jpg"
+    },
     "name": "Samsung Galaxy A54 5G",
     "version": "6.4\"",
     "resolution": "Full HD+",
     "price": "9.490.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy A54 5GB - is a generation of Galaxy phones that have just been introduced by Samsung to the Vietnamese market in April 2023. The device owns a camera cluster with a main resolution of 50 MP, a good chip and a quality Super AMOLED screen. Trendy square design In terms of design, this device is inspired by a few high-end Samsung product lines such as the Galaxy S23 series, with a flat shape in the frame and back to make the overall device luxurious and modern more. The outer shell of the machine is made mainly of plastic, which plays an important role in minimizing weight and creating a light feeling when holding the product."
   },
   {
-    "id":"58",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299734/xiaomi-redmi-12-pro-4g-xanh-thumb-600x600.jpg",
+    "id": "58",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299734/xiaomi-redmi-12-pro-4g-xanh-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299734/xiaomi-redmi-12-pro-4g-xanh-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299734/xiaomi-redmi-12-pro-4g-xanh-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299734/xiaomi-redmi-12-pro-4g-xanh-thumb-600x600.jpg"
+    },
     "name": "Xiaomi Redmi Note 12 Pro",
     "version": "6.67\"",
     "resolution": "Full HD+",
     "price": "6.690.000",
     "installment": "0% installment",
-    "manufactory": "xiaomi"
+    "manufactory": "xiaomi",
+    "description": "Xiaomi Redmi 12C is a popular phone model that has just been launched on the market in July 2022 with an extremely attractive price, the device mainly supports texting and calls and a large battery so you can comfortable to use for many days in a row. Compact design This Masstel phone measures  53.8 mm in width with a weight of  137.6 g, which makes it easier to hold so you can comfortably use it for hours or easily carry it around. anywhere."
   },
   {
-    "id":"59",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/272016/sam-sung-galaxy-a23-5g-den-thumb-600x600.jpg",
+    "id": "59",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/272016/sam-sung-galaxy-a23-5g-den-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/272016/sam-sung-galaxy-a23-5g-den-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/272016/sam-sung-galaxy-a23-5g-den-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/272016/sam-sung-galaxy-a23-5g-den-thumb-600x600.jpg"
+    },
     "name": "Samsung Galaxy A23 5G",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "5.190.000",
     "installment": "",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy A24 6GB - is a generation of Galaxy phones that have just been introduced by Samsung to the Vietnamese market in April 2023. The device owns a camera cluster with a main resolution of 50 MP, a good chip and a quality Super AMOLED screen. Trendy square design In terms of design, this device is inspired by a few high-end Samsung product lines such as the Galaxy S23 series, with a flat shape in the frame and back to make the overall device luxurious and modern more. The outer shell of the machine is made mainly of plastic, which plays an important role in minimizing weight and creating a light feeling when holding the product."
   },
   {
-    "id":"60",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/291696/vivo-y22s-vang-thumb-1-2-600x600.jpeg",
+    "id": "60",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/291696/vivo-y22s-vang-thumb-1-2-600x600.jpeg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/291696/vivo-y22s-vang-thumb-1-2-600x600.jpeg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/291696/vivo-y22s-vang-thumb-1-2-600x600.jpeg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/291696/vivo-y22s-vang-thumb-1-2-600x600.jpeg"
+    },
     "name": "Vivo Y22s",
     "version": "6.55\"",
     "resolution": "HD+",
     "price": "4.790.000",
     "installment": "0% installment",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo officially launched the Vivo V23 6GB phone  with a series of outstanding advantages, not only external appearance but also internal power. In particular, this smartphone also owns a very good price in the segment, promising to meet your entertainment needs well. Outstanding camera cluster, capturing all the moments Becoming a photographer will be extremely easy with the rear 3-camera system with the main camera having a resolution of 50 MP for sharp, high-quality photos whether you take pictures during the day or at night."
   },
   {
-    "id":"61",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/282090/oppo-a57-den-thumb-600x600.jpg",
+    "id": "61",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/282090/oppo-a57-den-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/282090/oppo-a57-den-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/282090/oppo-a57-den-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/282090/oppo-a57-den-thumb-600x600.jpg"
+    },
     "name": "OPPO A57",
     "version": "6.56\"",
     "resolution": "HD+",
     "price": "4.090.000",
     "installment": "",
-    "manufactory": "oppo"
+    "manufactory": "oppo",
+    "description": "OPPO has launched the A57 model with the exclusive OPPO Glow design, the camera has the effect of a professional DSLR with dual light borders, the device has a powerful configuration and is certified with an A rating for smoothness. Easily stand out from the crowd The OPPO Reno7 Z 5G phone has a trendy, square beveled frame that makes the device exude a modern and dynamic look. Softly curved four corners create a feeling of comfort and lightness (only 173 g). The monolithic design makes the overall machine extremely solid, not only beautiful but also durable."
   },
   {
-    "id":"62",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/262402/Samsung-Galaxy-A13-cam-thumb-600x600.jpg",
+    "id": "62",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/262402/Samsung-Galaxy-A13-cam-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/262402/Samsung-Galaxy-A13-cam-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/262402/Samsung-Galaxy-A13-cam-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/262402/Samsung-Galaxy-A13-cam-thumb-600x600.jpg"
+    },
     "name": "Samsung Galaxy A13",
     "version": "6.6\"",
     "resolution": "Full HD+",
     "price": "3.590.000",
     "installment": "",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy A13 - is a generation of Galaxy phones that have just been introduced by Samsung to the Vietnamese market in April 2023. The device owns a camera cluster with a main resolution of 50 MP, a good chip and a quality Super AMOLED screen. Trendy square design In terms of design, this device is inspired by a few high-end Samsung product lines such as the Galaxy S23 series, with a flat shape in the frame and back to make the overall device luxurious and modern more. The outer shell of the machine is made mainly of plastic, which plays an important role in minimizing weight and creating a light feeling when holding the product."
   },
   {
-    "id":"63",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/249720/Vivo-y15s-2021-xanh-thuy-tinh-660x600.jpg",
+    "id": "63",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/249720/Vivo-y15s-2021-xanh-thuy-tinh-660x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/249720/Vivo-y15s-2021-xanh-thuy-tinh-660x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/249720/Vivo-y15s-2021-xanh-thuy-tinh-660x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/249720/Vivo-y15s-2021-xanh-thuy-tinh-660x600.jpg"
+    },
     "name": "Vivo Y15 series",
     "version": "6.51\"",
     "resolution": "HD+",
     "price": "2.490.000",
     "installment": "",
-    "manufactory": "vivo"
+    "manufactory": "vivo",
+    "description": "Vivo officially launched the Vivo V23 6GB phone  with a series of outstanding advantages, not only external appearance but also internal power. In particular, this smartphone also owns a very good price in the segment, promising to meet your entertainment needs well. Outstanding camera cluster, capturing all the moments Becoming a photographer will be extremely easy with the rear 3-camera system with the main camera having a resolution of 50 MP for sharp, high-quality photos whether you take pictures during the day or at night."
   },
   {
-    "id":"64",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/275434/samsung-galaxy-a04-thumb-xanh-600x600.jpg",
+    "id": "64",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/275434/samsung-galaxy-a04-thumb-xanh-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/275434/samsung-galaxy-a04-thumb-xanh-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/275434/samsung-galaxy-a04-thumb-xanh-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/275434/samsung-galaxy-a04-thumb-xanh-600x600.jpg"
+    },
     "name": "Samsung Galaxy A04",
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.490.000",
     "installment": "0% installment",
-    "manufactory": "samsung"
+    "manufactory": "samsung",
+    "description": "Samsung Galaxy A04 - is a generation of Galaxy phones that have just been introduced by Samsung to the Vietnamese market in April 2023. The device owns a camera cluster with a main resolution of 50 MP, a good chip and a quality Super AMOLED screen. Trendy square design In terms of design, this device is inspired by a few high-end Samsung product lines such as the Galaxy S23 series, with a flat shape in the frame and back to make the overall device luxurious and modern more. The outer shell of the machine is made mainly of plastic, which plays an important role in minimizing weight and creating a light feeling when holding the product."
   },
   {
-    "id":"65",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/302655/xiaomi-redmi-note-12-plus-xanh-duong-thumb-600x600.jpg",
+    "id": "65",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/302655/xiaomi-redmi-note-12-plus-xanh-duong-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/302655/xiaomi-redmi-note-12-plus-xanh-duong-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/302655/xiaomi-redmi-note-12-plus-xanh-duong-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/302655/xiaomi-redmi-note-12-plus-xanh-duong-thumb-600x600.jpg"
+    },
     "name": "Xiaomi Redmi A2+",
     "version": "6.52\"",
     "resolution": "HD+",
     "price": "2.490.000",
     "installment": "",
-    "manufactory": "xiaomi"
+    "manufactory": "xiaomi",
+    "description": "Xiaomi Redmi A2+ is a popular phone model that has just been launched on the market in July 2022 with an extremely attractive price, the device mainly supports texting and calls and a large battery so you can comfortable to use for many days in a row. Compact design This Masstel phone measures  53.8 mm in width with a weight of  137.6 g, which makes it easier to hold so you can comfortably use it for hours or easily carry it around. anywhere."
   },
   {
-    "id":"66",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/292632/realme-c33-thumb-xanh-600x600.jpg",
+    "id": "66",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/292632/realme-c33-thumb-xanh-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/292632/realme-c33-thumb-xanh-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/292632/realme-c33-thumb-xanh-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/292632/realme-c33-thumb-xanh-600x600.jpg"
+    },
     "name": "realme C33",
     "version": "6.5\"",
     "resolution": "HD+",
     "price": "2.440.000",
     "installment": "",
-    "manufactory": "realme"
+    "manufactory": "realme",
+    "description": "realme C33 can be considered as one of the most anticipated smartphone models in the beginning of 2023 with many highlights, some notable points can be mentioned such as: Super AMOLED panel, super resolution 50 MP camera comes with powerful Helio G99 chip. Shine with a new look realme 10 has a square appearance thanks to the flat shaping on the sides and edges. The total weight of the device reaches 178 g, so long-term use will help reduce hand fatigue, which is really useful for those who often have to use the phone for many hours."
   },
   {
-    "id":"67",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+    "id": "67",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/251897/itel-l6502-den-600x600.jpg"
+    },
     "name": "Itel L6502",
     "version": "6.52\"",
     "resolution": "HD+",
     "price": "1.590.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Itel L6502 4G launched with youthful colors, bringing a personality as well as flexibility - easy to carry anywhere, because the machine has an extremely compact size. Small appearance Itel it9010 4G has a finished plastic frame and back, removable battery design makes it easy to replace the battery every time it degrades without going to a repair service."
   },
   {
-    "id":"68",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+    "id": "68",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-do-thumb-600x600.jpg"
+    },
     "name": "Nokia 8210 4G",
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "1.590.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia 8210 4G is probably a suitable choice for those who need a common phone for their calling needs. The machine is cheap and has high durability, helping users to save a lot of money initially as well as not to worry too much about problems during use. Meticulously finished down to the smallest detail Nokia 8210 4G owns a back and frame made from Polycarbonate plastic, with youthful colors. With the body of a compact, easy-to-hold phone, users can easily pocket it without fear of being pinched like on large-sized smartphones."
   },
   {
-    "id":"69",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+    "id": "69",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/251896/itel-l6006-violet-600x600.jpg"
+    },
     "name": "Itel L6006",
     "version": "6.1\"",
     "resolution": "HD+",
     "price": "1.390.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Itel L6006 4G launched with youthful colors, bringing a personality as well as flexibility - easy to carry anywhere, because the machine has an extremely compact size. Small appearance Itel it9010 4G has a finished plastic frame and back, removable battery design makes it easy to replace the battery every time it degrades without going to a repair service."
   },
   {
-    "id":"70",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+    "id": "70",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg"
+    },
     "name": "Nokia 215 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "990.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia officially launched the Nokia 110 4G phone upgraded version of the Nokia 110 2019 with the main highlight of which is 4G Internet connection technology to enjoy the experience anytime, anywhere with an extremely new and luxurious design. important. Elegant and durable design Nokia 110 4G owns a familiar appearance, when using refined Polycarbonate plastic material to help the device become youthful, dynamic and extremely eye-catching."
   },
   {
-    "id":"71",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+    "id": "71",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg"
+    },
     "name": "Mobell Rock 4",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "810.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell officially launched the popular phone Mobell M239, which has the advantage of a neat design and youthful colors. Simple, sturdy design Mobell M239 possesses the familiar appearance of a popular phone, when using fine-tuned plastic material to help the device become youthful and extremely sturdy."
   },
   {
-    "id":"72",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+    "id": "72",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/304608/mobell-f309-trang-thumb-600x600.jpg"
+    },
     "name": "Mobell F309",
     "version": "2.31\"",
     "resolution": "QVGA",
     "price": "760.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell officially launched the popular phone Mobell M239, which has the advantage of a neat design and youthful colors. Simple, sturdy design Mobell M239 possesses the familiar appearance of a popular phone, when using fine-tuned plastic material to help the device become youthful and extremely sturdy."
   },
   {
-    "id":"73",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+    "id": "73",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg"
+    },
     "name": "Masstel Lux 20 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "750.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Lux 20 4G - a popular phone model, launched to meet the basic needs of users such as making calls, texting or listening to FM radio. The device possesses a compact, durable appearance, so it is very suitable as a secondary phone to serve work, because it can accompany you anywhere because of its easy-to-carry appearance. Compact design Masstel FAMI 12 4G has a solid design with a metal frame and a plastic back. The device has a quick screen unlock key next to the border, for more convenient operation. Besides, the device is also launched with many colors for users to freely choose."
   },
   {
-    "id":"74",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+    "id": "74",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg"
+    },
     "name": "Masstel FAMI 60 4G",
     "version": "2\"",
     "resolution": "QVGA",
     "price": "730.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Fami 60 is a popular phone exclusively for the elderly with a neat design, clear screen and extremely large speakerphone cluster and super buffalo battery, supporting 4G LTE talk technology, promising. will perfectly meet your basic entertainment needs, communication. Convenient design, easy to use Masstel Fami 60 has a neat and convenient design with the familiar T9 keyboard, the keys are large and evenly spaced, easy to observe and use even for the elderly, poor eyes can also operate a exact way."
   },
   {
-    "id":"75",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+    "id": "75",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg"
+    },
     "name": "Nokia 110 4G",
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "720.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia 110 4G - The popular phone stands out with its luxurious design, long-lasting ability to listen to calls, support 4G technology and many other attractive entertainment utilities from Nokia. Looks mixed with a bit of modern The whole body of the machine is finished from plastic with a shiny shell that looks quite nice, creating elegance and sophistication for the machine. One of the plus points of the device is its high durability, which prevents it from cracking when accidentally bumped or dropped."
   },
   {
-    "id":"76",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+    "id": "76",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg"
+    },
     "name": "Mobell M539",
     "version": "2.8\"",
     "resolution": "QVGA",
     "price": "700.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell M539 - the newly launched feature phone is suitable for those who are looking for a compact device that serves well in communication because the device supports 4G VoLTE mobile network and the ability to equip 2 nano SIM. Small and slim appearance Mobell M539 owns a delicate shape with a soft curved back on both sides, providing a comfortable grip experience for those of you who often use the phone. The overall device is surrounded by a frame and back made of plastic, thereby optimizing the volume so that the user can hold it more gently."
   },
   {
-    "id":"77",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+    "id": "77",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg"
+    },
     "name": "Itel it9210 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "680.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "In addition to the popularity of many smartphone models, some popular phone products are still very popular with users. Masstel IZI 26 4G was launched with many of the essential features of a “brick” phone to help you stay in touch better. Compact appearance - easy to use Still a familiar design that makes the Masstel phone brand, the machine is finished from plastic to provide certainty, as well as good grip when in use."
   },
   {
-    "id":"78",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+    "id": "78",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg"
+    },
     "name": "Nokia 105 4G",
     "version": "1.8\"",
     "resolution": "QQVGA",
     "price": "670.000",
     "installment": "",
-    "manufactory": "nokia"
+    "manufactory": "nokia",
+    "description": "Nokia 105 4G - The popular phone stands out with its luxurious design, long-lasting ability to listen to calls, support 4G technology and many other attractive entertainment utilities from Nokia. Looks mixed with a bit of modern The whole body of the machine is finished from plastic with a shiny shell that looks quite nice, creating elegance and sophistication for the machine. One of the plus points of the device is its high durability, which prevents it from cracking when accidentally bumped or dropped."
   },
   {
-    "id":"79",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+    "id": "79",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg"
+    },
     "name": "Masstel FAMI 12 4G",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "620.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Fami 12 4G - a popular phone model, launched to meet the basic needs of users such as making calls, texting or listening to FM radio. The device possesses a compact, durable appearance, so it is very suitable as a secondary phone to serve work, because it can accompany you anywhere because of its easy-to-carry appearance. Compact design Masstel FAMI 12 4G has a solid design with a metal frame and a plastic back. The device has a quick screen unlock key next to the border, for more convenient operation. Besides, the device is also launched with many colors for users to freely choose."
   },
   {
-    "id":"80",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+    "id": "80",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg"
+    },
     "name": "Mobell F209",
     "version": "2\"",
     "resolution": "QVGA",
     "price": "620.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell Rock 4 is considered one of the most durable phones that the Mobell family officially launched on the market, possessing a sturdy appearance and an extremely strong battery that helps the device to accompany you for a long time. long time. Unique look Mobell Rock 4 is complete with a rather aggressive and fancy look, the textures on the body are highlighted with diagonal lines on the back to help users hold it more firmly without worrying too much. to the problem of collision during use."
   },
   {
-    "id":"81",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+    "id": "81",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg"
+    },
     "name": "Masstel IZI 26 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "600.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel IZI 26 4G - a popular phone model, launched to meet the basic needs of users such as making calls, texting or listening to FM radio. The device possesses a compact, durable appearance, so it is very suitable as a secondary phone to serve work, because it can accompany you anywhere because of its easy-to-carry appearance. Compact design Masstel FAMI 12 4G has a solid design with a metal frame and a plastic back. The device has a quick screen unlock key next to the border, for more convenient operation. Besides, the device is also launched with many colors for users to freely choose."
   },
   {
-    "id":"82",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+    "id": "82",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg"
+    },
     "name": "Itel it9010 4G",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "580.000",
     "installment": "",
-    "manufactory": "itel"
+    "manufactory": "itel",
+    "description": "Itel it9010 4G launched with youthful colors, bringing a personality as well as flexibility - easy to carry anywhere, because the machine has an extremely compact size. Small appearance Itel it9010 4G has a finished plastic frame and back, removable battery design makes it easy to replace the battery every time it degrades without going to a repair service."
   },
   {
-    "id":"83",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+    "id": "83",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg"
+    },
     "name": "Masstel Lux 10 4G",
     "version": "2.4\"",
     "resolution": "QVGA",
     "price": "570.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel Lux 10 - a phone model that has just been launched in Vietnam market in December 2022, the device is shaped by the manufacturer as a popular phone with the function to meet the main listening tasks. The phone features a large battery and advanced 4G VoLTE mobile network support. Slim and small design Masstel Lux 10 has a fairly modern appearance thanks to the use of a fairly square design language when the edges and back are beveled flat. The width of the phone is 53.8 mm, so it will easily fit in the palm of your hand."
   },
   {
-    "id":"84",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+    "id": "84",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg"
+    },
     "name": "Masstel IZI 10 4G",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
     "installment": "",
-    "manufactory": "masstel"
+    "manufactory": "masstel",
+    "description": "Masstel IZI 10 4G - a popular phone model, launched to meet the basic needs of users such as making calls, texting or listening to FM radio. The device possesses a compact, durable appearance, so it is very suitable as a secondary phone to serve work, because it can accompany you anywhere because of its easy-to-carry appearance. Compact design Masstel FAMI 12 4G has a solid design with a metal frame and a plastic back. The device has a quick screen unlock key next to the border, for more convenient operation. Besides, the device is also launched with many colors for users to freely choose."
   },
   {
-    "id":"85",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+    "id": "85",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg"
+    },
     "name": "Mobell M239",
     "version": "1.77\"",
     "resolution": "QQVGA",
     "price": "390.000",
     "installment": "",
-    "manufactory": "mobell"
+    "manufactory": "mobell",
+    "description": "Mobell M239 - the newly launched feature phone is suitable for those who are looking for a compact device that serves well in communication because the device supports 4G VoLTE mobile network and the ability to equip 2 nano SIM. Small and slim appearance Mobell M539 owns a delicate shape with a soft curved back on both sides, providing a comfortable grip experience for those of you who often use the phone. The overall device is surrounded by a frame and back made of plastic, thereby optimizing the volume so that the user can hold it more gently."
   },
   {
-    "id":"86",
-    "image": "https://cdn.tgdd.vn/Products/Images/42/306785/realme-c53-gold-thumb-1-600x600.jpg",
+    "id": "86",
+    "images": {
+      "image": "https://cdn.tgdd.vn/Products/Images/42/306785/realme-c53-gold-thumb-1-600x600.jpg",
+      "image1": "https://cdn.tgdd.vn/Products/Images/42/306785/realme-c53-gold-thumb-1-600x600.jpg",
+      "image2": "https://cdn.tgdd.vn/Products/Images/42/306785/realme-c53-gold-thumb-1-600x600.jpg",
+      "image3": "https://cdn.tgdd.vn/Products/Images/42/306785/realme-c53-gold-thumb-1-600x600.jpg"
+    },
     "name": "realme C53",
     "version": "6.6\"",
     "resolution": "HD+",
     "price": "16.000.000",
     "installment": "",
-    "manufactory": "realme"
+    "manufactory": "realme",
+    "description": "realme C53 can be considered as one of the most anticipated smartphone models in the beginning of 2023 with many highlights, some notable points can be mentioned such as: Super AMOLED panel, super resolution 50 MP camera comes with powerful Helio G99 chip. Shine with a new look realme 10 has a square appearance thanks to the flat shaping on the sides and edges. The total weight of the device reaches 178 g, so long-term use will help reduce hand fatigue, which is really useful for those who often have to use the phone for many hours."
   }
 ]
