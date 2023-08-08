@@ -25,6 +25,24 @@ const App = () => {
   // State for storing the favorite product IDs
   const [favoriteProductIDs, setFavoriteProductIDs] = useState([]);
 
+  // State for storing the selected product's ID for details view
+  const [selectedProductID, setSelectedProductID] = useState(null);
+
+  // Function to handle selecting a product card
+  const handleSelectProduct = (productID) => {
+    setSelectedProductID((prevProductID) => {
+      if (prevProductID === productID) {
+        return null; // Close the details if it's the same product
+      }
+      return productID; // Display the details of the selected product
+    });
+  };
+
+  // Callback for closing the product details
+  const handleCloseProductDetails = () => {
+    setSelectedProductID(null);
+  };
+
   // Function to handle toggling a product as favorite
   const toggleProductFavorite = (productID) => {
     setFavoriteProductIDs((prevFavorites) => {
@@ -107,6 +125,7 @@ const App = () => {
           products={filterProducts}
           favoriteProductIDs={favoriteProductIDs}
           onToggleProductFavorite={toggleProductFavorite}
+          onSelectProduct={handleSelectProduct}
         />
       </section>
       <section>
@@ -114,9 +133,17 @@ const App = () => {
           products={filterProducts}
           favoriteProductIDs={favoriteProductIDs}
           onToggleProductFavorite={toggleProductFavorite}
+          onSelectProduct={handleSelectProduct}
         />
       </section>
-      <ProductDetails product={allProducts[56]} />
+      <section>
+        {selectedProductID !== null && (
+          <ProductDetails
+            product={allProducts.find((product) => product.id === selectedProductID)}
+            onClose={handleCloseProductDetails}
+          />
+        )}
+      </section>
       <section />
     </main>
   );

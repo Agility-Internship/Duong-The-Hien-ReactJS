@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
@@ -15,18 +15,34 @@ import Popover from './common/Popover';
  *
  * @param product - The product product object.
  * @param isFavoriteProduct - Boolean value indicating if the product is in favorites list.
+ * @param onClose - Callback function to close the product details.
  * @returns {JSX.Element} Product Details content.
  */
-const ProductDetails = (product = []) => {
-  const selectedProduct = product.product;
+const ProductDetails = ({ product = [], isFavoriteProduct = false, onClose = () => {} }) => {
+  const selectedProduct = product;
+
   const imageUrls = Object.values(selectedProduct.images);
+
+  const [isPopoverOpen, setIsPopoverOpen] = useState(true);
+
+  const handleButtonClick = () => {
+    setIsPopoverOpen((prevState) => {
+      onClose();
+      return !prevState;
+    });
+  };
   return (
-    <section className="bg-gray-800 fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50">
-      <div className="container min-h-screen w-[40%] h-[30%]  flex justify-center items-center">
+    <section
+      className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50 ${
+        isPopoverOpen ? 'bg-gray-800' : 'hidden'
+      }`}
+    >
+      <div className="container min-h-screen w-[40%] h-[30%] flex justify-center items-center">
         <Popover
-          closeButton
-          isOpen
-          popoverClassName="relative bg-white rounded-2xl max-h-[700x] overflow-x-auto  shadow-2xl p-10 m-2 "
+          closeButtonoo
+          isOpen={isPopoverOpen}
+          onClose={handleButtonClick}
+          popoverClassName="relative bg-white rounded-2xl max-h-[700x] overflow-x-auto shadow-2xl p-10 m-2 "
           arrowPopover={false}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-none items-center">
@@ -47,7 +63,7 @@ const ProductDetails = (product = []) => {
                   <Typography level={3} className="text-4xl" size="xl">
                     {selectedProduct.name}
                   </Typography>
-                  <FavoriteButton />
+                  <FavoriteButton isFavorite={isFavoriteProduct} />
                 </div>
                 <div className="inline-block">
                   {selectedProduct.installment && (
@@ -100,6 +116,8 @@ ProductDetails.propTypes = {
     resolution: PropTypes.string,
     price: PropTypes.string.isRequired,
   }).isRequired,
+  isFavoriteProduct: PropTypes.bool.isRequired,
+  onClose: PropTypes.func,
 };
 
 export default ProductDetails;

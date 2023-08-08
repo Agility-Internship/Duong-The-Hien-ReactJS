@@ -16,12 +16,14 @@ import ProductCard from './ProductCard';
  * @param products - An array of all products
  * @param favoriteProductIDs - An array of favorite product IDs
  * @param onToggleProductFavorite - Function to handle toggling a product as favorite
+ * @param onSelectProduct - Function to handle the selection of a product.
  * @returns {JSX.Element} The FavoriteProductsCard Component
  */
 const FavoriteProductsCard = ({
   products = [],
   favoriteProductIDs = [],
   onToggleProductFavorite = () => {},
+  onSelectProduct = () => {},
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
@@ -62,6 +64,7 @@ const FavoriteProductsCard = ({
                       isFavoriteProduct={isFavoriteProduct}
                       product={productFavorite}
                       onSelectFavorite={onToggleProductFavorite}
+                      onSelectProduct={onSelectProduct}
                     />
                   </div>
                 );
@@ -82,6 +85,7 @@ FavoriteProductsCard.propTypes = {
   ).isRequired,
   favoriteProductIDs: PropTypes.arrayOf(PropTypes.number).isRequired,
   onToggleProductFavorite: PropTypes.func.isRequired,
+  onSelectProduct: PropTypes.func.isRequired,
 };
 
 export default FavoriteProductsCard;

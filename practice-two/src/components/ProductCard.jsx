@@ -15,11 +15,23 @@ import FavoriteButton from './common/Button/ButtonFavorite';
  * @param product - The product data object.
  * @param isFavoriteProduct - Boolean value indicating if the product is in favorites list.
  * @param onSelectFavorite - Function to handle the selection/unselection of a favorite product.
+ * @param onSelectProduct - Function to handle the selection of a product.
  * @returns {JSX.Element} Product Card content.
  */
-function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = () => {} }) {
+function ProductCard({
+  product = [],
+  isFavoriteProduct = false,
+  onSelectFavorite = () => {},
+  onSelectProduct = () => {},
+}) {
+  // Function to handle get ID when a favorite product is selected
   const handleFavoriteToggle = () => {
     onSelectFavorite(product.id);
+  };
+
+  // Function to handle get ID when a product card is selected
+  const handleSelectProduct = () => {
+    onSelectProduct(product.id);
   };
   const firstImage = Object.values(product.images)[0];
 
@@ -36,8 +48,8 @@ function ProductCard({ product = [], isFavoriteProduct = [], onSelectFavorite = 
           )}
           <FavoriteButton isFavorite={isFavoriteProduct} onClick={handleFavoriteToggle} />
         </div>
-        <CardImage src={firstImage} alt="This is a picture of the card-image" />
-        <CardContent>
+        <CardContent onClick={handleSelectProduct}>
+          <CardImage src={firstImage} alt="This is a picture of the card-image" />
           <div className="hover:text-blue-700">
             <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
               {product.name}
@@ -73,6 +85,7 @@ ProductCard.propTypes = {
   }).isRequired,
   isFavoriteProduct: PropTypes.bool.isRequired,
   onSelectFavorite: PropTypes.func.isRequired,
+  onSelectProduct: PropTypes.func.isRequired,
 };
 
 export default ProductCard;

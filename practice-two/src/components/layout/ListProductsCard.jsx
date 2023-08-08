@@ -13,12 +13,23 @@ import Typography from '../common/Typography';
  * @param products - An array of product objects to be displayed.
  * @param favoriteProductIDs - An array of product IDs marked as favorites.
  * @param onToggleProductFavorite - Function to handle the selection/unselection of a favorite product.
+ * @param onSelectProduct - Function to handle the selection of a product.
  * @returns {JSX.Element} The ProductList Component.
  */
-const ProductList = ({ products = [], favoriteProductIDs = [], onToggleProductFavorite = () => {} }) => {
+const ProductList = ({
+  products = [],
+  favoriteProductIDs = [],
+  onToggleProductFavorite = () => {},
+  onSelectProduct = () => {},
+}) => {
   // Function to handle the click event when a favorite product is selected
   const handleFavoriteSelect = (productId) => {
     onToggleProductFavorite(productId);
+  };
+
+  // Function to handle the click event when a product card is selected
+  const handleSelectProduct = (productID) => {
+    onSelectProduct(productID);
   };
   return (
     <div className="mt-8">
@@ -42,6 +53,7 @@ const ProductList = ({ products = [], favoriteProductIDs = [], onToggleProductFa
                 product={product}
                 isFavoriteProduct={isFavoriteProduct}
                 onSelectFavorite={handleFavoriteSelect}
+                onSelectProduct={handleSelectProduct}
               />
             </div>
           );
@@ -64,6 +76,7 @@ ProductList.propTypes = {
   ).isRequired,
   favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onToggleProductFavorite: PropTypes.func.isRequired,
+  onSelectProduct: PropTypes.func.isRequired,
 };
 
 export default ProductList;
