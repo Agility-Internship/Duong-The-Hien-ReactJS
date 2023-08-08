@@ -27,7 +27,6 @@ const App = () => {
 
   // State for storing the selected product's ID for details view
   const [selectedProductID, setSelectedProductID] = useState(null);
-
   /**
    * Handle the selection of a product to view its details or close the details view.
    *
@@ -165,7 +164,7 @@ const App = () => {
           <ProductDetails
             product={selectedProduct}
             favoriteProductIDs={favoriteProductIDs}
-            onClose={handleCloseProductDetails}
+            onClosePopover={handleCloseProductDetails}
             onToggleProductFavorite={toggleProductFavorite}
           />
         )}

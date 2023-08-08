@@ -48,7 +48,7 @@ const ProductDetails = ({
         isPopoverOpen ? 'bg-gray-800' : 'hidden'
       }`}
     >
-      <div className="container min-h-screen w-[40%] h-[30%] flex justify-center items-center">
+      <div className="container min-h-screen w-[50%] h-[30%] flex justify-center items-center">
         <Popover
           closeButtonoo
           isOpen={isPopoverOpen}
@@ -71,9 +71,9 @@ const ProductDetails = ({
             <div>
               <div className="basic-info flex flex-col gap-4 relative">
                 <div className="flex justify-between hover:text-blue-700">
-                  <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
+                  <Typography className="text-3xl" size="xl">
                     {selectedProduct.name}
-                  </Link>
+                  </Typography>
                   <FavoriteButton
                     isFavorite={favoriteProductIDs.includes(product.id)}
                     onClick={handleFavoriteToggle}
