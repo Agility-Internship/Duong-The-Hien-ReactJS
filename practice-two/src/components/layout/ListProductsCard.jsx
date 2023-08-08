@@ -46,11 +46,11 @@ const ProductList = ({
         </Typography>
       </div>
       {/* List Products */}
-      <ul className="grid grid-cols-5 -z-30 gap-2 ">
+      <ul className="grid justify-items-center sm:items-stretch grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
         {products.map((product) => (
           <li
             key={product.id}
-            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border rounded-xl relative"
+            className="overflow-hidden w-[70%] sm:w-[100%] flex items-center p-2 pt-4 pb-5 border rounded-xl relative"
           >
             <ProductCard
               product={product}

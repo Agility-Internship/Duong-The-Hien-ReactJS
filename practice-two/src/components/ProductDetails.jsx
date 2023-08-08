@@ -11,7 +11,7 @@ import Popover from './common/Popover';
 /**
  * Product Details components.
  *
- *  A reusable component that displays product information in a details.
+ * A reusable component that displays product information in a details.
  *
  * @param product - The product product object.
  * @param favoriteProductIDs - An array of product IDs marked as favorites.
@@ -48,16 +48,16 @@ const ProductDetails = ({
         isPopoverOpen ? 'bg-gray-800' : 'hidden'
       }`}
     >
-      <div className="container min-h-screen w-[40%] h-[30%] flex justify-center items-center">
+      <div className="container min-h-screen lg:w-[70%] md:w-[50%] flex justify-center items-center">
         <Popover
           closeButtonoo
           isOpen={isPopoverOpen}
           onClosePopover={handleButtonClick}
-          popoverClassName="relative bg-white rounded-2xl max-h-[700x] overflow-x-auto shadow-2xl p-10 m-2 "
+          popoverClassName="relative bg-white rounded-2xl max-h-[700px] max-w-[800px] overflow-x-auto shadow-2xl p-10 m-2 "
           arrowPopover={false}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-none items-center">
-            <div className="grid grid-cols-3 grid-rows-auto gap-3 mr-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-none items-center pt-5">
+            <div className="grid grid-cols-3 grid-rows-auto gap-3 mr-5 ">
               {imageUrls.map((imageUrl, index) => (
                 <div
                   // eslint-disable-next-line react/no-array-index-key
@@ -70,10 +70,10 @@ const ProductDetails = ({
             </div>
             <div>
               <div className="basic-info flex flex-col gap-4 relative">
-                <div className="flex justify-between hover:text-blue-700">
-                  <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
+                <div className="flex justify-between hover:text-blue-700 lg:w-[90%]">
+                  <Typography level={3} size="xl" className="text-3xl">
                     {selectedProduct.name}
-                  </Link>
+                  </Typography>
                   <FavoriteButton
                     isFavorite={favoriteProductIDs.includes(product.id)}
                     onClick={handleFavoriteToggle}

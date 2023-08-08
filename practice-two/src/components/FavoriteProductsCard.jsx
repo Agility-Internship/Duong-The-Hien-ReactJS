@@ -43,12 +43,12 @@ const FavoriteProductsCard = ({
           closeButton
           isOpen={isPopoverOpen}
           onClosePopover={handleButtonClick}
-          popoverClassName="relative bg-white p-8 rounded-xl border border-gray-500 max-h-[800px] max-w-[900px] overflow-y-auto"
+          popoverClassName="relative bg-white p-8 rounded-xl border border-gray-500 max-h-[90vh] max-w-[90vw] overflow-y-auto"
           arrowPopover={false}
         >
-          <div className="mb-4">
-            <h2 className="text-2xl text-center pb-4">My Favorite List</h2>
-            <div className="grid grid-cols-3 gap-2">
+          <div className="mb-4 w-[900px]">
+            <h2 className="text-2xl text-center pt-5 pb-4">My Favorite List</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               {favoriteProductIDs.map((productId) => {
                 const productFavorite = products.find((p) => p.id === productId);
                 if (!productFavorite) return null;
