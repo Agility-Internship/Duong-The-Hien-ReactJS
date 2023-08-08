@@ -60,7 +60,7 @@ const GroupFilterPopover = ({
         {categories.value}
         <img src={ICON.filter} alt="filter-icon" className="w-4" />
       </Button>
-      <Popover isOpen={isPopoverOpen} onClose={handleButtonClick}>
+      <Popover isOpen={isPopoverOpen} onClosePopover={handleButtonClick}>
         {/* Group filter popover */}
         <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
           {/* Manufacture list */}

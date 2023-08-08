@@ -13,12 +13,29 @@ import Typography from '../common/Typography';
  * @param products - An array of product objects to be displayed.
  * @param favoriteProductIDs - An array of product IDs marked as favorites.
  * @param onToggleProductFavorite - Function to handle the selection/unselection of a favorite product.
+ * @param onSelectProduct - Function to handle the selection of a product.
  * @returns {JSX.Element} The ProductList Component.
  */
-const ProductList = ({ products = [], favoriteProductIDs = [], onToggleProductFavorite = () => {} }) => {
-  // Function to handle the click event when a favorite product is selected
+const ProductList = ({
+  products = [],
+  favoriteProductIDs = [],
+  onToggleProductFavorite = () => {},
+  onSelectProduct = () => {},
+}) => {
+  /**
+   * Handle the click event when a favorite product is selected
+   * @param productId - ID of the product to toggle favorite status
+   */
   const handleFavoriteSelect = (productId) => {
     onToggleProductFavorite(productId);
+  };
+
+  /**
+   * Handle the click event when a product card is selected
+   * @param productID - ID of the product selected
+   */
+  const handleSelectProduct = (productID) => {
+    onSelectProduct(productID);
   };
   return (
     <div className="mt-8">
@@ -29,24 +46,21 @@ const ProductList = ({ products = [], favoriteProductIDs = [], onToggleProductFa
         </Typography>
       </div>
       {/* List Products */}
-      <div className="grid grid-cols-5 border -z-30">
-        {products.map((product) => {
-          // Check if product.id exists in favorites array
-          const isFavoriteProduct = !!favoriteProductIDs.includes(product.id);
-          return (
-            <div
-              key={product.id}
-              className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
-            >
-              <ProductCard
-                product={product}
-                isFavoriteProduct={isFavoriteProduct}
-                onSelectFavorite={handleFavoriteSelect}
-              />
-            </div>
-          );
-        })}
-      </div>
+      <ul className="grid justify-items-center sm:items-stretch grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+        {products.map((product) => (
+          <li
+            key={product.id}
+            className="overflow-hidden w-[70%] sm:w-[100%] flex items-center p-2 pt-4 pb-5 border rounded-xl relative"
+          >
+            <ProductCard
+              product={product}
+              favoriteProductIDs={favoriteProductIDs}
+              onSelectFavorite={handleFavoriteSelect}
+              onSelectProduct={handleSelectProduct}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
@@ -64,6 +78,7 @@ ProductList.propTypes = {
   ).isRequired,
   favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onToggleProductFavorite: PropTypes.func.isRequired,
+  onSelectProduct: PropTypes.func.isRequired,
 };
 
 export default ProductList;

@@ -50,7 +50,7 @@ const ManuFacturePopover = ({
         {categories.value}
         <img src={ICON.dropdown} alt="filter-icon" className="w-4" />
       </Button>
-      <Popover closeButton={false} isOpen={isPopoverOpen} onClose={handleButtonClick}>
+      <Popover closeButton={false} isOpen={isPopoverOpen} onClosePopover={handleButtonClick}>
         <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
           {/* Manufacture list */}
           <div className="w-full block px-5">
