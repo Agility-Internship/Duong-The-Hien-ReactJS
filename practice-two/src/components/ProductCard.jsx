@@ -38,7 +38,7 @@ function ProductCard({
   return (
     <Card>
       <CardOverflow>
-        <div className="card-label flex justify-between">
+        <div className="card-label flex justify-end">
           {product.installment && (
             <div className="absolute top-2 left-2">
               <Typography color="black" size="xl" variant="solid">

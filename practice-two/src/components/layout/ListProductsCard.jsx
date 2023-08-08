@@ -40,11 +40,11 @@ const ProductList = ({
         </Typography>
       </div>
       {/* List Products */}
-      <div className="grid grid-cols-5 border -z-30">
+      <ul className="grid grid-cols-5 -z-30 gap-2 ">
         {products.map((product) => (
-          <div
+          <li
             key={product.id}
-            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
+            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border rounded-xl relative"
           >
             <ProductCard
               product={product}
@@ -52,9 +52,9 @@ const ProductList = ({
               onSelectFavorite={handleFavoriteSelect}
               onSelectProduct={handleSelectProduct}
             />
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

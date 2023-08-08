@@ -122,7 +122,7 @@ const App = () => {
           onPriceFilter={handlePriceFilter}
         />
         <FavoriteProductsCard
-          products={filterProducts}
+          products={allProducts}
           favoriteProductIDs={favoriteProductIDs}
           onToggleProductFavorite={toggleProductFavorite}
           onSelectProduct={handleSelectProduct}
