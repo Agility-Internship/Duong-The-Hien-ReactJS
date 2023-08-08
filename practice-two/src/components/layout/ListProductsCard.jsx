@@ -22,12 +22,18 @@ const ProductList = ({
   onToggleProductFavorite = () => {},
   onSelectProduct = () => {},
 }) => {
-  // Function to handle the click event when a favorite product is selected
+  /**
+   * Handle the click event when a favorite product is selected
+   * @param productId - ID of the product to toggle favorite status
+   */
   const handleFavoriteSelect = (productId) => {
     onToggleProductFavorite(productId);
   };
 
-  // Function to handle the click event when a product card is selected
+  /**
+   * Handle the click event when a product card is selected
+   * @param productID - ID of the product selected
+   */
   const handleSelectProduct = (productID) => {
     onSelectProduct(productID);
   };

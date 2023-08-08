@@ -16,14 +16,14 @@ import Popover from './common/Popover';
  * @param product - The product product object.
  * @param favoriteProductIDs - An array of product IDs marked as favorites.
  * @param onToggleProductFavorite - Function to handle toggling a product as favorite
- * @param onClose - Callback function to close the product details.
+ * @param onClosePopover - Callback function to close the product details.
  * @returns {JSX.Element} Product Details content.
  */
 const ProductDetails = ({
   product = [],
   favoriteProductIDs = [],
   onToggleProductFavorite = () => {},
-  onClose = () => {},
+  onClosePopover = () => {},
 }) => {
   const selectedProduct = product;
 
@@ -33,7 +33,7 @@ const ProductDetails = ({
 
   const handleButtonClick = () => {
     setIsPopoverOpen((prevState) => {
-      onClose();
+      onClosePopover();
       return !prevState;
     });
   };
@@ -52,7 +52,7 @@ const ProductDetails = ({
         <Popover
           closeButtonoo
           isOpen={isPopoverOpen}
-          onClose={handleButtonClick}
+          onClosePopover={handleButtonClick}
           popoverClassName="relative bg-white rounded-2xl max-h-[700x] overflow-x-auto shadow-2xl p-10 m-2 "
           arrowPopover={false}
         >
@@ -64,7 +64,7 @@ const ProductDetails = ({
                   key={index}
                   className={`border rounded-2xl ${index === 0 ? 'active col-span-3' : ''}`}
                 >
-                  <CardImage src={imageUrl} alt={`Product Image ${index + 1}`} />
+                  <CardImage src={imageUrl} alt={`Color ${index + 1} styles for phones `} />
                 </div>
               ))}
             </div>
@@ -131,7 +131,7 @@ ProductDetails.propTypes = {
     price: PropTypes.string.isRequired,
   }).isRequired,
   favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onClose: PropTypes.func,
+  onClosePopover: PropTypes.func,
   onToggleProductFavorite: PropTypes.func.isRequired,
 };
 

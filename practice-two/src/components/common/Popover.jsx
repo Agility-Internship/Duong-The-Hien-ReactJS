@@ -7,7 +7,7 @@ import Button from './Button/Button';
 /**
  * Popover comments
  * @param isOpen - Flag to determine if the popover is open.
- * @param onClose - Function to be called when the popover should be closed.
+ * @param onClosePopover - Function to be called when the popover should be closed.
  * @param closeButton - Flag to determine whether to show the close button.
  * @param popoverClassName - Custom class name for the main popover div.
  * @param arrowPopover - Flag to determine whether to show the arrow in the popover.
@@ -15,7 +15,7 @@ import Button from './Button/Button';
  */
 const Popover = ({
   isOpen = false,
-  onClose = () => {},
+  onClosePopover = () => {},
   closeButton = true,
   children,
   popoverClassName = false,
@@ -32,7 +32,7 @@ const Popover = ({
           {/* Render the close button only if closeButton prop is true */}
           {closeButton && (
             <div className="absolute top-1 right-2">
-              <Button onClick={onClose}>Close</Button>
+              <Button onClick={onClosePopover}>Close</Button>
             </div>
           )}
         </div>
@@ -47,7 +47,7 @@ const Popover = ({
 
 Popover.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func,
+  onClosePopover: PropTypes.func,
   closeButton: PropTypes.bool,
   popoverClassName: PropTypes.string, // New prop for customizing the popover's main div
   arrowPopover: PropTypes.bool, // New prop to determine whether to show the arrow

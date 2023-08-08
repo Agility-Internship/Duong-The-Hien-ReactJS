@@ -21,7 +21,10 @@ import { ICON } from '../../../constants/data';
  * @returns {JSX.Element} The FavoriteButton component JSX.
  */
 const FavoriteButton = ({ onClick = () => {}, isFavorite = false }) => {
-  // Function to handle the event when the button is clicked
+  /**
+   * Handle the click event of the button.
+   * @param {Object} e - Event object
+   */
   const handleButtonClick = (e) => {
     // Call the onClick function provided by the parent component
     if (onClick) {

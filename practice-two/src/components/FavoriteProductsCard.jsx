@@ -42,7 +42,7 @@ const FavoriteProductsCard = ({
         <Popover
           closeButton
           isOpen={isPopoverOpen}
-          onClose={handleButtonClick}
+          onClosePopover={handleButtonClick}
           popoverClassName="relative bg-white p-8 rounded-xl border border-gray-500 max-h-[800px] max-w-[900px] overflow-y-auto"
           arrowPopover={false}
         >

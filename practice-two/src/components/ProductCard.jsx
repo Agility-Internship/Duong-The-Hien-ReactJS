@@ -24,12 +24,18 @@ function ProductCard({
   onSelectFavorite = () => {},
   onSelectProduct = () => {},
 }) {
-  // Function to handle get ID when a favorite product is selected
+  /**
+   * Handle the click event when a favorite product is selected
+   * @return productId - ID of the product to toggle favorite status
+   */
   const handleFavoriteToggle = () => {
     onSelectFavorite(product.id);
   };
 
-  // Function to handle get ID when a product card is selected
+  /**
+   * Handle the click event when a product card is selected
+   * @return productID - ID of the product selected
+   */
   const handleSelectProduct = () => {
     onSelectProduct(product.id);
   };
