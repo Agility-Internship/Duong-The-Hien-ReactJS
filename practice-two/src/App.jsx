@@ -140,7 +140,9 @@ const App = () => {
         {selectedProductID !== null && (
           <ProductDetails
             product={allProducts.find((product) => product.id === selectedProductID)}
+            favoriteProductIDs={favoriteProductIDs}
             onClose={handleCloseProductDetails}
+            onToggleProductFavorite={toggleProductFavorite}
           />
         )}
       </section>

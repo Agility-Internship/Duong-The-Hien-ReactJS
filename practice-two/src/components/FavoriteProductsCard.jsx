@@ -53,16 +53,14 @@ const FavoriteProductsCard = ({
                 const productFavorite = products.find((p) => p.id === productId);
                 if (!productFavorite) return null;
 
-                const isFavoriteProduct = !!favoriteProductIDs.includes(productId);
-
                 return (
                   <div
                     key={productFavorite.id}
                     className="overflow-hidden flex items-center p-2 pt-4 pb-5 border relative rounded-xl border-gray-500"
                   >
                     <ProductCard
-                      isFavoriteProduct={isFavoriteProduct}
                       product={productFavorite}
+                      favoriteProductIDs={favoriteProductIDs}
                       onSelectFavorite={onToggleProductFavorite}
                       onSelectProduct={onSelectProduct}
                     />
@@ -83,7 +81,7 @@ FavoriteProductsCard.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  favoriteProductIDs: PropTypes.arrayOf(PropTypes.number).isRequired,
+  favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onToggleProductFavorite: PropTypes.func.isRequired,
   onSelectProduct: PropTypes.func.isRequired,
 };

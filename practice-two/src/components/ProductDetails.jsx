@@ -14,11 +14,17 @@ import Popover from './common/Popover';
  *  A reusable component that displays product information in a details.
  *
  * @param product - The product product object.
- * @param isFavoriteProduct - Boolean value indicating if the product is in favorites list.
+ * @param favoriteProductIDs - An array of product IDs marked as favorites.
+ * @param onToggleProductFavorite - Function to handle toggling a product as favorite
  * @param onClose - Callback function to close the product details.
  * @returns {JSX.Element} Product Details content.
  */
-const ProductDetails = ({ product = [], isFavoriteProduct = false, onClose = () => {} }) => {
+const ProductDetails = ({
+  product = [],
+  favoriteProductIDs = [],
+  onToggleProductFavorite = () => {},
+  onClose = () => {},
+}) => {
   const selectedProduct = product;
 
   const imageUrls = Object.values(selectedProduct.images);
@@ -31,6 +37,11 @@ const ProductDetails = ({ product = [], isFavoriteProduct = false, onClose = () 
       return !prevState;
     });
   };
+
+  const handleFavoriteToggle = () => {
+    onToggleProductFavorite(product.id);
+  };
+
   return (
     <section
       className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50 ${
@@ -59,11 +70,14 @@ const ProductDetails = ({ product = [], isFavoriteProduct = false, onClose = () 
             </div>
             <div>
               <div className="basic-info flex flex-col gap-4 relative">
-                <div className="flex justify-between">
-                  <Typography level={3} className="text-4xl" size="xl">
+                <div className="flex justify-between hover:text-blue-700">
+                  <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
                     {selectedProduct.name}
-                  </Typography>
-                  <FavoriteButton isFavorite={isFavoriteProduct} />
+                  </Link>
+                  <FavoriteButton
+                    isFavorite={favoriteProductIDs.includes(product.id)}
+                    onClick={handleFavoriteToggle}
+                  />
                 </div>
                 <div className="inline-block">
                   {selectedProduct.installment && (
@@ -116,8 +130,9 @@ ProductDetails.propTypes = {
     resolution: PropTypes.string,
     price: PropTypes.string.isRequired,
   }).isRequired,
-  isFavoriteProduct: PropTypes.bool.isRequired,
+  favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClose: PropTypes.func,
+  onToggleProductFavorite: PropTypes.func.isRequired,
 };
 
 export default ProductDetails;

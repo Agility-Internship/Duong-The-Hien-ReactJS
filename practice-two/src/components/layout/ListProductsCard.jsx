@@ -41,23 +41,19 @@ const ProductList = ({
       </div>
       {/* List Products */}
       <div className="grid grid-cols-5 border -z-30">
-        {products.map((product) => {
-          // Check if product.id exists in favorites array
-          const isFavoriteProduct = !!favoriteProductIDs.includes(product.id);
-          return (
-            <div
-              key={product.id}
-              className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
-            >
-              <ProductCard
-                product={product}
-                isFavoriteProduct={isFavoriteProduct}
-                onSelectFavorite={handleFavoriteSelect}
-                onSelectProduct={handleSelectProduct}
-              />
-            </div>
-          );
-        })}
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="overflow-hidden flex items-center p-2 pt-4 pb-5 border-r border-b relative"
+          >
+            <ProductCard
+              product={product}
+              favoriteProductIDs={favoriteProductIDs}
+              onSelectFavorite={handleFavoriteSelect}
+              onSelectProduct={handleSelectProduct}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
