@@ -48,6 +48,18 @@ const App = () => {
   };
 
   /**
+   * Handle resetting all filters to empty and display the entire product list.
+   *
+   * @returns return empty options of original selectedFilter
+   */
+  const handleResetFilters = () => {
+    setSelectedFilter({
+      manufacturer: [],
+      price: [],
+    });
+  };
+
+  /**
    * Toggle the favorite status of a product.
    *
    * @param {string} productID - ID of the product to toggle favorite status for
@@ -144,6 +156,7 @@ const App = () => {
           selectedFilter={selectedFilter}
           onManufacturerFilter={handleManufacturerFilter}
           onPriceFilter={handlePriceFilter}
+          onResetFilters={handleResetFilters}
         />
         <FavoriteProductsCard
           products={allProducts}
