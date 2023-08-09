@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // Components
 import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
 import Typography from './common/Typography';
-import Link from './common/Link';
 import FavoriteButton from './common/Button/ButtonFavorite';
 
 /**
@@ -44,7 +43,7 @@ function ProductCard({
   return (
     <Card>
       <CardOverflow>
-        <div className="card-label flex justify-end">
+        <div className="card-label flex justify-end gap-5">
           {product.installment && (
             <div className="absolute top-2 left-2">
               <Typography color="black" size="xl" variant="solid">
@@ -59,12 +58,12 @@ function ProductCard({
         </div>
         <CardContent onClick={handleSelectProduct}>
           <CardImage src={firstImage} alt="This is a picture of the card-image" />
-          <div className="hover:text-blue-700">
-            <Link href="/product-card" underline={false} size="xl" variant="custom-variant">
+          <div className="mb-3">
+            <Typography level={3} size="xl" color="" className="text-[1.2rem] hover:text-blue-700">
               {product.name}
-            </Link>
+            </Typography>
           </div>
-          <div className="card-compare flex gap-2">
+          <div className="card-compare flex gap-2 mb-3">
             <Typography color="black" size="md" variant="solid">
               {product.version}
             </Typography>
