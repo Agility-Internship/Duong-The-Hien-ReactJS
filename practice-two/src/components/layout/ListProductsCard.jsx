@@ -37,6 +37,7 @@ const ProductList = ({
   const handleSelectProduct = (productID) => {
     onSelectProduct(productID);
   };
+
   return (
     <div className="mt-8">
       {/* Total Products */}
@@ -46,7 +47,7 @@ const ProductList = ({
         </Typography>
       </div>
       {/* List Products */}
-      <ul className="grid justify-items-center sm:items-stretch grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+      <ul className="grid justify-items-center sm:items-stretch grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
         {products.map((product) => (
           <li
             key={product.id}
