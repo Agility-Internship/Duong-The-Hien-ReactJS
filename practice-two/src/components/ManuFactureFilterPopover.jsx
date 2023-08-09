@@ -51,11 +51,11 @@ const ManuFacturePopover = ({
         <img src={ICON.dropdown} alt="filter-icon" className="w-4" />
       </Button>
       <Popover closeButton={false} isOpen={isPopoverOpen} onClosePopover={handleButtonClick}>
-        <div className="flex flex-wrap w-[900px] max-w-[547px] gap-0 max-h-[80vh] py-5">
+        <div className="flex flex-wrap sm:w-[500px] md:w-[900px] max-w-[547px] gap-0 max-h-[80vh] h-auto py-5">
           {/* Manufacture list */}
           <div className="w-full block px-5">
             {/* Filter Manufacturers Button */}
-            <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden py overflow-y-auto overflow-x-auto">
+            <div className="gap-2 pt-2 min-h-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 max-h-[vh] max-w-[500wh] overflow-hidden py overflow-y-auto overflow-x-auto">
               {manufacturers.map((manufacturer) => (
                 <Button
                   key={manufacturer.id}

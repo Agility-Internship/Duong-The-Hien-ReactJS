@@ -62,14 +62,14 @@ const GroupFilterPopover = ({
       </Button>
       <Popover isOpen={isPopoverOpen} onClosePopover={handleButtonClick}>
         {/* Group filter popover */}
-        <div className="flex flex-wrap w-[900px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
+        <div className="flex flex-wrap w-[250px] sm:w-[600px] md:w-[700px] max-w-[900px] mt-5 gap-0 max-h-[80vh] p-0">
           {/* Manufacture list */}
           <div className="w-full block px-5 pt-0">
             <div className="mb-1">
               <Typography size="xl">Manufacture</Typography>
             </div>
             {/* Filter Manufactures Button */}
-            <div className="gap-2 pt-2 min-h-0 grid grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+            <div className="gap-2 pt-2 min-h-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
               {manufacturers.map((manufacturer) => (
                 <Button
                   key={manufacturer.id}
@@ -99,7 +99,7 @@ const GroupFilterPopover = ({
               <Typography size="xl">Prices</Typography>
             </div>
             {/* Filter Prices Button */}
-            <div className="flex gap-5 flex-row flex-wrap pb-5 w-[30%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+            <div className="flex gap-5 flex-row flex-wrap pb-5 w-[100%] md:w-[40%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
               {prices.map((price) => {
                 const isSelected = selectedPriceIds.includes(`${price.id}`);
 
