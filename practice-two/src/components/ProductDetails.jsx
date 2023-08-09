@@ -100,7 +100,7 @@ const ProductDetails = ({
                 </Typography>
                 <Link
                   href="/shopping-cart"
-                  variant="bg-secondary hover:bg-blue-800 hover:border focus:bg-white focus:border py-2 px-4 rounded font-semibold text-sm text-center"
+                  variant="bg-secondary hover:bg-blue-800 hover:border focus:bg-blue-800  focus:border py-2 px-4 rounded font-semibold text-sm text-center"
                   disabled
                   color="white"
                   underline={false}
