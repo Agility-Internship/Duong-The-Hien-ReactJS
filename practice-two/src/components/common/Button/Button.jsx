@@ -26,10 +26,11 @@ const colorClasses = {
 /**
  * Button component
  * @param children Text for the button.
- * @param variant Variant of the button. Can be one of 'primary', 'secondary'
+ * @param variant Variant of the button. Can be one of 'primary', 'secondary', 'outline', or a custom variant.
  * @param size Size of the button. Can be one of 'small', 'medium', or 'large'.
  * @param type Type of the button. Can be one of 'button', 'submit', or 'reset'.
- * @param color Color of the button. Can be one of 'green', 'blue', 'red', 'gray'.
+ * @param color Color of the button. Can be one of 'red', 'blue', 'light'.
+ * @param customVariant Custom variant class for the button.
  * @param onClick Click event handler function for the button.
  * @returns {JSX.Element} - Button element.
  */
@@ -39,6 +40,7 @@ const Button = ({
   size = 'medium',
   type = 'button',
   color = 'light',
+  customVariant = '',
   onClick = () => {},
   ...restProps
 }) => {
@@ -51,6 +53,7 @@ const Button = ({
     sizeClasses[size],
     variantClasses[variant],
     colorClasses[color],
+    customVariant,
   ].join(' ');
 
   return (
@@ -66,6 +69,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   color: PropTypes.oneOf(['red', 'blue', 'light']),
+  customVariant: PropTypes.string, // Add PropTypes for customVariant
   onClick: PropTypes.func,
 };
 
