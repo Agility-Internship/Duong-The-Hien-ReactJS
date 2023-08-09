@@ -43,17 +43,14 @@ const ProductDetails = ({
   };
 
   return (
-    <section
-      className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50 ${
-        isPopoverOpen ? 'bg-gray-800' : 'hidden'
-      }`}
-    >
+    <section className="fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50">
       <div className="container min-h-screen lg:w-[70%] md:w-[50%] flex justify-center items-center">
         <Popover
           closeButtonoo
           isOpen={isPopoverOpen}
           onClosePopover={handleButtonClick}
-          popoverClassName="relative bg-white rounded-2xl max-h-[700px] max-w-[800px] overflow-x-auto shadow-2xl p-10 m-2 "
+          isFixed
+          popoverClassName="relative bg-white rounded-2xl max-h-auto max-w-[800px] shadow-2xl p-10 m-2 "
           arrowPopover={false}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-none items-center pt-5">
@@ -71,7 +68,7 @@ const ProductDetails = ({
             <div>
               <div className="basic-info flex flex-col gap-4 relative mt-5 ">
                 <div className="flex justify-between hover:text-blue-700 lg:w-[90%] ">
-                  <Typography level={3} size="xl" className="text-3xl">
+                  <Typography level={3} size="xl" className="text-4xl">
                     {selectedProduct.name}
                   </Typography>
                   <FavoriteButton
@@ -103,9 +100,9 @@ const ProductDetails = ({
                 </Typography>
                 <Link
                   href="/shopping-cart"
-                  variant="bg-secondary py-2 px-4 rounded font-semibold text-sm"
+                  variant="bg-secondary hover:bg-white hover:border focus:bg-white focus:border py-2 px-4 rounded font-semibold text-sm text-center"
                   disabled
-                  color="white"
+                  color="black"
                   underline={false}
                   size="xl"
                 >
