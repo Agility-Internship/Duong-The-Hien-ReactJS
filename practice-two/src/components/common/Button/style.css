@@ -1,15 +1,4 @@
-/* Thêm các thuộc tính mới vào class .heart */
-.heart {
-  position: absolute;
-  top: -9px;
-  right: -2px;
-  height: 100%;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-.heart.heart-active {
+.heart-active {
   animation: animate 0.8s steps(28) forwards; /* Use "forwards" to retain the final animation state */
   background-position: right;
 }

@@ -22,7 +22,7 @@ const CardContent = ({ children, onClick = () => {} }) => {
   };
   return (
     <div
-      className="card-content bg-transparent border-none h-4/5 pt-5 relative"
+      className="card-content bg-transparent border-none h-4/5 relative"
       onClick={handleButtonClick}
       onKeyDown={handleKeyDown}
       role="button"
