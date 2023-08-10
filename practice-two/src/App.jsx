@@ -28,6 +28,13 @@ const App = () => {
   // State for storing the selected product's ID for details view
   const [selectedProductID, setSelectedProductID] = useState(null);
 
+  // Add a class to the body tag when selectedProductID is not null
+  if (selectedProductID !== null) {
+    document.body.classList.add('overflow-hidden');
+  } else {
+    document.body.classList.remove('overflow-hidden');
+  }
+
   /**
    * Handle the selection of a product to view its details or close the details view.
    *
