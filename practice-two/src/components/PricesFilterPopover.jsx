@@ -54,7 +54,7 @@ const PricePopover = ({
       <Popover closeButton={false} isOpen={isPopoverOpen} onClosePopover={handleButtonClick}>
         <div className="flex flex-wrap w-[130px] sm:w-[300px] md:w-[300px] max-w-[547px] gap-0 max-h-[80vh] py-5">
           <div className="w-full block px-5">
-            <div className="flex gap-5 flex-row flex-wrap w-[100%] max-h-[23vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
+            <div className="flex gap-5 flex-row flex-wrap w-[100%] max-h-[100vh] max-w-[500wh] overflow-hidden overflow-y-auto overflow-x-auto">
               {prices.map((price) => {
                 const isSelected = selectedPriceIds.includes(`${price.id}`);
 
