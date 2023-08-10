@@ -91,7 +91,7 @@ const ProductDetails = ({
                     {selectedProduct.resolution}
                   </Typography>
                 </div>
-                <Typography size="xl" color="red" variant="plain">
+                <Typography size="xl" color="text-primary" variant="plain">
                   {selectedProduct.price}
                   &#8363;
                 </Typography>
