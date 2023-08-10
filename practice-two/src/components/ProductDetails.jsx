@@ -50,7 +50,7 @@ const ProductDetails = ({
           isOpen={isPopoverOpen}
           onClosePopover={handleButtonClick}
           isFixed
-          popoverClassName="relative bg-white rounded-2xl max-h-auto max-w-[800px] shadow-2xl p-10 m-2 "
+          popoverClassName="relative bg-white rounded-2xl max-h-auto max-w-[800px] max-h-[90vh] overflow-y-auto shadow-2xl p-10 m-2 "
           arrowPopover={false}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-none items-center pt-5">

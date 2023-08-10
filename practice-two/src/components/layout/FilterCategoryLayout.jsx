@@ -56,7 +56,7 @@ const FilterCategoryLayout = ({
 
   return (
     <div>
-      <div className="flex gap-2 sm:gap-4 relative">
+      <div className="flex gap-2 sm:gap-4 flex-wrap relative">
         <GroupFilterPopover
           categories={CATEGORIES[0]}
           selectedFilter={selectedFilter}
