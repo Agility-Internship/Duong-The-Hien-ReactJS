@@ -68,7 +68,7 @@ const ProductDetails = ({
             <div>
               <div className="basic-info flex flex-col gap-4 relative mt-5 ">
                 <div className="flex justify-between items-center hover:text-blue-700 lg:w-[90%] ">
-                  <Typography level={3} className="text-4xl font-bold">
+                  <Typography level={3} size="xxl" variant="plain">
                     {selectedProduct.name}
                   </Typography>
                   <FavoriteButton
