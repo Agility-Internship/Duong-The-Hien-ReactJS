@@ -1,13 +1,13 @@
 .heart-active {
-  animation: animate 0.8s steps(28) forwards; /* Use "forwards" to retain the final animation state */
-  background-position: right;
+  animation: animate 0.8s steps(28) forwards;
+  background-position: right top;
 }
 
 @keyframes animate {
   0% {
-    background-position: left;
+    background-position: left top;
   }
   100% {
-    background-position: right;
+    background-position: right top;
   }
 }

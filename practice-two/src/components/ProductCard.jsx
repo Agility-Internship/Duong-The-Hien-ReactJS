@@ -45,7 +45,7 @@ function ProductCard({
       <CardOverflow>
         <div className="card-label flex justify-end gap-5">
           {product.installment && (
-            <div className="absolute top-2 left-2">
+            <div className="absolute top-4 left-2">
               <Typography color="black" size="xl" variant="solid">
                 {product.installment}
               </Typography>
