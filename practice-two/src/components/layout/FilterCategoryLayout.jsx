@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import GroupFilterPopover from '../GroupFilterPopover';
 import ManuFacturePopover from '../ManuFactureFilterPopover';
 import PricePopover from '../PricesFilterPopover';
-import ResetFiltersButton from '../ResetFilters';
 import Button from '../common/Button/Button';
 
 // Data
@@ -78,7 +77,7 @@ const FilterCategoryLayout = ({
           prices={prices}
           onSelectPrice={handlePriceSelect}
         />
-        <ResetFiltersButton onResetFilters={onResetFilters} />
+        <Button onClick={onResetFilters}>Reset Filters</Button>
       </div>
       <div className="flex gap-6">
         <div className="mt-5 flex flex-wrap w-full gap-3">
