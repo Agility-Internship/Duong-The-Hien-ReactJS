@@ -27,8 +27,13 @@ const FavoriteProductsCard = ({
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
+  if (isPopoverOpen === true) {
+    document.body.classList.add('overflow-hidden');
+  }
+
   const handleButtonClick = () => {
     setIsPopoverOpen((prevState) => !prevState);
+    document.body.classList.remove('overflow-hidden');
   };
 
   return (
