@@ -20,6 +20,7 @@ function Typography({
   children,
 }) {
   const sizeClasses = {
+    xxl: 'text-[19px] font-bold',
     xl: 'text-xl font-bold',
     lg: 'text-lg font-normal',
     md: 'text-md font-normal',
@@ -34,20 +35,16 @@ function Typography({
 
   const headingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
-  const typographyClasses = `${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+  const typographyClasses = `${sizeClasses[size]} ${variantClasses[variant]} ${className} ${color}`;
 
   const Tag = level > 0 && level <= 6 ? headingLevels[level - 1] : 'p';
 
-  return (
-    <Tag className={typographyClasses} style={{ color }}>
-      {children}
-    </Tag>
-  );
+  return <Tag className={typographyClasses}>{children}</Tag>;
 }
 
 Typography.propTypes = {
   color: PropTypes.string,
-  size: PropTypes.oneOf(['xl', 'lg', 'md']),
+  size: PropTypes.oneOf(['xxl', 'xl', 'lg', 'md']),
   variant: PropTypes.oneOf(['solid', 'soft', 'outlined', 'plain']),
   level: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6]),
   className: PropTypes.string,

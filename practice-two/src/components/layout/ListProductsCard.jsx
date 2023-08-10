@@ -51,7 +51,7 @@ const ProductList = ({
         {products.map((product) => (
           <li
             key={product.id}
-            className="overflow-hidden w-[70%] sm:w-[100%] flex items-center p-2 pt-4 pb-5 border rounded-xl relative"
+            className="overflow-hidden w-[70%] sm:w-[100%] flex items-center p-2 pt-4 pb-5 border rounded-xl relative transition duration-300 hover:shadow-xl"
           >
             <ProductCard
               product={product}

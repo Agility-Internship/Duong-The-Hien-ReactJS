@@ -68,7 +68,7 @@ const ProductDetails = ({
             <div>
               <div className="basic-info flex flex-col gap-4 relative mt-5 ">
                 <div className="flex justify-between items-center hover:text-blue-700 lg:w-[90%] ">
-                  <Typography level={3} size="xl" className="text-3xl">
+                  <Typography level={3} size="xxl" variant="plain">
                     {selectedProduct.name}
                   </Typography>
                   <FavoriteButton
@@ -91,7 +91,7 @@ const ProductDetails = ({
                     {selectedProduct.resolution}
                   </Typography>
                 </div>
-                <Typography size="xl" color="red" variant="plain">
+                <Typography size="xl" color="text-primary" variant="plain">
                   {selectedProduct.price}
                   &#8363;
                 </Typography>
@@ -100,7 +100,7 @@ const ProductDetails = ({
                 </Typography>
                 <Link
                   href="/shopping-cart"
-                  variant="bg-secondary hover:bg-blue-800 hover:border focus:bg-blue-800  focus:border py-2 px-4 rounded font-semibold text-sm text-center"
+                  variant="bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded font-semibold text-sm text-center"
                   disabled
                   color="white"
                   underline={false}

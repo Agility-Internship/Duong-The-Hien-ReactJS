@@ -28,6 +28,13 @@ const App = () => {
   // State for storing the selected product's ID for details view
   const [selectedProductID, setSelectedProductID] = useState(null);
 
+  // Add a class to the body tag when selectedProductID is not null
+  if (selectedProductID !== null) {
+    document.body.classList.add('overflow-hidden');
+  } else {
+    document.body.classList.remove('overflow-hidden');
+  }
+
   /**
    * Handle the selection of a product to view its details or close the details view.
    *
@@ -150,7 +157,7 @@ const App = () => {
   const selectedProduct = allProducts.find((product) => product.id === selectedProductID);
 
   return (
-    <main className="m-auto p-3 max-w-screen-xl w-full min-w-[300px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] gap-6">
+    <main className="m-auto p-3 max-w-screen-xl w-full min-w-[300px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] gap-6 overflow-hidden">
       <section className="pt-3 flex flex-col sm:flex-row gap-4 ">
         <FilterCategoryLayout
           selectedFilter={selectedFilter}

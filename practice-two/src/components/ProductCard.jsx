@@ -45,7 +45,7 @@ function ProductCard({
       <CardOverflow>
         <div className="card-label flex justify-end gap-5">
           {product.installment && (
-            <div className="absolute top-2 left-2">
+            <div className="absolute top-4 left-2">
               <Typography color="black" size="xl" variant="solid">
                 {product.installment}
               </Typography>
@@ -59,7 +59,7 @@ function ProductCard({
         <CardContent onClick={handleSelectProduct}>
           <CardImage src={firstImage} alt="This is a picture of the card-image" />
           <div className="mb-3">
-            <Typography level={3} size="xl" color="" className="text-[1.21rem] hover:text-blue-700">
+            <Typography level={3} size="xxl" variant="plain" className="hover:text-secondary">
               {product.name}
             </Typography>
           </div>
@@ -71,7 +71,7 @@ function ProductCard({
               {product.resolution}
             </Typography>
           </div>
-          <Typography color="red" size="xl" variant="plain">
+          <Typography color="text-primary" size="xl" variant="plain">
             {product.price}
             &#8363;
           </Typography>
