@@ -36,7 +36,12 @@ const FavoriteButton = ({ onClick = () => {}, isFavorite = false }) => {
   const heartIconClasses = `heart ${isFavorite ? 'heart-active' : ''}`;
 
   return (
-    <Button variant="outline" size="small" onClick={handleButtonClick}>
+    <Button
+      customVariant="relative w-[50px] h-[50px] -top-3"
+      variant="outline"
+      size="small"
+      onClick={handleButtonClick}
+    >
       {/* Use inline styles to set the background */}
       <span
         className={heartIconClasses}
