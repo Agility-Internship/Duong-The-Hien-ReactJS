@@ -59,7 +59,7 @@ function ProductCard({
         <CardContent onClick={handleSelectProduct}>
           <CardImage src={firstImage} alt="This is a picture of the card-image" />
           <div className="mb-3">
-            <Typography level={3} size="xl" color="" className="text-[1.21rem] hover:text-blue-700">
+            <Typography level={3} size="xl" color="" className="text-[19px] hover:text-blue-700">
               {product.name}
             </Typography>
           </div>
