@@ -31,12 +31,18 @@ const FavoriteButton = ({ onClick = () => {}, isFavorite = false }) => {
       onClick(e); // Pass the event object and the new 'isFavorite' value to the parent's onClick function
     }
   };
-
   // Create a variable 'heartIconClasses' to apply CSS classes based on the 'isFavorite' prop
-  const heartIconClasses = `heart ${isFavorite ? 'heart-active' : ''}`;
+  const heartIconClasses = `${'absolute top-[-5px] right-[-2px] w-full h-full'} ${
+    isFavorite ? 'heart-active' : ''
+  }`;
 
   return (
-    <Button variant="outline" size="small" onClick={handleButtonClick}>
+    <Button
+      customVariant="relative w-[50px] h-[40px] -top-3"
+      variant="outline"
+      size="small"
+      onClick={handleButtonClick}
+    >
       {/* Use inline styles to set the background */}
       <span
         className={heartIconClasses}
