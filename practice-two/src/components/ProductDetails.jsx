@@ -99,7 +99,7 @@ const ProductDetails = ({
                   {selectedProduct.description}
                 </Typography>
                 <Link
-                  href="/shopping-cart"
+                  href="/"
                   variant="bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded font-semibold text-sm text-center"
                   disabled
                   color="white"

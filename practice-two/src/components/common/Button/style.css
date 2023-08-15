@@ -1,5 +1,5 @@
 .heart-active {
-  animation: animate 0.8s steps(28) forwards;
+  animation: animate 2s steps(28) forwards;
   background-position: right top;
 }
 
