@@ -13,7 +13,6 @@ import { ICON } from '../constants/data';
  *
  * A popover component for displaying cart products.
  * When the button is clicked, a popover with a list of  products is displayed.
- * The popover automatically closes when clicking outside of it.
  *
  * @param products - An array of all products
  * @returns {JSX.Element} The ShoppingCart Component
