@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BUTTON = {
-  DEFAULT: 'bg-white hover:border-secondary border-2 border-light',
+  DEFAULT: 'hover:border-secondary border-2 border-light',
 };
 
 const variantClasses = {

@@ -20,8 +20,13 @@ import { ICON } from '../constants/data';
 const ShoppingCart = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
+  if (isPopoverOpen === true) {
+    document.body.classList.add('overflow-hidden');
+  }
+
   const handleButtonClick = () => {
     setIsPopoverOpen((prevState) => !prevState);
+    document.body.classList.remove('overflow-hidden');
   };
 
   return (
@@ -34,15 +39,15 @@ const ShoppingCart = () => {
           </div>
         </div>
       </Button>
-      <div
-        className={`fixed w-full inset-0 bg-black/30 bg-opacity-10 opacity-100 transform transition-transform z-50 ${
-          isPopoverOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
+      <div className={`fixed w-full inset-0 z-50 ${isPopoverOpen ? 'bg-black/30' : 'hidden'}`}>
         <Popover
           closeButton
           isOpen={isPopoverOpen}
           onClosePopover={handleButtonClick}
+          closeButtonContent="X"
+          closeButtonStyle="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black "
+          isFixed
+          fixedOverlayClassName="bg-opacity-10 opacity-100 backdrop-blur-none "
           popoverClassName="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl dark:border-neutral-700 dark:bg-black/80 dark:text-white md:w-[33%] translate-x-0 "
           arrowPopover={false}
         >
