@@ -14,7 +14,7 @@ import Button from './Button/Button';
  * @param popoverClassName - Custom class name for the main popover div.
  * @param arrowPopover - Flag to determine whether to show the arrow in the popover.
  * @param isFixed - Flag to determine whether to use fixed positioning for the popover.
- * @param fixedOverlayClassName - Custom class name for the fixed overlay element.
+ * @param customClassNames - Custom class name for the fixed overlay element.
  * @returns {JSX.Element|null} The Popover component JSX.
  */
 const Popover = ({
@@ -27,7 +27,7 @@ const Popover = ({
   popoverClassName,
   arrowPopover = true,
   isFixed = false,
-  fixedOverlayClassName,
+  customClassNames,
 }) => {
   const defaultPopoverClassName = 'absolute flex top-10 -left-5 bg-white m-4 z-200 shadow-2xl z-50';
   const customPopoverClassName = popoverClassName ? `${popoverClassName}` : defaultPopoverClassName;
@@ -36,7 +36,7 @@ const Popover = ({
     <>
       {isFixed && (
         <button
-          className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center bg-gray-800 ${fixedOverlayClassName}`}
+          className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center bg-gray-800 ${customClassNames}`}
           onClick={onClosePopover}
           onKeyDown={onClosePopover}
         >
@@ -73,7 +73,7 @@ Popover.propTypes = {
   popoverClassName: PropTypes.string,
   arrowPopover: PropTypes.bool,
   isFixed: PropTypes.bool,
-  fixedOverlayClassName: PropTypes.string,
+  customClassNames: PropTypes.string,
   children: PropTypes.node,
 };
 

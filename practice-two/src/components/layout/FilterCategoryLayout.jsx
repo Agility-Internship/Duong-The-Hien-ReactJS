@@ -6,11 +6,11 @@ import GroupFilterPopover from '../GroupFilterPopover';
 import ManuFacturePopover from '../ManuFactureFilterPopover';
 import PricePopover from '../PricesFilterPopover';
 import Button from '../common/Button/Button';
+import ShoppingCart from '../ShoppingCart';
 
 // Data
 import BRAND from '../../constants/brand';
 import { PRICES, CATEGORIES } from '../../constants/data';
-import ShoppingCart from '../ShoppingCart';
 
 /**
  * FilterCategoryLayout Component
