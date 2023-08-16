@@ -11,7 +11,6 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
-import ShoppingCart from './components/ShoppingCart';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -166,15 +165,12 @@ const App = () => {
           onPriceFilter={handlePriceFilter}
           onResetFilters={handleResetFilters}
         />
-        <div className="flex gap-5">
-          <ShoppingCart />
-          <FavoriteProductsCard
-            products={allProducts}
-            favoriteProductIDs={favoriteProductIDs}
-            onToggleProductFavorite={toggleProductFavorite}
-            onSelectProduct={handleSelectProduct}
-          />
-        </div>
+        <FavoriteProductsCard
+          products={allProducts}
+          favoriteProductIDs={favoriteProductIDs}
+          onToggleProductFavorite={toggleProductFavorite}
+          onSelectProduct={handleSelectProduct}
+        />
       </section>
       <section>
         <ProductList
