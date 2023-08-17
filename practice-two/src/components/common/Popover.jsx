@@ -40,9 +40,8 @@ const Popover = ({
           className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center bg-gray-800 ${customClassNames}`}
           onClick={onClosePopover}
           onKeyDown={onClosePopover}
-        >
-          {/* Content goes here */}
-        </button>
+          aria-label="Close popover"
+        />
       )}
       <div className="z-30">
         <div className={customPopoverClassName}>
