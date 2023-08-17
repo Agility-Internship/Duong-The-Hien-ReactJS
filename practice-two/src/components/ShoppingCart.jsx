@@ -48,7 +48,7 @@ const ShoppingCart = ({ products = [] }) => {
           closeButtonContent="X"
           closeButtonStyle="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black"
           isFixed
-          customSliderBarClassNames="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl dark:border-neutral-700 dark:bg-black/80 dark:text-white md:w-[33%] translate-x-0"
+          customSliderBarClassNames="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl dark:border-neutral-700 dark:bg-black/80 dark:text-white md:w-[50%] lg:w-[35%] translate-x-0"
         >
           <div className="w-full h-full">
             <div className="inline-block">
