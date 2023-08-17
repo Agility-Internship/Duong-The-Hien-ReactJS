@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { CardImage } from './common/Card';
 import Link from './common/Link';
 import Typography from './common/Typography';
-import FavoriteButton from './common/Button/ButtonFavorite';
+import FavoriteButton from './ButtonFavorite/ButtonFavorite';
 import Popover from './common/Popover';
 
 /**

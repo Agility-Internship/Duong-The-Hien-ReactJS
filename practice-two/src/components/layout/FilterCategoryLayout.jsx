@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import GroupFilterPopover from '../GroupFilterPopover';
 import ManuFacturePopover from '../ManuFactureFilterPopover';
 import PricePopover from '../PricesFilterPopover';
-import Button from '../common/Button/Button';
+import Button from '../common/Button';
+import ShoppingCart from '../ShoppingCart';
 
 // Data
 import BRAND from '../../constants/brand';
@@ -56,28 +57,31 @@ const FilterCategoryLayout = ({
 
   return (
     <div>
-      <div className="flex gap-2 sm:gap-4 flex-wrap relative">
-        <GroupFilterPopover
-          categories={CATEGORIES[0]}
-          selectedFilter={selectedFilter}
-          manufacturers={manufacturers}
-          onSelectManufacturer={handleManufacturerSelect}
-          prices={prices}
-          onSelectPrice={handlePriceSelect}
-        />
-        <ManuFacturePopover
-          categories={CATEGORIES[1]}
-          selectedFilter={selectedFilter}
-          manufacturers={manufacturers}
-          onSelectManufacturer={handleManufacturerSelect}
-        />
-        <PricePopover
-          categories={CATEGORIES[2]}
-          selectedFilter={selectedFilter}
-          prices={prices}
-          onSelectPrice={handlePriceSelect}
-        />
-        <Button onClick={onResetFilters}>Reset Filters</Button>
+      <div className="flex justify-between">
+        <div className="flex gap-2 sm:gap-4 flex-wrap relative">
+          <GroupFilterPopover
+            categories={CATEGORIES[0]}
+            selectedFilter={selectedFilter}
+            manufacturers={manufacturers}
+            onSelectManufacturer={handleManufacturerSelect}
+            prices={prices}
+            onSelectPrice={handlePriceSelect}
+          />
+          <ManuFacturePopover
+            categories={CATEGORIES[1]}
+            selectedFilter={selectedFilter}
+            manufacturers={manufacturers}
+            onSelectManufacturer={handleManufacturerSelect}
+          />
+          <PricePopover
+            categories={CATEGORIES[2]}
+            selectedFilter={selectedFilter}
+            prices={prices}
+            onSelectPrice={handlePriceSelect}
+          />
+          <Button onClick={onResetFilters}>Reset Filters</Button>
+        </div>
+        <ShoppingCart />
       </div>
       <div className="flex gap-6">
         <div className="mt-5 flex flex-wrap w-full gap-3">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import Button from './common/Button/Button';
+import Button from './common/Button';
 import Popover from './common/Popover';
 import ProductCard from './ProductCard';
 
