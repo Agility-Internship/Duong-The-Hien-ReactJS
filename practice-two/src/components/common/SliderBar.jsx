@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 /**
- * SliderBar comments
+ * SliderBar Component
+ *
  * @param isOpen - Flag to determine if the SliderBar is open.
  * @param onCloseSliderBar - Function to be called when the SliderBar should be closed.
  * @param closeButton - Flag to determine whether to show the close button.

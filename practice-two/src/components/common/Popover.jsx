@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 /**
- * Popover comments
+ * Popover Component
+ *
  * @param isOpen - Flag to determine if the popover is open.
  * @param onClosePopover - Function to be called when the popover should be closed.
  * @param closeButton - Flag to determine whether to show the close button.
