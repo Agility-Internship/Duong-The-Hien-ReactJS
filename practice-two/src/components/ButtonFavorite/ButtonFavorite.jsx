@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 // Components
-import Button from './Button';
+import Button from '../common/Button';
 
 // Data
-import { ICON } from '../../../constants/data';
+import { ICON } from '../../constants/data';
 
 /**
  * FavoriteButton Component

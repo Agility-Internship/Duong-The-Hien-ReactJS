@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Component
-import Button from './Button/Button';
+import Button from './Button';
 
 /**
  * Popover comments

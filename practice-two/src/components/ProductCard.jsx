@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Components
 import { Card, CardOverflow, CardImage, CardContent } from './common/Card';
 import Typography from './common/Typography';
-import FavoriteButton from './common/Button/ButtonFavorite';
+import FavoriteButton from './ButtonFavorite/ButtonFavorite';
 
 /**
  * Product Card Component.
