@@ -13,7 +13,6 @@ import Button from './Button';
  * @param closeButtonStyle - CSS class for styling the close button.
  * @param customSliderBarClassNames - Custom class name for the main SliderBar div.
  * @param isFixed - Flag to determine whether to use fixed positioning for the SliderBar.
- * @param customBackdropClassNames - Custom class names to be added to elements.
  * @returns {JSX.Element|null} The SliderBar component JSX.
  */
 const SliderBar = ({
@@ -24,26 +23,20 @@ const SliderBar = ({
   closeButtonStyle = '',
   children,
   isFixed = false,
-  customBackdropClassNames,
   customSliderBarClassNames,
-}) => {
-  const defaultSliderBarClassName = 'absolute flex top-10 -left-5 bg-white m-4 z-200 shadow-2xl z-50';
-  const customSliderBarClassName = customSliderBarClassNames
-    ? `${customSliderBarClassNames}`
-    : defaultSliderBarClassName;
-
-  return isOpen ? (
+}) =>
+  isOpen ? (
     <>
       {isFixed && (
         <button
-          className={`fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center ${customBackdropClassNames}`}
+          className="fixed inset-0 backdrop-filter flex items-center justify-center bg-opacity-10 opacity-100 backdrop-blur-none "
           onClick={onCloseSliderBar}
           onKeyDown={onCloseSliderBar}
           aria-label="Close Slider Bar"
         />
       )}
       <aside className="z-30">
-        <div className={customSliderBarClassName}>
+        <div className={customSliderBarClassNames}>
           <div className="flex">
             {children}
             {closeButton && (
@@ -58,7 +51,6 @@ const SliderBar = ({
       </aside>
     </>
   ) : null;
-};
 
 SliderBar.propTypes = {
   isOpen: PropTypes.bool.isRequired,
@@ -68,7 +60,6 @@ SliderBar.propTypes = {
   closeButtonStyle: PropTypes.string,
   customSliderBarClassNames: PropTypes.string,
   isFixed: PropTypes.bool,
-  customBackdropClassNames: PropTypes.string,
   children: PropTypes.node,
 };
 
