@@ -198,7 +198,7 @@ const ShoppingCart = ({ products = [] }) => {
                     variant="plain"
                     className="text-right text-base text-black dark:text-white"
                   >
-                    $249.99
+                    249.99
                     <span className="ml-1 inline">VNĐ</span>
                   </Typography>
                 </div>
