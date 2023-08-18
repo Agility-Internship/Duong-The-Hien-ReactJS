@@ -38,16 +38,14 @@ const SliderBar = ({
       )}
       <aside className="z-30">
         <div className={customSliderBarClassNames}>
-          <div className="flex">
-            {children}
-            {closeButton && (
-              <div className="absolute top-1 right-2">
-                <Button customVariant={closeButtonStyle} onClick={onCloseSliderBar}>
-                  {closeButtonContent}
-                </Button>
-              </div>
-            )}
-          </div>
+          {children}
+          {closeButton && (
+            <div className="absolute top-1 right-2">
+              <Button customVariant={closeButtonStyle} onClick={onCloseSliderBar}>
+                {closeButtonContent}
+              </Button>
+            </div>
+          )}
         </div>
       </aside>
     </>

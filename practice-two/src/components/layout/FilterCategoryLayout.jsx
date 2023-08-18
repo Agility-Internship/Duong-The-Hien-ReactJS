@@ -19,6 +19,7 @@ import { PRICES, CATEGORIES } from '../../constants/data';
  * It receives two functions, `handleManufacturerFilter` and `handlePriceFilter`,
  * to handle filtering based on manufacturers and prices, respectively.
  *
+ * @param products - An array of all products
  * @param selectedFilter - Object containing the selected filter criteria.
  * @param onManufacturerFilter - Function to handle manufacturer filtering.
  * @param onPriceFilter - Function to handle price filtering.
@@ -26,6 +27,7 @@ import { PRICES, CATEGORIES } from '../../constants/data';
  * @returns {JSX.Element} The FilterCategoryLayout Component.
  */
 const FilterCategoryLayout = ({
+  products = [],
   selectedFilter = { manufacturer: [], price: [] },
   onManufacturerFilter = () => {},
   onPriceFilter = () => {},
@@ -36,7 +38,6 @@ const FilterCategoryLayout = ({
     img: brand.imageURL,
     alt: brand.type,
   }));
-
   const prices = PRICES.map((price) => ({
     id: price.id,
     text: price.text,
@@ -81,7 +82,7 @@ const FilterCategoryLayout = ({
           />
           <Button onClick={onResetFilters}>Reset Filters</Button>
         </div>
-        <ShoppingCart />
+        <ShoppingCart products={products} />
       </div>
       <div className="flex gap-6">
         <div className="mt-5 flex flex-wrap w-full gap-3">
@@ -113,6 +114,11 @@ const FilterCategoryLayout = ({
 };
 
 FilterCategoryLayout.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   selectedFilter: PropTypes.shape({
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
