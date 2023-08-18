@@ -28,7 +28,7 @@ const RemoveButton = ({ onClick = () => {} }) => (
 
 // Quantity Button Component
 const QuantityButton = ({ label = '', onClick = () => {}, children }) => (
-  <Button // github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prop-types.mdon
+  <Button
     aria-label={label}
     className="ease flex h-full min-w-[36px] max-w-[36px] flex-none items-center justify-center rounded-full px-2 transition-all duration-200 hover:border-neutral-800 hover:opacity-80"
     onClick={onClick}
