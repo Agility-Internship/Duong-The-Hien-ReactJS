@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Button from './common/Button';
 import SliderBar from './common/SliderBar';
 import Typography from './common/Typography';
-import Link from './common/Link';
 import CartItem from './CartItem';
 import TotalSection from './TotalSection';
 
@@ -70,16 +69,13 @@ const ShoppingCart = ({ products = [] }) => {
                 ))}
               </ul>
               <TotalSection />
-              <Link
-                href="/payment"
-                variant="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl font-semibold text-sm text-center"
-                disabled
-                color="white"
-                underline={false}
-                size="lg"
+              <Button
+                type="submit"
+                variant="outline"
+                customVariant="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
               >
                 Proceed to Checkout
-              </Link>
+              </Button>
             </div>
           </div>
         </SliderBar>

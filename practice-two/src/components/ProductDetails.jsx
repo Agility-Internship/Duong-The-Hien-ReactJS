@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // Components
 import { CardImage } from './common/Card';
-import Link from './common/Link';
+import Button from './common/Button';
 import Typography from './common/Typography';
 import FavoriteButton from './ButtonFavorite/ButtonFavorite';
 import Popover from './common/Popover';
@@ -98,16 +98,13 @@ const ProductDetails = ({
                 <Typography className="leading-6" color="gray-300" size="md" variant="plain">
                   {selectedProduct.description}
                 </Typography>
-                <Link
-                  href="/"
-                  variant="bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded font-semibold text-sm text-center"
-                  disabled
-                  color="white"
-                  underline={false}
-                  size="xl"
+                <Button
+                  type="submit"
+                  variant="outline"
+                  customVariant="bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
                 >
                   Buy It Now
-                </Link>
+                </Button>
               </div>
             </div>
           </div>
