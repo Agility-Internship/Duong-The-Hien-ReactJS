@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Button from './common/Button';
 import Typography from './common/Typography';
 
-// Remove Button Component
 const RemoveButton = ({ onClick = () => {} }) => (
   <Button
     aria-label="Remove cart item"
@@ -26,7 +25,6 @@ const RemoveButton = ({ onClick = () => {} }) => (
   </Button>
 );
 
-// Quantity Button Component
 const QuantityButton = ({ label = '', onClick = () => {}, children }) => (
   <Button // github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prop-types.mdon
     aria-label={label}
@@ -37,14 +35,12 @@ const QuantityButton = ({ label = '', onClick = () => {}, children }) => (
   </Button>
 );
 
-// Product Image Component
 const ProductImage = ({ src, alt }) => (
   <div className="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
     <img src={src} alt={alt} width="64" height="64" className="h-full w-full object-cover" />
   </div>
 );
 
-// Custom Typography Component
 const CustomTypography = ({
   level = 0,
   size = 'md',
@@ -58,6 +54,14 @@ const CustomTypography = ({
   </Typography>
 );
 
+/**
+ * CartItem Component
+ *
+ * A CartItem component for displaying details products
+ *
+ * @param products - An array of all products
+ * @returns {JSX.Element} The CartItem Component
+ */
 const CartItem = ({ product = [] }) => {
   const { images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];

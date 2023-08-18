@@ -71,7 +71,7 @@ const ShoppingCart = ({ products = [] }) => {
               </ul>
               <TotalSection />
               <Link
-                href="/"
+                href="/payment"
                 variant="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl font-semibold text-sm text-center"
                 disabled
                 color="white"
