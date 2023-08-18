@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Button from './common/Button';
 import Typography from './common/Typography';
 
+// Remove Button Component
 const RemoveButton = ({ onClick = () => {} }) => (
   <Button
     aria-label="Remove cart item"
@@ -25,6 +26,7 @@ const RemoveButton = ({ onClick = () => {} }) => (
   </Button>
 );
 
+// Quantity Button Component
 const QuantityButton = ({ label = '', onClick = () => {}, children }) => (
   <Button // github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prop-types.mdon
     aria-label={label}
@@ -35,23 +37,11 @@ const QuantityButton = ({ label = '', onClick = () => {}, children }) => (
   </Button>
 );
 
+// Product Image Component
 const ProductImage = ({ src, alt }) => (
   <div className="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
     <img src={src} alt={alt} width="64" height="64" className="h-full w-full object-cover" />
   </div>
-);
-
-const CustomTypography = ({
-  level = 0,
-  size = 'md',
-  color = 'black',
-  variant = 'plain',
-  className = '',
-  text,
-}) => (
-  <Typography level={level} size={size} color={color} variant={variant} className={className}>
-    {text}
-  </Typography>
 );
 
 /**
@@ -87,18 +77,24 @@ const CartItem = ({ product = [] }) => {
         <div className="z-30 flex flex-row space-x-4">
           <ProductImage src={firstImage} alt="Products images" />
           <div className="flex flex-1 flex-col text-base">
-            <CustomTypography text={name} level={3} className="hover:text-secondary" />
+            <Typography level={3} size="md" variant="plain" className="hover:text-secondary">
+              {name}
+            </Typography>
             <div className="card-compare flex flex-wrap gap-2 mb-3">
-              <CustomTypography text={version} variant="solid" />
-              <CustomTypography text={resolution} variant="solid" />
+              <Typography color="black" size="md" variant="solid">
+                {version}
+              </Typography>
+              <Typography color="black" size="md" variant="solid">
+                {resolution}
+              </Typography>
             </div>
           </div>
         </div>
         <div className="flex h-16 flex-col justify-between">
-          <CustomTypography
-            text={`${price} VNĐ`}
-            className="flex justify-end space-y-2 text-right text-sm"
-          />
+          <Typography variant="plain" className="flex justify-end space-y-2 text-right text-sm">
+            {price}
+            VNĐ
+          </Typography>
           <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
             <QuantityButton label="Reduce item quantity" onClick={decreaseQuantity}>
               <svg
@@ -113,7 +109,9 @@ const CartItem = ({ product = [] }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
               </svg>
             </QuantityButton>
-            <CustomTypography text={quantity} className="w-6 text-center" />
+            <Typography variant="plain" className="w-6 text-center">
+              <span className="w-full text-sm">{quantity}</span>
+            </Typography>
             <QuantityButton label="Increase item quantity" onClick={increaseQuantity}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -147,15 +145,6 @@ QuantityButton.propTypes = {
 ProductImage.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-};
-
-CustomTypography.propTypes = {
-  text: PropTypes.string.isRequired,
-  level: PropTypes.number.isRequired,
-  size: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  variant: PropTypes.string,
-  className: PropTypes.string,
 };
 
 CartItem.propTypes = {
