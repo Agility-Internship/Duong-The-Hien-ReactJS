@@ -81,25 +81,18 @@ const CartItem = ({ product = [] }) => {
           <RemoveButton />
         </div>
         <div className="z-30 flex flex-row space-x-4">
-          <ProductImage src={firstImage} alt="Lightweight Jacket" />
+          <ProductImage src={firstImage} alt="Products images" />
           <div className="flex flex-1 flex-col text-base">
-            <CustomTypography
-              text={name}
-              level={3}
-              size="md"
-              variant="plain"
-              className="hover:text-secondary"
-            />
+            <CustomTypography text={name} level={3} className="hover:text-secondary" />
             <div className="card-compare flex flex-wrap gap-2 mb-3">
-              <CustomTypography text={version} color="black" size="md" variant="solid" />
-              <CustomTypography text={resolution} color="black" size="md" variant="solid" />
+              <CustomTypography text={version} variant="solid" />
+              <CustomTypography text={resolution} variant="solid" />
             </div>
           </div>
         </div>
         <div className="flex h-16 flex-col justify-between">
           <CustomTypography
             text={`${price} VNĐ`}
-            variant="plain"
             className="flex justify-end space-y-2 text-right text-sm"
           />
           <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
@@ -116,7 +109,7 @@ const CartItem = ({ product = [] }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
               </svg>
             </QuantityButton>
-            <CustomTypography text={quantity} variant="plain" className="w-6 text-center" />
+            <CustomTypography text={quantity} className="w-6 text-center" />
             <QuantityButton label="Increase item quantity" onClick={increaseQuantity}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
