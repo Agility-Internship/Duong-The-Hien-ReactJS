@@ -13,7 +13,7 @@ import Typography from './common/Typography';
  * @param products - An array of all products
  * @returns {JSX.Element} The CartItem Component
  */
-const CartItem = ({ product }) => {
+const CartItem = ({ product = [] }) => {
   const { images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];
 
