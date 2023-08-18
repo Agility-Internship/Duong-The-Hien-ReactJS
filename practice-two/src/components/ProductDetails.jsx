@@ -99,7 +99,6 @@ const ProductDetails = ({
                   {selectedProduct.description}
                 </Typography>
                 <Button
-                  type="submit"
                   variant="outline"
                   customVariant="bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
                 >
