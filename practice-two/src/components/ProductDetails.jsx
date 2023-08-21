@@ -98,16 +98,16 @@ const ProductDetails = ({
                 <Typography className="leading-6" color="gray-300" size="md" variant="plain">
                   {selectedProduct.description}
                 </Typography>
-                <div className="flex gap-5">
+                <div className="flex flex-col lg:flex-row gap-5">
                   <Button
                     variant="outline"
-                    customVariant="w-[50%] bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
+                    customVariant="w-[100%] lg-[50%] bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
                   >
                     Buy It Now
                   </Button>
                   <Button
                     variant="outline"
-                    customVariant="w-[50%] bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
+                    customVariant="w-[100%] lg-[50%] bg-gray-400 hover:bg-gray-600 focus:bg-gray-600 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
                   >
                     Add to Cart
                   </Button>
