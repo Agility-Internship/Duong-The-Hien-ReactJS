@@ -90,22 +90,36 @@ const App = () => {
   };
 
   /**
-   * Toggle the products in cart
+   * Add a product to the cart.
    *
-   * @param {string} productID - ID of the product to toggle products cart
+   * @param {string} productID - ID of the product to add to the cart
    * @returns {Array} - Updated list of products cart IDs
    */
-  const toggleProductCart = (productID) => {
+  const addToCart = (productID) => {
     setCartProductIDs((prevCartIDs) => {
-      const isProductInCart = prevCartIDs.includes(productID);
-
-      // If the product is already in the cart, remove it
-      if (isProductInCart) {
-        return prevCartIDs.filter((id) => id !== productID);
+      // If the product is already in the cart, don't add it again
+      if (prevCartIDs.includes(productID)) {
+        return prevCartIDs;
       }
 
-      // If the product is not in the cart, add it
       return [...prevCartIDs, productID];
+    });
+  };
+
+  /**
+   * Remove a product from the cart.
+   *
+   * @param {string} productID - ID of the product to remove from the cart
+   * @returns {Array} - Updated list of products cart IDs
+   */
+  const removeFromCart = (productID) => {
+    setCartProductIDs((prevCartIDs) => {
+      // If the product is not in the cart, no need to remove it
+      if (!prevCartIDs.includes(productID)) {
+        return prevCartIDs;
+      }
+
+      return prevCartIDs.filter((id) => id !== productID);
     });
   };
 
@@ -143,7 +157,7 @@ const App = () => {
    * Handle the selection or deselection of a manufacturer filter option.
    *
    * @param {string} selectedManufacturer - Name of the selected manufacturer
-   * @returns {Object} - Name of selected manufacturer for selectedFilter.manufacturur
+   * @returns {Object} - Name of selected manufacturer for selectedFilter.manufacturer
    */
   const handleManufacturerFilter = (selectedManufacturer) => {
     setSelectedFilter((prevFilter) => {
@@ -186,7 +200,7 @@ const App = () => {
           products={allProducts}
           selectedFilter={selectedFilter}
           cartProductIDs={cartProductIDs}
-          onAddToCart={toggleProductCart}
+          removeFromCart={removeFromCart}
           onManufacturerFilter={handleManufacturerFilter}
           onPriceFilter={handlePriceFilter}
           onResetFilters={handleResetFilters}
@@ -213,7 +227,7 @@ const App = () => {
             favoriteProductIDs={favoriteProductIDs}
             onClosePopover={handleCloseProductDetails}
             onToggleProductFavorite={toggleProductFavorite}
-            onAddToCart={toggleProductCart}
+            onAddToCart={addToCart}
           />
         )}
       </section>

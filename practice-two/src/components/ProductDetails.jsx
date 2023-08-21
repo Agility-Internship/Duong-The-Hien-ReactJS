@@ -52,7 +52,7 @@ const ProductDetails = ({
     <section className="fixed inset-0 bg-opacity-70 backdrop-filter backdrop-blur-lg flex items-center justify-center z-50">
       <div className="container min-h-screen lg:w-[70%] md:w-[50%] flex justify-center items-center">
         <Popover
-          closeButtonoo
+          closeButton
           isOpen={isPopoverOpen}
           onClosePopover={handleButtonClick}
           isFixed

@@ -50,10 +50,10 @@ const ProductImage = ({ src, alt }) => (
  * A CartItem component for displaying details products
  *
  * @param products - An array of all products
- * @param onAddToCart - Function to handle adding a product to the cart
+ * @param removeFromCart - Function to handle remove a product to the cart
  * @returns {JSX.Element} The CartItem Component
  */
-const CartItem = ({ product = [], onAddToCart = () => {} }) => {
+const CartItem = ({ product = [], removeFromCart = () => {} }) => {
   const { images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];
 
@@ -70,7 +70,7 @@ const CartItem = ({ product = [], onAddToCart = () => {} }) => {
   };
 
   const handleProductCart = () => {
-    onAddToCart(product.id);
+    removeFromCart(product.id);
   };
 
   return (
@@ -161,7 +161,7 @@ CartItem.propTypes = {
     resolution: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
   }).isRequired,
-  onAddToCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
 };
 
 export default CartItem;

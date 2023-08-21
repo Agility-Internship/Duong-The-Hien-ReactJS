@@ -19,10 +19,10 @@ import { ICON } from '../constants/data';
  *
  * @param products - An array of all products
  * @param cartProductIDs - An array of IDs of products in the cart
- * @param onAddToCart - Function to handle adding a product to the cart
+ * @param removeFromCart - Function to handle removing a product to the cart
  * @returns {JSX.Element} The ShoppingCart Component
  */
-const ShoppingCart = ({ products = [], cartProductIDs = [], onAddToCart = () => {} }) => {
+const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () => {} }) => {
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
 
   if (isSliderBarOpen === true) {
@@ -74,7 +74,11 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], onAddToCart = () => 
                     const productCart = products.find((p) => p.id === productId);
                     if (!productCart) return null;
                     return (
-                      <CartItem key={productCart.id} product={productCart} onAddToCart={onAddToCart} />
+                      <CartItem
+                        key={productCart.id}
+                        product={productCart}
+                        removeFromCart={removeFromCart}
+                      />
                     );
                   })}
                 </ul>
@@ -101,7 +105,7 @@ ShoppingCart.propTypes = {
     }),
   ).isRequired,
   cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onAddToCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

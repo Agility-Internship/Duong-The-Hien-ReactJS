@@ -21,8 +21,8 @@ import { PRICES, CATEGORIES } from '../../constants/data';
  *
  * @param products - An array of all products.
  * @param selectedFilter - Object containing the selected filter criteria.
- * @param cartProductIDs - An array of cart prodcuts ID.
- * @param onAddToCart - Function to handle adding a product to the cart.
+ * @param cartProductIDs - An array of cart products ID.
+ * @param removeFromCart - Function to handle removing a product to the cart.
  * @param onManufacturerFilter - Function to handle manufacturer filtering.
  * @param onPriceFilter - Function to handle price filtering.
  * @param onResetFilters - Function to reset all filters.
@@ -32,7 +32,7 @@ const FilterCategoryLayout = ({
   products = [],
   selectedFilter = { manufacturer: [], price: [] },
   cartProductIDs = [],
-  onAddToCart = () => {},
+  removeFromCart = () => {},
   onManufacturerFilter = () => {},
   onPriceFilter = () => {},
   onResetFilters = () => {},
@@ -86,7 +86,11 @@ const FilterCategoryLayout = ({
           />
           <Button onClick={onResetFilters}>Reset Filters</Button>
         </div>
-        <ShoppingCart onAddToCart={onAddToCart} products={products} cartProductIDs={cartProductIDs} />
+        <ShoppingCart
+          removeFromCart={removeFromCart}
+          products={products}
+          cartProductIDs={cartProductIDs}
+        />
       </div>
       <div className="flex gap-6">
         <div className="mt-5 flex flex-wrap w-full gap-3">
@@ -128,7 +132,7 @@ FilterCategoryLayout.propTypes = {
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
   }),
   cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onAddToCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
   onManufacturerFilter: PropTypes.func,
   onPriceFilter: PropTypes.func,
   onResetFilters: PropTypes.func,
