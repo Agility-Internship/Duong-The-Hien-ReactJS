@@ -41,7 +41,7 @@ const SliderBar = ({
           {children}
           {closeButton && (
             <div className="absolute top-1 right-2">
-              <Button customVariant={closeButtonStyle} onClick={onCloseSliderBar}>
+              <Button customClass={closeButtonStyle} onClick={onCloseSliderBar}>
                 {closeButtonContent}
               </Button>
             </div>

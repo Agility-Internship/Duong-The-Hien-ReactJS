@@ -38,7 +38,7 @@ const FavoriteButton = ({ onClick = () => {}, isFavorite = false }) => {
 
   return (
     <Button
-      customVariant="relative w-[70px] h-[46px] -top-3 "
+      className="relative w-[70px] h-[46px] -top-3 "
       variant="outline"
       size="small"
       onClick={handleButtonClick}

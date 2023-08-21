@@ -37,7 +37,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], onAddToCart = () => 
 
   return (
     <div>
-      <Button customVariant="w-11 h-11 relative" onClick={handleButtonClick}>
+      <Button customClass="w-11 h-11 relative" onClick={handleButtonClick}>
         <img src={ICON.cart} alt="cart-icon" className="w-6" />
         <div className="absolute -top-3 -right-2">
           <div className="rounded-full text-sm bg-blue-500 text-white p-1 w-5 h-5 flex justify-center items-center">
@@ -81,7 +81,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], onAddToCart = () => 
                 <TotalSection />
                 <Button
                   variant="outline"
-                  customVariant="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
+                  customClass="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
                 >
                   Proceed to Checkout
                 </Button>

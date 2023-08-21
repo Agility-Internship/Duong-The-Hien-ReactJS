@@ -49,7 +49,7 @@ const Popover = ({
             {children}
             {closeButton && (
               <div className="absolute top-1 right-2">
-                <Button customVariant={closeButtonStyle} onClick={onClosePopover}>
+                <Button customClass={closeButtonStyle} onClick={onClosePopover}>
                   {closeButtonContent}
                 </Button>
               </div>
