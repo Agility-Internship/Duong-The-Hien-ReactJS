@@ -21,7 +21,7 @@ import Popover from './common/Popover';
  * @returns {JSX.Element} Product Details content.
  */
 const ProductDetails = ({
-  product = [],
+  product = {},
   favoriteProductIDs = [],
   onToggleProductFavorite = () => {},
   onClosePopover = () => {},
