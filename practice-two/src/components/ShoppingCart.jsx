@@ -37,7 +37,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
 
   return (
     <div>
-      <Button customClass="w-11 h-11 relative" onClick={handleButtonClick}>
+      <Button customClasses="w-11 h-11 relative" onClick={handleButtonClick}>
         <img src={ICON.cart} alt="cart-icon" className="w-6" />
         <div className="absolute -top-3 -right-2">
           <div className="rounded-full text-sm bg-blue-500 text-white p-1 w-5 h-5 flex justify-center items-center">
@@ -50,7 +50,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
           isOpen={isSliderBarOpen}
           onCloseSliderBar={handleButtonClick}
           closeButtonContent="X"
-          closeButtonStyle="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black"
+          customCloseButton="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black"
           isFixed
           customSliderBarClassNames="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl dark:border-neutral-700 dark:bg-black/80 dark:text-white md:w-[50%] lg:w-[35%] translate-x-0"
         >
@@ -72,7 +72,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
                 <ul className="flex-grow overflow-auto py-4">
                   {cartProductIDs.map((productId) => {
                     const productCart = products.find((p) => p.id === productId);
-                    if (!productCart) return null;
+
                     return (
                       <CartItem
                         key={productCart.id}
@@ -85,7 +85,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
                 <TotalSection />
                 <Button
                   variant="outline"
-                  customClass="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
+                  customClasses="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
                 >
                   Proceed to Checkout
                 </Button>

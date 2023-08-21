@@ -11,7 +11,7 @@ import Button from './Button';
  * @param onClosePopover - Function to be called when the popover should be closed.
  * @param closeButton - Flag to determine whether to show the close button.
  * @param closeButtonContent - Text content for the close button.
- * @param closeButtonStyle - CSS class for styling the close button.
+ * @param customCloseButton - CSS class for styling the close button.
  * @param popoverClassName - Custom class name for the main popover div.
  * @param arrowPopover - Flag to determine whether to show the arrow in the popover.
  * @param isFixed - Flag to determine whether to use fixed positioning for the popover.
@@ -23,7 +23,7 @@ const Popover = ({
   onClosePopover = () => {},
   closeButton = true,
   closeButtonContent = 'Close',
-  closeButtonStyle = '',
+  customCloseButton = '',
   children,
   popoverClassName,
   arrowPopover = true,
@@ -49,7 +49,7 @@ const Popover = ({
             {children}
             {closeButton && (
               <div className="absolute top-1 right-2">
-                <Button customClass={closeButtonStyle} onClick={onClosePopover}>
+                <Button customClasses={customCloseButton} onClick={onClosePopover}>
                   {closeButtonContent}
                 </Button>
               </div>
@@ -69,7 +69,7 @@ Popover.propTypes = {
   onClosePopover: PropTypes.func,
   closeButton: PropTypes.bool,
   closeButtonContent: PropTypes.string,
-  closeButtonStyle: PropTypes.string,
+  customCloseButton: PropTypes.string,
   popoverClassName: PropTypes.string,
   arrowPopover: PropTypes.bool,
   isFixed: PropTypes.bool,

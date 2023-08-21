@@ -11,7 +11,7 @@ import Button from './Button';
  * @param onCloseSliderBar - Function to be called when the SliderBar should be closed.
  * @param closeButton - Flag to determine whether to show the close button.
  * @param closeButtonContent - Text content for the close button.
- * @param closeButtonStyle - CSS class for styling the close button.
+ * @param customCloseButton - CSS class for styling the close button.
  * @param customSliderBarClassNames - Custom class name for the main SliderBar div.
  * @param isFixed - Flag to determine whether to use fixed positioning for the SliderBar.
  * @returns {JSX.Element|null} The SliderBar component JSX.
@@ -21,7 +21,7 @@ const SliderBar = ({
   onCloseSliderBar = () => {},
   closeButton = true,
   closeButtonContent = 'Close',
-  closeButtonStyle = '',
+  customCloseButton = '',
   children,
   isFixed = false,
   customSliderBarClassNames,
@@ -41,7 +41,7 @@ const SliderBar = ({
           {children}
           {closeButton && (
             <div className="absolute top-1 right-2">
-              <Button customClass={closeButtonStyle} onClick={onCloseSliderBar}>
+              <Button customClasses={customCloseButton} onClick={onCloseSliderBar}>
                 {closeButtonContent}
               </Button>
             </div>
@@ -56,7 +56,7 @@ SliderBar.propTypes = {
   onCloseSliderBar: PropTypes.func,
   closeButton: PropTypes.bool,
   closeButtonContent: PropTypes.string,
-  closeButtonStyle: PropTypes.string,
+  customCloseButton: PropTypes.string,
   customSliderBarClassNames: PropTypes.string,
   isFixed: PropTypes.bool,
   children: PropTypes.node,

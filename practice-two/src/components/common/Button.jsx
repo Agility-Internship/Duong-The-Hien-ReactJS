@@ -9,7 +9,7 @@ const variantClasses = {
   primary: `${BUTTON.DEFAULT} rounded-lg`,
   secondary: `${BUTTON.DEFAULT} rounded-[50px]`,
   outline: 'border-none',
-  custom: `${BUTTON.DEFAULT} py-2 px-4 w-[100%] lg-[50%] rounded text-white text-xl font-semibold justify-center`,
+  purchaseButton: ' py-2 px-4 w-[100%] lg-[50%] rounded text-white text-xl font-semibold justify-center',
 };
 
 const sizeClasses = {
@@ -31,7 +31,7 @@ const colorClasses = {
  * @param size Size of the button. Can be one of 'small', 'medium', or 'large'.
  * @param type Type of the button. Can be one of 'button', 'submit', or 'reset'.
  * @param color Color of the button. Can be one of 'red', 'blue', 'light'.
- * @param customClass Custom variant class for the button.
+ * @param customClasses  Custom variant class for the button.
  * @param onClick Click event handler function for the button.
  * @returns {JSX.Element} - Button element.
  */
@@ -41,7 +41,7 @@ const Button = ({
   size = 'medium',
   type = 'button',
   color = 'light',
-  customClass = '',
+  customClasses = '',
   onClick = () => {},
   ...restProps
 }) => {
@@ -54,7 +54,7 @@ const Button = ({
     sizeClasses[size],
     variantClasses[variant],
     colorClasses[color],
-    customClass,
+    customClasses,
   ].join(' ');
 
   return (
@@ -66,11 +66,11 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'purchaseButton']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   color: PropTypes.oneOf(['red', 'blue', 'light']),
-  customClass: PropTypes.string,
+  customClasses: PropTypes.string,
   onClick: PropTypes.func,
 };
 
