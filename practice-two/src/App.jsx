@@ -28,6 +28,9 @@ const App = () => {
   // State for storing the selected product's ID for details view
   const [selectedProductID, setSelectedProductID] = useState(null);
 
+  // State for storing the IDs of products added to cart
+  const [cartProductIDs, setCartProductIDs] = useState([]);
+
   // Add a class to the body tag when selectedProductID is not null
   if (selectedProductID !== null) {
     document.body.classList.add('overflow-hidden');
@@ -83,6 +86,20 @@ const App = () => {
 
       // If it's not in the favorites list, add it
       return [...prevFavorites, productID];
+    });
+  };
+
+  const toggleProductCart = (productID) => {
+    setCartProductIDs((prevCartIDs) => {
+      const isProductInCart = prevCartIDs.includes(productID);
+
+      // If the product is already in the cart, remove it
+      if (isProductInCart) {
+        return prevCartIDs.filter((id) => id !== productID);
+      }
+
+      // If the product is not in the cart, add it
+      return [...prevCartIDs, productID];
     });
   };
 
@@ -162,6 +179,8 @@ const App = () => {
         <FilterCategoryLayout
           products={allProducts}
           selectedFilter={selectedFilter}
+          cartProductIDs={cartProductIDs}
+          onAddToCart={toggleProductCart}
           onManufacturerFilter={handleManufacturerFilter}
           onPriceFilter={handlePriceFilter}
           onResetFilters={handleResetFilters}
@@ -188,6 +207,7 @@ const App = () => {
             favoriteProductIDs={favoriteProductIDs}
             onClosePopover={handleCloseProductDetails}
             onToggleProductFavorite={toggleProductFavorite}
+            onAddToCart={toggleProductCart}
           />
         )}
       </section>

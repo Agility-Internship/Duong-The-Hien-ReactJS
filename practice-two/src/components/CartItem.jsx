@@ -50,9 +50,10 @@ const ProductImage = ({ src, alt }) => (
  * A CartItem component for displaying details products
  *
  * @param products - An array of all products
+ * @param onAddToCart - Function to handle adding a product to the cart
  * @returns {JSX.Element} The CartItem Component
  */
-const CartItem = ({ product = [] }) => {
+const CartItem = ({ product = [], onAddToCart = () => {} }) => {
   const { images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];
 
@@ -68,11 +69,15 @@ const CartItem = ({ product = [] }) => {
     setQuantity(quantity + 1);
   };
 
+  const handleProductCart = () => {
+    onAddToCart(product.id);
+  };
+
   return (
     <li className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700">
       <div className="relative flex w-full flex-row justify-between px-1 py-4">
         <div className="absolute z-40 -mt-2 ml-[55px]">
-          <RemoveButton />
+          <RemoveButton onClick={handleProductCart} />
         </div>
         <div className="z-30 flex flex-row space-x-4">
           <ProductImage src={firstImage} alt="Products images" />
@@ -156,6 +161,7 @@ CartItem.propTypes = {
     resolution: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
   }).isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default CartItem;

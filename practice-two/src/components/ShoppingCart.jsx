@@ -18,15 +18,18 @@ import { ICON } from '../constants/data';
  * When the button is clicked, a SliderBar with a list of  products is displayed.
  *
  * @param products - An array of all products
+ * @param cartProductIDs - An array of IDs of products in the cart
+ * @param onAddToCart - Function to handle adding a product to the cart
  * @returns {JSX.Element} The ShoppingCart Component
  */
-const ShoppingCart = ({ products = [] }) => {
+const ShoppingCart = ({ products = [], cartProductIDs = [], onAddToCart = () => {} }) => {
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
 
   if (isSliderBarOpen === true) {
     document.body.classList.add('overflow-hidden');
   }
 
+  // Toggle slider bar and lock scroll
   const handleButtonClick = () => {
     setIsSliderBarOpen((prevState) => !prevState);
     document.body.classList.remove('overflow-hidden');
@@ -38,7 +41,7 @@ const ShoppingCart = ({ products = [] }) => {
         <img src={ICON.cart} alt="cart-icon" className="w-6" />
         <div className="absolute -top-3 -right-2">
           <div className="rounded-full text-sm bg-blue-500 text-white p-1 w-5 h-5 flex justify-center items-center">
-            {products.length}
+            {cartProductIDs.length}
           </div>
         </div>
       </Button>
@@ -53,29 +56,37 @@ const ShoppingCart = ({ products = [] }) => {
         >
           <div className="w-full h-full">
             <div className="inline-block">
-              <Typography level={2} size="xl" variant="soild">
+              <Typography level={2} size="xl" variant="plain">
                 My Cart
               </Typography>
             </div>
-            {/* TODO: Update the display of the cart when there are no products */}
-            {/* <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
-              <img src={ICON.cart} alt="cart-icon" className="w-24" />
-              <Typography className="mt-6 text-center text-2xl font-bold">Your cart is empty.</Typography>
-            </div> */}
-            <div className="flex h-full w-full flex-col justify-between overflow-hidden p-1 pb-10">
-              <ul className="flex-grow overflow-auto py-4">
-                {products.map((product) => (
-                  <CartItem key={product.id} product={product} />
-                ))}
-              </ul>
-              <TotalSection />
-              <Button
-                variant="outline"
-                customVariant="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
-              >
-                Proceed to Checkout
-              </Button>
-            </div>
+            {cartProductIDs.length === 0 ? (
+              <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
+                <img src={ICON.cart} alt="cart-icon" className="w-24" />
+                <Typography variant="plain" className="mt-6 text-center text-2xl font-bold">
+                  Your cart is empty.
+                </Typography>
+              </div>
+            ) : (
+              <div className="flex h-full w-full flex-col justify-between overflow-hidden p-1 pb-10">
+                <ul className="flex-grow overflow-auto py-4">
+                  {cartProductIDs.map((productId) => {
+                    const productCart = products.find((p) => p.id === productId);
+                    if (!productCart) return null;
+                    return (
+                      <CartItem key={productCart.id} product={productCart} onAddToCart={onAddToCart} />
+                    );
+                  })}
+                </ul>
+                <TotalSection />
+                <Button
+                  variant="outline"
+                  customVariant="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
+                >
+                  Proceed to Checkout
+                </Button>
+              </div>
+            )}
           </div>
         </SliderBar>
       </div>
@@ -89,6 +100,8 @@ ShoppingCart.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

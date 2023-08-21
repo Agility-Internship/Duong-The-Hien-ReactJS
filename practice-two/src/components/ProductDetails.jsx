@@ -17,6 +17,7 @@ import Popover from './common/Popover';
  * @param favoriteProductIDs - An array of product IDs marked as favorites.
  * @param onToggleProductFavorite - Function to handle toggling a product as favorite
  * @param onClosePopover - Callback function to close the product details.
+ * @param onAddToCart - Function to handle adding a product to the cart
  * @returns {JSX.Element} Product Details content.
  */
 const ProductDetails = ({
@@ -24,6 +25,7 @@ const ProductDetails = ({
   favoriteProductIDs = [],
   onToggleProductFavorite = () => {},
   onClosePopover = () => {},
+  onAddToCart = () => {},
 }) => {
   const selectedProduct = product;
 
@@ -40,6 +42,10 @@ const ProductDetails = ({
 
   const handleFavoriteToggle = () => {
     onToggleProductFavorite(product.id);
+  };
+
+  const handleAddToCart = () => {
+    onAddToCart(product.id);
   };
 
   return (
@@ -108,6 +114,7 @@ const ProductDetails = ({
                   <Button
                     variant="outline"
                     customVariant="w-[100%] lg-[50%] bg-gray-400 hover:bg-gray-600 focus:bg-gray-600 py-2 px-4 rounded text-white text-xl font-semibold text-sm justify-center"
+                    onClick={handleAddToCart}
                   >
                     Add to Cart
                   </Button>
@@ -134,6 +141,7 @@ ProductDetails.propTypes = {
   favoriteProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClosePopover: PropTypes.func,
   onToggleProductFavorite: PropTypes.func.isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default ProductDetails;
