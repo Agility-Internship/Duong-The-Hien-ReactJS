@@ -89,6 +89,12 @@ const App = () => {
     });
   };
 
+  /**
+   * Toggle the products in cart
+   *
+   * @param {string} productID - ID of the product to toggle products cart
+   * @returns {Array} - Updated list of products cart IDs
+   */
   const toggleProductCart = (productID) => {
     setCartProductIDs((prevCartIDs) => {
       const isProductInCart = prevCartIDs.includes(productID);
