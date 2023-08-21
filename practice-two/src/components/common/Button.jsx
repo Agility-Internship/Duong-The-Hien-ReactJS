@@ -9,7 +9,7 @@ const variantClasses = {
   primary: `${BUTTON.DEFAULT} rounded-lg`,
   secondary: `${BUTTON.DEFAULT} rounded-[50px]`,
   outline: 'border-none',
-  purchaseButton: ' py-2 px-4 w-[100%] lg-[50%] rounded text-white text-xl font-semibold justify-center',
+  purchase: ' py-2 px-4 w-[100%] lg-[50%] rounded text-white text-xl font-semibold justify-center',
 };
 
 const sizeClasses = {
@@ -66,7 +66,7 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'purchaseButton']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'purchase']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   color: PropTypes.oneOf(['red', 'blue', 'light']),
