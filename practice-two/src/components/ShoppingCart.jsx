@@ -84,7 +84,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
                 </ul>
                 <TotalSection />
                 <Button
-                  variant="outline"
+                  variant="light"
                   customClasses="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
                 >
                   Proceed to Checkout

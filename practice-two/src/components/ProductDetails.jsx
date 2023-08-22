@@ -106,14 +106,16 @@ const ProductDetails = ({
                 </Typography>
                 <div className="flex flex-col lg:flex-row gap-5">
                   <Button
-                    variant="purchase"
-                    customClasses="bg-secondary hover:bg-blue-800 focus:bg-blue-800"
+                    variant="primary"
+                    size="medium"
+                    customClasses="w-[100%] lg-[50%] bg-secondary hover:bg-blue-800 focus:bg-blue-800"
                   >
                     Buy It Now
                   </Button>
                   <Button
-                    variant="purchase"
-                    customClasses="bg-gray-400 hover:bg-gray-600 focus:bg-gray-600"
+                    variant="secondary"
+                    size="medium"
+                    customClasses="w-[100%] lg-[50%] bg-gray-400 hover:bg-gray-600 focus:bg-gray-600"
                     onClick={handleAddToCart}
                   >
                     Add to Cart

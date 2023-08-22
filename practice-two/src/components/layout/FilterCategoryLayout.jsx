@@ -102,8 +102,9 @@ const FilterCategoryLayout = ({
                   ? 'red' // Add 'border-primary' class for selected manufacturers
                   : 'light' // Use 'light' as the default color
               }
-              variant="secondary"
+              variant="light"
               size="medium"
+              rounder="double"
               value={manufacturer.alt}
               onClick={handleManufacturerSelect}
             >

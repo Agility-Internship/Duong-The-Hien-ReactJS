@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BUTTON = {
-  DEFAULT: 'hover:border-secondary border-2 border-light',
+  LIGHT: 'hover:border-secondary border-2 border-light',
+  COLOR: 'rounded text-white text-xl font-semibold justify-center',
 };
 
 const variantClasses = {
-  primary: `${BUTTON.DEFAULT} rounded-lg`,
-  secondary: `${BUTTON.DEFAULT} rounded-[50px]`,
-  outline: 'border-none',
-  purchase: ' py-2 px-4 w-[100%] lg-[50%] rounded text-white text-xl font-semibold justify-center',
+  primary: `${BUTTON.COLOR} bg-blue-600 hover:bg-blue-700 border-blue-600 border hover:border-blue-700`,
+  secondary: `${BUTTON.COLOR} bg-gray-300 hover:bg-gray-400 border-gray-300 border hover:border-gray-400`,
+  light: `${BUTTON.LIGHT} border hover:border-secondary border-gray rounded-lg`,
 };
 
 const sizeClasses = {
@@ -24,23 +24,30 @@ const colorClasses = {
   light: 'border-light',
 };
 
+const rounderClasses = {
+  soft: 'rounded-lg',
+  double: 'rounded-[50px]',
+};
+
 /**
  * Button component
  * @param children Text for the button.
- * @param variant Variant of the button. Can be one of 'primary', 'secondary', 'outline', or a custom variant.
+ * @param variant Variant of the button. Can be one of 'primary', 'secondary', 'light', or a custom variant.
  * @param size Size of the button. Can be one of 'small', 'medium', or 'large'.
  * @param type Type of the button. Can be one of 'button', 'submit', or 'reset'.
  * @param color Color of the button. Can be one of 'red', 'blue', 'light'.
+ * @param rounder Rounder of the button. Can be one of 'soft', 'double'.
  * @param customClasses  Custom variant class for the button.
  * @param onClick Click event handler function for the button.
  * @returns {JSX.Element} - Button element.
  */
 const Button = ({
   children,
-  variant = 'primary',
+  variant = 'light',
   size = 'medium',
   type = 'button',
   color = 'light',
+  rounder = 'soft',
   customClasses = '',
   onClick = () => {},
   ...restProps
@@ -54,6 +61,7 @@ const Button = ({
     sizeClasses[size],
     variantClasses[variant],
     colorClasses[color],
+    rounderClasses[rounder],
     customClasses,
   ].join(' ');
 
@@ -66,10 +74,11 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'purchase']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'light', 'purchase']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   color: PropTypes.oneOf(['red', 'blue', 'light']),
+  rounder: PropTypes.oneOf(['soft', 'double']),
   customClasses: PropTypes.string,
   onClick: PropTypes.func,
 };
