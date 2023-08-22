@@ -35,6 +35,8 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
     document.body.classList.remove('overflow-hidden');
   };
 
+  const getProductDetails = (productId) => products.find((product) => product.id === productId);
+
   return (
     <div>
       <Button customClasses="w-11 h-11 relative" onClick={handleButtonClick}>
@@ -71,12 +73,12 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
               <div className="flex h-full w-full flex-col justify-between overflow-hidden p-1 pb-10">
                 <ul className="flex-grow overflow-auto py-4">
                   {cartProductIDs.map((productId) => {
-                    const productCart = products.find((p) => p.id === productId);
+                    const productDetails = getProductDetails(productId);
 
                     return (
                       <CartItem
-                        key={productCart.id}
-                        product={productCart}
+                        key={productDetails.id}
+                        product={productDetails}
                         removeFromCart={removeFromCart}
                       />
                     );

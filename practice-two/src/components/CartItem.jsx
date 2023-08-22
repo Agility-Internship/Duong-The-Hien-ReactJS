@@ -154,12 +154,12 @@ ProductImage.propTypes = {
 
 CartItem.propTypes = {
   product: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    images: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    images: PropTypes.objectOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
     version: PropTypes.string.isRequired,
     resolution: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
   }).isRequired,
   removeFromCart: PropTypes.func.isRequired,
 };
