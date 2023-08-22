@@ -11,6 +11,7 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
+import Message from './components/common/Message';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -30,6 +31,13 @@ const App = () => {
 
   // State for storing the IDs of products added to cart
   const [cartProductIDs, setCartProductIDs] = useState([]);
+
+  // State để show Message when add to cart
+  const [showAddToCartModal, setShowAddToCartModal] = useState(false);
+
+  const closeAddToCartModal = () => {
+    setShowAddToCartModal(false);
+  };
 
   // Add a class to the body tag when selectedProductID is not null
   if (selectedProductID !== null) {
@@ -101,6 +109,7 @@ const App = () => {
       if (prevCartIDs.includes(productID)) {
         return prevCartIDs;
       }
+      setShowAddToCartModal(true);
 
       return [...prevCartIDs, productID];
     });
@@ -231,6 +240,7 @@ const App = () => {
           />
         )}
       </section>
+      <section>{showAddToCartModal && <Message onClose={closeAddToCartModal} />}</section>
       <section />
     </main>
   );
