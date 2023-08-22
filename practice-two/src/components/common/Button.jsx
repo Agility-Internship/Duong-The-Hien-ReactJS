@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 const BUTTON = {
   LIGHT: 'hover:border-secondary border-2 border-light',
-  COLOR: 'rounded text-white text-xl font-semibold justify-center',
+  DEFAULT: 'rounded text-white text-xl font-semibold justify-center',
 };
 
 const variantClasses = {
-  primary: `${BUTTON.COLOR} bg-blue-600 hover:bg-blue-700 border-blue-600 border hover:border-blue-700`,
-  secondary: `${BUTTON.COLOR} bg-gray-300 hover:bg-gray-400 border-gray-300 border hover:border-gray-400`,
+  primary: `${BUTTON.DEFAULT} bg-blue-600 hover:bg-blue-700 border-blue-600 border hover:border-blue-700`,
+  secondary: `${BUTTON.DEFAULT} bg-gray-300 hover:bg-gray-400 border-gray-300 border hover:border-gray-400`,
   light: `${BUTTON.LIGHT} border hover:border-secondary border-gray rounded-lg`,
 };
 
