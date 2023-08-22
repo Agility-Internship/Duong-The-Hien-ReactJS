@@ -56,7 +56,6 @@ const FavoriteProductsCard = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               {favoriteProductIDs.map((productId) => {
                 const productFavorite = products.find((p) => p.id === productId);
-                if (!productFavorite) return null;
 
                 return (
                   <div

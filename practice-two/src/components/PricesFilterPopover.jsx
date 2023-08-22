@@ -62,7 +62,7 @@ const PricePopover = ({
                   <Button
                     key={price.id}
                     id={price.id}
-                    variant="primary"
+                    variant="light"
                     color={isSelected ? 'red' : 'light'} // Set color based on isSelected
                     size="medium"
                     data-min={price.min}

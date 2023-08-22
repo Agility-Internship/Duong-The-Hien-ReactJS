@@ -49,10 +49,11 @@ const ProductImage = ({ src, alt }) => (
  *
  * A CartItem component for displaying details products
  *
- * @param products - An array of all products
+ * @param products - The product data object
+ * @param removeFromCart - Function to handle remove a product to the cart
  * @returns {JSX.Element} The CartItem Component
  */
-const CartItem = ({ product = [] }) => {
+const CartItem = ({ product = {}, removeFromCart = () => {} }) => {
   const { images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];
 
@@ -68,11 +69,15 @@ const CartItem = ({ product = [] }) => {
     setQuantity(quantity + 1);
   };
 
+  const handleRemoveFromCart = () => {
+    removeFromCart(product.id);
+  };
+
   return (
     <li className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700">
       <div className="relative flex w-full flex-row justify-between px-1 py-4">
         <div className="absolute z-40 -mt-2 ml-[55px]">
-          <RemoveButton />
+          <RemoveButton onClick={handleRemoveFromCart} />
         </div>
         <div className="z-30 flex flex-row space-x-4">
           <ProductImage src={firstImage} alt="Products images" />
@@ -149,13 +154,14 @@ ProductImage.propTypes = {
 
 CartItem.propTypes = {
   product: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    images: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    images: PropTypes.objectOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
     version: PropTypes.string.isRequired,
     resolution: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
   }).isRequired,
+  removeFromCart: PropTypes.func.isRequired,
 };
 
 export default CartItem;

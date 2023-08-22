@@ -11,6 +11,7 @@ import LIST_PRODUCTS from '../database/products.json';
 
 // Filter
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
+import Message from './components/common/Message';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -27,6 +28,16 @@ const App = () => {
 
   // State for storing the selected product's ID for details view
   const [selectedProductID, setSelectedProductID] = useState(null);
+
+  // State for storing the IDs of products added to cart
+  const [cartProductIDs, setCartProductIDs] = useState([]);
+
+  // State để show Message when add to cart
+  const [showAddToCartModal, setShowAddToCartModal] = useState(false);
+
+  const closeAddToCartModal = () => {
+    setShowAddToCartModal(false);
+  };
 
   // Add a class to the body tag when selectedProductID is not null
   if (selectedProductID !== null) {
@@ -87,6 +98,41 @@ const App = () => {
   };
 
   /**
+   * Add a product to the cart.
+   *
+   * @param {string} productID - ID of the product to add to the cart
+   * @returns {Array} - Updated list of products cart IDs
+   */
+  const addToCart = (productID) => {
+    setCartProductIDs((prevCartIDs) => {
+      // If the product is already in the cart, don't add it again
+      if (prevCartIDs.includes(productID)) {
+        return prevCartIDs;
+      }
+      setShowAddToCartModal(true);
+
+      return [...prevCartIDs, productID];
+    });
+  };
+
+  /**
+   * Remove a product from the cart.
+   *
+   * @param {string} productID - ID of the product to remove from the cart
+   * @returns {Array} - Updated list of products cart IDs
+   */
+  const removeFromCart = (productID) => {
+    setCartProductIDs((prevCartIDs) => {
+      // If the product is not in the cart, no need to remove it
+      if (!prevCartIDs.includes(productID)) {
+        return prevCartIDs;
+      }
+
+      return prevCartIDs.filter((id) => id !== productID);
+    });
+  };
+
+  /**
    * Handle the selection or deselection of a price filter option.
    *
    * @param {String} selectedID - ID of the selected price filter option
@@ -120,7 +166,7 @@ const App = () => {
    * Handle the selection or deselection of a manufacturer filter option.
    *
    * @param {string} selectedManufacturer - Name of the selected manufacturer
-   * @returns {Object} - Name of selected manufacturer for selectedFilter.manufacturur
+   * @returns {Object} - Name of selected manufacturer for selectedFilter.manufacturer
    */
   const handleManufacturerFilter = (selectedManufacturer) => {
     setSelectedFilter((prevFilter) => {
@@ -162,6 +208,8 @@ const App = () => {
         <FilterCategoryLayout
           products={allProducts}
           selectedFilter={selectedFilter}
+          cartProductIDs={cartProductIDs}
+          removeFromCart={removeFromCart}
           onManufacturerFilter={handleManufacturerFilter}
           onPriceFilter={handlePriceFilter}
           onResetFilters={handleResetFilters}
@@ -188,9 +236,11 @@ const App = () => {
             favoriteProductIDs={favoriteProductIDs}
             onClosePopover={handleCloseProductDetails}
             onToggleProductFavorite={toggleProductFavorite}
+            onAddToCart={addToCart}
           />
         )}
       </section>
+      <section>{showAddToCartModal && <Message onClose={closeAddToCartModal} />}</section>
       <section />
     </main>
   );

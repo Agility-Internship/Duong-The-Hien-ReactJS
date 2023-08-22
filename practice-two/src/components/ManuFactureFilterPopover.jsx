@@ -64,7 +64,7 @@ const ManuFacturePopover = ({
                       ? 'red' // Add 'border-primary' class for selected manufacturers
                       : 'light' // Use 'light' as the default color
                   }
-                  variant="primary"
+                  variant="light"
                   value={manufacturer.alt}
                   onClick={handleManufacturerSelect}
                 >

@@ -13,12 +13,12 @@ import FavoriteButton from './ButtonFavorite/ButtonFavorite';
  *
  * @param product - The product data object.
  * @param favoriteProductIDs - An array of product IDs marked as favorites.
- * @param onSelectFavorite - Function to handle the selection/unselection of a favorite product.
+ * @param onSelectFavorite - Function to handle the selection/unselecting of a favorite product.
  * @param onSelectProduct - Function to handle the selection of a product.
  * @returns {JSX.Element} Product Card content.
  */
 function ProductCard({
-  product = [],
+  product = {},
   favoriteProductIDs = [],
   onSelectFavorite = () => {},
   onSelectProduct = () => {},

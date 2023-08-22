@@ -78,7 +78,7 @@ const GroupFilterPopover = ({
                       ? 'red' // Add 'border-primary' class for selected manufacturers
                       : 'light' // Use 'light' as the default color
                   }
-                  variant="primary"
+                  variant="light"
                   value={manufacturer.alt}
                   onClick={handleManufacturerSelect}
                 >
@@ -107,7 +107,7 @@ const GroupFilterPopover = ({
                   <Button
                     key={price.id}
                     id={price.id}
-                    variant="primary"
+                    variant="light"
                     color={isSelected ? 'red' : 'light'}
                     size="medium"
                     data-min={price.min}
