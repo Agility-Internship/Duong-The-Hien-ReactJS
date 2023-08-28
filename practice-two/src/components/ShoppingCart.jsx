@@ -41,11 +41,6 @@ const ShoppingCart = ({
     document.body.classList.remove('overflow-hidden');
   };
 
-  const cartProducts = cartProductIDs.map((item) => ({
-    id: item.id,
-    quantity: item.quantity,
-  }));
-
   const getProductDetails = (product, productId) => products.find((p) => p.id === productId);
 
   return (
@@ -83,7 +78,7 @@ const ShoppingCart = ({
             ) : (
               <div className="flex h-full w-full flex-col justify-between overflow-hidden p-1 pb-10">
                 <ul className="flex-grow overflow-auto py-4">
-                  {cartProducts.map((productId) => {
+                  {cartProductIDs.map((productId) => {
                     const productCart = getProductDetails(products, productId.id);
 
                     return (

@@ -67,15 +67,17 @@ const CartItem = ({
   const [quantity, setQuantity] = useState(productQuantity);
 
   const decreaseQuantity = () => {
-    if (quantity) {
-      setQuantity(quantity - 1);
-      updateQuantity(product.id, quantity - 1);
+    if (quantity > 0) {
+      const updatedQuantity = quantity - 1;
+      setQuantity(updatedQuantity);
+      updateQuantity(product.id, updatedQuantity);
     }
   };
 
   const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-    updateQuantity(product.id, quantity + 1);
+    const updatedQuantity = quantity + 1;
+    setQuantity(updatedQuantity);
+    updateQuantity(product.id, updatedQuantity);
   };
 
   const handleRemoveFromCart = () => {
