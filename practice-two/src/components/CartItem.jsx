@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
@@ -53,6 +53,7 @@ const ProductImage = ({ src, alt }) => (
  * @param productQuantity - The product Quantity number
  * @param removeFromCart - Function to handle remove a product to the cart
  * @param updateQuantity - Function to handle update a product to the cart
+ * @param getProductPrice - Function to get prices product
  * @returns {JSX.Element} The CartItem Component
  */
 const CartItem = ({
@@ -60,26 +61,40 @@ const CartItem = ({
   productQuantity = {},
   updateQuantity = () => {},
   removeFromCart = () => {},
+  getProductPrice = () => {},
 }) => {
-  const { images, name, version, resolution, price } = product;
+  const { id, images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];
 
   const [quantity, setQuantity] = useState(productQuantity);
 
+  const parsedPrice = parseFloat(price);
+  const [productPrice, setProductPrice] = useState(parsedPrice * quantity);
+
+  const updateProductPriceAndQuantity = (newQuantity) => {
+    setQuantity(newQuantity);
+    updateQuantity(id, newQuantity);
+    const newProductPrice = parsedPrice * newQuantity;
+    setProductPrice(newProductPrice);
+    getProductPrice(id, newProductPrice);
+  };
+
   const decreaseQuantity = () => {
-    if (quantity) {
-      setQuantity(quantity - 1);
-      updateQuantity(product.id, quantity - 1);
+    if (quantity > 0) {
+      updateProductPriceAndQuantity(quantity - 1);
     }
   };
 
   const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-    updateQuantity(product.id, quantity + 1);
+    updateProductPriceAndQuantity(quantity + 1);
   };
 
+  useEffect(() => {
+    updateProductPriceAndQuantity(quantity);
+  });
+
   const handleRemoveFromCart = () => {
-    removeFromCart(product.id);
+    removeFromCart(id);
   };
 
   return (
@@ -106,7 +121,7 @@ const CartItem = ({
         </div>
         <div className="flex h-16 flex-col justify-between">
           <Typography variant="plain" className="flex justify-end space-y-2 text-right text-sm">
-            {price}
+            {productPrice}
             VNĐ
           </Typography>
           <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
@@ -173,6 +188,7 @@ CartItem.propTypes = {
   productQuantity: PropTypes.number.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateQuantity: PropTypes.func.isRequired,
+  getProductPrice: PropTypes.func.isRequired,
 };
 
 export default CartItem;

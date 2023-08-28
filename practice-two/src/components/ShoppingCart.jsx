@@ -30,6 +30,7 @@ const ShoppingCart = ({
   updateQuantity = () => {},
 }) => {
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
+  const [productPrices, setProductPrices] = useState({});
 
   if (isSliderBarOpen === true) {
     document.body.classList.add('overflow-hidden');
@@ -39,6 +40,13 @@ const ShoppingCart = ({
   const handleButtonClick = () => {
     setIsSliderBarOpen((prevState) => !prevState);
     document.body.classList.remove('overflow-hidden');
+  };
+
+  const handleGetProductPrice = (productId, price) => {
+    setProductPrices((prevPrices) => ({
+      ...prevPrices,
+      [productId]: price,
+    }));
   };
 
   const cartProducts = cartProductIDs.map((item) => ({
@@ -91,13 +99,14 @@ const ShoppingCart = ({
                         key={productCart.id}
                         product={productCart}
                         productQuantity={productId.quantity}
+                        getProductPrice={handleGetProductPrice}
                         updateQuantity={updateQuantity}
                         removeFromCart={removeFromCart}
                       />
                     );
                   })}
                 </ul>
-                <TotalSection />
+                <TotalSection productPrices={productPrices} />
                 <Button
                   variant="light"
                   customClasses="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
