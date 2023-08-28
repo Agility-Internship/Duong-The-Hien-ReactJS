@@ -32,7 +32,7 @@ const App = () => {
   // State for storing the IDs of products added to cart
   const [cartProductIDs, setCartProductIDs] = useState([]);
 
-  // State để show Message when add to cart
+  // State show Message when add to cart
   const [showAddToCartModal, setShowAddToCartModal] = useState(false);
 
   const closeAddToCartModal = () => {
@@ -104,14 +104,21 @@ const App = () => {
    * @returns {Array} - Updated list of products cart IDs
    */
   const addToCart = (productID) => {
-    setCartProductIDs((prevCartIDs) => {
-      // If the product is already in the cart, don't add it again
-      if (prevCartIDs.includes(productID)) {
-        return prevCartIDs;
+    setCartProductIDs((prevCartProducts) => {
+      const existingProduct = prevCartProducts.find((item) => item.id === productID);
+
+      if (existingProduct) {
+        setShowAddToCartModal(true);
+        // If the product already exists in the cart, update its quantity
+        return prevCartProducts.map((item) =>
+          item.id === productID ? { ...item, quantity: item.quantity + 1 } : item,
+        );
       }
+
       setShowAddToCartModal(true);
 
-      return [...prevCartIDs, productID];
+      // If the product is not in the cart, add it with quantity 1
+      return [...prevCartProducts, { id: productID, quantity: 1 }];
     });
   };
 
@@ -122,14 +129,28 @@ const App = () => {
    * @returns {Array} - Updated list of products cart IDs
    */
   const removeFromCart = (productID) => {
-    setCartProductIDs((prevCartIDs) => {
-      // If the product is not in the cart, no need to remove it
-      if (!prevCartIDs.includes(productID)) {
-        return prevCartIDs;
-      }
-
-      return prevCartIDs.filter((id) => id !== productID);
+    setCartProductIDs((prevCartProducts) => {
+      const updatedCart = prevCartProducts.filter((item) => item.id !== productID);
+      return updatedCart;
     });
+  };
+
+  /**
+   * Update the quantity of a product in the cart.
+   *
+   * @param {string} productID - ID of the product to update quantity for
+   * @param {number} newQuantity - New quantity value for the product
+   */
+  const updateQuantity = (productID, newQuantity) => {
+    if (newQuantity <= 0) {
+      removeFromCart(productID); // Remove the product from the cart
+    } else {
+      setCartProductIDs((prevCartProducts) =>
+        prevCartProducts.map((item) =>
+          item.id === productID ? { ...item, quantity: newQuantity } : item,
+        ),
+      );
+    }
   };
 
   /**
@@ -210,6 +231,7 @@ const App = () => {
           selectedFilter={selectedFilter}
           cartProductIDs={cartProductIDs}
           removeFromCart={removeFromCart}
+          updateQuantity={updateQuantity}
           onManufacturerFilter={handleManufacturerFilter}
           onPriceFilter={handlePriceFilter}
           onResetFilters={handleResetFilters}

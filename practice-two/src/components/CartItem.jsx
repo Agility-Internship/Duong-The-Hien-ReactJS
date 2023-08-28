@@ -49,24 +49,33 @@ const ProductImage = ({ src, alt }) => (
  *
  * A CartItem component for displaying details products
  *
- * @param products - The product data object
+ * @param product - The product data object
+ * @param productQuantity - The product Quantity number
  * @param removeFromCart - Function to handle remove a product to the cart
+ * @param updateQuantity - Function to handle update a product to the cart
  * @returns {JSX.Element} The CartItem Component
  */
-const CartItem = ({ product = {}, removeFromCart = () => {} }) => {
+const CartItem = ({
+  product = {},
+  productQuantity = {},
+  updateQuantity = () => {},
+  removeFromCart = () => {},
+}) => {
   const { images, name, version, resolution, price } = product;
   const firstImage = Object.values(images)[0];
 
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(productQuantity);
 
   const decreaseQuantity = () => {
-    if (quantity > 1) {
+    if (quantity) {
       setQuantity(quantity - 1);
+      updateQuantity(product.id, quantity - 1);
     }
   };
 
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
+    updateQuantity(product.id, quantity + 1);
   };
 
   const handleRemoveFromCart = () => {
@@ -161,7 +170,9 @@ CartItem.propTypes = {
     resolution: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
   }).isRequired,
+  productQuantity: PropTypes.number.isRequired,
   removeFromCart: PropTypes.func.isRequired,
+  updateQuantity: PropTypes.func.isRequired,
 };
 
 export default CartItem;
