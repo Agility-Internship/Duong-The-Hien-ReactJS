@@ -109,18 +109,15 @@ const App = () => {
 
       if (existingProduct) {
         // If the product already exists in the cart, update its quantity
-        setShowAddToCartModal(true);
-
         return prevCartProducts.map((item) =>
           item.id === productID ? { ...item, quantity: item.quantity + 1 } : item,
         );
       }
 
       // If the product is not in the cart, add it with a quantity of 1
-      setShowAddToCartModal(true);
-
       return [...prevCartProducts, { id: productID, quantity: 1 }];
     });
+    setShowAddToCartModal(true);
   };
 
   /**
