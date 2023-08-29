@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Components
 import Typography from './common/Typography';
 
-// Filter
+// Helper functions
 import { formatCurrency } from '../helper/productHelpers';
 
 /**

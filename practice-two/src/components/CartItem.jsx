@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Button from './common/Button';
 import Typography from './common/Typography';
 
-// Filter
+// Helper functions
 import { convertPriceToNumber, formatCurrency } from '../helper/productHelpers';
 
 // Remove Button Component

@@ -5,13 +5,13 @@ import FilterCategoryLayout from './components/layout/FilterCategoryLayout';
 import ProductList from './components/layout/ListProductsCard';
 import FavoriteProductsCard from './components/FavoriteProductsCard';
 import ProductDetails from './components/ProductDetails';
+import Message from './components/common/Message';
 
 // Data
 import LIST_PRODUCTS from '../database/products.json';
 
-// Filter
+// Helper functions
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
-import Message from './components/common/Message';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
