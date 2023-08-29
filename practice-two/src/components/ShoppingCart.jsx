@@ -21,19 +21,19 @@ import { ICON } from '../constants/data';
  * @param cartProductIDs - An array of IDs of products in the cart
  * @param removeFromCart - Function to handle removing a product to the cart
  * @param updateQuantity - Function to handle update a product to the cart.
+ * @param getProductPrice - Function to get prices product to the cart.
  * @returns {JSX.Element} The ShoppingCart Component
  */
 const ShoppingCart = ({
   products = [],
   cartProductIDs = [],
+  productPrices = {},
   removeFromCart = () => {},
   updateQuantity = () => {},
+  getProductPrice = () => {},
 }) => {
   // State to manage the status of the slider bar (open/closed)
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
-
-  // State to store the prices of products in the cart
-  const [productPrices, setProductPrices] = useState({});
 
   if (isSliderBarOpen === true) {
     document.body.classList.add('overflow-hidden');
@@ -45,16 +45,8 @@ const ShoppingCart = ({
     document.body.classList.remove('overflow-hidden');
   };
 
-  // Update the stored price for a specific product
-  const handleGetProductPrice = (productId, price) => {
-    setProductPrices((prevPrices) => ({
-      ...prevPrices,
-      [productId]: price,
-    }));
-  };
-
   // Function to get details of a product by its ID
-  const getProductDetails = (product, productId) => products.find((p) => p.id === productId);
+  const getProductDetails = (product, productId) => product.find((p) => p.id === productId);
 
   return (
     <div>
@@ -99,7 +91,7 @@ const ShoppingCart = ({
                         key={productCart.id}
                         product={productCart}
                         productQuantity={productId.quantity}
-                        getProductPrice={handleGetProductPrice}
+                        getProductPrice={getProductPrice}
                         updateQuantity={updateQuantity}
                         removeFromCart={removeFromCart}
                       />
@@ -128,9 +120,11 @@ ShoppingCart.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  productPrices: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
   cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateQuantity: PropTypes.func.isRequired,
+  getProductPrice: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

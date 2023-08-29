@@ -35,6 +35,21 @@ const App = () => {
   // State show Message when add to cart
   const [showAddToCartModal, setShowAddToCartModal] = useState(false);
 
+  // State to store the prices of products in the cart
+  const [productPrices, setProductPrices] = useState({});
+
+  console.log('====================================');
+  console.log(productPrices);
+  console.log('====================================');
+
+  // Update the stored price for a specific product
+  const handleGetProductPrice = (productId, price) => {
+    setProductPrices((prevPrices) => ({
+      ...prevPrices,
+      [productId]: price,
+    }));
+  };
+
   // Close the "Add to Cart" modal.
   const closeAddToCartModal = () => {
     setShowAddToCartModal(false);
@@ -232,8 +247,10 @@ const App = () => {
           products={allProducts}
           selectedFilter={selectedFilter}
           cartProductIDs={cartProductIDs}
+          productPrices={productPrices}
           removeFromCart={removeFromCart}
           updateQuantity={updateQuantity}
+          getProductPrice={handleGetProductPrice}
           onManufacturerFilter={handleManufacturerFilter}
           onPriceFilter={handlePriceFilter}
           onResetFilters={handleResetFilters}
@@ -261,6 +278,7 @@ const App = () => {
             onClosePopover={handleCloseProductDetails}
             onToggleProductFavorite={toggleProductFavorite}
             onAddToCart={addToCart}
+            getProductPrice={handleGetProductPrice}
           />
         )}
       </section>

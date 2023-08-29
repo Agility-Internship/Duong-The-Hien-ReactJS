@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
@@ -106,11 +106,6 @@ const CartItem = ({
   const increaseQuantity = () => {
     updateProductPriceAndQuantity(quantity + 1);
   };
-
-  // UseEffect hook to update the product's total price whenever the quantity changes
-  useEffect(() => {
-    updateProductPriceAndQuantity(quantity);
-  });
 
   // Function to handle removing the product from the cart
   const handleRemoveFromCart = () => {
