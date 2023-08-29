@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import Button from './common/Button';
 import Typography from './common/Typography';
 
+// Filter
+import { convertPriceToNumber, formatCurrency } from '../helper/productHelpers';
+
 // Remove Button Component
 const RemoveButton = ({ onClick = () => {} }) => (
   <Button
@@ -68,7 +71,7 @@ const CartItem = ({
 
   const [quantity, setQuantity] = useState(productQuantity);
 
-  const parsedPrice = parseFloat(price);
+  const parsedPrice = convertPriceToNumber(price);
   const [productPrice, setProductPrice] = useState(parsedPrice * quantity);
 
   const updateProductPriceAndQuantity = (newQuantity) => {
@@ -121,7 +124,7 @@ const CartItem = ({
         </div>
         <div className="flex h-16 flex-col justify-between">
           <Typography variant="plain" className="flex justify-end space-y-2 text-right text-sm">
-            {productPrice}
+            {formatCurrency(productPrice)}
             VNĐ
           </Typography>
           <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">

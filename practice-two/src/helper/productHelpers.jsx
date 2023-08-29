@@ -30,6 +30,14 @@ const convertPriceToNumber = (price) => {
 };
 
 /**
+ * Converts an amount to currency format in VND (Vietnamese Dong).
+ * @param {number} amount - The amount to be converted.
+ * @returns {string} - Formatted currency string.
+ */
+const formatCurrency = (amount) =>
+  amount.toLocaleString('vi-VN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+/**
  * Filters products based on selected price options.
  * @param {Array} products - The array of products to filter.
  * @param {Array} selectedPrice - An array of selected price options to filter.
@@ -49,4 +57,4 @@ const filterProductsByPrice = (products, selectedPrice) => {
   });
 };
 
-export { filterProductsByManufacturer, filterProductsByPrice, convertPriceToNumber };
+export { filterProductsByManufacturer, filterProductsByPrice, convertPriceToNumber, formatCurrency };

@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 // Components
 import Typography from './common/Typography';
 
+// Filter
+import { formatCurrency } from '../helper/productHelpers';
+
 /**
  * TotalSection Component
  *
@@ -34,7 +37,7 @@ const TotalSection = ({ productPrices = {} }) => {
       <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
         <Typography variant="plain">Total</Typography>
         <Typography variant="plain" className="text-right text-base text-black dark:text-white">
-          {totalPrice}
+          {formatCurrency(totalPrice)}
           <span className="ml-1 inline">VNĐ</span>
         </Typography>
       </div>
