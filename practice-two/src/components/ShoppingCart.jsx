@@ -29,7 +29,10 @@ const ShoppingCart = ({
   removeFromCart = () => {},
   updateQuantity = () => {},
 }) => {
+  // State to manage the status of the slider bar (open/closed)
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
+
+  // State to store the prices of products in the cart
   const [productPrices, setProductPrices] = useState({});
 
   if (isSliderBarOpen === true) {
@@ -42,6 +45,7 @@ const ShoppingCart = ({
     document.body.classList.remove('overflow-hidden');
   };
 
+  // Update the stored price for a specific product
   const handleGetProductPrice = (productId, price) => {
     setProductPrices((prevPrices) => ({
       ...prevPrices,
@@ -49,6 +53,7 @@ const ShoppingCart = ({
     }));
   };
 
+  // Function to get details of a product by its ID
   const getProductDetails = (product, productId) => products.find((p) => p.id === productId);
 
   return (

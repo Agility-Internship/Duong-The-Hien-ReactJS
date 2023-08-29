@@ -67,35 +67,52 @@ const CartItem = ({
   getProductPrice = () => {},
 }) => {
   const { id, images, name, version, resolution, price } = product;
+
+  // Extract the first image from the images object
   const firstImage = Object.values(images)[0];
 
+  // State for managing the quantity of the product
   const [quantity, setQuantity] = useState(productQuantity);
 
+  // Convert the price from string to a numeric value
   const parsedPrice = convertPriceToNumber(price);
+
+  // State for storing the total price of the product based on quantity
   const [productPrice, setProductPrice] = useState(parsedPrice * quantity);
 
+  // Function to update both quantity and total price of the product
   const updateProductPriceAndQuantity = (newQuantity) => {
     setQuantity(newQuantity);
+
+    // Call the updateQuantity function to update the cart's quantity for this product
     updateQuantity(id, newQuantity);
+
+    // Calculate the new total price based on the updated quantity
     const newProductPrice = parsedPrice * newQuantity;
     setProductPrice(newProductPrice);
+
+    // Call the getProductPrice function to update the cart's total price
     getProductPrice(id, newProductPrice);
   };
 
+  // Function to decrease the product quantity by 1
   const decreaseQuantity = () => {
     if (quantity > 0) {
       updateProductPriceAndQuantity(quantity - 1);
     }
   };
 
+  // Function to increase the product quantity by 1
   const increaseQuantity = () => {
     updateProductPriceAndQuantity(quantity + 1);
   };
 
+  // UseEffect hook to update the product's total price whenever the quantity changes
   useEffect(() => {
     updateProductPriceAndQuantity(quantity);
   });
 
+  // Function to handle removing the product from the cart
   const handleRemoveFromCart = () => {
     removeFromCart(id);
   };

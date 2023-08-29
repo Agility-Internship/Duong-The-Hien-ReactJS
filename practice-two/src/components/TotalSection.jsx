@@ -16,7 +16,6 @@ import { formatCurrency } from '../helper/productHelpers';
  * @returns {JSX.Element} The TotalSection Component
  */
 const TotalSection = ({ productPrices = {} }) => {
-  // Calculate the total price from the productPrices array
   const totalPrice = Object.values(productPrices).reduce((sum, price) => sum + price, 0);
 
   return (
