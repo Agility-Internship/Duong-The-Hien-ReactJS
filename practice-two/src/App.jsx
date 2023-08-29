@@ -38,10 +38,6 @@ const App = () => {
   // State to store the prices of products in the cart
   const [productPrices, setProductPrices] = useState({});
 
-  console.log('====================================');
-  console.log(productPrices);
-  console.log('====================================');
-
   // Update the stored price for a specific product
   const handleGetProductPrice = (productId, price) => {
     setProductPrices((prevPrices) => ({
