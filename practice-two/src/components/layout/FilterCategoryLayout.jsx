@@ -23,6 +23,7 @@ import { PRICES, CATEGORIES } from '../../constants/data';
  * @param selectedFilter - Object containing the selected filter criteria.
  * @param cartProductIDs - An array of cart products ID.
  * @param removeFromCart - Function to handle removing a product to the cart.
+ * @param updateQuantity - Function to handle update a product to the cart.
  * @param onManufacturerFilter - Function to handle manufacturer filtering.
  * @param onPriceFilter - Function to handle price filtering.
  * @param onResetFilters - Function to reset all filters.
@@ -33,6 +34,7 @@ const FilterCategoryLayout = ({
   selectedFilter = { manufacturer: [], price: [] },
   cartProductIDs = [],
   removeFromCart = () => {},
+  updateQuantity = () => {},
   onManufacturerFilter = () => {},
   onPriceFilter = () => {},
   onResetFilters = () => {},
@@ -88,6 +90,7 @@ const FilterCategoryLayout = ({
         </div>
         <ShoppingCart
           removeFromCart={removeFromCart}
+          updateQuantity={updateQuantity}
           products={products}
           cartProductIDs={cartProductIDs}
         />
@@ -133,6 +136,7 @@ FilterCategoryLayout.propTypes = {
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
   }),
   cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  updateQuantity: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   onManufacturerFilter: PropTypes.func,
   onPriceFilter: PropTypes.func,

@@ -20,9 +20,15 @@ import { ICON } from '../constants/data';
  * @param products - An array of all products
  * @param cartProductIDs - An array of IDs of products in the cart
  * @param removeFromCart - Function to handle removing a product to the cart
+ * @param updateQuantity - Function to handle update a product to the cart.
  * @returns {JSX.Element} The ShoppingCart Component
  */
-const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () => {} }) => {
+const ShoppingCart = ({
+  products = [],
+  cartProductIDs = [],
+  removeFromCart = () => {},
+  updateQuantity = () => {},
+}) => {
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
 
   if (isSliderBarOpen === true) {
@@ -35,7 +41,7 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
     document.body.classList.remove('overflow-hidden');
   };
 
-  const getProductDetails = (productId) => products.find((product) => product.id === productId);
+  const getProductDetails = (product, productId) => products.find((p) => p.id === productId);
 
   return (
     <div>
@@ -73,12 +79,14 @@ const ShoppingCart = ({ products = [], cartProductIDs = [], removeFromCart = () 
               <div className="flex h-full w-full flex-col justify-between overflow-hidden p-1 pb-10">
                 <ul className="flex-grow overflow-auto py-4">
                   {cartProductIDs.map((productId) => {
-                    const productDetails = getProductDetails(productId);
+                    const productCart = getProductDetails(products, productId.id);
 
                     return (
                       <CartItem
-                        key={productDetails.id}
-                        product={productDetails}
+                        key={productCart.id}
+                        product={productCart}
+                        productQuantity={productId.quantity}
+                        updateQuantity={updateQuantity}
                         removeFromCart={removeFromCart}
                       />
                     );
@@ -108,6 +116,7 @@ ShoppingCart.propTypes = {
   ).isRequired,
   cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   removeFromCart: PropTypes.func.isRequired,
+  updateQuantity: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

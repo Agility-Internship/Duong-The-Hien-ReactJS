@@ -22,9 +22,9 @@ const Message = ({ onClose = () => {} }) => {
   }, [onClose]);
   return isVisible ? (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-black bg-opacity-40 p-4 rounded-md shadow-md text-white text-center">
+      <div className="bg-black bg-opacity-80 p-4 rounded-md shadow-md text-white text-center">
         <h2 className="text-xl font-semibold mb-2">Product Added to Cart</h2>
-        <p className="text-gray-300">The selected product has been added to your cart.</p>
+        <p className="text-white">The selected product has been added to your cart.</p>
         <button
           className="mt-4 bg-secondary text-white px-4 py-2 rounded-md hover:bg-blue-600"
           onClick={onClose}
