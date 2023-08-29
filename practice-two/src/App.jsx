@@ -108,18 +108,16 @@ const App = () => {
       const existingProduct = prevCartProducts.find((item) => item.id === productID);
 
       if (existingProduct) {
-        setShowAddToCartModal(true);
         // If the product already exists in the cart, update its quantity
         return prevCartProducts.map((item) =>
           item.id === productID ? { ...item, quantity: item.quantity + 1 } : item,
         );
       }
 
-      setShowAddToCartModal(true);
-
-      // If the product is not in the cart, add it with quantity 1
+      // If the product is not in the cart, add it with a quantity of 1
       return [...prevCartProducts, { id: productID, quantity: 1 }];
     });
+    setShowAddToCartModal(true);
   };
 
   /**
@@ -143,7 +141,8 @@ const App = () => {
    */
   const updateQuantity = (productID, newQuantity) => {
     if (newQuantity <= 0) {
-      removeFromCart(productID); // Remove the product from the cart
+      // Remove the product from the cart
+      removeFromCart(productID);
     } else {
       setCartProductIDs((prevCartProducts) =>
         prevCartProducts.map((item) =>
