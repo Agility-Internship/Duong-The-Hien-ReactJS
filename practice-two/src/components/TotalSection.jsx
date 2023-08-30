@@ -43,6 +43,7 @@ const TotalSection = ({ productPrices = {} }) => {
     </div>
   );
 };
+
 TotalSection.propTypes = {
   productPrices: PropTypes.arrayOf(
     PropTypes.shape({

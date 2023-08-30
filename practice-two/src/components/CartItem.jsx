@@ -73,22 +73,17 @@ const CartItem = ({
   const [quantity, setQuantity] = useState(productQuantity);
 
   // Convert the price from string to a numeric value
-  const parsedPrice = convertPriceToNumber(price);
+  const convertedPrice = convertPriceToNumber(price);
 
-  // State for storing the total price of the product based on quantity
-  const [productPrice, setProductPrice] = useState(parsedPrice * quantity);
+  // Compute the product price based on convertedPrice and quantity
+  const productPrice = convertedPrice * quantity;
 
-  // Function to update both quantity and total price of the product
+  // Function to update both quantity and price of the product
   const updateProductPriceAndQuantity = (newQuantity) => {
     setQuantity(newQuantity);
 
     // Call the updateQuantity function to update the cart's quantity for this product
     updateQuantity(id, newQuantity);
-
-    // Calculate the new total price based on the updated quantity
-    const newProductPrice = parsedPrice * newQuantity;
-
-    setProductPrice(newProductPrice);
   };
 
   // Function to decrease the product quantity by 1
