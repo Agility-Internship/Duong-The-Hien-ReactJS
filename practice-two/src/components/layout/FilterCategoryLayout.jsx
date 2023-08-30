@@ -57,6 +57,7 @@ const FilterCategoryLayout = ({
 
   const handlePriceSelect = (e) => {
     const selectedOption = e.target;
+
     const selectDataset = e.target.dataset;
 
     onPriceFilter(selectedOption.id, selectDataset.min, selectDataset.max);

@@ -87,6 +87,7 @@ const CartItem = ({
 
     // Calculate the new total price based on the updated quantity
     const newProductPrice = parsedPrice * newQuantity;
+
     setProductPrice(newProductPrice);
   };
 

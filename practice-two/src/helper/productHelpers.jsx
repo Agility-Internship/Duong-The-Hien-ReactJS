@@ -15,6 +15,7 @@ const filterProductsByManufacturer = (products, selectedManufacturer) => {
 
   return products.filter((product) => {
     const productManufacturer = product.manufactory.toLowerCase();
+
     return selectedManufacturerObject.includes(productManufacturer);
   });
 };
@@ -26,6 +27,7 @@ const filterProductsByManufacturer = (products, selectedManufacturer) => {
  */
 const convertPriceToNumber = (price) => {
   const numericString = price.replace(/[.]+/g, '');
+
   return parseInt(numericString, 10);
 };
 
@@ -46,12 +48,15 @@ const formatCurrency = (amount) =>
 const calculateTotalPrices = (products, cartProductIDs) =>
   cartProductIDs.map((item) => {
     const productIDs = products.find((p) => p.id === item.id);
+
     const productPrices = convertPriceToNumber(productIDs.price);
 
     if (productIDs) {
       const totalPrice = productPrices * item.quantity;
+
       return { id: item.id, totalPrice };
     }
+
     return null;
   });
 
@@ -68,8 +73,10 @@ const filterProductsByPrice = (products, selectedPrice) => {
 
   return products.filter((product) => {
     const price = convertPriceToNumber(product.price);
+
     return selectedPrice.some((priceOption) => {
       const { min, max } = priceOption;
+
       return (min === undefined || price >= min) && (max === undefined || price <= max);
     });
   });

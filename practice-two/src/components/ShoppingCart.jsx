@@ -42,6 +42,7 @@ const ShoppingCart = ({
   // Toggle slider bar and lock scroll
   const handleButtonClick = () => {
     setIsSliderBarOpen((prevState) => !prevState);
+
     document.body.classList.remove('overflow-hidden');
   };
 
