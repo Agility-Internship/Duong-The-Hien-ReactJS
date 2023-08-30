@@ -16,7 +16,7 @@ import { formatCurrency } from '../helper/productHelpers';
  * @returns {JSX.Element} The TotalSection Component
  */
 const TotalSection = ({ productPrices = {} }) => {
-  const totalPrice = Object.values(productPrices).reduce((sum, price) => sum + price, 0);
+  const totalPrice = productPrices.reduce((sum, item) => sum + item.totalPrice, 0);
 
   return (
     <div className="py-4 text-sm text-neutral-500  dark:text-neutral-400">

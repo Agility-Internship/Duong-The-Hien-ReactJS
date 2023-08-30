@@ -11,6 +11,9 @@ import TotalSection from './TotalSection';
 // Data
 import { ICON } from '../constants/data';
 
+// Helper functions
+import { calculateTotalPrices } from '../helper/productHelpers';
+
 /**
  * ShoppingCart Component
  *
@@ -21,16 +24,13 @@ import { ICON } from '../constants/data';
  * @param cartProductIDs - An array of IDs of products in the cart
  * @param removeFromCart - Function to handle removing a product to the cart
  * @param updateQuantity - Function to handle update a product to the cart.
- * @param getProductPrice - Function to get prices product to the cart.
  * @returns {JSX.Element} The ShoppingCart Component
  */
 const ShoppingCart = ({
   products = [],
   cartProductIDs = [],
-  productPrices = {},
   removeFromCart = () => {},
   updateQuantity = () => {},
-  getProductPrice = () => {},
 }) => {
   // State to manage the status of the slider bar (open/closed)
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
@@ -47,6 +47,8 @@ const ShoppingCart = ({
 
   // Function to get details of a product by its ID
   const getProductDetails = (product, productId) => product.find((p) => p.id === productId);
+
+  const totalPrices = calculateTotalPrices(products, cartProductIDs);
 
   return (
     <div>
@@ -91,14 +93,13 @@ const ShoppingCart = ({
                         key={productCart.id}
                         product={productCart}
                         productQuantity={productId.quantity}
-                        getProductPrice={getProductPrice}
                         updateQuantity={updateQuantity}
                         removeFromCart={removeFromCart}
                       />
                     );
                   })}
                 </ul>
-                <TotalSection productPrices={productPrices} />
+                <TotalSection productPrices={totalPrices} />
                 <Button
                   variant="light"
                   customClasses="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
@@ -120,11 +121,9 @@ ShoppingCart.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  productPrices: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
   cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateQuantity: PropTypes.func.isRequired,
-  getProductPrice: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

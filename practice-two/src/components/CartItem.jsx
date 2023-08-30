@@ -56,7 +56,6 @@ const ProductImage = ({ src, alt }) => (
  * @param productQuantity - The product Quantity number
  * @param removeFromCart - Function to handle remove a product to the cart
  * @param updateQuantity - Function to handle update a product to the cart
- * @param getProductPrice - Function to get prices product
  * @returns {JSX.Element} The CartItem Component
  */
 const CartItem = ({
@@ -64,7 +63,6 @@ const CartItem = ({
   productQuantity = {},
   updateQuantity = () => {},
   removeFromCart = () => {},
-  getProductPrice = () => {},
 }) => {
   const { id, images, name, version, resolution, price } = product;
 
@@ -90,9 +88,6 @@ const CartItem = ({
     // Calculate the new total price based on the updated quantity
     const newProductPrice = parsedPrice * newQuantity;
     setProductPrice(newProductPrice);
-
-    // Call the getProductPrice function to update the cart's total price
-    getProductPrice(id, newProductPrice);
   };
 
   // Function to decrease the product quantity by 1
@@ -203,7 +198,6 @@ CartItem.propTypes = {
   productQuantity: PropTypes.number.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateQuantity: PropTypes.func.isRequired,
-  getProductPrice: PropTypes.func.isRequired,
 };
 
 export default CartItem;

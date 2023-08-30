@@ -8,9 +8,6 @@ import Typography from './common/Typography';
 import FavoriteButton from './ButtonFavorite/ButtonFavorite';
 import Popover from './common/Popover';
 
-//
-import { convertPriceToNumber } from '../helper/productHelpers';
-
 /**
  * Product Details components.
  *
@@ -21,7 +18,6 @@ import { convertPriceToNumber } from '../helper/productHelpers';
  * @param onToggleProductFavorite - Function to handle toggling a product as favorite
  * @param onClosePopover - Callback function to close the product details.
  * @param onAddToCart - Function to handle adding a product to the cart
- * @param getProductPrice - Function to get prices product to the cart.
  * @returns {JSX.Element} Product Details content.
  */
 const ProductDetails = ({
@@ -30,7 +26,6 @@ const ProductDetails = ({
   onToggleProductFavorite = () => {},
   onClosePopover = () => {},
   onAddToCart = () => {},
-  getProductPrice = () => {},
 }) => {
   const selectedProduct = product;
 
@@ -51,7 +46,6 @@ const ProductDetails = ({
 
   const handleAddToCart = () => {
     onAddToCart(product.id);
-    getProductPrice(selectedProduct.id, convertPriceToNumber(selectedProduct.price));
   };
 
   return (
@@ -150,7 +144,6 @@ ProductDetails.propTypes = {
   onClosePopover: PropTypes.func,
   onToggleProductFavorite: PropTypes.func.isRequired,
   onAddToCart: PropTypes.func.isRequired,
-  getProductPrice: PropTypes.func.isRequired,
 };
 
 export default ProductDetails;

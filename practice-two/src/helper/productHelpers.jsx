@@ -38,6 +38,24 @@ const formatCurrency = (amount) =>
   amount.toLocaleString('vi-VN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 /**
+ *
+ * @param {*} products
+ * @param {*} cartProductIDs
+ * @returns
+ */
+const calculateTotalPrices = (products, cartProductIDs) =>
+  cartProductIDs.map((item) => {
+    const productIDs = products.find((p) => p.id === item.id);
+    const productPrices = convertPriceToNumber(productIDs.price);
+
+    if (productIDs) {
+      const totalPrice = productPrices * item.quantity;
+      return { id: item.id, totalPrice };
+    }
+    return null;
+  });
+
+/**
  * Filters products based on selected price options.
  * @param {Array} products - The array of products to filter.
  * @param {Array} selectedPrice - An array of selected price options to filter.
@@ -57,4 +75,10 @@ const filterProductsByPrice = (products, selectedPrice) => {
   });
 };
 
-export { filterProductsByManufacturer, filterProductsByPrice, convertPriceToNumber, formatCurrency };
+export {
+  filterProductsByManufacturer,
+  filterProductsByPrice,
+  convertPriceToNumber,
+  formatCurrency,
+  calculateTotalPrices,
+};
