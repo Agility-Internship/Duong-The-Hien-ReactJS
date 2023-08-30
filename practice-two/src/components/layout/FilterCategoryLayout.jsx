@@ -136,7 +136,7 @@ FilterCategoryLayout.propTypes = {
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
   }),
-  cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  cartProductIDs: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
   updateQuantity: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   onManufacturerFilter: PropTypes.func,

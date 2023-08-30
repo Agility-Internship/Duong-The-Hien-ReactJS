@@ -122,7 +122,7 @@ ShoppingCart.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  cartProductIDs: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateQuantity: PropTypes.func.isRequired,
 };

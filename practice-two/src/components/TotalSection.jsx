@@ -44,7 +44,12 @@ const TotalSection = ({ productPrices = {} }) => {
   );
 };
 TotalSection.propTypes = {
-  productPrices: PropTypes.number.isRequired,
+  productPrices: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      totalPrice: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default TotalSection;
