@@ -38,10 +38,10 @@ const formatCurrency = (amount) =>
   amount.toLocaleString('vi-VN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 /**
- *
- * @param {*} products
- * @param {*} cartProductIDs
- * @returns
+ * Calculate total prices for products in the cart.
+ * @param {Array} products - Array of all available products
+ * @param {Array} cartProductIDs - Array of objects with product IDs and quantities
+ * @returns {Array} Array of objects with calculated total prices
  */
 const calculateTotalPrices = (products, cartProductIDs) =>
   cartProductIDs.map((item) => {
