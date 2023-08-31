@@ -11,6 +11,9 @@ import TotalSection from './TotalSection';
 // Data
 import { ICON } from '../constants/data';
 
+// Helper functions
+import { calculateTotalPrices } from '../helper/productHelpers';
+
 /**
  * ShoppingCart Component
  *
@@ -29,6 +32,7 @@ const ShoppingCart = ({
   removeFromCart = () => {},
   updateQuantity = () => {},
 }) => {
+  // State to manage the status of the slider bar (open/closed)
   const [isSliderBarOpen, setIsSliderBarOpen] = useState(false);
 
   if (isSliderBarOpen === true) {
@@ -38,10 +42,14 @@ const ShoppingCart = ({
   // Toggle slider bar and lock scroll
   const handleButtonClick = () => {
     setIsSliderBarOpen((prevState) => !prevState);
+
     document.body.classList.remove('overflow-hidden');
   };
 
-  const getProductDetails = (product, productId) => products.find((p) => p.id === productId);
+  // Function to get details of a product by its ID
+  const getProductDetails = (product, productId) => product.find((p) => p.id === productId);
+
+  const totalPrices = calculateTotalPrices(products, cartProductIDs);
 
   return (
     <div>
@@ -92,7 +100,7 @@ const ShoppingCart = ({
                     );
                   })}
                 </ul>
-                <TotalSection />
+                <TotalSection productPrices={totalPrices} />
                 <Button
                   variant="light"
                   customClasses="inline-block bg-secondary hover:bg-blue-800 focus:bg-blue-800 py-2 px-4 rounded-3xl text-lg text-white font-semibold flex justify-center"
@@ -114,7 +122,7 @@ ShoppingCart.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  cartProductIDs: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
   removeFromCart: PropTypes.func.isRequired,
   updateQuantity: PropTypes.func.isRequired,
 };

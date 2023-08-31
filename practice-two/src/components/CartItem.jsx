@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import Button from './common/Button';
 import Typography from './common/Typography';
 
+// Helper functions
+import { convertPriceToNumber, formatCurrency } from '../helper/productHelpers';
+
 // Remove Button Component
 const RemoveButton = ({ onClick = () => {} }) => (
   <Button
@@ -61,27 +64,43 @@ const CartItem = ({
   updateQuantity = () => {},
   removeFromCart = () => {},
 }) => {
-  const { images, name, version, resolution, price } = product;
+  const { id, images, name, version, resolution, price } = product;
+
+  // Extract the first image from the images object
   const firstImage = Object.values(images)[0];
 
+  // State for managing the quantity of the product
   const [quantity, setQuantity] = useState(productQuantity);
 
+  // Convert the price from string to a numeric value
+  const convertedPrice = convertPriceToNumber(price);
+
+  // Compute the product price based on convertedPrice and quantity
+  const productPrice = convertedPrice * quantity;
+
+  // Function to update both quantity and price of the product
+  const updateProductPriceAndQuantity = (newQuantity) => {
+    setQuantity(newQuantity);
+
+    // Call the updateQuantity function to update the cart's quantity for this product
+    updateQuantity(id, newQuantity);
+  };
+
+  // Function to decrease the product quantity by 1
   const decreaseQuantity = () => {
     if (quantity > 0) {
-      const updatedQuantity = quantity - 1;
-      setQuantity(updatedQuantity);
-      updateQuantity(product.id, updatedQuantity);
+      updateProductPriceAndQuantity(quantity - 1);
     }
   };
 
+  // Function to increase the product quantity by 1
   const increaseQuantity = () => {
-    const updatedQuantity = quantity + 1;
-    setQuantity(updatedQuantity);
-    updateQuantity(product.id, updatedQuantity);
+    updateProductPriceAndQuantity(quantity + 1);
   };
 
+  // Function to handle removing the product from the cart
   const handleRemoveFromCart = () => {
-    removeFromCart(product.id);
+    removeFromCart(id);
   };
 
   return (
@@ -108,7 +127,7 @@ const CartItem = ({
         </div>
         <div className="flex h-16 flex-col justify-between">
           <Typography variant="plain" className="flex justify-end space-y-2 text-right text-sm">
-            {price}
+            {formatCurrency(productPrice)}
             VNĐ
           </Typography>
           <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">

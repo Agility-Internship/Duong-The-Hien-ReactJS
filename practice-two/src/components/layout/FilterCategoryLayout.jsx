@@ -57,6 +57,7 @@ const FilterCategoryLayout = ({
 
   const handlePriceSelect = (e) => {
     const selectedOption = e.target;
+
     const selectDataset = e.target.dataset;
 
     onPriceFilter(selectedOption.id, selectDataset.min, selectDataset.max);
@@ -89,10 +90,10 @@ const FilterCategoryLayout = ({
           <Button onClick={onResetFilters}>Reset Filters</Button>
         </div>
         <ShoppingCart
-          removeFromCart={removeFromCart}
-          updateQuantity={updateQuantity}
           products={products}
           cartProductIDs={cartProductIDs}
+          removeFromCart={removeFromCart}
+          updateQuantity={updateQuantity}
         />
       </div>
       <div className="flex gap-6">
@@ -135,7 +136,7 @@ FilterCategoryLayout.propTypes = {
     manufacturer: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.arrayOf(PropTypes.string).isRequired,
   }),
-  cartProductIDs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  cartProductIDs: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
   updateQuantity: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   onManufacturerFilter: PropTypes.func,

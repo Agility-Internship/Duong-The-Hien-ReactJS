@@ -5,13 +5,13 @@ import FilterCategoryLayout from './components/layout/FilterCategoryLayout';
 import ProductList from './components/layout/ListProductsCard';
 import FavoriteProductsCard from './components/FavoriteProductsCard';
 import ProductDetails from './components/ProductDetails';
+import Message from './components/common/Message';
 
 // Data
 import LIST_PRODUCTS from '../database/products.json';
 
-// Filter
+// Helper functions
 import { filterProductsByManufacturer, filterProductsByPrice } from './helper/productHelpers';
-import Message from './components/common/Message';
 
 const App = () => {
   // Process the product data by adding the 'manufacturer' property to each product
@@ -35,6 +35,7 @@ const App = () => {
   // State show Message when add to cart
   const [showAddToCartModal, setShowAddToCartModal] = useState(false);
 
+  // Close the "Add to Cart" modal.
   const closeAddToCartModal = () => {
     setShowAddToCartModal(false);
   };
@@ -107,8 +108,8 @@ const App = () => {
     setCartProductIDs((prevCartProducts) => {
       const existingProduct = prevCartProducts.find((item) => item.id === productID);
 
+      // If the product already exists in the cart, update its quantity
       if (existingProduct) {
-        // If the product already exists in the cart, update its quantity
         return prevCartProducts.map((item) =>
           item.id === productID ? { ...item, quantity: item.quantity + 1 } : item,
         );
@@ -117,6 +118,7 @@ const App = () => {
       // If the product is not in the cart, add it with a quantity of 1
       return [...prevCartProducts, { id: productID, quantity: 1 }];
     });
+
     setShowAddToCartModal(true);
   };
 
@@ -214,6 +216,7 @@ const App = () => {
   const filterProducts = allProducts.filter((product) => {
     const manufacturerFilterMatch =
       filterProductsByManufacturer([product], selectedFilter.manufacturer).length > 0;
+
     const priceFilterMatch = filterProductsByPrice([product], selectedFilter.price).length > 0;
 
     return manufacturerFilterMatch && priceFilterMatch;
