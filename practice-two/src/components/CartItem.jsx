@@ -104,7 +104,7 @@ const CartItem = ({
   };
 
   return (
-    <li className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700">
+    <li className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-400">
       <div className="relative flex w-full flex-row justify-between px-1 py-4">
         <div className="absolute z-40 -mt-2 ml-[55px]">
           <RemoveButton onClick={handleRemoveFromCart} />
@@ -130,7 +130,7 @@ const CartItem = ({
             {formatCurrency(productPrice)}
             VNĐ
           </Typography>
-          <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
+          <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-400">
             <QuantityButton label="Reduce item quantity" onClick={decreaseQuantity}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
